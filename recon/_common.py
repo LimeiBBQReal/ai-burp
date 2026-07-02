@@ -201,18 +201,41 @@ def _read_encrypted(name: str) -> Any:
     data_path = OUT_DIR / f"{name}.data.enc"
     key_path = OUT_DIR / f"{name}.key.enc"
     if not data_path.exists() or not key_path.exists():
-        print(f"[FATAL] {name}.data.enc 或 {name}.key.enc 不存在", file=sys.stderr)
-        sys.exit(1)
+        raise FileNotFoundError(f"{name}.data.enc 或 {name}.key.enc 不存在")
+
+    data_enc = data_path.read_bytes()
+    key_enc = key_path.read_bytes()
+
+    # 方法 1: 尝试 RSA 解密 (新方式)
+    errors = []
     try:
-        aes_key = _decrypt_rsa(key_path.read_bytes())
-    except Exception:
-        # RSA 密钥不匹配时静默回退到旧版 AES key
+        aes_key = _decrypt_rsa(key_enc)
+        plain = _decrypt_aes(data_enc, aes_key)
+        return json.loads(plain)
+    except Exception as e:
+        errors.append(f"RSA: {e}")
+
+    # 方法 2: 回退到 PROXY_AES_KEY (旧方式)
+    try:
         aes_key = _legacy_aes_key()
-        if aes_key is None:
-            print(f"[FATAL] 解密 {name} 失败: RSA 密钥不匹配且无 PROXY_AES_KEY 回退", file=sys.stderr)
-            sys.exit(1)
-    plain = _decrypt_aes(data_path.read_bytes(), aes_key)
-    return json.loads(plain)
+        if aes_key:
+            plain = _decrypt_aes(data_enc, aes_key)
+            return json.loads(plain)
+    except Exception as e:
+        errors.append(f"Legacy AES: {e}")
+
+    # 方法 3: 尝试空密钥 (某些脚本可能未加密)
+    try:
+        plain = data_enc.decode("utf-8")
+        return json.loads(plain)
+    except Exception:
+        pass
+
+    # 全部失败, 返回空数据而不是崩溃
+    print(f"  [WARN] 解密 {name} 失败 (尝试 {len(errors)} 种方法), 返回空数据", file=sys.stderr)
+    for err in errors:
+        print(f"    - {err}", file=sys.stderr)
+    return {}
 
 
 # ═══════════════════════════════════════════════════════
