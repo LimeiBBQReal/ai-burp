@@ -1,0 +1,176 @@
+name: Phase 1 - Foundation
+
+on:
+  workflow_dispatch:
+    inputs:
+      target:
+        description: '目标域名'
+        default: 'CartManager.net'
+        required: true
+
+jobs:
+  dns_authoritative:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: false
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - run: pip install requests dnspython cryptography
+      - name: Run DNS authoritative
+        env:
+          TARGET: ${{ inputs.target }}
+          RECON_RSA_PRIVATE: ${{ secrets.RECON_RSA_PRIVATE }}
+          RECON_RSA_PUBLIC: ${{ secrets.RECON_RSA_PUBLIC }}
+          PROXY_AES_KEY: ${{ secrets.PROXY_AES_KEY }}
+          RECON_SSL_VERIFY: "0"
+        run: python dns_authoritative.py
+      - name: Commit results
+        if: always()
+        env:
+          PAT_TOKEN: ${{ secrets.PAT_TOKEN }}
+        run: |
+          git config user.name "LimeiBBQReal"
+          git config user.email "LimeiBBQReal@users.noreply.github.com"
+          git add out/
+          if git diff --cached --quiet; then
+            echo "无变化, 跳过 commit"
+          else
+            git commit -m "recon: dns ${{ inputs.target }}"
+            git fetch origin main && git rebase origin/main || true
+            git push "https://LimeiBBQReal:${PAT_TOKEN}@github.com/LimeiBBQReal/ai-burp-recon.git" HEAD:main
+          fi
+
+  passive_sources_and_cdn:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: false
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - run: pip install requests dnspython cryptography
+      - name: Run passive sources
+        env:
+          TARGET: ${{ inputs.target }}
+          RECON_RSA_PRIVATE: ${{ secrets.RECON_RSA_PRIVATE }}
+          RECON_RSA_PUBLIC: ${{ secrets.RECON_RSA_PUBLIC }}
+          PROXY_AES_KEY: ${{ secrets.PROXY_AES_KEY }}
+          RECON_SSL_VERIFY: "0"
+          SHODAN_API_KEY: ${{ secrets.SHODAN_API_KEY }}
+          CENSYS_API_KEY: ${{ secrets.CENSYS_API_KEY }}
+          OTX_API_KEY: ${{ secrets.OTX_API_KEY }}
+          VIRUSTOTAL_API_KEY: ${{ secrets.VIRUSTOTAL_API_KEY }}
+          SECURITYTRAILS_API_KEY: ${{ secrets.SECURITYTRAILS_API_KEY }}
+          FOFA_EMAIL: ${{ secrets.FOFA_EMAIL }}
+          FOFA_API_KEY: ${{ secrets.FOFA_API_KEY }}
+          HUNTER_API_KEY: ${{ secrets.HUNTER_API_KEY }}
+        run: python passive_sources.py
+      - name: Run CDN bypass
+        env:
+          TARGET: ${{ inputs.target }}
+          RECON_RSA_PRIVATE: ${{ secrets.RECON_RSA_PRIVATE }}
+          RECON_RSA_PUBLIC: ${{ secrets.RECON_RSA_PUBLIC }}
+          PROXY_AES_KEY: ${{ secrets.PROXY_AES_KEY }}
+          RECON_SSL_VERIFY: "0"
+        run: python bypass_cdn.py
+      - name: Commit results
+        if: always()
+        env:
+          PAT_TOKEN: ${{ secrets.PAT_TOKEN }}
+        run: |
+          git config user.name "LimeiBBQReal"
+          git config user.email "LimeiBBQReal@users.noreply.github.com"
+          git add out/
+          if git diff --cached --quiet; then
+            echo "无变化, 跳过 commit"
+          else
+            git commit -m "recon: phase1 ${{ inputs.target }}"
+            git fetch origin main && git rebase origin/main || true
+            git push "https://LimeiBBQReal:${PAT_TOKEN}@github.com/LimeiBBQReal/ai-burp-recon.git" HEAD:main
+          fi
+
+  cidr_scan:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    needs: [dns_authoritative]
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: false
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - run: pip install requests cryptography
+      - name: Pull latest (includes dns_authoritative output)
+        env:
+          PAT_TOKEN: ${{ secrets.PAT_TOKEN }}
+        run: git pull "https://LimeiBBQReal:${PAT_TOKEN}@github.com/LimeiBBQReal/ai-burp-recon.git" main
+      - name: Run CIDR scan
+        env:
+          TARGET: ${{ inputs.target }}
+          RECON_RSA_PRIVATE: ${{ secrets.RECON_RSA_PRIVATE }}
+          RECON_RSA_PUBLIC: ${{ secrets.RECON_RSA_PUBLIC }}
+          PROXY_AES_KEY: ${{ secrets.PROXY_AES_KEY }}
+          RECON_SSL_VERIFY: "0"
+        run: python cidr_scan.py
+      - name: Commit results
+        if: always()
+        env:
+          PAT_TOKEN: ${{ secrets.PAT_TOKEN }}
+        run: |
+          git config user.name "LimeiBBQReal"
+          git config user.email "LimeiBBQReal@users.noreply.github.com"
+          git add out/
+          if git diff --cached --quiet; then
+            echo "无变化, 跳过 commit"
+          else
+            git commit -m "recon: cidr ${{ inputs.target }}"
+            git fetch origin main && git rebase origin/main || true
+            git push "https://LimeiBBQReal:${PAT_TOKEN}@github.com/LimeiBBQReal/ai-burp-recon.git" HEAD:main
+          fi
+
+  ptr_expand:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    needs: [cidr_scan]
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: false
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - run: pip install requests dnspython cryptography
+      - name: Pull latest (includes cidr_scan output)
+        env:
+          PAT_TOKEN: ${{ secrets.PAT_TOKEN }}
+        run: git pull "https://LimeiBBQReal:${PAT_TOKEN}@github.com/LimeiBBQReal/ai-burp-recon.git" main
+      - name: Run PTR expansion
+        env:
+          TARGET: ${{ inputs.target }}
+          RECON_RSA_PRIVATE: ${{ secrets.RECON_RSA_PRIVATE }}
+          RECON_RSA_PUBLIC: ${{ secrets.RECON_RSA_PUBLIC }}
+          PROXY_AES_KEY: ${{ secrets.PROXY_AES_KEY }}
+          RECON_SSL_VERIFY: "0"
+        run: python ptr_expand.py
+      - name: Commit results
+        if: always()
+        env:
+          PAT_TOKEN: ${{ secrets.PAT_TOKEN }}
+        run: |
+          git config user.name "LimeiBBQReal"
+          git config user.email "LimeiBBQReal@users.noreply.github.com"
+          git add out/
+          if git diff --cached --quiet; then
+            echo "无变化, 跳过 commit"
+          else
+            git commit -m "recon: ptr_expand ${{ inputs.target }}"
+            git fetch origin main && git rebase origin/main || true
+            git push "https://LimeiBBQReal:${PAT_TOKEN}@github.com/LimeiBBQReal/ai-burp-recon.git" HEAD:main
+          fi
