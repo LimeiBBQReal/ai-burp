@@ -1,0 +1,302 @@
+[
+  {
+    "url": "http://bzhost1.com",
+    "direct": {
+      "status": 502,
+      "length": 0,
+      "server": "",
+      "location": ""
+    },
+    "proxy": {
+      "status": "ERR",
+      "length": 0,
+      "server": "HTTPConnectionPool(host='3.211.120.181', port=443): Max retr",
+      "location": ""
+    }
+  },
+  {
+    "url": "http://bzhost1.com/phpmyadmin",
+    "direct": {
+      "status": 502,
+      "length": 0,
+      "server": "",
+      "location": ""
+    },
+    "proxy": {
+      "status": "ERR",
+      "length": 0,
+      "server": "HTTPConnectionPool(host='3.211.120.181', port=443): Max retr",
+      "location": ""
+    }
+  },
+  {
+    "url": "http://bzhost1.com/wp-login.php",
+    "direct": {
+      "status": 502,
+      "length": 0,
+      "server": "",
+      "location": ""
+    },
+    "proxy": {
+      "status": "ERR",
+      "length": 0,
+      "server": "HTTPConnectionPool(host='3.211.120.181', port=443): Read tim",
+      "location": ""
+    }
+  },
+  {
+    "url": "http://www.bzhost1.com",
+    "direct": {
+      "status": 502,
+      "length": 0,
+      "server": "",
+      "location": ""
+    },
+    "proxy": {
+      "status": "ERR",
+      "length": 0,
+      "server": "HTTPConnectionPool(host='3.211.120.181', port=443): Max retr",
+      "location": ""
+    }
+  },
+  {
+    "url": "https://www.bzhost1.com",
+    "direct": {
+      "status": "ERR",
+      "length": 0,
+      "server": "HTTPSConnectionPool(host='www.bzhost1.com', port=443): Max r",
+      "location": ""
+    },
+    "proxy": {
+      "status": "ERR",
+      "length": 0,
+      "server": "('Connection aborted.', RemoteDisconnected('Remote end close",
+      "location": ""
+    }
+  },
+  {
+    "url": "http://webmail.blastzone.org",
+    "direct": {
+      "status": 200,
+      "length": 5555,
+      "server": "Apache",
+      "location": ""
+    },
+    "proxy": {
+      "status": "ERR",
+      "length": 0,
+      "server": "HTTPConnectionPool(host='3.211.120.181', port=443): Max retr",
+      "location": ""
+    }
+  },
+  {
+    "url": "https://webmail.blastzone.org",
+    "direct": {
+      "status": 200,
+      "length": 5555,
+      "server": "Apache",
+      "location": ""
+    },
+    "proxy": {
+      "status": "ERR",
+      "length": 0,
+      "server": "('Connection aborted.', ConnectionResetError(10054, '远程主机强迫关",
+      "location": ""
+    }
+  },
+  {
+    "url": "http://webmail.blastzone.org/?_task=login",
+    "direct": {
+      "status": 200,
+      "length": 5566,
+      "server": "Apache",
+      "location": ""
+    },
+    "proxy": {
+      "status": "ERR",
+      "length": 0,
+      "server": "HTTPConnectionPool(host='3.211.120.181', port=443): Max retr",
+      "location": ""
+    }
+  },
+  {
+    "url": "http://bzhost1.blastzone.org",
+    "direct": {
+      "status": 200,
+      "length": 1862,
+      "server": "Apache",
+      "location": ""
+    },
+    "proxy": {
+      "status": "ERR",
+      "length": 0,
+      "server": "HTTPConnectionPool(host='3.211.120.181', port=443): Max retr",
+      "location": ""
+    }
+  },
+  {
+    "url": "http://bzhost1.blastzone.org/phpmyadmin",
+    "direct": {
+      "status": 200,
+      "length": 18576,
+      "server": "Apache",
+      "location": ""
+    },
+    "proxy": {
+      "status": "ERR",
+      "length": 0,
+      "server": "HTTPConnectionPool(host='3.211.120.181', port=443): Max retr",
+      "location": ""
+    }
+  },
+  {
+    "url": "http://www.ashleywestmark.com",
+    "direct": {
+      "status": 502,
+      "length": 0,
+      "server": "",
+      "location": ""
+    },
+    "proxy": {
+      "status": "ERR",
+      "length": 0,
+      "server": "HTTPConnectionPool(host='3.211.120.181', port=443): Max retr",
+      "location": ""
+    }
+  },
+  {
+    "url": "https://www.ashleywestmark.com",
+    "direct": {
+      "status": 200,
+      "length": 693,
+      "server": "Apache",
+      "location": ""
+    },
+    "proxy": {
+      "status": 200,
+      "length": 116363,
+      "server": "Apache",
+      "location": ""
+    }
+  },
+  {
+    "url": "http://www.ashleywestmark.com/wp-login.php",
+    "direct": {
+      "status": 200,
+      "length": 704,
+      "server": "Apache",
+      "location": ""
+    },
+    "proxy": {
+      "status": "ERR",
+      "length": 0,
+      "server": "('Connection aborted.', RemoteDisconnected('Remote end close",
+      "location": ""
+    }
+  },
+  {
+    "url": "http://ashleywestmark.com",
+    "direct": {
+      "status": 200,
+      "length": 688,
+      "server": "Apache",
+      "location": ""
+    },
+    "proxy": {
+      "status": 200,
+      "length": 116363,
+      "server": "Apache",
+      "location": ""
+    }
+  },
+  {
+    "url": "http://216.215.30.39",
+    "direct": {
+      "status": 200,
+      "length": 10701,
+      "server": "Apache/2.4.66 (Debian)",
+      "location": ""
+    },
+    "proxy": {
+      "status": "ERR",
+      "length": 0,
+      "server": "HTTPConnectionPool(host='3.211.120.181', port=443): Max retr",
+      "location": ""
+    }
+  },
+  {
+    "url": "https://216.215.30.39",
+    "direct": {
+      "status": 200,
+      "length": 10701,
+      "server": "Apache/2.4.66 (Debian)",
+      "location": ""
+    },
+    "proxy": {
+      "status": 200,
+      "length": 10701,
+      "server": "Apache/2.4.66 (Debian)",
+      "location": ""
+    }
+  },
+  {
+    "url": "http://blastzone.org",
+    "direct": {
+      "status": 200,
+      "length": 9166,
+      "server": "Microsoft-IIS/10.0",
+      "location": ""
+    },
+    "proxy": {
+      "status": "ERR",
+      "length": 0,
+      "server": "HTTPConnectionPool(host='3.211.120.181', port=443): Max retr",
+      "location": ""
+    }
+  },
+  {
+    "url": "http://www.blastzone.org",
+    "direct": {
+      "status": 200,
+      "length": 9166,
+      "server": "Microsoft-IIS/10.0",
+      "location": ""
+    },
+    "proxy": {
+      "status": 200,
+      "length": 9166,
+      "server": "Microsoft-IIS/10.0",
+      "location": ""
+    }
+  },
+  {
+    "url": "http://bouncehouses.com",
+    "direct": {
+      "status": 200,
+      "length": 482472,
+      "server": "cloudflare",
+      "location": ""
+    },
+    "proxy": {
+      "status": "ERR",
+      "length": 0,
+      "server": "HTTPConnectionPool(host='3.211.120.181', port=443): Max retr",
+      "location": ""
+    }
+  },
+  {
+    "url": "https://bouncehouses.com",
+    "direct": {
+      "status": 200,
+      "length": 482472,
+      "server": "cloudflare",
+      "location": ""
+    },
+    "proxy": {
+      "status": "ERR",
+      "length": 0,
+      "server": "('Connection aborted.', RemoteDisconnected('Remote end close",
+      "location": ""
+    }
+  }
+]

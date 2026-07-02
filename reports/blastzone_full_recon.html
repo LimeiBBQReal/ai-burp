@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>红队评估报告 - blastzone-站群完整资产侦察</title>
+    <style>
+        body { font-family: 'Segoe UI', 'Microsoft YaHei', sans-serif; margin: 40px; background: #f5f5f5; }
+        .report { max-width: 900px; margin: 0 auto; background: white; padding: 40px; border-radius: 8px; box-shadow: 0 2px 10px rgba(0,0,0,0.1); }
+        h1 { color: #c0392b; border-bottom: 3px solid #c0392b; padding-bottom: 10px; }
+        h2 { color: #2c3e50; margin-top: 30px; }
+        .meta { background: #ecf0f1; padding: 15px; border-radius: 5px; margin-bottom: 20px; }
+        .meta td { padding: 5px 15px; }
+        .section { margin-bottom: 25px; padding: 15px; border-left: 4px solid #3498db; background: #fafafa; }
+        .section.findings { border-left-color: #e74c3c; }
+        .section.chain { border-left-color: #2ecc71; }
+        .section.logic { border-left-color: #f39c12; }
+        table { width: 100%; border-collapse: collapse; margin: 10px 0; }
+        th, td { padding: 8px 12px; text-align: left; border-bottom: 1px solid #ddd; }
+        th { background: #34495e; color: white; }
+        tr:hover { background: #f0f0f0; }
+        .severity-critical { color: #c0392b; font-weight: bold; }
+        .severity-high { color: #e74c3c; }
+        .severity-medium { color: #f39c12; }
+        .severity-low { color: #27ae60; }
+        .badge { display: inline-block; padding: 3px 8px; border-radius: 3px; font-size: 12px; color: white; }
+        .badge-critical { background: #c0392b; }
+        .badge-high { background: #e74c3c; }
+        .badge-medium { background: #f39c12; }
+        .badge-low { background: #27ae60; }
+        .footer { margin-top: 40px; text-align: center; color: #95a5a6; font-size: 12px; }
+        code { background: #f4f4f4; padding: 2px 6px; border-radius: 3px; font-family: Consolas, monospace; }
+        pre { background: #2c3e50; color: #ecf0f1; padding: 15px; border-radius: 5px; overflow-x: auto; }
+    </style>
+</head>
+<body>
+<div class="report">
+    <h1>🔴 红队评估报告</h1>
+    <div class="meta">
+        <table>
+            <tr><td><strong>项目</strong></td><td>blastzone-站群完整资产侦察</td>
+                <td><strong>目标</strong></td><td>blastzone.org</td></tr>
+            <tr><td><strong>日期</strong></td><td>2026-06-24 04:51:02</td>
+                <td><strong>漏洞数</strong></td><td>39</td></tr>
+        </table>
+    </div>
+    <div class="section info"><h2>资产概览</h2><pre>{
+  &quot;关联域名总数&quot;: &quot;25+ (6 核心 + 19 NS反查发现)&quot;,
+  &quot;服务器数量&quot;: &quot;17+ 台&quot;,
+  &quot;子域名数量&quot;: &quot;50+ 个&quot;,
+  &quot;IP段&quot;: &quot;216.215.30.32/28 (AS19800) + 66.113.102.192/27 (AS30170) + 173.209.174.233 (AS13370)&quot;,
+  &quot;站群性质&quot;: &quot;火箭/航空航天爱好者社区 Web Hosting (blastzonewebhosting.com)&quot;
+}</pre></div><div class="section findings"><h2>核心站群域名 (6 个, 共享 NS/SOA/IP/SPF)</h2><table><thead><tr><th>严重度</th><th>类型</th><th>目标</th><th>证据</th></tr></thead>
+                       <tbody><tr>
+                        <td><span class="badge badge-high">HIGH</span></td>
+                        <td>主站</td>
+                        <td>blastzone.org</td>
+                        <td>IIS 主站 + NS/SOA 提供者</td>
+                    </tr><tr>
+                        <td><span class="badge badge-medium">MEDIUM</span></td>
+                        <td>.com版</td>
+                        <td>blastzone.com</td>
+                        <td>MX 指向站群段 66.113.102.198</td>
+                    </tr><tr>
+                        <td><span class="badge badge-high">HIGH</span></td>
+                        <td>NS提供者</td>
+                        <td>blastzonewebhosting.com</td>
+                        <td>为整个社区提供 DNS 托管 (ns1/ns2)</td>
+                    </tr><tr>
+                        <td><span class="badge badge-high">HIGH</span></td>
+                        <td>Loki Research</td>
+                        <td>lokiresearch.com</td>
+                        <td>与 bzwin1 共享 216.215.30.34</td>
+                    </tr><tr>
+                        <td><span class="badge badge-medium">MEDIUM</span></td>
+                        <td>Artful Bullet</td>
+                        <td>artfulbullet.com</td>
+                        <td>历史 IP 3个全在站群段</td>
+                    </tr><tr>
+                        <td><span class="badge badge-medium">MEDIUM</span></td>
+                        <td>Performance Hobbies</td>
+                        <td>performancehobbies.com</td>
+                        <td>SOA 指向 bzhost1.blastzone.org</td>
+                    </tr></tbody></table></div><div class="section findings"><h2>NS 反查发现的站群域名 (19+ 个)</h2><table><thead><tr><th>严重度</th><th>类型</th><th>目标</th><th>证据</th></tr></thead>
+                       <tbody><tr>
+                        <td><span class="badge badge-high">HIGH</span></td>
+                        <td>NAR</td>
+                        <td>nar.org</td>
+                        <td>National Association of Rocketry (全国火箭协会!)</td>
+                    </tr><tr>
+                        <td><span class="badge badge-high">HIGH</span></td>
+                        <td>RasAero</td>
+                        <td>rasaero.com</td>
+                        <td>Rocket and Space Aeronautics</td>
+                    </tr><tr>
+                        <td><span class="badge badge-medium">MEDIUM</span></td>
+                        <td>Myth Racing</td>
+                        <td>myth-racing.com</td>
+                        <td>火箭竞速</td>
+                    </tr><tr>
+                        <td><span class="badge badge-medium">MEDIUM</span></td>
+                        <td>NYPower</td>
+                        <td>nypower.org</td>
+                        <td>NY Power 火箭竞赛</td>
+                    </tr><tr>
+                        <td><span class="badge badge-medium">MEDIUM</span></td>
+                        <td>BurnSim</td>
+                        <td>burnsim.com</td>
+                        <td>火箭发动机模拟软件</td>
+                    </tr><tr>
+                        <td><span class="badge badge-medium">MEDIUM</span></td>
+                        <td>RocketryData</td>
+                        <td>rocketrydata.com</td>
+                        <td>火箭数据</td>
+                    </tr><tr>
+                        <td><span class="badge badge-medium">MEDIUM</span></td>
+                        <td>NWRocketry</td>
+                        <td>northwestrocketry.com</td>
+                        <td>西北火箭协会</td>
+                    </tr><tr>
+                        <td><span class="badge badge-medium">MEDIUM</span></td>
+                        <td>MDRocketry</td>
+                        <td>mdrocketry.net</td>
+                        <td>马里兰火箭协会</td>
+                    </tr><tr>
+                        <td><span class="badge badge-medium">MEDIUM</span></td>
+                        <td>ScottsRockets</td>
+                        <td>scottsrockets.com</td>
+                        <td>Scott 火箭</td>
+                    </tr><tr>
+                        <td><span class="badge badge-medium">MEDIUM</span></td>
+                        <td>RocketFlite</td>
+                        <td>rocketflite.com</td>
+                        <td>RocketFlite</td>
+                    </tr><tr>
+                        <td><span class="badge badge-medium">MEDIUM</span></td>
+                        <td>MDRA</td>
+                        <td>mdra-archive.org</td>
+                        <td>MDRA 档案</td>
+                    </tr><tr>
+                        <td><span class="badge badge-medium">MEDIUM</span></td>
+                        <td>RocketryEdu</td>
+                        <td>rocketry-education.com</td>
+                        <td>火箭教育</td>
+                    </tr><tr>
+                        <td><span class="badge badge-medium">MEDIUM</span></td>
+                        <td>HomeControl</td>
+                        <td>homecontrolassistant.com</td>
+                        <td>IoT 家居控制!</td>
+                    </tr><tr>
+                        <td><span class="badge badge-low">LOW</span></td>
+                        <td>Lesabrage</td>
+                        <td>lesabrage.com</td>
+                        <td>托管客户</td>
+                    </tr><tr>
+                        <td><span class="badge badge-low">LOW</span></td>
+                        <td>RouseTech</td>
+                        <td>rousetech.net</td>
+                        <td>托管客户</td>
+                    </tr><tr>
+                        <td><span class="badge badge-low">LOW</span></td>
+                        <td>AshleyWestmark</td>
+                        <td>ashleywestmark.com</td>
+                        <td>托管客户</td>
+                    </tr><tr>
+                        <td><span class="badge badge-low">LOW</span></td>
+                        <td>Technicopedia</td>
+                        <td>technicopedia.com</td>
+                        <td>托管客户</td>
+                    </tr><tr>
+                        <td><span class="badge badge-low">LOW</span></td>
+                        <td>DryHarvest</td>
+                        <td>dryharvest.com</td>
+                        <td>托管客户</td>
+                    </tr><tr>
+                        <td><span class="badge badge-low">LOW</span></td>
+                        <td>Pemberton</td>
+                        <td>pembertontechnologies.com</td>
+                        <td>托管客户</td>
+                    </tr></tbody></table></div><div class="section findings"><h2>站群关联证据链 (7 条铁证)</h2><table><thead><tr><th>严重度</th><th>类型</th><th>目标</th><th>证据</th></tr></thead>
+                       <tbody><tr><td colspan='4'>NS 交叉: 25+ 域名全部使用 ns1/ns2.blastzonewebhosting.com</td></tr><tr><td colspan='4'>SOA 统一: blastzone.org + lokiresearch + performancehobbies 的 SOA 都指向 bzhost1.blastzone.org</td></tr><tr><td colspan='4'>SPF 同段: 三个域名 SPF 都授权 ip4:216.215.30.32/28 + ip4:66.113.102.192/27</td></tr><tr><td colspan='4'>历史 IP 重叠: artfulbullet.com 历史 IP (.38/.200/.196) 全在站群段</td></tr><tr><td colspan='4'>DKIM 同账号: 4+ 域名共用 em1093523 selector (smtp2go 同一账号)</td></tr><tr><td colspan='4'>旁站重叠: lokiresearch.com + performancehobbies.com 与 bzwin1.blastzone.org 共享 216.215.30.34</td></tr><tr><td colspan='4'>MX 交叉: blastzonewebhosting.com 的 MX 指向 mail.blastzone.org</td></tr></tbody></table></div><div class="section findings"><h2>高危目标 (优先攻击)</h2><table><thead><tr><th>严重度</th><th>类型</th><th>目标</th><th>证据</th></tr></thead>
+                       <tbody><tr>
+                        <td><span class="badge badge-critical">CRITICAL</span></td>
+                        <td>Proxmox VE</td>
+                        <td>216.215.30.35</td>
+                        <td>proxmox.blastzone.org 虚拟化管理 — 控制全部 VM</td>
+                    </tr><tr>
+                        <td><span class="badge badge-critical">CRITICAL</span></td>
+                        <td>phpMyAdmin</td>
+                        <td>216.215.30.37</td>
+                        <td>bzhost1 phpMyAdmin — 数据库管理</td>
+                    </tr><tr>
+                        <td><span class="badge badge-critical">CRITICAL</span></td>
+                        <td>RDP</td>
+                        <td>173.209.174.233:3389</td>
+                        <td>home.blastzone.org RDP 暴露公网</td>
+                    </tr><tr>
+                        <td><span class="badge badge-critical">CRITICAL</span></td>
+                        <td>Blue Iris</td>
+                        <td>173.209.174.233:81</td>
+                        <td>安防摄像头管理系统</td>
+                    </tr><tr>
+                        <td><span class="badge badge-high">HIGH</span></td>
+                        <td>Webmail x2</td>
+                        <td>216.215.30.37 + 66.113.102.196</td>
+                        <td>两个 Webmail 实例</td>
+                    </tr><tr>
+                        <td><span class="badge badge-high">HIGH</span></td>
+                        <td>IoT 控制</td>
+                        <td>homecontrolassistant.com</td>
+                        <td>家居控制 — 可能暴露内网设备</td>
+                    </tr><tr>
+                        <td><span class="badge badge-high">HIGH</span></td>
+                        <td>NAR</td>
+                        <td>nar.org</td>
+                        <td>全国火箭协会 — 可能含会员数据</td>
+                    </tr></tbody></table></div><div class="section info"><h2>侦察方法</h2><pre>{
+  &quot;数据源&quot;: &quot;Shodan + Censys + VirusTotal + SecurityTrails + OTX + MyIP.ms + crt.sh + HackerTarget + Shodan InternetDB&quot;,
+  &quot;工具&quot;: &quot;AI-Burp V4 (IntelAggregator + AssetExpander + reverse_correlate)&quot;,
+  &quot;方法&quot;: &quot;三轮正向扩散 + NS/SOA/SPF 反向关联 + 全段反向DNS + ASN搜索&quot;,
+  &quot;关键突破&quot;: &quot;NS 反向关联 (reverse_correlate) 一次发现 19 个新域名&quot;
+}</pre></div>
+    <div class="footer">
+        <p>AI-Burp V4 自动生成 | 2026-06-24 04:51:02</p>
+        <p>本报告仅供授权方使用, 未经许可不得传播</p>
+    </div>
+</div>
+</body>
+</html>

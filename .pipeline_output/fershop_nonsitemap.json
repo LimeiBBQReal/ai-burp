@@ -1,0 +1,5509 @@
+[
+  {
+    "type": "url",
+    "value": "https://fershop.net/api/auth.php",
+    "source": "crawler_html_inline_js",
+    "confidence": 0.7,
+    "tags": [
+      "api_discovered"
+    ]
+  },
+  {
+    "type": "url",
+    "value": "https://fershop.net/api/auth.php",
+    "source": "crawler_html_inline_js",
+    "confidence": 0.7,
+    "tags": [
+      "api_discovered"
+    ]
+  },
+  {
+    "type": "url",
+    "value": "https://fershop.net/api/votes.php",
+    "source": "crawler_html_inline_js",
+    "confidence": 0.7,
+    "tags": [
+      "api_discovered"
+    ]
+  },
+  {
+    "type": "url",
+    "value": "https://fershop.net/opensearch.xml",
+    "source": "crawler_html_inline_js",
+    "confidence": 0.7,
+    "tags": [
+      "api_discovered"
+    ]
+  },
+  {
+    "type": "url",
+    "value": "https://fershop.net/feed.xml",
+    "source": "crawler_html_inline_js",
+    "confidence": 0.7,
+    "tags": [
+      "api_discovered"
+    ]
+  },
+  {
+    "type": "url",
+    "value": "https://fershop.net/api/auth.php",
+    "source": "crawler_html_inline_js",
+    "confidence": 0.7,
+    "tags": [
+      "api_discovered"
+    ]
+  },
+  {
+    "type": "url",
+    "value": "https://fershop.net/api/auth.php",
+    "source": "crawler_html_inline_js",
+    "confidence": 0.7,
+    "tags": [
+      "api_discovered"
+    ]
+  },
+  {
+    "type": "url",
+    "value": "https://fershop.net/api/votes.php",
+    "source": "crawler_html_inline_js",
+    "confidence": 0.7,
+    "tags": [
+      "api_discovered"
+    ]
+  },
+  {
+    "type": "url",
+    "value": "https://fershop.net/opensearch.xml",
+    "source": "crawler_html_inline_js",
+    "confidence": 0.7,
+    "tags": [
+      "api_discovered"
+    ]
+  },
+  {
+    "type": "url",
+    "value": "https://fershop.net/feed.xml",
+    "source": "crawler_html_inline_js",
+    "confidence": 0.7,
+    "tags": [
+      "api_discovered"
+    ]
+  },
+  {
+    "type": "url",
+    "value": "https://fershop.net/api/auth.php",
+    "source": "crawler_html_inline_js",
+    "confidence": 0.7,
+    "tags": [
+      "api_discovered"
+    ]
+  },
+  {
+    "type": "url",
+    "value": "https://fershop.net/api/auth.php",
+    "source": "crawler_html_inline_js",
+    "confidence": 0.7,
+    "tags": [
+      "api_discovered"
+    ]
+  },
+  {
+    "type": "url",
+    "value": "https://fershop.net/opensearch.xml",
+    "source": "crawler_html_inline_js",
+    "confidence": 0.7,
+    "tags": [
+      "api_discovered"
+    ]
+  },
+  {
+    "type": "url",
+    "value": "https://fershop.net/feed.xml",
+    "source": "crawler_html_inline_js",
+    "confidence": 0.7,
+    "tags": [
+      "api_discovered"
+    ]
+  },
+  {
+    "type": "url",
+    "value": "https://fershop.net/api/auth.php",
+    "source": "crawler_html_inline_js",
+    "confidence": 0.7,
+    "tags": [
+      "api_discovered"
+    ]
+  },
+  {
+    "type": "url",
+    "value": "https://fershop.net/api/auth.php",
+    "source": "crawler_html_inline_js",
+    "confidence": 0.7,
+    "tags": [
+      "api_discovered"
+    ]
+  },
+  {
+    "type": "url",
+    "value": "https://fershop.net/opensearch.xml",
+    "source": "crawler_html_inline_js",
+    "confidence": 0.7,
+    "tags": [
+      "api_discovered"
+    ]
+  },
+  {
+    "type": "url",
+    "value": "https://fershop.net/feed.xml",
+    "source": "crawler_html_inline_js",
+    "confidence": 0.7,
+    "tags": [
+      "api_discovered"
+    ]
+  },
+  {
+    "type": "url",
+    "value": "https://fershop.net/v3/signin/identifier?app_domain=https://fershop.net&amp;client_id=762035908431-9kl6ml5gkncg24v92q1b77qgtqvva7u4.apps.googleusercontent.com&amp;continue=https://accounts.google.com/signin/oauth/legacy/consent?authuser%3Dunknown%26part%3DAJi8hANUxgRXSzrF0wrWADfjc2qM9cuJvDpkfw6D2BILyQnZyQCgjSVS0WhcGVmAmvJBiT_1bI3l9bV5RRQovV57yZWEvMQzWougoJliKtx6Vv17y8s8AWWObRdGj5EIeyshzHtgLad8J2FdnFLrTn9m5TZ5oouYcsziwWAklyoZ20zu1ytWlmUY5OvBce_KMWZh9a4WSFFnmWlz3ro4RDtFteNiL-jWl1wOFQqC4L25oEvogE4zLIgC8D6saWrL4MR9KA8WE8cQQgSg0Y39d_7C7n0Xuk7-AvRxMobG3DwHbnFN7o_kGZh4isoiF7XSFDaBDa9DG3ut8aRTeMIxmI2L-EvYmFpLbHFcttu0Ew1A6cyvf0G7IDn6n5RqLL2loU86BlxqHCvlIpcaQQckPXE4gdp5I0LJIPhPAnSnLXg1Roy8u-HHij_N3myh7daWw7HPKoZmOSP2aink-eRJnHDdyEWNGwU90g%26flowName%3DGeneralOAuthFlow%26as%3DS-417310026%253A1782454005250465%26client_id%3D762035908431-9kl6ml5gkncg24v92q1b77qgtqvva7u4.apps.googleusercontent.com%23&amp;dsh=S-417310026:1782454005250465&amp;flowName=GeneralOAuthLite&amp;o2v=2&amp;opparams=%253F&amp;rart=ANgoxccqn0YIyZjnbSWezy8K4WapdejJe3uYczseTAfkljsp2hxow6N35A_NvXKkvg70xjc5t1eVk9cvAvH0pHY2IBbhsV2uaDdFmGSp45MC6B3c0BtZsas&amp;redirect_uri=https://fershop.net/api/auth.php?provider%3Dgoogle%26action%3Dcallback&amp;response_type=code&amp;scope=openid+email+profile&amp;service=lso&amp;state=dea0e0eabc59b8eabf333274f9d4b51b",
+    "source": "crawler_html_form",
+    "confidence": 0.8,
+    "tags": [
+      "form",
+      "method:POST"
+    ]
+  },
+  {
+    "type": "url",
+    "value": "https://fershop.net/api/graphql_is_translatable_rweb_tweet_is_translatable_enabled",
+    "source": "crawler_html_inline_js",
+    "confidence": 0.7,
+    "tags": [
+      "api_discovered"
+    ]
+  },
+  {
+    "type": "url",
+    "value": "https://fershop.net/api/graphql_is_translatable_rweb_tweet_is_translatable_enabled",
+    "source": "crawler_html_inline_js",
+    "confidence": 0.7,
+    "tags": [
+      "api_discovered"
+    ]
+  },
+  {
+    "type": "url",
+    "value": "https://fershop.net/api/backendDataInSessionFlag",
+    "source": "crawler_html_inline_js",
+    "confidence": 0.7,
+    "tags": [
+      "api_discovered"
+    ]
+  },
+  {
+    "type": "url",
+    "value": "https://fershop.net/os-x.xml",
+    "source": "crawler_html_inline_js",
+    "confidence": 0.7,
+    "tags": [
+      "api_discovered"
+    ]
+  },
+  {
+    "type": "url",
+    "value": "https://fershop.net/os-grok.xml",
+    "source": "crawler_html_inline_js",
+    "confidence": 0.7,
+    "tags": [
+      "api_discovered"
+    ]
+  },
+  {
+    "type": "url",
+    "value": "https://fershop.net/manifest.json",
+    "source": "crawler_html_inline_js",
+    "confidence": 0.7,
+    "tags": [
+      "api_discovered"
+    ]
+  },
+  {
+    "type": "url",
+    "value": "https://fershop.net/os-x.xml",
+    "source": "crawler_html_inline_js",
+    "confidence": 0.7,
+    "tags": [
+      "api_discovered"
+    ]
+  },
+  {
+    "type": "url",
+    "value": "https://fershop.net/os-grok.xml",
+    "source": "crawler_html_inline_js",
+    "confidence": 0.7,
+    "tags": [
+      "api_discovered"
+    ]
+  },
+  {
+    "type": "url",
+    "value": "https://fershop.net/api/auth.php",
+    "source": "crawler_html_inline_js",
+    "confidence": 0.7,
+    "tags": [
+      "api_discovered"
+    ]
+  },
+  {
+    "type": "url",
+    "value": "https://fershop.net/api/auth.php",
+    "source": "crawler_html_inline_js",
+    "confidence": 0.7,
+    "tags": [
+      "api_discovered"
+    ]
+  },
+  {
+    "type": "url",
+    "value": "https://fershop.net/api/artists.php",
+    "source": "crawler_html_inline_js",
+    "confidence": 0.7,
+    "tags": [
+      "api_discovered"
+    ]
+  },
+  {
+    "type": "url",
+    "value": "https://fershop.net/opensearch.xml",
+    "source": "crawler_html_inline_js",
+    "confidence": 0.7,
+    "tags": [
+      "api_discovered"
+    ]
+  },
+  {
+    "type": "url",
+    "value": "https://fershop.net/feed.xml",
+    "source": "crawler_html_inline_js",
+    "confidence": 0.7,
+    "tags": [
+      "api_discovered"
+    ]
+  },
+  {
+    "type": "url",
+    "value": "https://fershop.net/api/auth.php",
+    "source": "crawler_html_inline_js",
+    "confidence": 0.7,
+    "tags": [
+      "api_discovered"
+    ]
+  },
+  {
+    "type": "url",
+    "value": "https://fershop.net/api/auth.php",
+    "source": "crawler_html_inline_js",
+    "confidence": 0.7,
+    "tags": [
+      "api_discovered"
+    ]
+  },
+  {
+    "type": "url",
+    "value": "https://fershop.net/opensearch.xml",
+    "source": "crawler_html_inline_js",
+    "confidence": 0.7,
+    "tags": [
+      "api_discovered"
+    ]
+  },
+  {
+    "type": "url",
+    "value": "https://fershop.net/feed.xml",
+    "source": "crawler_html_inline_js",
+    "confidence": 0.7,
+    "tags": [
+      "api_discovered"
+    ]
+  },
+  {
+    "type": "url",
+    "value": "https://fershop.net/catalog",
+    "source": "crawler_html_form",
+    "confidence": 0.8,
+    "tags": [
+      "form",
+      "method:GET"
+    ]
+  },
+  {
+    "type": "url",
+    "value": "https://fershop.net/api/auth.php",
+    "source": "crawler_html_inline_js",
+    "confidence": 0.7,
+    "tags": [
+      "api_discovered"
+    ]
+  },
+  {
+    "type": "url",
+    "value": "https://fershop.net/api/auth.php",
+    "source": "crawler_html_inline_js",
+    "confidence": 0.7,
+    "tags": [
+      "api_discovered"
+    ]
+  },
+  {
+    "type": "url",
+    "value": "https://fershop.net/opensearch.xml",
+    "source": "crawler_html_inline_js",
+    "confidence": 0.7,
+    "tags": [
+      "api_discovered"
+    ]
+  },
+  {
+    "type": "url",
+    "value": "https://fershop.net/feed.xml",
+    "source": "crawler_html_inline_js",
+    "confidence": 0.7,
+    "tags": [
+      "api_discovered"
+    ]
+  },
+  {
+    "type": "url",
+    "value": "https://fershop.net/api/auth.php",
+    "source": "crawler_html_inline_js",
+    "confidence": 0.7,
+    "tags": [
+      "api_discovered"
+    ]
+  },
+  {
+    "type": "url",
+    "value": "https://fershop.net/api/auth.php",
+    "source": "crawler_html_inline_js",
+    "confidence": 0.7,
+    "tags": [
+      "api_discovered"
+    ]
+  },
+  {
+    "type": "url",
+    "value": "https://fershop.net/opensearch.xml",
+    "source": "crawler_html_inline_js",
+    "confidence": 0.7,
+    "tags": [
+      "api_discovered"
+    ]
+  },
+  {
+    "type": "url",
+    "value": "https://fershop.net/feed.xml",
+    "source": "crawler_html_inline_js",
+    "confidence": 0.7,
+    "tags": [
+      "api_discovered"
+    ]
+  },
+  {
+    "type": "url",
+    "value": "https://fershop.net/catalog",
+    "source": "crawler_html_form",
+    "confidence": 0.8,
+    "tags": [
+      "form",
+      "method:GET"
+    ]
+  },
+  {
+    "type": "url",
+    "value": "https://fershop.net/api/auth.php",
+    "source": "crawler_html_inline_js",
+    "confidence": 0.7,
+    "tags": [
+      "api_discovered"
+    ]
+  },
+  {
+    "type": "url",
+    "value": "https://fershop.net/api/auth.php",
+    "source": "crawler_html_inline_js",
+    "confidence": 0.7,
+    "tags": [
+      "api_discovered"
+    ]
+  },
+  {
+    "type": "url",
+    "value": "https://fershop.net/opensearch.xml",
+    "source": "crawler_html_inline_js",
+    "confidence": 0.7,
+    "tags": [
+      "api_discovered"
+    ]
+  },
+  {
+    "type": "url",
+    "value": "https://fershop.net/feed.xml",
+    "source": "crawler_html_inline_js",
+    "confidence": 0.7,
+    "tags": [
+      "api_discovered"
+    ]
+  },
+  {
+    "type": "url",
+    "value": "https://fershop.net/catalog",
+    "source": "crawler_html_form",
+    "confidence": 0.8,
+    "tags": [
+      "form",
+      "method:GET"
+    ]
+  },
+  {
+    "type": "url",
+    "value": "https://fershop.net/api/auth.php",
+    "source": "crawler_html_inline_js",
+    "confidence": 0.7,
+    "tags": [
+      "api_discovered"
+    ]
+  },
+  {
+    "type": "url",
+    "value": "https://fershop.net/api/auth.php",
+    "source": "crawler_html_inline_js",
+    "confidence": 0.7,
+    "tags": [
+      "api_discovered"
+    ]
+  },
+  {
+    "type": "url",
+    "value": "https://fershop.net/opensearch.xml",
+    "source": "crawler_html_inline_js",
+    "confidence": 0.7,
+    "tags": [
+      "api_discovered"
+    ]
+  },
+  {
+    "type": "url",
+    "value": "https://fershop.net/feed.xml",
+    "source": "crawler_html_inline_js",
+    "confidence": 0.7,
+    "tags": [
+      "api_discovered"
+    ]
+  },
+  {
+    "type": "url",
+    "value": "https://fershop.net/catalog",
+    "source": "crawler_html_form",
+    "confidence": 0.8,
+    "tags": [
+      "form",
+      "method:GET"
+    ]
+  },
+  {
+    "type": "url",
+    "value": "https://fershop.net/api/auth.php",
+    "source": "crawler_html_inline_js",
+    "confidence": 0.7,
+    "tags": [
+      "api_discovered"
+    ]
+  },
+  {
+    "type": "url",
+    "value": "https://fershop.net/api/auth.php",
+    "source": "crawler_html_inline_js",
+    "confidence": 0.7,
+    "tags": [
+      "api_discovered"
+    ]
+  },
+  {
+    "type": "url",
+    "value": "https://fershop.net/opensearch.xml",
+    "source": "crawler_html_inline_js",
+    "confidence": 0.7,
+    "tags": [
+      "api_discovered"
+    ]
+  },
+  {
+    "type": "url",
+    "value": "https://fershop.net/feed.xml",
+    "source": "crawler_html_inline_js",
+    "confidence": 0.7,
+    "tags": [
+      "api_discovered"
+    ]
+  },
+  {
+    "type": "url",
+    "value": "https://fershop.net/catalog",
+    "source": "crawler_html_form",
+    "confidence": 0.8,
+    "tags": [
+      "form",
+      "method:GET"
+    ]
+  },
+  {
+    "type": "url",
+    "value": "https://fershop.net/api/auth.php",
+    "source": "crawler_html_inline_js",
+    "confidence": 0.7,
+    "tags": [
+      "api_discovered"
+    ]
+  },
+  {
+    "type": "url",
+    "value": "https://fershop.net/api/auth.php",
+    "source": "crawler_html_inline_js",
+    "confidence": 0.7,
+    "tags": [
+      "api_discovered"
+    ]
+  },
+  {
+    "type": "url",
+    "value": "https://fershop.net/api/",
+    "source": "crawler_html_inline_js",
+    "confidence": 0.7,
+    "tags": [
+      "api_discovered"
+    ]
+  },
+  {
+    "type": "url",
+    "value": "https://fershop.net/api/upload.php",
+    "source": "crawler_html_inline_js",
+    "confidence": 0.7,
+    "tags": [
+      "api_discovered"
+    ]
+  },
+  {
+    "type": "url",
+    "value": "https://fershop.net/opensearch.xml",
+    "source": "crawler_html_inline_js",
+    "confidence": 0.7,
+    "tags": [
+      "api_discovered"
+    ]
+  },
+  {
+    "type": "url",
+    "value": "https://fershop.net/feed.xml",
+    "source": "crawler_html_inline_js",
+    "confidence": 0.7,
+    "tags": [
+      "api_discovered"
+    ]
+  },
+  {
+    "type": "url",
+    "value": "https://fershop.net/api/auth.php",
+    "source": "crawler_html_inline_js",
+    "confidence": 0.7,
+    "tags": [
+      "api_discovered"
+    ]
+  },
+  {
+    "type": "url",
+    "value": "https://fershop.net/api/auth.php",
+    "source": "crawler_html_inline_js",
+    "confidence": 0.7,
+    "tags": [
+      "api_discovered"
+    ]
+  },
+  {
+    "type": "url",
+    "value": "https://fershop.net/api/",
+    "source": "crawler_html_inline_js",
+    "confidence": 0.7,
+    "tags": [
+      "api_discovered"
+    ]
+  },
+  {
+    "type": "url",
+    "value": "https://fershop.net/api/upload.php",
+    "source": "crawler_html_inline_js",
+    "confidence": 0.7,
+    "tags": [
+      "api_discovered"
+    ]
+  },
+  {
+    "type": "url",
+    "value": "https://fershop.net/opensearch.xml",
+    "source": "crawler_html_inline_js",
+    "confidence": 0.7,
+    "tags": [
+      "api_discovered"
+    ]
+  },
+  {
+    "type": "url",
+    "value": "https://fershop.net/feed.xml",
+    "source": "crawler_html_inline_js",
+    "confidence": 0.7,
+    "tags": [
+      "api_discovered"
+    ]
+  },
+  {
+    "type": "url",
+    "value": "https://fershop.net/api/auth.php",
+    "source": "crawler_html_inline_js",
+    "confidence": 0.7,
+    "tags": [
+      "api_discovered"
+    ]
+  },
+  {
+    "type": "url",
+    "value": "https://fershop.net/api/auth.php",
+    "source": "crawler_html_inline_js",
+    "confidence": 0.7,
+    "tags": [
+      "api_discovered"
+    ]
+  },
+  {
+    "type": "url",
+    "value": "https://fershop.net/api/",
+    "source": "crawler_html_inline_js",
+    "confidence": 0.7,
+    "tags": [
+      "api_discovered"
+    ]
+  },
+  {
+    "type": "url",
+    "value": "https://fershop.net/api/upload.php",
+    "source": "crawler_html_inline_js",
+    "confidence": 0.7,
+    "tags": [
+      "api_discovered"
+    ]
+  },
+  {
+    "type": "url",
+    "value": "https://fershop.net/opensearch.xml",
+    "source": "crawler_html_inline_js",
+    "confidence": 0.7,
+    "tags": [
+      "api_discovered"
+    ]
+  },
+  {
+    "type": "url",
+    "value": "https://fershop.net/feed.xml",
+    "source": "crawler_html_inline_js",
+    "confidence": 0.7,
+    "tags": [
+      "api_discovered"
+    ]
+  },
+  {
+    "type": "url",
+    "value": "https://fershop.net/api/auth.php",
+    "source": "crawler_html_inline_js",
+    "confidence": 0.7,
+    "tags": [
+      "api_discovered"
+    ]
+  },
+  {
+    "type": "url",
+    "value": "https://fershop.net/api/auth.php",
+    "source": "crawler_html_inline_js",
+    "confidence": 0.7,
+    "tags": [
+      "api_discovered"
+    ]
+  },
+  {
+    "type": "url",
+    "value": "https://fershop.net/opensearch.xml",
+    "source": "crawler_html_inline_js",
+    "confidence": 0.7,
+    "tags": [
+      "api_discovered"
+    ]
+  },
+  {
+    "type": "url",
+    "value": "https://fershop.net/feed.xml",
+    "source": "crawler_html_inline_js",
+    "confidence": 0.7,
+    "tags": [
+      "api_discovered"
+    ]
+  },
+  {
+    "type": "url",
+    "value": "./api/",
+    "source": "crawler_js_extract",
+    "confidence": 0.8,
+    "tags": [
+      "api_discovered"
+    ]
+  },
+  {
+    "type": "url",
+    "value": "./api/products.php",
+    "source": "crawler_js_extract",
+    "confidence": 0.8,
+    "tags": [
+      "api_discovered"
+    ]
+  },
+  {
+    "type": "url",
+    "value": "https://fershop.net/api/auth.php",
+    "source": "crawler_html_inline_js",
+    "confidence": 0.7,
+    "tags": [
+      "api_discovered"
+    ]
+  },
+  {
+    "type": "url",
+    "value": "https://fershop.net/api/auth.php",
+    "source": "crawler_html_inline_js",
+    "confidence": 0.7,
+    "tags": [
+      "api_discovered"
+    ]
+  },
+  {
+    "type": "url",
+    "value": "https://fershop.net/opensearch.xml",
+    "source": "crawler_html_inline_js",
+    "confidence": 0.7,
+    "tags": [
+      "api_discovered"
+    ]
+  },
+  {
+    "type": "url",
+    "value": "https://fershop.net/feed.xml",
+    "source": "crawler_html_inline_js",
+    "confidence": 0.7,
+    "tags": [
+      "api_discovered"
+    ]
+  },
+  {
+    "type": "url",
+    "value": "https://fershop.net/api/auth.php",
+    "source": "crawler_html_inline_js",
+    "confidence": 0.7,
+    "tags": [
+      "api_discovered"
+    ]
+  },
+  {
+    "type": "url",
+    "value": "https://fershop.net/api/auth.php",
+    "source": "crawler_html_inline_js",
+    "confidence": 0.7,
+    "tags": [
+      "api_discovered"
+    ]
+  },
+  {
+    "type": "url",
+    "value": "https://fershop.net/opensearch.xml",
+    "source": "crawler_html_inline_js",
+    "confidence": 0.7,
+    "tags": [
+      "api_discovered"
+    ]
+  },
+  {
+    "type": "url",
+    "value": "https://fershop.net/feed.xml",
+    "source": "crawler_html_inline_js",
+    "confidence": 0.7,
+    "tags": [
+      "api_discovered"
+    ]
+  },
+  {
+    "type": "url",
+    "value": "https://fershop.net/catalog",
+    "source": "crawler_html_form",
+    "confidence": 0.8,
+    "tags": [
+      "form",
+      "method:GET"
+    ]
+  },
+  {
+    "type": "url",
+    "value": "https://fershop.net/api/auth.php",
+    "source": "crawler_html_inline_js",
+    "confidence": 0.7,
+    "tags": [
+      "api_discovered"
+    ]
+  },
+  {
+    "type": "url",
+    "value": "https://fershop.net/api/auth.php",
+    "source": "crawler_html_inline_js",
+    "confidence": 0.7,
+    "tags": [
+      "api_discovered"
+    ]
+  },
+  {
+    "type": "url",
+    "value": "https://fershop.net/opensearch.xml",
+    "source": "crawler_html_inline_js",
+    "confidence": 0.7,
+    "tags": [
+      "api_discovered"
+    ]
+  },
+  {
+    "type": "url",
+    "value": "https://fershop.net/feed.xml",
+    "source": "crawler_html_inline_js",
+    "confidence": 0.7,
+    "tags": [
+      "api_discovered"
+    ]
+  },
+  {
+    "type": "url",
+    "value": "https://fershop.net/api/auth.php",
+    "source": "crawler_html_inline_js",
+    "confidence": 0.7,
+    "tags": [
+      "api_discovered"
+    ]
+  },
+  {
+    "type": "url",
+    "value": "https://fershop.net/api/auth.php",
+    "source": "crawler_html_inline_js",
+    "confidence": 0.7,
+    "tags": [
+      "api_discovered"
+    ]
+  },
+  {
+    "type": "url",
+    "value": "https://fershop.net/opensearch.xml",
+    "source": "crawler_html_inline_js",
+    "confidence": 0.7,
+    "tags": [
+      "api_discovered"
+    ]
+  },
+  {
+    "type": "url",
+    "value": "https://fershop.net/feed.xml",
+    "source": "crawler_html_inline_js",
+    "confidence": 0.7,
+    "tags": [
+      "api_discovered"
+    ]
+  },
+  {
+    "type": "url",
+    "value": "https://fershop.net/api/auth.php",
+    "source": "crawler_html_inline_js",
+    "confidence": 0.7,
+    "tags": [
+      "api_discovered"
+    ]
+  },
+  {
+    "type": "url",
+    "value": "https://fershop.net/api/auth.php",
+    "source": "crawler_html_inline_js",
+    "confidence": 0.7,
+    "tags": [
+      "api_discovered"
+    ]
+  },
+  {
+    "type": "url",
+    "value": "https://fershop.net/opensearch.xml",
+    "source": "crawler_html_inline_js",
+    "confidence": 0.7,
+    "tags": [
+      "api_discovered"
+    ]
+  },
+  {
+    "type": "url",
+    "value": "https://fershop.net/feed.xml",
+    "source": "crawler_html_inline_js",
+    "confidence": 0.7,
+    "tags": [
+      "api_discovered"
+    ]
+  },
+  {
+    "type": "url",
+    "value": "https://fershop.net/api/founding-members-payment.php",
+    "source": "crawler_html_inline_js",
+    "confidence": 0.7,
+    "tags": [
+      "api_discovered"
+    ]
+  },
+  {
+    "type": "url",
+    "value": "https://fershop.net/api/founding-members-payment.php",
+    "source": "crawler_html_form",
+    "confidence": 0.8,
+    "tags": [
+      "form",
+      "method:POST"
+    ]
+  },
+  {
+    "type": "url",
+    "value": "https://fershop.net/api/auth.php",
+    "source": "crawler_html_inline_js",
+    "confidence": 0.7,
+    "tags": [
+      "api_discovered"
+    ]
+  },
+  {
+    "type": "url",
+    "value": "https://fershop.net/api/auth.php",
+    "source": "crawler_html_inline_js",
+    "confidence": 0.7,
+    "tags": [
+      "api_discovered"
+    ]
+  },
+  {
+    "type": "url",
+    "value": "https://fershop.net/api/artists.php",
+    "source": "crawler_html_inline_js",
+    "confidence": 0.7,
+    "tags": [
+      "api_discovered"
+    ]
+  },
+  {
+    "type": "url",
+    "value": "https://fershop.net/opensearch.xml",
+    "source": "crawler_html_inline_js",
+    "confidence": 0.7,
+    "tags": [
+      "api_discovered"
+    ]
+  },
+  {
+    "type": "url",
+    "value": "https://fershop.net/feed.xml",
+    "source": "crawler_html_inline_js",
+    "confidence": 0.7,
+    "tags": [
+      "api_discovered"
+    ]
+  },
+  {
+    "type": "url",
+    "value": "https://fershop.net/api/auth.php",
+    "source": "crawler_html_inline_js",
+    "confidence": 0.7,
+    "tags": [
+      "api_discovered"
+    ]
+  },
+  {
+    "type": "url",
+    "value": "https://fershop.net/api/auth.php",
+    "source": "crawler_html_inline_js",
+    "confidence": 0.7,
+    "tags": [
+      "api_discovered"
+    ]
+  },
+  {
+    "type": "url",
+    "value": "https://fershop.net/api/artists.php",
+    "source": "crawler_html_inline_js",
+    "confidence": 0.7,
+    "tags": [
+      "api_discovered"
+    ]
+  },
+  {
+    "type": "url",
+    "value": "https://fershop.net/opensearch.xml",
+    "source": "crawler_html_inline_js",
+    "confidence": 0.7,
+    "tags": [
+      "api_discovered"
+    ]
+  },
+  {
+    "type": "url",
+    "value": "https://fershop.net/feed.xml",
+    "source": "crawler_html_inline_js",
+    "confidence": 0.7,
+    "tags": [
+      "api_discovered"
+    ]
+  },
+  {
+    "type": "url",
+    "value": "https://fershop.net/api/auth.php",
+    "source": "crawler_html_inline_js",
+    "confidence": 0.7,
+    "tags": [
+      "api_discovered"
+    ]
+  },
+  {
+    "type": "url",
+    "value": "https://fershop.net/api/auth.php",
+    "source": "crawler_html_inline_js",
+    "confidence": 0.7,
+    "tags": [
+      "api_discovered"
+    ]
+  },
+  {
+    "type": "url",
+    "value": "https://fershop.net/api/artists.php",
+    "source": "crawler_html_inline_js",
+    "confidence": 0.7,
+    "tags": [
+      "api_discovered"
+    ]
+  },
+  {
+    "type": "url",
+    "value": "https://fershop.net/opensearch.xml",
+    "source": "crawler_html_inline_js",
+    "confidence": 0.7,
+    "tags": [
+      "api_discovered"
+    ]
+  },
+  {
+    "type": "url",
+    "value": "https://fershop.net/feed.xml",
+    "source": "crawler_html_inline_js",
+    "confidence": 0.7,
+    "tags": [
+      "api_discovered"
+    ]
+  },
+  {
+    "type": "url",
+    "value": "https://fershop.net/api/auth.php",
+    "source": "crawler_html_inline_js",
+    "confidence": 0.7,
+    "tags": [
+      "api_discovered"
+    ]
+  },
+  {
+    "type": "url",
+    "value": "https://fershop.net/api/auth.php",
+    "source": "crawler_html_inline_js",
+    "confidence": 0.7,
+    "tags": [
+      "api_discovered"
+    ]
+  },
+  {
+    "type": "url",
+    "value": "https://fershop.net/api/",
+    "source": "crawler_html_inline_js",
+    "confidence": 0.7,
+    "tags": [
+      "api_discovered"
+    ]
+  },
+  {
+    "type": "url",
+    "value": "https://fershop.net/api/upload.php",
+    "source": "crawler_html_inline_js",
+    "confidence": 0.7,
+    "tags": [
+      "api_discovered"
+    ]
+  },
+  {
+    "type": "url",
+    "value": "https://fershop.net/opensearch.xml",
+    "source": "crawler_html_inline_js",
+    "confidence": 0.7,
+    "tags": [
+      "api_discovered"
+    ]
+  },
+  {
+    "type": "url",
+    "value": "https://fershop.net/feed.xml",
+    "source": "crawler_html_inline_js",
+    "confidence": 0.7,
+    "tags": [
+      "api_discovered"
+    ]
+  },
+  {
+    "type": "url",
+    "value": "https://fershop.net/api/auth.php",
+    "source": "crawler_html_inline_js",
+    "confidence": 0.7,
+    "tags": [
+      "api_discovered"
+    ]
+  },
+  {
+    "type": "url",
+    "value": "https://fershop.net/api/auth.php",
+    "source": "crawler_html_inline_js",
+    "confidence": 0.7,
+    "tags": [
+      "api_discovered"
+    ]
+  },
+  {
+    "type": "url",
+    "value": "https://fershop.net/opensearch.xml",
+    "source": "crawler_html_inline_js",
+    "confidence": 0.7,
+    "tags": [
+      "api_discovered"
+    ]
+  },
+  {
+    "type": "url",
+    "value": "https://fershop.net/feed.xml",
+    "source": "crawler_html_inline_js",
+    "confidence": 0.7,
+    "tags": [
+      "api_discovered"
+    ]
+  },
+  {
+    "type": "url",
+    "value": "https://fershop.net/catalog",
+    "source": "crawler_html_form",
+    "confidence": 0.8,
+    "tags": [
+      "form",
+      "method:GET"
+    ]
+  },
+  {
+    "type": "url",
+    "value": "https://fershop.net/api/auth.php",
+    "source": "crawler_html_inline_js",
+    "confidence": 0.7,
+    "tags": [
+      "api_discovered"
+    ]
+  },
+  {
+    "type": "url",
+    "value": "https://fershop.net/api/auth.php",
+    "source": "crawler_html_inline_js",
+    "confidence": 0.7,
+    "tags": [
+      "api_discovered"
+    ]
+  },
+  {
+    "type": "url",
+    "value": "https://fershop.net/opensearch.xml",
+    "source": "crawler_html_inline_js",
+    "confidence": 0.7,
+    "tags": [
+      "api_discovered"
+    ]
+  },
+  {
+    "type": "url",
+    "value": "https://fershop.net/feed.xml",
+    "source": "crawler_html_inline_js",
+    "confidence": 0.7,
+    "tags": [
+      "api_discovered"
+    ]
+  },
+  {
+    "type": "url",
+    "value": "https://fershop.net/catalog",
+    "source": "crawler_html_form",
+    "confidence": 0.8,
+    "tags": [
+      "form",
+      "method:GET"
+    ]
+  },
+  {
+    "type": "url",
+    "value": "https://fershop.net/api/auth.php",
+    "source": "crawler_html_inline_js",
+    "confidence": 0.7,
+    "tags": [
+      "api_discovered"
+    ]
+  },
+  {
+    "type": "url",
+    "value": "https://fershop.net/api/auth.php",
+    "source": "crawler_html_inline_js",
+    "confidence": 0.7,
+    "tags": [
+      "api_discovered"
+    ]
+  },
+  {
+    "type": "url",
+    "value": "https://fershop.net/opensearch.xml",
+    "source": "crawler_html_inline_js",
+    "confidence": 0.7,
+    "tags": [
+      "api_discovered"
+    ]
+  },
+  {
+    "type": "url",
+    "value": "https://fershop.net/feed.xml",
+    "source": "crawler_html_inline_js",
+    "confidence": 0.7,
+    "tags": [
+      "api_discovered"
+    ]
+  },
+  {
+    "type": "url",
+    "value": "https://fershop.net/catalog",
+    "source": "crawler_html_form",
+    "confidence": 0.8,
+    "tags": [
+      "form",
+      "method:GET"
+    ]
+  },
+  {
+    "type": "url",
+    "value": "https://fershop.net/api/auth.php",
+    "source": "crawler_html_inline_js",
+    "confidence": 0.7,
+    "tags": [
+      "api_discovered"
+    ]
+  },
+  {
+    "type": "url",
+    "value": "https://fershop.net/api/auth.php",
+    "source": "crawler_html_inline_js",
+    "confidence": 0.7,
+    "tags": [
+      "api_discovered"
+    ]
+  },
+  {
+    "type": "url",
+    "value": "https://fershop.net/opensearch.xml",
+    "source": "crawler_html_inline_js",
+    "confidence": 0.7,
+    "tags": [
+      "api_discovered"
+    ]
+  },
+  {
+    "type": "url",
+    "value": "https://fershop.net/feed.xml",
+    "source": "crawler_html_inline_js",
+    "confidence": 0.7,
+    "tags": [
+      "api_discovered"
+    ]
+  },
+  {
+    "type": "url",
+    "value": "https://fershop.net/catalog",
+    "source": "crawler_html_form",
+    "confidence": 0.8,
+    "tags": [
+      "form",
+      "method:GET"
+    ]
+  },
+  {
+    "type": "url",
+    "value": "https://fershop.net/api/auth.php",
+    "source": "crawler_html_inline_js",
+    "confidence": 0.7,
+    "tags": [
+      "api_discovered"
+    ]
+  },
+  {
+    "type": "url",
+    "value": "https://fershop.net/api/auth.php",
+    "source": "crawler_html_inline_js",
+    "confidence": 0.7,
+    "tags": [
+      "api_discovered"
+    ]
+  },
+  {
+    "type": "url",
+    "value": "https://fershop.net/opensearch.xml",
+    "source": "crawler_html_inline_js",
+    "confidence": 0.7,
+    "tags": [
+      "api_discovered"
+    ]
+  },
+  {
+    "type": "url",
+    "value": "https://fershop.net/feed.xml",
+    "source": "crawler_html_inline_js",
+    "confidence": 0.7,
+    "tags": [
+      "api_discovered"
+    ]
+  },
+  {
+    "type": "url",
+    "value": "https://fershop.net/catalog",
+    "source": "crawler_html_form",
+    "confidence": 0.8,
+    "tags": [
+      "form",
+      "method:GET"
+    ]
+  },
+  {
+    "type": "url",
+    "value": "https://fershop.net/api/auth.php",
+    "source": "crawler_html_inline_js",
+    "confidence": 0.7,
+    "tags": [
+      "api_discovered"
+    ]
+  },
+  {
+    "type": "url",
+    "value": "https://fershop.net/api/auth.php",
+    "source": "crawler_html_inline_js",
+    "confidence": 0.7,
+    "tags": [
+      "api_discovered"
+    ]
+  },
+  {
+    "type": "url",
+    "value": "https://fershop.net/opensearch.xml",
+    "source": "crawler_html_inline_js",
+    "confidence": 0.7,
+    "tags": [
+      "api_discovered"
+    ]
+  },
+  {
+    "type": "url",
+    "value": "https://fershop.net/feed.xml",
+    "source": "crawler_html_inline_js",
+    "confidence": 0.7,
+    "tags": [
+      "api_discovered"
+    ]
+  },
+  {
+    "type": "url",
+    "value": "https://fershop.net/catalog",
+    "source": "crawler_html_form",
+    "confidence": 0.8,
+    "tags": [
+      "form",
+      "method:GET"
+    ]
+  },
+  {
+    "type": "url",
+    "value": "https://fershop.net/api/auth.php",
+    "source": "crawler_html_inline_js",
+    "confidence": 0.7,
+    "tags": [
+      "api_discovered"
+    ]
+  },
+  {
+    "type": "url",
+    "value": "https://fershop.net/api/auth.php",
+    "source": "crawler_html_inline_js",
+    "confidence": 0.7,
+    "tags": [
+      "api_discovered"
+    ]
+  },
+  {
+    "type": "url",
+    "value": "https://fershop.net/opensearch.xml",
+    "source": "crawler_html_inline_js",
+    "confidence": 0.7,
+    "tags": [
+      "api_discovered"
+    ]
+  },
+  {
+    "type": "url",
+    "value": "https://fershop.net/feed.xml",
+    "source": "crawler_html_inline_js",
+    "confidence": 0.7,
+    "tags": [
+      "api_discovered"
+    ]
+  },
+  {
+    "type": "url",
+    "value": "https://fershop.net/catalog",
+    "source": "crawler_html_form",
+    "confidence": 0.8,
+    "tags": [
+      "form",
+      "method:GET"
+    ]
+  },
+  {
+    "type": "url",
+    "value": "https://fershop.net/api/auth.php",
+    "source": "crawler_html_inline_js",
+    "confidence": 0.7,
+    "tags": [
+      "api_discovered"
+    ]
+  },
+  {
+    "type": "url",
+    "value": "https://fershop.net/api/auth.php",
+    "source": "crawler_html_inline_js",
+    "confidence": 0.7,
+    "tags": [
+      "api_discovered"
+    ]
+  },
+  {
+    "type": "url",
+    "value": "https://fershop.net/opensearch.xml",
+    "source": "crawler_html_inline_js",
+    "confidence": 0.7,
+    "tags": [
+      "api_discovered"
+    ]
+  },
+  {
+    "type": "url",
+    "value": "https://fershop.net/feed.xml",
+    "source": "crawler_html_inline_js",
+    "confidence": 0.7,
+    "tags": [
+      "api_discovered"
+    ]
+  },
+  {
+    "type": "url",
+    "value": "https://fershop.net/catalog",
+    "source": "crawler_html_form",
+    "confidence": 0.8,
+    "tags": [
+      "form",
+      "method:GET"
+    ]
+  },
+  {
+    "type": "url",
+    "value": "https://fershop.net/api/auth.php",
+    "source": "crawler_html_inline_js",
+    "confidence": 0.7,
+    "tags": [
+      "api_discovered"
+    ]
+  },
+  {
+    "type": "url",
+    "value": "https://fershop.net/api/auth.php",
+    "source": "crawler_html_inline_js",
+    "confidence": 0.7,
+    "tags": [
+      "api_discovered"
+    ]
+  },
+  {
+    "type": "url",
+    "value": "https://fershop.net/opensearch.xml",
+    "source": "crawler_html_inline_js",
+    "confidence": 0.7,
+    "tags": [
+      "api_discovered"
+    ]
+  },
+  {
+    "type": "url",
+    "value": "https://fershop.net/feed.xml",
+    "source": "crawler_html_inline_js",
+    "confidence": 0.7,
+    "tags": [
+      "api_discovered"
+    ]
+  },
+  {
+    "type": "url",
+    "value": "https://fershop.net/catalog",
+    "source": "crawler_html_form",
+    "confidence": 0.8,
+    "tags": [
+      "form",
+      "method:GET"
+    ]
+  },
+  {
+    "type": "url",
+    "value": "https://fershop.net/api/auth.php",
+    "source": "crawler_html_inline_js",
+    "confidence": 0.7,
+    "tags": [
+      "api_discovered"
+    ]
+  },
+  {
+    "type": "url",
+    "value": "https://fershop.net/api/auth.php",
+    "source": "crawler_html_inline_js",
+    "confidence": 0.7,
+    "tags": [
+      "api_discovered"
+    ]
+  },
+  {
+    "type": "url",
+    "value": "https://fershop.net/opensearch.xml",
+    "source": "crawler_html_inline_js",
+    "confidence": 0.7,
+    "tags": [
+      "api_discovered"
+    ]
+  },
+  {
+    "type": "url",
+    "value": "https://fershop.net/feed.xml",
+    "source": "crawler_html_inline_js",
+    "confidence": 0.7,
+    "tags": [
+      "api_discovered"
+    ]
+  },
+  {
+    "type": "url",
+    "value": "https://fershop.net/catalog",
+    "source": "crawler_html_form",
+    "confidence": 0.8,
+    "tags": [
+      "form",
+      "method:GET"
+    ]
+  },
+  {
+    "type": "url",
+    "value": "https://fershop.net/api/auth.php",
+    "source": "crawler_html_inline_js",
+    "confidence": 0.7,
+    "tags": [
+      "api_discovered"
+    ]
+  },
+  {
+    "type": "url",
+    "value": "https://fershop.net/api/auth.php",
+    "source": "crawler_html_inline_js",
+    "confidence": 0.7,
+    "tags": [
+      "api_discovered"
+    ]
+  },
+  {
+    "type": "url",
+    "value": "https://fershop.net/opensearch.xml",
+    "source": "crawler_html_inline_js",
+    "confidence": 0.7,
+    "tags": [
+      "api_discovered"
+    ]
+  },
+  {
+    "type": "url",
+    "value": "https://fershop.net/feed.xml",
+    "source": "crawler_html_inline_js",
+    "confidence": 0.7,
+    "tags": [
+      "api_discovered"
+    ]
+  },
+  {
+    "type": "url",
+    "value": "https://fershop.net/catalog",
+    "source": "crawler_html_form",
+    "confidence": 0.8,
+    "tags": [
+      "form",
+      "method:GET"
+    ]
+  },
+  {
+    "type": "url",
+    "value": "https://fershop.net/api/auth.php",
+    "source": "crawler_html_inline_js",
+    "confidence": 0.7,
+    "tags": [
+      "api_discovered"
+    ]
+  },
+  {
+    "type": "url",
+    "value": "https://fershop.net/api/auth.php",
+    "source": "crawler_html_inline_js",
+    "confidence": 0.7,
+    "tags": [
+      "api_discovered"
+    ]
+  },
+  {
+    "type": "url",
+    "value": "https://fershop.net/opensearch.xml",
+    "source": "crawler_html_inline_js",
+    "confidence": 0.7,
+    "tags": [
+      "api_discovered"
+    ]
+  },
+  {
+    "type": "url",
+    "value": "https://fershop.net/feed.xml",
+    "source": "crawler_html_inline_js",
+    "confidence": 0.7,
+    "tags": [
+      "api_discovered"
+    ]
+  },
+  {
+    "type": "url",
+    "value": "https://fershop.net/catalog",
+    "source": "crawler_html_form",
+    "confidence": 0.8,
+    "tags": [
+      "form",
+      "method:GET"
+    ]
+  },
+  {
+    "type": "url",
+    "value": "https://fershop.net/api/auth.php",
+    "source": "crawler_html_inline_js",
+    "confidence": 0.7,
+    "tags": [
+      "api_discovered"
+    ]
+  },
+  {
+    "type": "url",
+    "value": "https://fershop.net/api/auth.php",
+    "source": "crawler_html_inline_js",
+    "confidence": 0.7,
+    "tags": [
+      "api_discovered"
+    ]
+  },
+  {
+    "type": "url",
+    "value": "https://fershop.net/opensearch.xml",
+    "source": "crawler_html_inline_js",
+    "confidence": 0.7,
+    "tags": [
+      "api_discovered"
+    ]
+  },
+  {
+    "type": "url",
+    "value": "https://fershop.net/feed.xml",
+    "source": "crawler_html_inline_js",
+    "confidence": 0.7,
+    "tags": [
+      "api_discovered"
+    ]
+  },
+  {
+    "type": "url",
+    "value": "https://fershop.net/catalog",
+    "source": "crawler_html_form",
+    "confidence": 0.8,
+    "tags": [
+      "form",
+      "method:GET"
+    ]
+  },
+  {
+    "type": "url",
+    "value": "https://fershop.net/api/auth.php",
+    "source": "crawler_html_inline_js",
+    "confidence": 0.7,
+    "tags": [
+      "api_discovered"
+    ]
+  },
+  {
+    "type": "url",
+    "value": "https://fershop.net/api/auth.php",
+    "source": "crawler_html_inline_js",
+    "confidence": 0.7,
+    "tags": [
+      "api_discovered"
+    ]
+  },
+  {
+    "type": "url",
+    "value": "https://fershop.net/opensearch.xml",
+    "source": "crawler_html_inline_js",
+    "confidence": 0.7,
+    "tags": [
+      "api_discovered"
+    ]
+  },
+  {
+    "type": "url",
+    "value": "https://fershop.net/feed.xml",
+    "source": "crawler_html_inline_js",
+    "confidence": 0.7,
+    "tags": [
+      "api_discovered"
+    ]
+  },
+  {
+    "type": "url",
+    "value": "https://fershop.net/catalog",
+    "source": "crawler_html_form",
+    "confidence": 0.8,
+    "tags": [
+      "form",
+      "method:GET"
+    ]
+  },
+  {
+    "type": "url",
+    "value": "https://fershop.net/api/upload.php",
+    "source": "crawler_js_extract",
+    "confidence": 0.8,
+    "tags": [
+      "api_discovered"
+    ]
+  },
+  {
+    "type": "url",
+    "value": "https://fershop.net/api/wiki-edit.php",
+    "source": "crawler_js_extract",
+    "confidence": 0.8,
+    "tags": [
+      "api_discovered"
+    ]
+  },
+  {
+    "type": "url",
+    "value": "https://fershop.net/api/auth.php",
+    "source": "crawler_html_inline_js",
+    "confidence": 0.7,
+    "tags": [
+      "api_discovered"
+    ]
+  },
+  {
+    "type": "url",
+    "value": "https://fershop.net/api/auth.php",
+    "source": "crawler_html_inline_js",
+    "confidence": 0.7,
+    "tags": [
+      "api_discovered"
+    ]
+  },
+  {
+    "type": "url",
+    "value": "https://fershop.net/opensearch.xml",
+    "source": "crawler_html_inline_js",
+    "confidence": 0.7,
+    "tags": [
+      "api_discovered"
+    ]
+  },
+  {
+    "type": "url",
+    "value": "https://fershop.net/feed.xml",
+    "source": "crawler_html_inline_js",
+    "confidence": 0.7,
+    "tags": [
+      "api_discovered"
+    ]
+  },
+  {
+    "type": "url",
+    "value": "https://fershop.net/api/auth.php",
+    "source": "crawler_html_inline_js",
+    "confidence": 0.7,
+    "tags": [
+      "api_discovered"
+    ]
+  },
+  {
+    "type": "url",
+    "value": "https://fershop.net/api/auth.php",
+    "source": "crawler_html_inline_js",
+    "confidence": 0.7,
+    "tags": [
+      "api_discovered"
+    ]
+  },
+  {
+    "type": "url",
+    "value": "https://fershop.net/opensearch.xml",
+    "source": "crawler_html_inline_js",
+    "confidence": 0.7,
+    "tags": [
+      "api_discovered"
+    ]
+  },
+  {
+    "type": "url",
+    "value": "https://fershop.net/feed.xml",
+    "source": "crawler_html_inline_js",
+    "confidence": 0.7,
+    "tags": [
+      "api_discovered"
+    ]
+  },
+  {
+    "type": "url",
+    "value": "https://fershop.net/catalog",
+    "source": "crawler_html_form",
+    "confidence": 0.8,
+    "tags": [
+      "form",
+      "method:GET"
+    ]
+  },
+  {
+    "type": "url",
+    "value": "https://fershop.net/api/auth.php",
+    "source": "crawler_html_inline_js",
+    "confidence": 0.7,
+    "tags": [
+      "api_discovered"
+    ]
+  },
+  {
+    "type": "url",
+    "value": "https://fershop.net/api/auth.php",
+    "source": "crawler_html_inline_js",
+    "confidence": 0.7,
+    "tags": [
+      "api_discovered"
+    ]
+  },
+  {
+    "type": "url",
+    "value": "https://fershop.net/opensearch.xml",
+    "source": "crawler_html_inline_js",
+    "confidence": 0.7,
+    "tags": [
+      "api_discovered"
+    ]
+  },
+  {
+    "type": "url",
+    "value": "https://fershop.net/feed.xml",
+    "source": "crawler_html_inline_js",
+    "confidence": 0.7,
+    "tags": [
+      "api_discovered"
+    ]
+  },
+  {
+    "type": "url",
+    "value": "https://fershop.net/catalog",
+    "source": "crawler_html_form",
+    "confidence": 0.8,
+    "tags": [
+      "form",
+      "method:GET"
+    ]
+  },
+  {
+    "type": "url",
+    "value": "https://fershop.net/api/auth.php",
+    "source": "crawler_html_inline_js",
+    "confidence": 0.7,
+    "tags": [
+      "api_discovered"
+    ]
+  },
+  {
+    "type": "url",
+    "value": "https://fershop.net/api/auth.php",
+    "source": "crawler_html_inline_js",
+    "confidence": 0.7,
+    "tags": [
+      "api_discovered"
+    ]
+  },
+  {
+    "type": "url",
+    "value": "https://fershop.net/opensearch.xml",
+    "source": "crawler_html_inline_js",
+    "confidence": 0.7,
+    "tags": [
+      "api_discovered"
+    ]
+  },
+  {
+    "type": "url",
+    "value": "https://fershop.net/feed.xml",
+    "source": "crawler_html_inline_js",
+    "confidence": 0.7,
+    "tags": [
+      "api_discovered"
+    ]
+  },
+  {
+    "type": "url",
+    "value": "https://fershop.net/catalog",
+    "source": "crawler_html_form",
+    "confidence": 0.8,
+    "tags": [
+      "form",
+      "method:GET"
+    ]
+  },
+  {
+    "type": "url",
+    "value": "https://fershop.net/api/auth.php",
+    "source": "crawler_html_inline_js",
+    "confidence": 0.7,
+    "tags": [
+      "api_discovered"
+    ]
+  },
+  {
+    "type": "url",
+    "value": "https://fershop.net/api/auth.php",
+    "source": "crawler_html_inline_js",
+    "confidence": 0.7,
+    "tags": [
+      "api_discovered"
+    ]
+  },
+  {
+    "type": "url",
+    "value": "https://fershop.net/opensearch.xml",
+    "source": "crawler_html_inline_js",
+    "confidence": 0.7,
+    "tags": [
+      "api_discovered"
+    ]
+  },
+  {
+    "type": "url",
+    "value": "https://fershop.net/feed.xml",
+    "source": "crawler_html_inline_js",
+    "confidence": 0.7,
+    "tags": [
+      "api_discovered"
+    ]
+  },
+  {
+    "type": "url",
+    "value": "https://fershop.net/catalog",
+    "source": "crawler_html_form",
+    "confidence": 0.8,
+    "tags": [
+      "form",
+      "method:GET"
+    ]
+  },
+  {
+    "type": "url",
+    "value": "https://fershop.net/api/auth.php",
+    "source": "crawler_html_inline_js",
+    "confidence": 0.7,
+    "tags": [
+      "api_discovered"
+    ]
+  },
+  {
+    "type": "url",
+    "value": "https://fershop.net/api/auth.php",
+    "source": "crawler_html_inline_js",
+    "confidence": 0.7,
+    "tags": [
+      "api_discovered"
+    ]
+  },
+  {
+    "type": "url",
+    "value": "https://fershop.net/opensearch.xml",
+    "source": "crawler_html_inline_js",
+    "confidence": 0.7,
+    "tags": [
+      "api_discovered"
+    ]
+  },
+  {
+    "type": "url",
+    "value": "https://fershop.net/feed.xml",
+    "source": "crawler_html_inline_js",
+    "confidence": 0.7,
+    "tags": [
+      "api_discovered"
+    ]
+  },
+  {
+    "type": "url",
+    "value": "https://fershop.net/api/auth.php",
+    "source": "crawler_html_inline_js",
+    "confidence": 0.7,
+    "tags": [
+      "api_discovered"
+    ]
+  },
+  {
+    "type": "url",
+    "value": "https://fershop.net/api/auth.php",
+    "source": "crawler_html_inline_js",
+    "confidence": 0.7,
+    "tags": [
+      "api_discovered"
+    ]
+  },
+  {
+    "type": "url",
+    "value": "https://fershop.net/opensearch.xml",
+    "source": "crawler_html_inline_js",
+    "confidence": 0.7,
+    "tags": [
+      "api_discovered"
+    ]
+  },
+  {
+    "type": "url",
+    "value": "https://fershop.net/feed.xml",
+    "source": "crawler_html_inline_js",
+    "confidence": 0.7,
+    "tags": [
+      "api_discovered"
+    ]
+  },
+  {
+    "type": "url",
+    "value": "https://fershop.net/api/auth.php",
+    "source": "crawler_html_inline_js",
+    "confidence": 0.7,
+    "tags": [
+      "api_discovered"
+    ]
+  },
+  {
+    "type": "url",
+    "value": "https://fershop.net/api/auth.php",
+    "source": "crawler_html_inline_js",
+    "confidence": 0.7,
+    "tags": [
+      "api_discovered"
+    ]
+  },
+  {
+    "type": "url",
+    "value": "https://fershop.net/opensearch.xml",
+    "source": "crawler_html_inline_js",
+    "confidence": 0.7,
+    "tags": [
+      "api_discovered"
+    ]
+  },
+  {
+    "type": "url",
+    "value": "https://fershop.net/feed.xml",
+    "source": "crawler_html_inline_js",
+    "confidence": 0.7,
+    "tags": [
+      "api_discovered"
+    ]
+  },
+  {
+    "type": "url",
+    "value": "https://fershop.net/api/auth.php",
+    "source": "crawler_html_inline_js",
+    "confidence": 0.7,
+    "tags": [
+      "api_discovered"
+    ]
+  },
+  {
+    "type": "url",
+    "value": "https://fershop.net/api/auth.php",
+    "source": "crawler_html_inline_js",
+    "confidence": 0.7,
+    "tags": [
+      "api_discovered"
+    ]
+  },
+  {
+    "type": "url",
+    "value": "https://fershop.net/opensearch.xml",
+    "source": "crawler_html_inline_js",
+    "confidence": 0.7,
+    "tags": [
+      "api_discovered"
+    ]
+  },
+  {
+    "type": "url",
+    "value": "https://fershop.net/feed.xml",
+    "source": "crawler_html_inline_js",
+    "confidence": 0.7,
+    "tags": [
+      "api_discovered"
+    ]
+  },
+  {
+    "type": "url",
+    "value": "https://fershop.net/api/auth.php",
+    "source": "crawler_html_inline_js",
+    "confidence": 0.7,
+    "tags": [
+      "api_discovered"
+    ]
+  },
+  {
+    "type": "url",
+    "value": "https://fershop.net/api/auth.php",
+    "source": "crawler_html_inline_js",
+    "confidence": 0.7,
+    "tags": [
+      "api_discovered"
+    ]
+  },
+  {
+    "type": "url",
+    "value": "https://fershop.net/opensearch.xml",
+    "source": "crawler_html_inline_js",
+    "confidence": 0.7,
+    "tags": [
+      "api_discovered"
+    ]
+  },
+  {
+    "type": "url",
+    "value": "https://fershop.net/feed.xml",
+    "source": "crawler_html_inline_js",
+    "confidence": 0.7,
+    "tags": [
+      "api_discovered"
+    ]
+  },
+  {
+    "type": "url",
+    "value": "https://fershop.net/api/auth.php",
+    "source": "crawler_html_inline_js",
+    "confidence": 0.7,
+    "tags": [
+      "api_discovered"
+    ]
+  },
+  {
+    "type": "url",
+    "value": "https://fershop.net/api/auth.php",
+    "source": "crawler_html_inline_js",
+    "confidence": 0.7,
+    "tags": [
+      "api_discovered"
+    ]
+  },
+  {
+    "type": "url",
+    "value": "https://fershop.net/opensearch.xml",
+    "source": "crawler_html_inline_js",
+    "confidence": 0.7,
+    "tags": [
+      "api_discovered"
+    ]
+  },
+  {
+    "type": "url",
+    "value": "https://fershop.net/feed.xml",
+    "source": "crawler_html_inline_js",
+    "confidence": 0.7,
+    "tags": [
+      "api_discovered"
+    ]
+  },
+  {
+    "type": "url",
+    "value": "https://fershop.net/api/auth.php",
+    "source": "crawler_html_inline_js",
+    "confidence": 0.7,
+    "tags": [
+      "api_discovered"
+    ]
+  },
+  {
+    "type": "url",
+    "value": "https://fershop.net/api/auth.php",
+    "source": "crawler_html_inline_js",
+    "confidence": 0.7,
+    "tags": [
+      "api_discovered"
+    ]
+  },
+  {
+    "type": "url",
+    "value": "https://fershop.net/opensearch.xml",
+    "source": "crawler_html_inline_js",
+    "confidence": 0.7,
+    "tags": [
+      "api_discovered"
+    ]
+  },
+  {
+    "type": "url",
+    "value": "https://fershop.net/feed.xml",
+    "source": "crawler_html_inline_js",
+    "confidence": 0.7,
+    "tags": [
+      "api_discovered"
+    ]
+  },
+  {
+    "type": "url",
+    "value": "https://fershop.net/api/auth.php",
+    "source": "crawler_html_inline_js",
+    "confidence": 0.7,
+    "tags": [
+      "api_discovered"
+    ]
+  },
+  {
+    "type": "url",
+    "value": "https://fershop.net/api/auth.php",
+    "source": "crawler_html_inline_js",
+    "confidence": 0.7,
+    "tags": [
+      "api_discovered"
+    ]
+  },
+  {
+    "type": "url",
+    "value": "https://fershop.net/opensearch.xml",
+    "source": "crawler_html_inline_js",
+    "confidence": 0.7,
+    "tags": [
+      "api_discovered"
+    ]
+  },
+  {
+    "type": "url",
+    "value": "https://fershop.net/feed.xml",
+    "source": "crawler_html_inline_js",
+    "confidence": 0.7,
+    "tags": [
+      "api_discovered"
+    ]
+  },
+  {
+    "type": "url",
+    "value": "https://fershop.net/api/auth.php",
+    "source": "crawler_html_inline_js",
+    "confidence": 0.7,
+    "tags": [
+      "api_discovered"
+    ]
+  },
+  {
+    "type": "url",
+    "value": "https://fershop.net/api/auth.php",
+    "source": "crawler_html_inline_js",
+    "confidence": 0.7,
+    "tags": [
+      "api_discovered"
+    ]
+  },
+  {
+    "type": "url",
+    "value": "https://fershop.net/opensearch.xml",
+    "source": "crawler_html_inline_js",
+    "confidence": 0.7,
+    "tags": [
+      "api_discovered"
+    ]
+  },
+  {
+    "type": "url",
+    "value": "https://fershop.net/feed.xml",
+    "source": "crawler_html_inline_js",
+    "confidence": 0.7,
+    "tags": [
+      "api_discovered"
+    ]
+  },
+  {
+    "type": "url",
+    "value": "https://fershop.net/api/auth.php",
+    "source": "crawler_html_inline_js",
+    "confidence": 0.7,
+    "tags": [
+      "api_discovered"
+    ]
+  },
+  {
+    "type": "url",
+    "value": "https://fershop.net/api/auth.php",
+    "source": "crawler_html_inline_js",
+    "confidence": 0.7,
+    "tags": [
+      "api_discovered"
+    ]
+  },
+  {
+    "type": "url",
+    "value": "https://fershop.net/opensearch.xml",
+    "source": "crawler_html_inline_js",
+    "confidence": 0.7,
+    "tags": [
+      "api_discovered"
+    ]
+  },
+  {
+    "type": "url",
+    "value": "https://fershop.net/feed.xml",
+    "source": "crawler_html_inline_js",
+    "confidence": 0.7,
+    "tags": [
+      "api_discovered"
+    ]
+  },
+  {
+    "type": "url",
+    "value": "https://fershop.net/api/auth.php",
+    "source": "crawler_html_inline_js",
+    "confidence": 0.7,
+    "tags": [
+      "api_discovered"
+    ]
+  },
+  {
+    "type": "url",
+    "value": "https://fershop.net/api/auth.php",
+    "source": "crawler_html_inline_js",
+    "confidence": 0.7,
+    "tags": [
+      "api_discovered"
+    ]
+  },
+  {
+    "type": "url",
+    "value": "https://fershop.net/opensearch.xml",
+    "source": "crawler_html_inline_js",
+    "confidence": 0.7,
+    "tags": [
+      "api_discovered"
+    ]
+  },
+  {
+    "type": "url",
+    "value": "https://fershop.net/feed.xml",
+    "source": "crawler_html_inline_js",
+    "confidence": 0.7,
+    "tags": [
+      "api_discovered"
+    ]
+  },
+  {
+    "type": "url",
+    "value": "https://fershop.net/api/auth.php",
+    "source": "crawler_html_inline_js",
+    "confidence": 0.7,
+    "tags": [
+      "api_discovered"
+    ]
+  },
+  {
+    "type": "url",
+    "value": "https://fershop.net/api/auth.php",
+    "source": "crawler_html_inline_js",
+    "confidence": 0.7,
+    "tags": [
+      "api_discovered"
+    ]
+  },
+  {
+    "type": "url",
+    "value": "https://fershop.net/opensearch.xml",
+    "source": "crawler_html_inline_js",
+    "confidence": 0.7,
+    "tags": [
+      "api_discovered"
+    ]
+  },
+  {
+    "type": "url",
+    "value": "https://fershop.net/feed.xml",
+    "source": "crawler_html_inline_js",
+    "confidence": 0.7,
+    "tags": [
+      "api_discovered"
+    ]
+  },
+  {
+    "type": "url",
+    "value": "https://fershop.net/api/auth.php",
+    "source": "crawler_html_inline_js",
+    "confidence": 0.7,
+    "tags": [
+      "api_discovered"
+    ]
+  },
+  {
+    "type": "url",
+    "value": "https://fershop.net/api/auth.php",
+    "source": "crawler_html_inline_js",
+    "confidence": 0.7,
+    "tags": [
+      "api_discovered"
+    ]
+  },
+  {
+    "type": "url",
+    "value": "https://fershop.net/opensearch.xml",
+    "source": "crawler_html_inline_js",
+    "confidence": 0.7,
+    "tags": [
+      "api_discovered"
+    ]
+  },
+  {
+    "type": "url",
+    "value": "https://fershop.net/feed.xml",
+    "source": "crawler_html_inline_js",
+    "confidence": 0.7,
+    "tags": [
+      "api_discovered"
+    ]
+  },
+  {
+    "type": "url",
+    "value": "https://fershop.net/api/auth.php",
+    "source": "crawler_html_inline_js",
+    "confidence": 0.7,
+    "tags": [
+      "api_discovered"
+    ]
+  },
+  {
+    "type": "url",
+    "value": "https://fershop.net/api/auth.php",
+    "source": "crawler_html_inline_js",
+    "confidence": 0.7,
+    "tags": [
+      "api_discovered"
+    ]
+  },
+  {
+    "type": "url",
+    "value": "https://fershop.net/opensearch.xml",
+    "source": "crawler_html_inline_js",
+    "confidence": 0.7,
+    "tags": [
+      "api_discovered"
+    ]
+  },
+  {
+    "type": "url",
+    "value": "https://fershop.net/feed.xml",
+    "source": "crawler_html_inline_js",
+    "confidence": 0.7,
+    "tags": [
+      "api_discovered"
+    ]
+  },
+  {
+    "type": "url",
+    "value": "https://fershop.net/api/auth.php",
+    "source": "crawler_html_inline_js",
+    "confidence": 0.7,
+    "tags": [
+      "api_discovered"
+    ]
+  },
+  {
+    "type": "url",
+    "value": "https://fershop.net/api/auth.php",
+    "source": "crawler_html_inline_js",
+    "confidence": 0.7,
+    "tags": [
+      "api_discovered"
+    ]
+  },
+  {
+    "type": "url",
+    "value": "https://fershop.net/opensearch.xml",
+    "source": "crawler_html_inline_js",
+    "confidence": 0.7,
+    "tags": [
+      "api_discovered"
+    ]
+  },
+  {
+    "type": "url",
+    "value": "https://fershop.net/feed.xml",
+    "source": "crawler_html_inline_js",
+    "confidence": 0.7,
+    "tags": [
+      "api_discovered"
+    ]
+  },
+  {
+    "type": "url",
+    "value": "https://fershop.net/api/auth.php",
+    "source": "crawler_html_inline_js",
+    "confidence": 0.7,
+    "tags": [
+      "api_discovered"
+    ]
+  },
+  {
+    "type": "url",
+    "value": "https://fershop.net/api/auth.php",
+    "source": "crawler_html_inline_js",
+    "confidence": 0.7,
+    "tags": [
+      "api_discovered"
+    ]
+  },
+  {
+    "type": "url",
+    "value": "https://fershop.net/opensearch.xml",
+    "source": "crawler_html_inline_js",
+    "confidence": 0.7,
+    "tags": [
+      "api_discovered"
+    ]
+  },
+  {
+    "type": "url",
+    "value": "https://fershop.net/feed.xml",
+    "source": "crawler_html_inline_js",
+    "confidence": 0.7,
+    "tags": [
+      "api_discovered"
+    ]
+  },
+  {
+    "type": "url",
+    "value": "https://fershop.net/api/auth.php",
+    "source": "crawler_html_inline_js",
+    "confidence": 0.7,
+    "tags": [
+      "api_discovered"
+    ]
+  },
+  {
+    "type": "url",
+    "value": "https://fershop.net/api/auth.php",
+    "source": "crawler_html_inline_js",
+    "confidence": 0.7,
+    "tags": [
+      "api_discovered"
+    ]
+  },
+  {
+    "type": "url",
+    "value": "https://fershop.net/opensearch.xml",
+    "source": "crawler_html_inline_js",
+    "confidence": 0.7,
+    "tags": [
+      "api_discovered"
+    ]
+  },
+  {
+    "type": "url",
+    "value": "https://fershop.net/feed.xml",
+    "source": "crawler_html_inline_js",
+    "confidence": 0.7,
+    "tags": [
+      "api_discovered"
+    ]
+  },
+  {
+    "type": "url",
+    "value": "https://fershop.net/api/auth.php",
+    "source": "crawler_html_inline_js",
+    "confidence": 0.7,
+    "tags": [
+      "api_discovered"
+    ]
+  },
+  {
+    "type": "url",
+    "value": "https://fershop.net/api/auth.php",
+    "source": "crawler_html_inline_js",
+    "confidence": 0.7,
+    "tags": [
+      "api_discovered"
+    ]
+  },
+  {
+    "type": "url",
+    "value": "https://fershop.net/opensearch.xml",
+    "source": "crawler_html_inline_js",
+    "confidence": 0.7,
+    "tags": [
+      "api_discovered"
+    ]
+  },
+  {
+    "type": "url",
+    "value": "https://fershop.net/feed.xml",
+    "source": "crawler_html_inline_js",
+    "confidence": 0.7,
+    "tags": [
+      "api_discovered"
+    ]
+  },
+  {
+    "type": "url",
+    "value": "https://fershop.net/api/auth.php",
+    "source": "crawler_html_inline_js",
+    "confidence": 0.7,
+    "tags": [
+      "api_discovered"
+    ]
+  },
+  {
+    "type": "url",
+    "value": "https://fershop.net/api/auth.php",
+    "source": "crawler_html_inline_js",
+    "confidence": 0.7,
+    "tags": [
+      "api_discovered"
+    ]
+  },
+  {
+    "type": "url",
+    "value": "https://fershop.net/opensearch.xml",
+    "source": "crawler_html_inline_js",
+    "confidence": 0.7,
+    "tags": [
+      "api_discovered"
+    ]
+  },
+  {
+    "type": "url",
+    "value": "https://fershop.net/feed.xml",
+    "source": "crawler_html_inline_js",
+    "confidence": 0.7,
+    "tags": [
+      "api_discovered"
+    ]
+  },
+  {
+    "type": "url",
+    "value": "https://fershop.net/api/auth.php",
+    "source": "crawler_html_inline_js",
+    "confidence": 0.7,
+    "tags": [
+      "api_discovered"
+    ]
+  },
+  {
+    "type": "url",
+    "value": "https://fershop.net/api/auth.php",
+    "source": "crawler_html_inline_js",
+    "confidence": 0.7,
+    "tags": [
+      "api_discovered"
+    ]
+  },
+  {
+    "type": "url",
+    "value": "https://fershop.net/opensearch.xml",
+    "source": "crawler_html_inline_js",
+    "confidence": 0.7,
+    "tags": [
+      "api_discovered"
+    ]
+  },
+  {
+    "type": "url",
+    "value": "https://fershop.net/feed.xml",
+    "source": "crawler_html_inline_js",
+    "confidence": 0.7,
+    "tags": [
+      "api_discovered"
+    ]
+  },
+  {
+    "type": "url",
+    "value": "https://fershop.net/api/auth.php",
+    "source": "crawler_html_inline_js",
+    "confidence": 0.7,
+    "tags": [
+      "api_discovered"
+    ]
+  },
+  {
+    "type": "url",
+    "value": "https://fershop.net/api/auth.php",
+    "source": "crawler_html_inline_js",
+    "confidence": 0.7,
+    "tags": [
+      "api_discovered"
+    ]
+  },
+  {
+    "type": "url",
+    "value": "https://fershop.net/opensearch.xml",
+    "source": "crawler_html_inline_js",
+    "confidence": 0.7,
+    "tags": [
+      "api_discovered"
+    ]
+  },
+  {
+    "type": "url",
+    "value": "https://fershop.net/feed.xml",
+    "source": "crawler_html_inline_js",
+    "confidence": 0.7,
+    "tags": [
+      "api_discovered"
+    ]
+  },
+  {
+    "type": "url",
+    "value": "https://fershop.net/api/auth.php",
+    "source": "crawler_html_inline_js",
+    "confidence": 0.7,
+    "tags": [
+      "api_discovered"
+    ]
+  },
+  {
+    "type": "url",
+    "value": "https://fershop.net/api/auth.php",
+    "source": "crawler_html_inline_js",
+    "confidence": 0.7,
+    "tags": [
+      "api_discovered"
+    ]
+  },
+  {
+    "type": "url",
+    "value": "https://fershop.net/opensearch.xml",
+    "source": "crawler_html_inline_js",
+    "confidence": 0.7,
+    "tags": [
+      "api_discovered"
+    ]
+  },
+  {
+    "type": "url",
+    "value": "https://fershop.net/feed.xml",
+    "source": "crawler_html_inline_js",
+    "confidence": 0.7,
+    "tags": [
+      "api_discovered"
+    ]
+  },
+  {
+    "type": "url",
+    "value": "https://fershop.net/api/auth.php",
+    "source": "crawler_html_inline_js",
+    "confidence": 0.7,
+    "tags": [
+      "api_discovered"
+    ]
+  },
+  {
+    "type": "url",
+    "value": "https://fershop.net/api/auth.php",
+    "source": "crawler_html_inline_js",
+    "confidence": 0.7,
+    "tags": [
+      "api_discovered"
+    ]
+  },
+  {
+    "type": "url",
+    "value": "https://fershop.net/opensearch.xml",
+    "source": "crawler_html_inline_js",
+    "confidence": 0.7,
+    "tags": [
+      "api_discovered"
+    ]
+  },
+  {
+    "type": "url",
+    "value": "https://fershop.net/feed.xml",
+    "source": "crawler_html_inline_js",
+    "confidence": 0.7,
+    "tags": [
+      "api_discovered"
+    ]
+  },
+  {
+    "type": "url",
+    "value": "https://fershop.net/api/auth.php",
+    "source": "crawler_html_inline_js",
+    "confidence": 0.7,
+    "tags": [
+      "api_discovered"
+    ]
+  },
+  {
+    "type": "url",
+    "value": "https://fershop.net/api/auth.php",
+    "source": "crawler_html_inline_js",
+    "confidence": 0.7,
+    "tags": [
+      "api_discovered"
+    ]
+  },
+  {
+    "type": "url",
+    "value": "https://fershop.net/opensearch.xml",
+    "source": "crawler_html_inline_js",
+    "confidence": 0.7,
+    "tags": [
+      "api_discovered"
+    ]
+  },
+  {
+    "type": "url",
+    "value": "https://fershop.net/feed.xml",
+    "source": "crawler_html_inline_js",
+    "confidence": 0.7,
+    "tags": [
+      "api_discovered"
+    ]
+  },
+  {
+    "type": "url",
+    "value": "https://fershop.net/api/auth.php",
+    "source": "crawler_html_inline_js",
+    "confidence": 0.7,
+    "tags": [
+      "api_discovered"
+    ]
+  },
+  {
+    "type": "url",
+    "value": "https://fershop.net/api/auth.php",
+    "source": "crawler_html_inline_js",
+    "confidence": 0.7,
+    "tags": [
+      "api_discovered"
+    ]
+  },
+  {
+    "type": "url",
+    "value": "https://fershop.net/opensearch.xml",
+    "source": "crawler_html_inline_js",
+    "confidence": 0.7,
+    "tags": [
+      "api_discovered"
+    ]
+  },
+  {
+    "type": "url",
+    "value": "https://fershop.net/feed.xml",
+    "source": "crawler_html_inline_js",
+    "confidence": 0.7,
+    "tags": [
+      "api_discovered"
+    ]
+  },
+  {
+    "type": "url",
+    "value": "https://fershop.net/api/auth.php",
+    "source": "crawler_html_inline_js",
+    "confidence": 0.7,
+    "tags": [
+      "api_discovered"
+    ]
+  },
+  {
+    "type": "url",
+    "value": "https://fershop.net/api/auth.php",
+    "source": "crawler_html_inline_js",
+    "confidence": 0.7,
+    "tags": [
+      "api_discovered"
+    ]
+  },
+  {
+    "type": "url",
+    "value": "https://fershop.net/opensearch.xml",
+    "source": "crawler_html_inline_js",
+    "confidence": 0.7,
+    "tags": [
+      "api_discovered"
+    ]
+  },
+  {
+    "type": "url",
+    "value": "https://fershop.net/feed.xml",
+    "source": "crawler_html_inline_js",
+    "confidence": 0.7,
+    "tags": [
+      "api_discovered"
+    ]
+  },
+  {
+    "type": "url",
+    "value": "https://fershop.net/api/auth.php",
+    "source": "crawler_html_inline_js",
+    "confidence": 0.7,
+    "tags": [
+      "api_discovered"
+    ]
+  },
+  {
+    "type": "url",
+    "value": "https://fershop.net/api/auth.php",
+    "source": "crawler_html_inline_js",
+    "confidence": 0.7,
+    "tags": [
+      "api_discovered"
+    ]
+  },
+  {
+    "type": "url",
+    "value": "https://fershop.net/opensearch.xml",
+    "source": "crawler_html_inline_js",
+    "confidence": 0.7,
+    "tags": [
+      "api_discovered"
+    ]
+  },
+  {
+    "type": "url",
+    "value": "https://fershop.net/feed.xml",
+    "source": "crawler_html_inline_js",
+    "confidence": 0.7,
+    "tags": [
+      "api_discovered"
+    ]
+  },
+  {
+    "type": "url",
+    "value": "https://fershop.net/api/auth.php",
+    "source": "crawler_html_inline_js",
+    "confidence": 0.7,
+    "tags": [
+      "api_discovered"
+    ]
+  },
+  {
+    "type": "url",
+    "value": "https://fershop.net/api/auth.php",
+    "source": "crawler_html_inline_js",
+    "confidence": 0.7,
+    "tags": [
+      "api_discovered"
+    ]
+  },
+  {
+    "type": "url",
+    "value": "https://fershop.net/opensearch.xml",
+    "source": "crawler_html_inline_js",
+    "confidence": 0.7,
+    "tags": [
+      "api_discovered"
+    ]
+  },
+  {
+    "type": "url",
+    "value": "https://fershop.net/feed.xml",
+    "source": "crawler_html_inline_js",
+    "confidence": 0.7,
+    "tags": [
+      "api_discovered"
+    ]
+  },
+  {
+    "type": "url",
+    "value": "https://fershop.net/api/auth.php",
+    "source": "crawler_html_inline_js",
+    "confidence": 0.7,
+    "tags": [
+      "api_discovered"
+    ]
+  },
+  {
+    "type": "url",
+    "value": "https://fershop.net/api/auth.php",
+    "source": "crawler_html_inline_js",
+    "confidence": 0.7,
+    "tags": [
+      "api_discovered"
+    ]
+  },
+  {
+    "type": "url",
+    "value": "https://fershop.net/opensearch.xml",
+    "source": "crawler_html_inline_js",
+    "confidence": 0.7,
+    "tags": [
+      "api_discovered"
+    ]
+  },
+  {
+    "type": "url",
+    "value": "https://fershop.net/feed.xml",
+    "source": "crawler_html_inline_js",
+    "confidence": 0.7,
+    "tags": [
+      "api_discovered"
+    ]
+  },
+  {
+    "type": "url",
+    "value": "https://fershop.net/api/auth.php",
+    "source": "crawler_html_inline_js",
+    "confidence": 0.7,
+    "tags": [
+      "api_discovered"
+    ]
+  },
+  {
+    "type": "url",
+    "value": "https://fershop.net/api/auth.php",
+    "source": "crawler_html_inline_js",
+    "confidence": 0.7,
+    "tags": [
+      "api_discovered"
+    ]
+  },
+  {
+    "type": "url",
+    "value": "https://fershop.net/opensearch.xml",
+    "source": "crawler_html_inline_js",
+    "confidence": 0.7,
+    "tags": [
+      "api_discovered"
+    ]
+  },
+  {
+    "type": "url",
+    "value": "https://fershop.net/feed.xml",
+    "source": "crawler_html_inline_js",
+    "confidence": 0.7,
+    "tags": [
+      "api_discovered"
+    ]
+  },
+  {
+    "type": "url",
+    "value": "https://fershop.net/api/auth.php",
+    "source": "crawler_html_inline_js",
+    "confidence": 0.7,
+    "tags": [
+      "api_discovered"
+    ]
+  },
+  {
+    "type": "url",
+    "value": "https://fershop.net/api/auth.php",
+    "source": "crawler_html_inline_js",
+    "confidence": 0.7,
+    "tags": [
+      "api_discovered"
+    ]
+  },
+  {
+    "type": "url",
+    "value": "https://fershop.net/opensearch.xml",
+    "source": "crawler_html_inline_js",
+    "confidence": 0.7,
+    "tags": [
+      "api_discovered"
+    ]
+  },
+  {
+    "type": "url",
+    "value": "https://fershop.net/feed.xml",
+    "source": "crawler_html_inline_js",
+    "confidence": 0.7,
+    "tags": [
+      "api_discovered"
+    ]
+  },
+  {
+    "type": "url",
+    "value": "https://fershop.net/api/auth.php",
+    "source": "crawler_html_inline_js",
+    "confidence": 0.7,
+    "tags": [
+      "api_discovered"
+    ]
+  },
+  {
+    "type": "url",
+    "value": "https://fershop.net/api/auth.php",
+    "source": "crawler_html_inline_js",
+    "confidence": 0.7,
+    "tags": [
+      "api_discovered"
+    ]
+  },
+  {
+    "type": "url",
+    "value": "https://fershop.net/opensearch.xml",
+    "source": "crawler_html_inline_js",
+    "confidence": 0.7,
+    "tags": [
+      "api_discovered"
+    ]
+  },
+  {
+    "type": "url",
+    "value": "https://fershop.net/feed.xml",
+    "source": "crawler_html_inline_js",
+    "confidence": 0.7,
+    "tags": [
+      "api_discovered"
+    ]
+  },
+  {
+    "type": "url",
+    "value": "https://fershop.net/api/auth.php",
+    "source": "crawler_html_inline_js",
+    "confidence": 0.7,
+    "tags": [
+      "api_discovered"
+    ]
+  },
+  {
+    "type": "url",
+    "value": "https://fershop.net/api/auth.php",
+    "source": "crawler_html_inline_js",
+    "confidence": 0.7,
+    "tags": [
+      "api_discovered"
+    ]
+  },
+  {
+    "type": "url",
+    "value": "https://fershop.net/opensearch.xml",
+    "source": "crawler_html_inline_js",
+    "confidence": 0.7,
+    "tags": [
+      "api_discovered"
+    ]
+  },
+  {
+    "type": "url",
+    "value": "https://fershop.net/feed.xml",
+    "source": "crawler_html_inline_js",
+    "confidence": 0.7,
+    "tags": [
+      "api_discovered"
+    ]
+  },
+  {
+    "type": "url",
+    "value": "https://fershop.net/api/auth.php",
+    "source": "crawler_html_inline_js",
+    "confidence": 0.7,
+    "tags": [
+      "api_discovered"
+    ]
+  },
+  {
+    "type": "url",
+    "value": "https://fershop.net/api/auth.php",
+    "source": "crawler_html_inline_js",
+    "confidence": 0.7,
+    "tags": [
+      "api_discovered"
+    ]
+  },
+  {
+    "type": "url",
+    "value": "https://fershop.net/opensearch.xml",
+    "source": "crawler_html_inline_js",
+    "confidence": 0.7,
+    "tags": [
+      "api_discovered"
+    ]
+  },
+  {
+    "type": "url",
+    "value": "https://fershop.net/feed.xml",
+    "source": "crawler_html_inline_js",
+    "confidence": 0.7,
+    "tags": [
+      "api_discovered"
+    ]
+  },
+  {
+    "type": "url",
+    "value": "https://fershop.net/api/auth.php",
+    "source": "crawler_html_inline_js",
+    "confidence": 0.7,
+    "tags": [
+      "api_discovered"
+    ]
+  },
+  {
+    "type": "url",
+    "value": "https://fershop.net/api/auth.php",
+    "source": "crawler_html_inline_js",
+    "confidence": 0.7,
+    "tags": [
+      "api_discovered"
+    ]
+  },
+  {
+    "type": "url",
+    "value": "https://fershop.net/opensearch.xml",
+    "source": "crawler_html_inline_js",
+    "confidence": 0.7,
+    "tags": [
+      "api_discovered"
+    ]
+  },
+  {
+    "type": "url",
+    "value": "https://fershop.net/feed.xml",
+    "source": "crawler_html_inline_js",
+    "confidence": 0.7,
+    "tags": [
+      "api_discovered"
+    ]
+  },
+  {
+    "type": "url",
+    "value": "https://fershop.net/api/auth.php",
+    "source": "crawler_html_inline_js",
+    "confidence": 0.7,
+    "tags": [
+      "api_discovered"
+    ]
+  },
+  {
+    "type": "url",
+    "value": "https://fershop.net/api/auth.php",
+    "source": "crawler_html_inline_js",
+    "confidence": 0.7,
+    "tags": [
+      "api_discovered"
+    ]
+  },
+  {
+    "type": "url",
+    "value": "https://fershop.net/opensearch.xml",
+    "source": "crawler_html_inline_js",
+    "confidence": 0.7,
+    "tags": [
+      "api_discovered"
+    ]
+  },
+  {
+    "type": "url",
+    "value": "https://fershop.net/feed.xml",
+    "source": "crawler_html_inline_js",
+    "confidence": 0.7,
+    "tags": [
+      "api_discovered"
+    ]
+  },
+  {
+    "type": "url",
+    "value": "https://fershop.net/api/auth.php",
+    "source": "crawler_html_inline_js",
+    "confidence": 0.7,
+    "tags": [
+      "api_discovered"
+    ]
+  },
+  {
+    "type": "url",
+    "value": "https://fershop.net/api/auth.php",
+    "source": "crawler_html_inline_js",
+    "confidence": 0.7,
+    "tags": [
+      "api_discovered"
+    ]
+  },
+  {
+    "type": "url",
+    "value": "https://fershop.net/opensearch.xml",
+    "source": "crawler_html_inline_js",
+    "confidence": 0.7,
+    "tags": [
+      "api_discovered"
+    ]
+  },
+  {
+    "type": "url",
+    "value": "https://fershop.net/feed.xml",
+    "source": "crawler_html_inline_js",
+    "confidence": 0.7,
+    "tags": [
+      "api_discovered"
+    ]
+  },
+  {
+    "type": "url",
+    "value": "https://fershop.net/api/auth.php",
+    "source": "crawler_html_inline_js",
+    "confidence": 0.7,
+    "tags": [
+      "api_discovered"
+    ]
+  },
+  {
+    "type": "url",
+    "value": "https://fershop.net/api/auth.php",
+    "source": "crawler_html_inline_js",
+    "confidence": 0.7,
+    "tags": [
+      "api_discovered"
+    ]
+  },
+  {
+    "type": "url",
+    "value": "https://fershop.net/opensearch.xml",
+    "source": "crawler_html_inline_js",
+    "confidence": 0.7,
+    "tags": [
+      "api_discovered"
+    ]
+  },
+  {
+    "type": "url",
+    "value": "https://fershop.net/feed.xml",
+    "source": "crawler_html_inline_js",
+    "confidence": 0.7,
+    "tags": [
+      "api_discovered"
+    ]
+  },
+  {
+    "type": "url",
+    "value": "https://fershop.net/api/auth.php",
+    "source": "crawler_html_inline_js",
+    "confidence": 0.7,
+    "tags": [
+      "api_discovered"
+    ]
+  },
+  {
+    "type": "url",
+    "value": "https://fershop.net/api/auth.php",
+    "source": "crawler_html_inline_js",
+    "confidence": 0.7,
+    "tags": [
+      "api_discovered"
+    ]
+  },
+  {
+    "type": "url",
+    "value": "https://fershop.net/opensearch.xml",
+    "source": "crawler_html_inline_js",
+    "confidence": 0.7,
+    "tags": [
+      "api_discovered"
+    ]
+  },
+  {
+    "type": "url",
+    "value": "https://fershop.net/feed.xml",
+    "source": "crawler_html_inline_js",
+    "confidence": 0.7,
+    "tags": [
+      "api_discovered"
+    ]
+  },
+  {
+    "type": "url",
+    "value": "https://fershop.net/api/auth.php",
+    "source": "crawler_html_inline_js",
+    "confidence": 0.7,
+    "tags": [
+      "api_discovered"
+    ]
+  },
+  {
+    "type": "url",
+    "value": "https://fershop.net/api/auth.php",
+    "source": "crawler_html_inline_js",
+    "confidence": 0.7,
+    "tags": [
+      "api_discovered"
+    ]
+  },
+  {
+    "type": "url",
+    "value": "https://fershop.net/opensearch.xml",
+    "source": "crawler_html_inline_js",
+    "confidence": 0.7,
+    "tags": [
+      "api_discovered"
+    ]
+  },
+  {
+    "type": "url",
+    "value": "https://fershop.net/feed.xml",
+    "source": "crawler_html_inline_js",
+    "confidence": 0.7,
+    "tags": [
+      "api_discovered"
+    ]
+  },
+  {
+    "type": "url",
+    "value": "https://fershop.net/api/auth.php",
+    "source": "crawler_html_inline_js",
+    "confidence": 0.7,
+    "tags": [
+      "api_discovered"
+    ]
+  },
+  {
+    "type": "url",
+    "value": "https://fershop.net/api/auth.php",
+    "source": "crawler_html_inline_js",
+    "confidence": 0.7,
+    "tags": [
+      "api_discovered"
+    ]
+  },
+  {
+    "type": "url",
+    "value": "https://fershop.net/opensearch.xml",
+    "source": "crawler_html_inline_js",
+    "confidence": 0.7,
+    "tags": [
+      "api_discovered"
+    ]
+  },
+  {
+    "type": "url",
+    "value": "https://fershop.net/feed.xml",
+    "source": "crawler_html_inline_js",
+    "confidence": 0.7,
+    "tags": [
+      "api_discovered"
+    ]
+  },
+  {
+    "type": "url",
+    "value": "https://fershop.net/api/auth.php",
+    "source": "crawler_html_inline_js",
+    "confidence": 0.7,
+    "tags": [
+      "api_discovered"
+    ]
+  },
+  {
+    "type": "url",
+    "value": "https://fershop.net/api/auth.php",
+    "source": "crawler_html_inline_js",
+    "confidence": 0.7,
+    "tags": [
+      "api_discovered"
+    ]
+  },
+  {
+    "type": "url",
+    "value": "https://fershop.net/opensearch.xml",
+    "source": "crawler_html_inline_js",
+    "confidence": 0.7,
+    "tags": [
+      "api_discovered"
+    ]
+  },
+  {
+    "type": "url",
+    "value": "https://fershop.net/feed.xml",
+    "source": "crawler_html_inline_js",
+    "confidence": 0.7,
+    "tags": [
+      "api_discovered"
+    ]
+  },
+  {
+    "type": "url",
+    "value": "https://fershop.net/api/auth.php",
+    "source": "crawler_html_inline_js",
+    "confidence": 0.7,
+    "tags": [
+      "api_discovered"
+    ]
+  },
+  {
+    "type": "url",
+    "value": "https://fershop.net/api/auth.php",
+    "source": "crawler_html_inline_js",
+    "confidence": 0.7,
+    "tags": [
+      "api_discovered"
+    ]
+  },
+  {
+    "type": "url",
+    "value": "https://fershop.net/opensearch.xml",
+    "source": "crawler_html_inline_js",
+    "confidence": 0.7,
+    "tags": [
+      "api_discovered"
+    ]
+  },
+  {
+    "type": "url",
+    "value": "https://fershop.net/feed.xml",
+    "source": "crawler_html_inline_js",
+    "confidence": 0.7,
+    "tags": [
+      "api_discovered"
+    ]
+  },
+  {
+    "type": "url",
+    "value": "https://fershop.net/api/auth.php",
+    "source": "crawler_html_inline_js",
+    "confidence": 0.7,
+    "tags": [
+      "api_discovered"
+    ]
+  },
+  {
+    "type": "url",
+    "value": "https://fershop.net/api/auth.php",
+    "source": "crawler_html_inline_js",
+    "confidence": 0.7,
+    "tags": [
+      "api_discovered"
+    ]
+  },
+  {
+    "type": "url",
+    "value": "https://fershop.net/opensearch.xml",
+    "source": "crawler_html_inline_js",
+    "confidence": 0.7,
+    "tags": [
+      "api_discovered"
+    ]
+  },
+  {
+    "type": "url",
+    "value": "https://fershop.net/feed.xml",
+    "source": "crawler_html_inline_js",
+    "confidence": 0.7,
+    "tags": [
+      "api_discovered"
+    ]
+  },
+  {
+    "type": "url",
+    "value": "https://fershop.net/api/auth.php",
+    "source": "crawler_html_inline_js",
+    "confidence": 0.7,
+    "tags": [
+      "api_discovered"
+    ]
+  },
+  {
+    "type": "url",
+    "value": "https://fershop.net/api/auth.php",
+    "source": "crawler_html_inline_js",
+    "confidence": 0.7,
+    "tags": [
+      "api_discovered"
+    ]
+  },
+  {
+    "type": "url",
+    "value": "https://fershop.net/opensearch.xml",
+    "source": "crawler_html_inline_js",
+    "confidence": 0.7,
+    "tags": [
+      "api_discovered"
+    ]
+  },
+  {
+    "type": "url",
+    "value": "https://fershop.net/feed.xml",
+    "source": "crawler_html_inline_js",
+    "confidence": 0.7,
+    "tags": [
+      "api_discovered"
+    ]
+  },
+  {
+    "type": "url",
+    "value": "https://fershop.net/api/auth.php",
+    "source": "crawler_html_inline_js",
+    "confidence": 0.7,
+    "tags": [
+      "api_discovered"
+    ]
+  },
+  {
+    "type": "url",
+    "value": "https://fershop.net/api/auth.php",
+    "source": "crawler_html_inline_js",
+    "confidence": 0.7,
+    "tags": [
+      "api_discovered"
+    ]
+  },
+  {
+    "type": "url",
+    "value": "https://fershop.net/opensearch.xml",
+    "source": "crawler_html_inline_js",
+    "confidence": 0.7,
+    "tags": [
+      "api_discovered"
+    ]
+  },
+  {
+    "type": "url",
+    "value": "https://fershop.net/feed.xml",
+    "source": "crawler_html_inline_js",
+    "confidence": 0.7,
+    "tags": [
+      "api_discovered"
+    ]
+  },
+  {
+    "type": "url",
+    "value": "https://fershop.net/api/auth.php",
+    "source": "crawler_html_inline_js",
+    "confidence": 0.7,
+    "tags": [
+      "api_discovered"
+    ]
+  },
+  {
+    "type": "url",
+    "value": "https://fershop.net/api/auth.php",
+    "source": "crawler_html_inline_js",
+    "confidence": 0.7,
+    "tags": [
+      "api_discovered"
+    ]
+  },
+  {
+    "type": "url",
+    "value": "https://fershop.net/opensearch.xml",
+    "source": "crawler_html_inline_js",
+    "confidence": 0.7,
+    "tags": [
+      "api_discovered"
+    ]
+  },
+  {
+    "type": "url",
+    "value": "https://fershop.net/feed.xml",
+    "source": "crawler_html_inline_js",
+    "confidence": 0.7,
+    "tags": [
+      "api_discovered"
+    ]
+  },
+  {
+    "type": "url",
+    "value": "https://fershop.net/api/auth.php",
+    "source": "crawler_html_inline_js",
+    "confidence": 0.7,
+    "tags": [
+      "api_discovered"
+    ]
+  },
+  {
+    "type": "url",
+    "value": "https://fershop.net/api/auth.php",
+    "source": "crawler_html_inline_js",
+    "confidence": 0.7,
+    "tags": [
+      "api_discovered"
+    ]
+  },
+  {
+    "type": "url",
+    "value": "https://fershop.net/opensearch.xml",
+    "source": "crawler_html_inline_js",
+    "confidence": 0.7,
+    "tags": [
+      "api_discovered"
+    ]
+  },
+  {
+    "type": "url",
+    "value": "https://fershop.net/feed.xml",
+    "source": "crawler_html_inline_js",
+    "confidence": 0.7,
+    "tags": [
+      "api_discovered"
+    ]
+  },
+  {
+    "type": "url",
+    "value": "https://fershop.net/api/auth.php",
+    "source": "crawler_html_inline_js",
+    "confidence": 0.7,
+    "tags": [
+      "api_discovered"
+    ]
+  },
+  {
+    "type": "url",
+    "value": "https://fershop.net/api/auth.php",
+    "source": "crawler_html_inline_js",
+    "confidence": 0.7,
+    "tags": [
+      "api_discovered"
+    ]
+  },
+  {
+    "type": "url",
+    "value": "https://fershop.net/opensearch.xml",
+    "source": "crawler_html_inline_js",
+    "confidence": 0.7,
+    "tags": [
+      "api_discovered"
+    ]
+  },
+  {
+    "type": "url",
+    "value": "https://fershop.net/feed.xml",
+    "source": "crawler_html_inline_js",
+    "confidence": 0.7,
+    "tags": [
+      "api_discovered"
+    ]
+  },
+  {
+    "type": "url",
+    "value": "https://fershop.net/api/auth.php",
+    "source": "crawler_html_inline_js",
+    "confidence": 0.7,
+    "tags": [
+      "api_discovered"
+    ]
+  },
+  {
+    "type": "url",
+    "value": "https://fershop.net/api/auth.php",
+    "source": "crawler_html_inline_js",
+    "confidence": 0.7,
+    "tags": [
+      "api_discovered"
+    ]
+  },
+  {
+    "type": "url",
+    "value": "https://fershop.net/opensearch.xml",
+    "source": "crawler_html_inline_js",
+    "confidence": 0.7,
+    "tags": [
+      "api_discovered"
+    ]
+  },
+  {
+    "type": "url",
+    "value": "https://fershop.net/feed.xml",
+    "source": "crawler_html_inline_js",
+    "confidence": 0.7,
+    "tags": [
+      "api_discovered"
+    ]
+  },
+  {
+    "type": "url",
+    "value": "https://fershop.net/api/auth.php",
+    "source": "crawler_html_inline_js",
+    "confidence": 0.7,
+    "tags": [
+      "api_discovered"
+    ]
+  },
+  {
+    "type": "url",
+    "value": "https://fershop.net/api/auth.php",
+    "source": "crawler_html_inline_js",
+    "confidence": 0.7,
+    "tags": [
+      "api_discovered"
+    ]
+  },
+  {
+    "type": "url",
+    "value": "https://fershop.net/opensearch.xml",
+    "source": "crawler_html_inline_js",
+    "confidence": 0.7,
+    "tags": [
+      "api_discovered"
+    ]
+  },
+  {
+    "type": "url",
+    "value": "https://fershop.net/feed.xml",
+    "source": "crawler_html_inline_js",
+    "confidence": 0.7,
+    "tags": [
+      "api_discovered"
+    ]
+  },
+  {
+    "type": "url",
+    "value": "https://fershop.net/api/auth.php",
+    "source": "crawler_html_inline_js",
+    "confidence": 0.7,
+    "tags": [
+      "api_discovered"
+    ]
+  },
+  {
+    "type": "url",
+    "value": "https://fershop.net/api/auth.php",
+    "source": "crawler_html_inline_js",
+    "confidence": 0.7,
+    "tags": [
+      "api_discovered"
+    ]
+  },
+  {
+    "type": "url",
+    "value": "https://fershop.net/opensearch.xml",
+    "source": "crawler_html_inline_js",
+    "confidence": 0.7,
+    "tags": [
+      "api_discovered"
+    ]
+  },
+  {
+    "type": "url",
+    "value": "https://fershop.net/feed.xml",
+    "source": "crawler_html_inline_js",
+    "confidence": 0.7,
+    "tags": [
+      "api_discovered"
+    ]
+  },
+  {
+    "type": "url",
+    "value": "https://fershop.net/api/auth.php",
+    "source": "crawler_html_inline_js",
+    "confidence": 0.7,
+    "tags": [
+      "api_discovered"
+    ]
+  },
+  {
+    "type": "url",
+    "value": "https://fershop.net/api/auth.php",
+    "source": "crawler_html_inline_js",
+    "confidence": 0.7,
+    "tags": [
+      "api_discovered"
+    ]
+  },
+  {
+    "type": "url",
+    "value": "https://fershop.net/opensearch.xml",
+    "source": "crawler_html_inline_js",
+    "confidence": 0.7,
+    "tags": [
+      "api_discovered"
+    ]
+  },
+  {
+    "type": "url",
+    "value": "https://fershop.net/feed.xml",
+    "source": "crawler_html_inline_js",
+    "confidence": 0.7,
+    "tags": [
+      "api_discovered"
+    ]
+  },
+  {
+    "type": "url",
+    "value": "https://fershop.net/api/auth.php",
+    "source": "crawler_html_inline_js",
+    "confidence": 0.7,
+    "tags": [
+      "api_discovered"
+    ]
+  },
+  {
+    "type": "url",
+    "value": "https://fershop.net/api/auth.php",
+    "source": "crawler_html_inline_js",
+    "confidence": 0.7,
+    "tags": [
+      "api_discovered"
+    ]
+  },
+  {
+    "type": "url",
+    "value": "https://fershop.net/opensearch.xml",
+    "source": "crawler_html_inline_js",
+    "confidence": 0.7,
+    "tags": [
+      "api_discovered"
+    ]
+  },
+  {
+    "type": "url",
+    "value": "https://fershop.net/feed.xml",
+    "source": "crawler_html_inline_js",
+    "confidence": 0.7,
+    "tags": [
+      "api_discovered"
+    ]
+  },
+  {
+    "type": "url",
+    "value": "https://fershop.net/api/auth.php",
+    "source": "crawler_html_inline_js",
+    "confidence": 0.7,
+    "tags": [
+      "api_discovered"
+    ]
+  },
+  {
+    "type": "url",
+    "value": "https://fershop.net/api/auth.php",
+    "source": "crawler_html_inline_js",
+    "confidence": 0.7,
+    "tags": [
+      "api_discovered"
+    ]
+  },
+  {
+    "type": "url",
+    "value": "https://fershop.net/opensearch.xml",
+    "source": "crawler_html_inline_js",
+    "confidence": 0.7,
+    "tags": [
+      "api_discovered"
+    ]
+  },
+  {
+    "type": "url",
+    "value": "https://fershop.net/feed.xml",
+    "source": "crawler_html_inline_js",
+    "confidence": 0.7,
+    "tags": [
+      "api_discovered"
+    ]
+  },
+  {
+    "type": "url",
+    "value": "https://fershop.net/api/auth.php",
+    "source": "crawler_html_inline_js",
+    "confidence": 0.7,
+    "tags": [
+      "api_discovered"
+    ]
+  },
+  {
+    "type": "url",
+    "value": "https://fershop.net/api/auth.php",
+    "source": "crawler_html_inline_js",
+    "confidence": 0.7,
+    "tags": [
+      "api_discovered"
+    ]
+  },
+  {
+    "type": "url",
+    "value": "https://fershop.net/opensearch.xml",
+    "source": "crawler_html_inline_js",
+    "confidence": 0.7,
+    "tags": [
+      "api_discovered"
+    ]
+  },
+  {
+    "type": "url",
+    "value": "https://fershop.net/feed.xml",
+    "source": "crawler_html_inline_js",
+    "confidence": 0.7,
+    "tags": [
+      "api_discovered"
+    ]
+  },
+  {
+    "type": "url",
+    "value": "https://fershop.net/api/auth.php",
+    "source": "crawler_html_inline_js",
+    "confidence": 0.7,
+    "tags": [
+      "api_discovered"
+    ]
+  },
+  {
+    "type": "url",
+    "value": "https://fershop.net/api/auth.php",
+    "source": "crawler_html_inline_js",
+    "confidence": 0.7,
+    "tags": [
+      "api_discovered"
+    ]
+  },
+  {
+    "type": "url",
+    "value": "https://fershop.net/opensearch.xml",
+    "source": "crawler_html_inline_js",
+    "confidence": 0.7,
+    "tags": [
+      "api_discovered"
+    ]
+  },
+  {
+    "type": "url",
+    "value": "https://fershop.net/feed.xml",
+    "source": "crawler_html_inline_js",
+    "confidence": 0.7,
+    "tags": [
+      "api_discovered"
+    ]
+  },
+  {
+    "type": "url",
+    "value": "https://fershop.net/api/auth.php",
+    "source": "crawler_html_inline_js",
+    "confidence": 0.7,
+    "tags": [
+      "api_discovered"
+    ]
+  },
+  {
+    "type": "url",
+    "value": "https://fershop.net/api/auth.php",
+    "source": "crawler_html_inline_js",
+    "confidence": 0.7,
+    "tags": [
+      "api_discovered"
+    ]
+  },
+  {
+    "type": "url",
+    "value": "https://fershop.net/opensearch.xml",
+    "source": "crawler_html_inline_js",
+    "confidence": 0.7,
+    "tags": [
+      "api_discovered"
+    ]
+  },
+  {
+    "type": "url",
+    "value": "https://fershop.net/feed.xml",
+    "source": "crawler_html_inline_js",
+    "confidence": 0.7,
+    "tags": [
+      "api_discovered"
+    ]
+  },
+  {
+    "type": "url",
+    "value": "https://fershop.net/api/auth.php",
+    "source": "crawler_html_inline_js",
+    "confidence": 0.7,
+    "tags": [
+      "api_discovered"
+    ]
+  },
+  {
+    "type": "url",
+    "value": "https://fershop.net/api/auth.php",
+    "source": "crawler_html_inline_js",
+    "confidence": 0.7,
+    "tags": [
+      "api_discovered"
+    ]
+  },
+  {
+    "type": "url",
+    "value": "https://fershop.net/opensearch.xml",
+    "source": "crawler_html_inline_js",
+    "confidence": 0.7,
+    "tags": [
+      "api_discovered"
+    ]
+  },
+  {
+    "type": "url",
+    "value": "https://fershop.net/feed.xml",
+    "source": "crawler_html_inline_js",
+    "confidence": 0.7,
+    "tags": [
+      "api_discovered"
+    ]
+  },
+  {
+    "type": "url",
+    "value": "https://fershop.net/api/auth.php",
+    "source": "crawler_html_inline_js",
+    "confidence": 0.7,
+    "tags": [
+      "api_discovered"
+    ]
+  },
+  {
+    "type": "url",
+    "value": "https://fershop.net/api/auth.php",
+    "source": "crawler_html_inline_js",
+    "confidence": 0.7,
+    "tags": [
+      "api_discovered"
+    ]
+  },
+  {
+    "type": "url",
+    "value": "https://fershop.net/opensearch.xml",
+    "source": "crawler_html_inline_js",
+    "confidence": 0.7,
+    "tags": [
+      "api_discovered"
+    ]
+  },
+  {
+    "type": "url",
+    "value": "https://fershop.net/feed.xml",
+    "source": "crawler_html_inline_js",
+    "confidence": 0.7,
+    "tags": [
+      "api_discovered"
+    ]
+  },
+  {
+    "type": "url",
+    "value": "https://fershop.net/api/auth.php",
+    "source": "crawler_html_inline_js",
+    "confidence": 0.7,
+    "tags": [
+      "api_discovered"
+    ]
+  },
+  {
+    "type": "url",
+    "value": "https://fershop.net/api/auth.php",
+    "source": "crawler_html_inline_js",
+    "confidence": 0.7,
+    "tags": [
+      "api_discovered"
+    ]
+  },
+  {
+    "type": "url",
+    "value": "https://fershop.net/opensearch.xml",
+    "source": "crawler_html_inline_js",
+    "confidence": 0.7,
+    "tags": [
+      "api_discovered"
+    ]
+  },
+  {
+    "type": "url",
+    "value": "https://fershop.net/feed.xml",
+    "source": "crawler_html_inline_js",
+    "confidence": 0.7,
+    "tags": [
+      "api_discovered"
+    ]
+  },
+  {
+    "type": "url",
+    "value": "https://fershop.net/api/auth.php",
+    "source": "crawler_html_inline_js",
+    "confidence": 0.7,
+    "tags": [
+      "api_discovered"
+    ]
+  },
+  {
+    "type": "url",
+    "value": "https://fershop.net/api/auth.php",
+    "source": "crawler_html_inline_js",
+    "confidence": 0.7,
+    "tags": [
+      "api_discovered"
+    ]
+  },
+  {
+    "type": "url",
+    "value": "https://fershop.net/opensearch.xml",
+    "source": "crawler_html_inline_js",
+    "confidence": 0.7,
+    "tags": [
+      "api_discovered"
+    ]
+  },
+  {
+    "type": "url",
+    "value": "https://fershop.net/feed.xml",
+    "source": "crawler_html_inline_js",
+    "confidence": 0.7,
+    "tags": [
+      "api_discovered"
+    ]
+  },
+  {
+    "type": "url",
+    "value": "https://fershop.net/api/auth.php",
+    "source": "crawler_html_inline_js",
+    "confidence": 0.7,
+    "tags": [
+      "api_discovered"
+    ]
+  },
+  {
+    "type": "url",
+    "value": "https://fershop.net/api/auth.php",
+    "source": "crawler_html_inline_js",
+    "confidence": 0.7,
+    "tags": [
+      "api_discovered"
+    ]
+  },
+  {
+    "type": "url",
+    "value": "https://fershop.net/opensearch.xml",
+    "source": "crawler_html_inline_js",
+    "confidence": 0.7,
+    "tags": [
+      "api_discovered"
+    ]
+  },
+  {
+    "type": "url",
+    "value": "https://fershop.net/feed.xml",
+    "source": "crawler_html_inline_js",
+    "confidence": 0.7,
+    "tags": [
+      "api_discovered"
+    ]
+  },
+  {
+    "type": "url",
+    "value": "https://fershop.net/api/auth.php",
+    "source": "crawler_html_inline_js",
+    "confidence": 0.7,
+    "tags": [
+      "api_discovered"
+    ]
+  },
+  {
+    "type": "url",
+    "value": "https://fershop.net/api/auth.php",
+    "source": "crawler_html_inline_js",
+    "confidence": 0.7,
+    "tags": [
+      "api_discovered"
+    ]
+  },
+  {
+    "type": "url",
+    "value": "https://fershop.net/opensearch.xml",
+    "source": "crawler_html_inline_js",
+    "confidence": 0.7,
+    "tags": [
+      "api_discovered"
+    ]
+  },
+  {
+    "type": "url",
+    "value": "https://fershop.net/feed.xml",
+    "source": "crawler_html_inline_js",
+    "confidence": 0.7,
+    "tags": [
+      "api_discovered"
+    ]
+  },
+  {
+    "type": "url",
+    "value": "https://fershop.net/api/auth.php",
+    "source": "crawler_html_inline_js",
+    "confidence": 0.7,
+    "tags": [
+      "api_discovered"
+    ]
+  },
+  {
+    "type": "url",
+    "value": "https://fershop.net/api/auth.php",
+    "source": "crawler_html_inline_js",
+    "confidence": 0.7,
+    "tags": [
+      "api_discovered"
+    ]
+  },
+  {
+    "type": "url",
+    "value": "https://fershop.net/opensearch.xml",
+    "source": "crawler_html_inline_js",
+    "confidence": 0.7,
+    "tags": [
+      "api_discovered"
+    ]
+  },
+  {
+    "type": "url",
+    "value": "https://fershop.net/feed.xml",
+    "source": "crawler_html_inline_js",
+    "confidence": 0.7,
+    "tags": [
+      "api_discovered"
+    ]
+  },
+  {
+    "type": "url",
+    "value": "https://fershop.net/api/auth.php",
+    "source": "crawler_html_inline_js",
+    "confidence": 0.7,
+    "tags": [
+      "api_discovered"
+    ]
+  },
+  {
+    "type": "url",
+    "value": "https://fershop.net/api/auth.php",
+    "source": "crawler_html_inline_js",
+    "confidence": 0.7,
+    "tags": [
+      "api_discovered"
+    ]
+  },
+  {
+    "type": "url",
+    "value": "https://fershop.net/opensearch.xml",
+    "source": "crawler_html_inline_js",
+    "confidence": 0.7,
+    "tags": [
+      "api_discovered"
+    ]
+  },
+  {
+    "type": "url",
+    "value": "https://fershop.net/feed.xml",
+    "source": "crawler_html_inline_js",
+    "confidence": 0.7,
+    "tags": [
+      "api_discovered"
+    ]
+  },
+  {
+    "type": "url",
+    "value": "https://fershop.net/api/auth.php",
+    "source": "crawler_html_inline_js",
+    "confidence": 0.7,
+    "tags": [
+      "api_discovered"
+    ]
+  },
+  {
+    "type": "url",
+    "value": "https://fershop.net/api/auth.php",
+    "source": "crawler_html_inline_js",
+    "confidence": 0.7,
+    "tags": [
+      "api_discovered"
+    ]
+  },
+  {
+    "type": "url",
+    "value": "https://fershop.net/opensearch.xml",
+    "source": "crawler_html_inline_js",
+    "confidence": 0.7,
+    "tags": [
+      "api_discovered"
+    ]
+  },
+  {
+    "type": "url",
+    "value": "https://fershop.net/feed.xml",
+    "source": "crawler_html_inline_js",
+    "confidence": 0.7,
+    "tags": [
+      "api_discovered"
+    ]
+  },
+  {
+    "type": "url",
+    "value": "https://fershop.net/api/auth.php",
+    "source": "crawler_html_inline_js",
+    "confidence": 0.7,
+    "tags": [
+      "api_discovered"
+    ]
+  },
+  {
+    "type": "url",
+    "value": "https://fershop.net/api/auth.php",
+    "source": "crawler_html_inline_js",
+    "confidence": 0.7,
+    "tags": [
+      "api_discovered"
+    ]
+  },
+  {
+    "type": "url",
+    "value": "https://fershop.net/opensearch.xml",
+    "source": "crawler_html_inline_js",
+    "confidence": 0.7,
+    "tags": [
+      "api_discovered"
+    ]
+  },
+  {
+    "type": "url",
+    "value": "https://fershop.net/feed.xml",
+    "source": "crawler_html_inline_js",
+    "confidence": 0.7,
+    "tags": [
+      "api_discovered"
+    ]
+  },
+  {
+    "type": "url",
+    "value": "https://fershop.net/api/auth.php",
+    "source": "crawler_html_inline_js",
+    "confidence": 0.7,
+    "tags": [
+      "api_discovered"
+    ]
+  },
+  {
+    "type": "url",
+    "value": "https://fershop.net/api/auth.php",
+    "source": "crawler_html_inline_js",
+    "confidence": 0.7,
+    "tags": [
+      "api_discovered"
+    ]
+  },
+  {
+    "type": "url",
+    "value": "https://fershop.net/opensearch.xml",
+    "source": "crawler_html_inline_js",
+    "confidence": 0.7,
+    "tags": [
+      "api_discovered"
+    ]
+  },
+  {
+    "type": "url",
+    "value": "https://fershop.net/feed.xml",
+    "source": "crawler_html_inline_js",
+    "confidence": 0.7,
+    "tags": [
+      "api_discovered"
+    ]
+  },
+  {
+    "type": "url",
+    "value": "https://fershop.net/api/auth.php",
+    "source": "crawler_html_inline_js",
+    "confidence": 0.7,
+    "tags": [
+      "api_discovered"
+    ]
+  },
+  {
+    "type": "url",
+    "value": "https://fershop.net/api/auth.php",
+    "source": "crawler_html_inline_js",
+    "confidence": 0.7,
+    "tags": [
+      "api_discovered"
+    ]
+  },
+  {
+    "type": "url",
+    "value": "https://fershop.net/opensearch.xml",
+    "source": "crawler_html_inline_js",
+    "confidence": 0.7,
+    "tags": [
+      "api_discovered"
+    ]
+  },
+  {
+    "type": "url",
+    "value": "https://fershop.net/feed.xml",
+    "source": "crawler_html_inline_js",
+    "confidence": 0.7,
+    "tags": [
+      "api_discovered"
+    ]
+  },
+  {
+    "type": "url",
+    "value": "https://fershop.net/api/auth.php",
+    "source": "crawler_html_inline_js",
+    "confidence": 0.7,
+    "tags": [
+      "api_discovered"
+    ]
+  },
+  {
+    "type": "url",
+    "value": "https://fershop.net/api/auth.php",
+    "source": "crawler_html_inline_js",
+    "confidence": 0.7,
+    "tags": [
+      "api_discovered"
+    ]
+  },
+  {
+    "type": "url",
+    "value": "https://fershop.net/opensearch.xml",
+    "source": "crawler_html_inline_js",
+    "confidence": 0.7,
+    "tags": [
+      "api_discovered"
+    ]
+  },
+  {
+    "type": "url",
+    "value": "https://fershop.net/feed.xml",
+    "source": "crawler_html_inline_js",
+    "confidence": 0.7,
+    "tags": [
+      "api_discovered"
+    ]
+  },
+  {
+    "type": "url",
+    "value": "https://fershop.net/api/auth.php",
+    "source": "crawler_html_inline_js",
+    "confidence": 0.7,
+    "tags": [
+      "api_discovered"
+    ]
+  },
+  {
+    "type": "url",
+    "value": "https://fershop.net/api/auth.php",
+    "source": "crawler_html_inline_js",
+    "confidence": 0.7,
+    "tags": [
+      "api_discovered"
+    ]
+  },
+  {
+    "type": "url",
+    "value": "https://fershop.net/opensearch.xml",
+    "source": "crawler_html_inline_js",
+    "confidence": 0.7,
+    "tags": [
+      "api_discovered"
+    ]
+  },
+  {
+    "type": "url",
+    "value": "https://fershop.net/feed.xml",
+    "source": "crawler_html_inline_js",
+    "confidence": 0.7,
+    "tags": [
+      "api_discovered"
+    ]
+  },
+  {
+    "type": "url",
+    "value": "https://fershop.net/api/auth.php",
+    "source": "crawler_html_inline_js",
+    "confidence": 0.7,
+    "tags": [
+      "api_discovered"
+    ]
+  },
+  {
+    "type": "url",
+    "value": "https://fershop.net/api/auth.php",
+    "source": "crawler_html_inline_js",
+    "confidence": 0.7,
+    "tags": [
+      "api_discovered"
+    ]
+  },
+  {
+    "type": "url",
+    "value": "https://fershop.net/opensearch.xml",
+    "source": "crawler_html_inline_js",
+    "confidence": 0.7,
+    "tags": [
+      "api_discovered"
+    ]
+  },
+  {
+    "type": "url",
+    "value": "https://fershop.net/feed.xml",
+    "source": "crawler_html_inline_js",
+    "confidence": 0.7,
+    "tags": [
+      "api_discovered"
+    ]
+  },
+  {
+    "type": "url",
+    "value": "https://fershop.net/api/auth.php",
+    "source": "crawler_html_inline_js",
+    "confidence": 0.7,
+    "tags": [
+      "api_discovered"
+    ]
+  },
+  {
+    "type": "url",
+    "value": "https://fershop.net/api/auth.php",
+    "source": "crawler_html_inline_js",
+    "confidence": 0.7,
+    "tags": [
+      "api_discovered"
+    ]
+  },
+  {
+    "type": "url",
+    "value": "https://fershop.net/opensearch.xml",
+    "source": "crawler_html_inline_js",
+    "confidence": 0.7,
+    "tags": [
+      "api_discovered"
+    ]
+  },
+  {
+    "type": "url",
+    "value": "https://fershop.net/feed.xml",
+    "source": "crawler_html_inline_js",
+    "confidence": 0.7,
+    "tags": [
+      "api_discovered"
+    ]
+  },
+  {
+    "type": "url",
+    "value": "https://fershop.net/api/auth.php",
+    "source": "crawler_html_inline_js",
+    "confidence": 0.7,
+    "tags": [
+      "api_discovered"
+    ]
+  },
+  {
+    "type": "url",
+    "value": "https://fershop.net/api/auth.php",
+    "source": "crawler_html_inline_js",
+    "confidence": 0.7,
+    "tags": [
+      "api_discovered"
+    ]
+  },
+  {
+    "type": "url",
+    "value": "https://fershop.net/opensearch.xml",
+    "source": "crawler_html_inline_js",
+    "confidence": 0.7,
+    "tags": [
+      "api_discovered"
+    ]
+  },
+  {
+    "type": "url",
+    "value": "https://fershop.net/feed.xml",
+    "source": "crawler_html_inline_js",
+    "confidence": 0.7,
+    "tags": [
+      "api_discovered"
+    ]
+  },
+  {
+    "type": "url",
+    "value": "https://fershop.net/api/auth.php",
+    "source": "crawler_html_inline_js",
+    "confidence": 0.7,
+    "tags": [
+      "api_discovered"
+    ]
+  },
+  {
+    "type": "url",
+    "value": "https://fershop.net/api/auth.php",
+    "source": "crawler_html_inline_js",
+    "confidence": 0.7,
+    "tags": [
+      "api_discovered"
+    ]
+  },
+  {
+    "type": "url",
+    "value": "https://fershop.net/opensearch.xml",
+    "source": "crawler_html_inline_js",
+    "confidence": 0.7,
+    "tags": [
+      "api_discovered"
+    ]
+  },
+  {
+    "type": "url",
+    "value": "https://fershop.net/feed.xml",
+    "source": "crawler_html_inline_js",
+    "confidence": 0.7,
+    "tags": [
+      "api_discovered"
+    ]
+  },
+  {
+    "type": "url",
+    "value": "https://fershop.net/api/auth.php",
+    "source": "crawler_html_inline_js",
+    "confidence": 0.7,
+    "tags": [
+      "api_discovered"
+    ]
+  },
+  {
+    "type": "url",
+    "value": "https://fershop.net/api/auth.php",
+    "source": "crawler_html_inline_js",
+    "confidence": 0.7,
+    "tags": [
+      "api_discovered"
+    ]
+  },
+  {
+    "type": "url",
+    "value": "https://fershop.net/opensearch.xml",
+    "source": "crawler_html_inline_js",
+    "confidence": 0.7,
+    "tags": [
+      "api_discovered"
+    ]
+  },
+  {
+    "type": "url",
+    "value": "https://fershop.net/feed.xml",
+    "source": "crawler_html_inline_js",
+    "confidence": 0.7,
+    "tags": [
+      "api_discovered"
+    ]
+  },
+  {
+    "type": "url",
+    "value": "https://fershop.net/api/auth.php",
+    "source": "crawler_html_inline_js",
+    "confidence": 0.7,
+    "tags": [
+      "api_discovered"
+    ]
+  },
+  {
+    "type": "url",
+    "value": "https://fershop.net/api/auth.php",
+    "source": "crawler_html_inline_js",
+    "confidence": 0.7,
+    "tags": [
+      "api_discovered"
+    ]
+  },
+  {
+    "type": "url",
+    "value": "https://fershop.net/opensearch.xml",
+    "source": "crawler_html_inline_js",
+    "confidence": 0.7,
+    "tags": [
+      "api_discovered"
+    ]
+  },
+  {
+    "type": "url",
+    "value": "https://fershop.net/feed.xml",
+    "source": "crawler_html_inline_js",
+    "confidence": 0.7,
+    "tags": [
+      "api_discovered"
+    ]
+  },
+  {
+    "type": "url",
+    "value": "https://fershop.net/api/auth.php",
+    "source": "crawler_html_inline_js",
+    "confidence": 0.7,
+    "tags": [
+      "api_discovered"
+    ]
+  },
+  {
+    "type": "url",
+    "value": "https://fershop.net/api/auth.php",
+    "source": "crawler_html_inline_js",
+    "confidence": 0.7,
+    "tags": [
+      "api_discovered"
+    ]
+  },
+  {
+    "type": "url",
+    "value": "https://fershop.net/opensearch.xml",
+    "source": "crawler_html_inline_js",
+    "confidence": 0.7,
+    "tags": [
+      "api_discovered"
+    ]
+  },
+  {
+    "type": "url",
+    "value": "https://fershop.net/feed.xml",
+    "source": "crawler_html_inline_js",
+    "confidence": 0.7,
+    "tags": [
+      "api_discovered"
+    ]
+  },
+  {
+    "type": "url",
+    "value": "https://fershop.net/api/auth.php",
+    "source": "crawler_html_inline_js",
+    "confidence": 0.7,
+    "tags": [
+      "api_discovered"
+    ]
+  },
+  {
+    "type": "url",
+    "value": "https://fershop.net/api/auth.php",
+    "source": "crawler_html_inline_js",
+    "confidence": 0.7,
+    "tags": [
+      "api_discovered"
+    ]
+  },
+  {
+    "type": "url",
+    "value": "https://fershop.net/opensearch.xml",
+    "source": "crawler_html_inline_js",
+    "confidence": 0.7,
+    "tags": [
+      "api_discovered"
+    ]
+  },
+  {
+    "type": "url",
+    "value": "https://fershop.net/feed.xml",
+    "source": "crawler_html_inline_js",
+    "confidence": 0.7,
+    "tags": [
+      "api_discovered"
+    ]
+  },
+  {
+    "type": "url",
+    "value": "https://fershop.net/api/auth.php",
+    "source": "crawler_html_inline_js",
+    "confidence": 0.7,
+    "tags": [
+      "api_discovered"
+    ]
+  },
+  {
+    "type": "url",
+    "value": "https://fershop.net/api/auth.php",
+    "source": "crawler_html_inline_js",
+    "confidence": 0.7,
+    "tags": [
+      "api_discovered"
+    ]
+  },
+  {
+    "type": "url",
+    "value": "https://fershop.net/opensearch.xml",
+    "source": "crawler_html_inline_js",
+    "confidence": 0.7,
+    "tags": [
+      "api_discovered"
+    ]
+  },
+  {
+    "type": "url",
+    "value": "https://fershop.net/feed.xml",
+    "source": "crawler_html_inline_js",
+    "confidence": 0.7,
+    "tags": [
+      "api_discovered"
+    ]
+  },
+  {
+    "type": "url",
+    "value": "https://fershop.net/api/auth.php",
+    "source": "crawler_html_inline_js",
+    "confidence": 0.7,
+    "tags": [
+      "api_discovered"
+    ]
+  },
+  {
+    "type": "url",
+    "value": "https://fershop.net/api/auth.php",
+    "source": "crawler_html_inline_js",
+    "confidence": 0.7,
+    "tags": [
+      "api_discovered"
+    ]
+  },
+  {
+    "type": "url",
+    "value": "https://fershop.net/opensearch.xml",
+    "source": "crawler_html_inline_js",
+    "confidence": 0.7,
+    "tags": [
+      "api_discovered"
+    ]
+  },
+  {
+    "type": "url",
+    "value": "https://fershop.net/feed.xml",
+    "source": "crawler_html_inline_js",
+    "confidence": 0.7,
+    "tags": [
+      "api_discovered"
+    ]
+  },
+  {
+    "type": "url",
+    "value": "https://fershop.net/api/auth.php",
+    "source": "crawler_html_inline_js",
+    "confidence": 0.7,
+    "tags": [
+      "api_discovered"
+    ]
+  },
+  {
+    "type": "url",
+    "value": "https://fershop.net/api/auth.php",
+    "source": "crawler_html_inline_js",
+    "confidence": 0.7,
+    "tags": [
+      "api_discovered"
+    ]
+  },
+  {
+    "type": "url",
+    "value": "https://fershop.net/opensearch.xml",
+    "source": "crawler_html_inline_js",
+    "confidence": 0.7,
+    "tags": [
+      "api_discovered"
+    ]
+  },
+  {
+    "type": "url",
+    "value": "https://fershop.net/feed.xml",
+    "source": "crawler_html_inline_js",
+    "confidence": 0.7,
+    "tags": [
+      "api_discovered"
+    ]
+  },
+  {
+    "type": "url",
+    "value": "https://fershop.net/api/auth.php",
+    "source": "crawler_html_inline_js",
+    "confidence": 0.7,
+    "tags": [
+      "api_discovered"
+    ]
+  },
+  {
+    "type": "url",
+    "value": "https://fershop.net/api/auth.php",
+    "source": "crawler_html_inline_js",
+    "confidence": 0.7,
+    "tags": [
+      "api_discovered"
+    ]
+  },
+  {
+    "type": "url",
+    "value": "https://fershop.net/opensearch.xml",
+    "source": "crawler_html_inline_js",
+    "confidence": 0.7,
+    "tags": [
+      "api_discovered"
+    ]
+  },
+  {
+    "type": "url",
+    "value": "https://fershop.net/feed.xml",
+    "source": "crawler_html_inline_js",
+    "confidence": 0.7,
+    "tags": [
+      "api_discovered"
+    ]
+  },
+  {
+    "type": "url",
+    "value": "https://fershop.net/api/auth.php",
+    "source": "crawler_html_inline_js",
+    "confidence": 0.7,
+    "tags": [
+      "api_discovered"
+    ]
+  },
+  {
+    "type": "url",
+    "value": "https://fershop.net/api/auth.php",
+    "source": "crawler_html_inline_js",
+    "confidence": 0.7,
+    "tags": [
+      "api_discovered"
+    ]
+  },
+  {
+    "type": "url",
+    "value": "https://fershop.net/opensearch.xml",
+    "source": "crawler_html_inline_js",
+    "confidence": 0.7,
+    "tags": [
+      "api_discovered"
+    ]
+  },
+  {
+    "type": "url",
+    "value": "https://fershop.net/feed.xml",
+    "source": "crawler_html_inline_js",
+    "confidence": 0.7,
+    "tags": [
+      "api_discovered"
+    ]
+  },
+  {
+    "type": "url",
+    "value": "https://fershop.net/api/auth.php",
+    "source": "crawler_html_inline_js",
+    "confidence": 0.7,
+    "tags": [
+      "api_discovered"
+    ]
+  },
+  {
+    "type": "url",
+    "value": "https://fershop.net/api/auth.php",
+    "source": "crawler_html_inline_js",
+    "confidence": 0.7,
+    "tags": [
+      "api_discovered"
+    ]
+  },
+  {
+    "type": "url",
+    "value": "https://fershop.net/opensearch.xml",
+    "source": "crawler_html_inline_js",
+    "confidence": 0.7,
+    "tags": [
+      "api_discovered"
+    ]
+  },
+  {
+    "type": "url",
+    "value": "https://fershop.net/feed.xml",
+    "source": "crawler_html_inline_js",
+    "confidence": 0.7,
+    "tags": [
+      "api_discovered"
+    ]
+  },
+  {
+    "type": "url",
+    "value": "https://fershop.net/api/auth.php",
+    "source": "crawler_html_inline_js",
+    "confidence": 0.7,
+    "tags": [
+      "api_discovered"
+    ]
+  },
+  {
+    "type": "url",
+    "value": "https://fershop.net/api/auth.php",
+    "source": "crawler_html_inline_js",
+    "confidence": 0.7,
+    "tags": [
+      "api_discovered"
+    ]
+  },
+  {
+    "type": "url",
+    "value": "https://fershop.net/opensearch.xml",
+    "source": "crawler_html_inline_js",
+    "confidence": 0.7,
+    "tags": [
+      "api_discovered"
+    ]
+  },
+  {
+    "type": "url",
+    "value": "https://fershop.net/feed.xml",
+    "source": "crawler_html_inline_js",
+    "confidence": 0.7,
+    "tags": [
+      "api_discovered"
+    ]
+  },
+  {
+    "type": "url",
+    "value": "https://fershop.net/api/auth.php",
+    "source": "crawler_html_inline_js",
+    "confidence": 0.7,
+    "tags": [
+      "api_discovered"
+    ]
+  },
+  {
+    "type": "url",
+    "value": "https://fershop.net/api/auth.php",
+    "source": "crawler_html_inline_js",
+    "confidence": 0.7,
+    "tags": [
+      "api_discovered"
+    ]
+  },
+  {
+    "type": "url",
+    "value": "https://fershop.net/opensearch.xml",
+    "source": "crawler_html_inline_js",
+    "confidence": 0.7,
+    "tags": [
+      "api_discovered"
+    ]
+  },
+  {
+    "type": "url",
+    "value": "https://fershop.net/feed.xml",
+    "source": "crawler_html_inline_js",
+    "confidence": 0.7,
+    "tags": [
+      "api_discovered"
+    ]
+  },
+  {
+    "type": "url",
+    "value": "https://fershop.net/api/auth.php",
+    "source": "crawler_html_inline_js",
+    "confidence": 0.7,
+    "tags": [
+      "api_discovered"
+    ]
+  },
+  {
+    "type": "url",
+    "value": "https://fershop.net/api/auth.php",
+    "source": "crawler_html_inline_js",
+    "confidence": 0.7,
+    "tags": [
+      "api_discovered"
+    ]
+  },
+  {
+    "type": "url",
+    "value": "https://fershop.net/opensearch.xml",
+    "source": "crawler_html_inline_js",
+    "confidence": 0.7,
+    "tags": [
+      "api_discovered"
+    ]
+  },
+  {
+    "type": "url",
+    "value": "https://fershop.net/feed.xml",
+    "source": "crawler_html_inline_js",
+    "confidence": 0.7,
+    "tags": [
+      "api_discovered"
+    ]
+  },
+  {
+    "type": "url",
+    "value": "https://fershop.net/api/auth.php",
+    "source": "crawler_html_inline_js",
+    "confidence": 0.7,
+    "tags": [
+      "api_discovered"
+    ]
+  },
+  {
+    "type": "url",
+    "value": "https://fershop.net/api/auth.php",
+    "source": "crawler_html_inline_js",
+    "confidence": 0.7,
+    "tags": [
+      "api_discovered"
+    ]
+  },
+  {
+    "type": "url",
+    "value": "https://fershop.net/opensearch.xml",
+    "source": "crawler_html_inline_js",
+    "confidence": 0.7,
+    "tags": [
+      "api_discovered"
+    ]
+  },
+  {
+    "type": "url",
+    "value": "https://fershop.net/feed.xml",
+    "source": "crawler_html_inline_js",
+    "confidence": 0.7,
+    "tags": [
+      "api_discovered"
+    ]
+  },
+  {
+    "type": "url",
+    "value": "https://fershop.net/api/auth.php",
+    "source": "crawler_html_inline_js",
+    "confidence": 0.7,
+    "tags": [
+      "api_discovered"
+    ]
+  },
+  {
+    "type": "url",
+    "value": "https://fershop.net/api/auth.php",
+    "source": "crawler_html_inline_js",
+    "confidence": 0.7,
+    "tags": [
+      "api_discovered"
+    ]
+  },
+  {
+    "type": "url",
+    "value": "https://fershop.net/opensearch.xml",
+    "source": "crawler_html_inline_js",
+    "confidence": 0.7,
+    "tags": [
+      "api_discovered"
+    ]
+  },
+  {
+    "type": "url",
+    "value": "https://fershop.net/feed.xml",
+    "source": "crawler_html_inline_js",
+    "confidence": 0.7,
+    "tags": [
+      "api_discovered"
+    ]
+  },
+  {
+    "type": "url",
+    "value": "https://fershop.net/api/auth.php",
+    "source": "crawler_html_inline_js",
+    "confidence": 0.7,
+    "tags": [
+      "api_discovered"
+    ]
+  },
+  {
+    "type": "url",
+    "value": "https://fershop.net/api/auth.php",
+    "source": "crawler_html_inline_js",
+    "confidence": 0.7,
+    "tags": [
+      "api_discovered"
+    ]
+  },
+  {
+    "type": "url",
+    "value": "https://fershop.net/opensearch.xml",
+    "source": "crawler_html_inline_js",
+    "confidence": 0.7,
+    "tags": [
+      "api_discovered"
+    ]
+  },
+  {
+    "type": "url",
+    "value": "https://fershop.net/feed.xml",
+    "source": "crawler_html_inline_js",
+    "confidence": 0.7,
+    "tags": [
+      "api_discovered"
+    ]
+  },
+  {
+    "type": "url",
+    "value": "https://fershop.net/api/auth.php",
+    "source": "crawler_html_inline_js",
+    "confidence": 0.7,
+    "tags": [
+      "api_discovered"
+    ]
+  },
+  {
+    "type": "url",
+    "value": "https://fershop.net/api/auth.php",
+    "source": "crawler_html_inline_js",
+    "confidence": 0.7,
+    "tags": [
+      "api_discovered"
+    ]
+  },
+  {
+    "type": "url",
+    "value": "https://fershop.net/opensearch.xml",
+    "source": "crawler_html_inline_js",
+    "confidence": 0.7,
+    "tags": [
+      "api_discovered"
+    ]
+  },
+  {
+    "type": "url",
+    "value": "https://fershop.net/feed.xml",
+    "source": "crawler_html_inline_js",
+    "confidence": 0.7,
+    "tags": [
+      "api_discovered"
+    ]
+  },
+  {
+    "type": "url",
+    "value": "https://fershop.net/api/auth.php",
+    "source": "crawler_html_inline_js",
+    "confidence": 0.7,
+    "tags": [
+      "api_discovered"
+    ]
+  },
+  {
+    "type": "url",
+    "value": "https://fershop.net/api/auth.php",
+    "source": "crawler_html_inline_js",
+    "confidence": 0.7,
+    "tags": [
+      "api_discovered"
+    ]
+  },
+  {
+    "type": "url",
+    "value": "https://fershop.net/opensearch.xml",
+    "source": "crawler_html_inline_js",
+    "confidence": 0.7,
+    "tags": [
+      "api_discovered"
+    ]
+  },
+  {
+    "type": "url",
+    "value": "https://fershop.net/feed.xml",
+    "source": "crawler_html_inline_js",
+    "confidence": 0.7,
+    "tags": [
+      "api_discovered"
+    ]
+  },
+  {
+    "type": "url",
+    "value": "https://fershop.net/api/auth.php",
+    "source": "crawler_html_inline_js",
+    "confidence": 0.7,
+    "tags": [
+      "api_discovered"
+    ]
+  },
+  {
+    "type": "url",
+    "value": "https://fershop.net/api/auth.php",
+    "source": "crawler_html_inline_js",
+    "confidence": 0.7,
+    "tags": [
+      "api_discovered"
+    ]
+  },
+  {
+    "type": "url",
+    "value": "https://fershop.net/opensearch.xml",
+    "source": "crawler_html_inline_js",
+    "confidence": 0.7,
+    "tags": [
+      "api_discovered"
+    ]
+  },
+  {
+    "type": "url",
+    "value": "https://fershop.net/feed.xml",
+    "source": "crawler_html_inline_js",
+    "confidence": 0.7,
+    "tags": [
+      "api_discovered"
+    ]
+  },
+  {
+    "type": "url",
+    "value": "https://fershop.net/api/auth.php",
+    "source": "crawler_html_inline_js",
+    "confidence": 0.7,
+    "tags": [
+      "api_discovered"
+    ]
+  },
+  {
+    "type": "url",
+    "value": "https://fershop.net/api/auth.php",
+    "source": "crawler_html_inline_js",
+    "confidence": 0.7,
+    "tags": [
+      "api_discovered"
+    ]
+  },
+  {
+    "type": "url",
+    "value": "https://fershop.net/opensearch.xml",
+    "source": "crawler_html_inline_js",
+    "confidence": 0.7,
+    "tags": [
+      "api_discovered"
+    ]
+  },
+  {
+    "type": "url",
+    "value": "https://fershop.net/feed.xml",
+    "source": "crawler_html_inline_js",
+    "confidence": 0.7,
+    "tags": [
+      "api_discovered"
+    ]
+  }
+]

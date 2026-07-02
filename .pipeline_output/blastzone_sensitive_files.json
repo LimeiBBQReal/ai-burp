@@ -1,0 +1,289 @@
+[
+  {
+    "base": "http://webmail.blastzone.org",
+    "path": "/.git/config",
+    "status": 403,
+    "len": 1810,
+    "preview": "<!DOCTYPE html PUBLIC \"-//W3C//DTD XHTML 1.0 Transitional//EN\"    \"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd\"> <html xmlns=\"http://www.w3.org/1999/xhtml\" xml:lang=\"en\" lang=\"en\"> <head> "
+  },
+  {
+    "base": "http://webmail.blastzone.org",
+    "path": "/.git/HEAD",
+    "status": 403,
+    "len": 1810,
+    "preview": "<!DOCTYPE html PUBLIC \"-//W3C//DTD XHTML 1.0 Transitional//EN\"    \"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd\"> <html xmlns=\"http://www.w3.org/1999/xhtml\" xml:lang=\"en\" lang=\"en\"> <head> "
+  },
+  {
+    "base": "http://webmail.blastzone.org",
+    "path": "/.env",
+    "status": 403,
+    "len": 1810,
+    "preview": "<!DOCTYPE html PUBLIC \"-//W3C//DTD XHTML 1.0 Transitional//EN\"    \"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd\"> <html xmlns=\"http://www.w3.org/1999/xhtml\" xml:lang=\"en\" lang=\"en\"> <head> "
+  },
+  {
+    "base": "http://webmail.blastzone.org",
+    "path": "/env",
+    "status": 403,
+    "len": 1810,
+    "preview": "<!DOCTYPE html PUBLIC \"-//W3C//DTD XHTML 1.0 Transitional//EN\"    \"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd\"> <html xmlns=\"http://www.w3.org/1999/xhtml\" xml:lang=\"en\" lang=\"en\"> <head> "
+  },
+  {
+    "base": "http://webmail.blastzone.org",
+    "path": "/.htaccess",
+    "status": 403,
+    "len": 1810,
+    "preview": "<!DOCTYPE html PUBLIC \"-//W3C//DTD XHTML 1.0 Transitional//EN\"    \"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd\"> <html xmlns=\"http://www.w3.org/1999/xhtml\" xml:lang=\"en\" lang=\"en\"> <head> "
+  },
+  {
+    "base": "http://webmail.blastzone.org",
+    "path": "/robots.txt",
+    "status": 200,
+    "len": 14,
+    "preview": "User-agent: * "
+  },
+  {
+    "base": "http://webmail.blastzone.org",
+    "path": "/configuration.php.bak",
+    "status": 403,
+    "len": 1810,
+    "preview": "<!DOCTYPE html PUBLIC \"-//W3C//DTD XHTML 1.0 Transitional//EN\"    \"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd\"> <html xmlns=\"http://www.w3.org/1999/xhtml\" xml:lang=\"en\" lang=\"en\"> <head> "
+  },
+  {
+    "base": "http://webmail.blastzone.org",
+    "path": "/server-status",
+    "status": 403,
+    "len": 1810,
+    "preview": "<!DOCTYPE html PUBLIC \"-//W3C//DTD XHTML 1.0 Transitional//EN\"    \"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd\"> <html xmlns=\"http://www.w3.org/1999/xhtml\" xml:lang=\"en\" lang=\"en\"> <head> "
+  },
+  {
+    "base": "http://webmail.blastzone.org",
+    "path": "/server-info",
+    "status": 403,
+    "len": 1810,
+    "preview": "<!DOCTYPE html PUBLIC \"-//W3C//DTD XHTML 1.0 Transitional//EN\"    \"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd\"> <html xmlns=\"http://www.w3.org/1999/xhtml\" xml:lang=\"en\" lang=\"en\"> <head> "
+  },
+  {
+    "base": "http://webmail.blastzone.org",
+    "path": "/.svn/entries",
+    "status": 403,
+    "len": 1810,
+    "preview": "<!DOCTYPE html PUBLIC \"-//W3C//DTD XHTML 1.0 Transitional//EN\"    \"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd\"> <html xmlns=\"http://www.w3.org/1999/xhtml\" xml:lang=\"en\" lang=\"en\"> <head> "
+  },
+  {
+    "base": "http://webmail.blastzone.org",
+    "path": "/.DS_Store",
+    "status": 403,
+    "len": 1810,
+    "preview": "<!DOCTYPE html PUBLIC \"-//W3C//DTD XHTML 1.0 Transitional//EN\"    \"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd\"> <html xmlns=\"http://www.w3.org/1999/xhtml\" xml:lang=\"en\" lang=\"en\"> <head> "
+  },
+  {
+    "base": "http://bzhost1.blastzone.org",
+    "path": "/.htaccess",
+    "status": 403,
+    "len": 1810,
+    "preview": "<!DOCTYPE html PUBLIC \"-//W3C//DTD XHTML 1.0 Transitional//EN\"    \"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd\"> <html xmlns=\"http://www.w3.org/1999/xhtml\" xml:lang=\"en\" lang=\"en\"> <head> "
+  },
+  {
+    "base": "http://bzhost1.blastzone.org",
+    "path": "/robots.txt",
+    "status": 200,
+    "len": 14,
+    "preview": "User-agent: * "
+  },
+  {
+    "base": "http://bzhost1.blastzone.org",
+    "path": "/phpinfo.php",
+    "status": 403,
+    "len": 1810,
+    "preview": "<!DOCTYPE html PUBLIC \"-//W3C//DTD XHTML 1.0 Transitional//EN\"    \"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd\"> <html xmlns=\"http://www.w3.org/1999/xhtml\" xml:lang=\"en\" lang=\"en\"> <head> "
+  },
+  {
+    "base": "http://bzhost1.blastzone.org",
+    "path": "/info.php",
+    "status": 403,
+    "len": 1810,
+    "preview": "<!DOCTYPE html PUBLIC \"-//W3C//DTD XHTML 1.0 Transitional//EN\"    \"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd\"> <html xmlns=\"http://www.w3.org/1999/xhtml\" xml:lang=\"en\" lang=\"en\"> <head> "
+  },
+  {
+    "base": "http://bzhost1.blastzone.org",
+    "path": "/test.php",
+    "status": 403,
+    "len": 1810,
+    "preview": "<!DOCTYPE html PUBLIC \"-//W3C//DTD XHTML 1.0 Transitional//EN\"    \"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd\"> <html xmlns=\"http://www.w3.org/1999/xhtml\" xml:lang=\"en\" lang=\"en\"> <head> "
+  },
+  {
+    "base": "http://bzhost1.blastzone.org",
+    "path": "/server-status",
+    "status": 403,
+    "len": 1810,
+    "preview": "<!DOCTYPE html PUBLIC \"-//W3C//DTD XHTML 1.0 Transitional//EN\"    \"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd\"> <html xmlns=\"http://www.w3.org/1999/xhtml\" xml:lang=\"en\" lang=\"en\"> <head> "
+  },
+  {
+    "base": "http://www.blastzone.org",
+    "path": "/robots.txt",
+    "status": 200,
+    "len": 76,
+    "preview": "# robots.txt for http://blastzone.com\r \r User-agent: *\r Disallow: /aRocket\r "
+  },
+  {
+    "base": "http://bouncehouses.com",
+    "path": "/.env",
+    "status": 200,
+    "len": 482480,
+    "preview": " <!doctype html> <html class=\"no-js\" lang=\"en\">   <head>     <meta charset=\"utf-8\">     <meta http-equiv=\"X-UA-Compatible\" content=\"IE=edge,chrome=1\">     <meta name=\"viewport\" content=\"width=device-w"
+  },
+  {
+    "base": "http://bouncehouses.com",
+    "path": "/.htaccess",
+    "status": 200,
+    "len": 482490,
+    "preview": " <!doctype html> <html class=\"no-js\" lang=\"en\">   <head>     <meta charset=\"utf-8\">     <meta http-equiv=\"X-UA-Compatible\" content=\"IE=edge,chrome=1\">     <meta name=\"viewport\" content=\"width=device-w"
+  },
+  {
+    "base": "http://bouncehouses.com",
+    "path": "/robots.txt",
+    "status": 200,
+    "len": 3632,
+    "preview": "# Shopify storefront. Public product, collection, page, blog, policy, cart, and localized HTML is crawlable. # Agent instructions: https://bouncehouses.com/agents.md # UCP discovery: https://bouncehou"
+  },
+  {
+    "base": "http://bouncehouses.com",
+    "path": "/sitemap.xml",
+    "status": 200,
+    "len": 880,
+    "preview": "<?xml version=\"1.0\" encoding=\"UTF-8\"?> <sitemapindex xmlns=\"http://www.sitemaps.org/schemas/sitemap/0.9\">   <!-- This is the parent sitemap linking to additional sitemaps for products, collections and"
+  },
+  {
+    "base": "http://bouncehouses.com",
+    "path": "/.DS_Store",
+    "status": 200,
+    "len": 482490,
+    "preview": " <!doctype html> <html class=\"no-js\" lang=\"en\">   <head>     <meta charset=\"utf-8\">     <meta http-equiv=\"X-UA-Compatible\" content=\"IE=edge,chrome=1\">     <meta name=\"viewport\" content=\"width=device-w"
+  },
+  {
+    "base": "http://216.215.30.39",
+    "path": "/.htaccess",
+    "status": 403,
+    "len": 318,
+    "preview": "<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.01//EN\" \"http://www.w3.org/TR/html4/strict.dtd\"> <html><head> <title>403 Forbidden</title> </head><body> <h1>Forbidden</h1> <p>You don't have permission to ac"
+  },
+  {
+    "base": "http://216.215.30.39",
+    "path": "/server-status",
+    "status": 403,
+    "len": 318,
+    "preview": "<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.01//EN\" \"http://www.w3.org/TR/html4/strict.dtd\"> <html><head> <title>403 Forbidden</title> </head><body> <h1>Forbidden</h1> <p>You don't have permission to ac"
+  },
+  {
+    "base": "http://www.ashleywestmark.com",
+    "path": "/.git/config",
+    "status": 200,
+    "len": 703,
+    "preview": "<!DOCTYPE html> <html lang=\"en-US\"> <head> <meta charset=\"UTF-8\"> <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0, viewport-fit=cover\" /> <title>Access Restricted</title> <meta na"
+  },
+  {
+    "base": "http://www.ashleywestmark.com",
+    "path": "/.env",
+    "status": 200,
+    "len": 696,
+    "preview": "<!DOCTYPE html> <html lang=\"en-US\"> <head> <meta charset=\"UTF-8\"> <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0, viewport-fit=cover\" /> <title>Access Restricted</title> <meta na"
+  },
+  {
+    "base": "http://www.ashleywestmark.com",
+    "path": "/env",
+    "status": 200,
+    "len": 695,
+    "preview": "<!DOCTYPE html> <html lang=\"en-US\"> <head> <meta charset=\"UTF-8\"> <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0, viewport-fit=cover\" /> <title>Access Restricted</title> <meta na"
+  },
+  {
+    "base": "http://www.ashleywestmark.com",
+    "path": "/.htaccess",
+    "status": 403,
+    "len": 1810,
+    "preview": "<!DOCTYPE html PUBLIC \"-//W3C//DTD XHTML 1.0 Transitional//EN\"    \"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd\"> <html xmlns=\"http://www.w3.org/1999/xhtml\" xml:lang=\"en\" lang=\"en\"> <head> "
+  },
+  {
+    "base": "http://www.ashleywestmark.com",
+    "path": "/web.config",
+    "status": 200,
+    "len": 702,
+    "preview": "<!DOCTYPE html> <html lang=\"en-US\"> <head> <meta charset=\"UTF-8\"> <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0, viewport-fit=cover\" /> <title>Access Restricted</title> <meta na"
+  },
+  {
+    "base": "http://www.ashleywestmark.com",
+    "path": "/robots.txt",
+    "status": 200,
+    "len": 4242,
+    "preview": "User-agent: * Allow: / Allow: /blog/ Allow: *.webp$  Disallow: /tag/deck-fence-cleaning/ Disallow: /category/blog/ Disallow: /tag/handymanservicesremove/ Disallow: /tag/commercial-property-maintenance"
+  },
+  {
+    "base": "http://www.ashleywestmark.com",
+    "path": "/sitemap.xml",
+    "status": 200,
+    "len": 703,
+    "preview": "<!DOCTYPE html> <html lang=\"en-US\"> <head> <meta charset=\"UTF-8\"> <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0, viewport-fit=cover\" /> <title>Access Restricted</title> <meta na"
+  },
+  {
+    "base": "http://www.ashleywestmark.com",
+    "path": "/info.php",
+    "status": 200,
+    "len": 700,
+    "preview": "<!DOCTYPE html> <html lang=\"en-US\"> <head> <meta charset=\"UTF-8\"> <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0, viewport-fit=cover\" /> <title>Access Restricted</title> <meta na"
+  },
+  {
+    "base": "http://www.ashleywestmark.com",
+    "path": "/test.php",
+    "status": 200,
+    "len": 94037,
+    "preview": "<!DOCTYPE html PUBLIC \"-//W3C//DTD XHTML 1.0 Transitional//EN\" \"DTD/xhtml1-transitional.dtd\"> <html xmlns=\"http://www.w3.org/1999/xhtml\"><head> <style type=\"text/css\"> body {background-color: #fff; co"
+  },
+  {
+    "base": "http://www.ashleywestmark.com",
+    "path": "/backup.sql",
+    "status": 200,
+    "len": 702,
+    "preview": "<!DOCTYPE html> <html lang=\"en-US\"> <head> <meta charset=\"UTF-8\"> <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0, viewport-fit=cover\" /> <title>Access Restricted</title> <meta na"
+  },
+  {
+    "base": "http://www.ashleywestmark.com",
+    "path": "/dump.sql",
+    "status": 200,
+    "len": 700,
+    "preview": "<!DOCTYPE html> <html lang=\"en-US\"> <head> <meta charset=\"UTF-8\"> <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0, viewport-fit=cover\" /> <title>Access Restricted</title> <meta na"
+  },
+  {
+    "base": "http://www.ashleywestmark.com",
+    "path": "/db.sql",
+    "status": 200,
+    "len": 698,
+    "preview": "<!DOCTYPE html> <html lang=\"en-US\"> <head> <meta charset=\"UTF-8\"> <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0, viewport-fit=cover\" /> <title>Access Restricted</title> <meta na"
+  },
+  {
+    "base": "http://www.ashleywestmark.com",
+    "path": "/wp-config.php.bak",
+    "status": 200,
+    "len": 709,
+    "preview": "<!DOCTYPE html> <html lang=\"en-US\"> <head> <meta charset=\"UTF-8\"> <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0, viewport-fit=cover\" /> <title>Access Restricted</title> <meta na"
+  },
+  {
+    "base": "http://www.ashleywestmark.com",
+    "path": "/server-status",
+    "status": 403,
+    "len": 1810,
+    "preview": "<!DOCTYPE html PUBLIC \"-//W3C//DTD XHTML 1.0 Transitional//EN\"    \"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd\"> <html xmlns=\"http://www.w3.org/1999/xhtml\" xml:lang=\"en\" lang=\"en\"> <head> "
+  },
+  {
+    "base": "http://www.ashleywestmark.com",
+    "path": "/server-info",
+    "status": 200,
+    "len": 703,
+    "preview": "<!DOCTYPE html> <html lang=\"en-US\"> <head> <meta charset=\"UTF-8\"> <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0, viewport-fit=cover\" /> <title>Access Restricted</title> <meta na"
+  },
+  {
+    "base": "http://www.ashleywestmark.com",
+    "path": "/.svn/entries",
+    "status": 200,
+    "len": 704,
+    "preview": "<!DOCTYPE html> <html lang=\"en-US\"> <head> <meta charset=\"UTF-8\"> <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0, viewport-fit=cover\" /> <title>Access Restricted</title> <meta na"
+  }
+]

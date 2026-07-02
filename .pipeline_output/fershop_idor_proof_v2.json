@@ -1,0 +1,212 @@
+[
+  {
+    "base_pid": 3,
+    "tests": {
+      "PID-1": {
+        "url": "https://fershop.net/catalog/product/2",
+        "status": 404,
+        "length": 6995
+      },
+      "PID+1": {
+        "url": "https://fershop.net/catalog/product/4",
+        "status": 404,
+        "length": 6995
+      },
+      "MAX": {
+        "url": "https://fershop.net/catalog/product/9999",
+        "status": 404,
+        "length": 6995
+      },
+      "ZERO": {
+        "url": "https://fershop.net/catalog/product/0",
+        "status": 200,
+        "length": 37977
+      },
+      "NEG": {
+        "url": "https://fershop.net/catalog/product/-1",
+        "status": 404,
+        "length": 6995
+      }
+    }
+  },
+  {
+    "base_pid": 28,
+    "tests": {
+      "PID-1": {
+        "url": "https://fershop.net/catalog/product/27",
+        "status": 404,
+        "length": 6995
+      },
+      "PID+1": {
+        "url": "https://fershop.net/catalog/product/29",
+        "status": 200,
+        "length": 49611
+      },
+      "MAX": {
+        "url": "https://fershop.net/catalog/product/9999",
+        "status": 404,
+        "length": 6995
+      },
+      "ZERO": {
+        "url": "https://fershop.net/catalog/product/0",
+        "status": 200,
+        "length": 37977
+      },
+      "NEG": {
+        "url": "https://fershop.net/catalog/product/-1",
+        "status": 404,
+        "length": 6995
+      }
+    }
+  },
+  {
+    "base_pid": 50,
+    "tests": {
+      "PID-1": {
+        "url": "https://fershop.net/catalog/product/49",
+        "status": 200,
+        "length": 46656
+      },
+      "PID+1": {
+        "url": "https://fershop.net/catalog/product/51",
+        "status": 200,
+        "length": 48286
+      },
+      "MAX": {
+        "url": "https://fershop.net/catalog/product/9999",
+        "status": 404,
+        "length": 6995
+      },
+      "ZERO": {
+        "url": "https://fershop.net/catalog/product/0",
+        "status": 200,
+        "length": 37977
+      },
+      "NEG": {
+        "url": "https://fershop.net/catalog/product/-1",
+        "status": 404,
+        "length": 6995
+      }
+    }
+  },
+  {
+    "base_pid": 100,
+    "tests": {
+      "PID-1": {
+        "url": "https://fershop.net/catalog/product/99",
+        "status": 200,
+        "length": 46875
+      },
+      "PID+1": {
+        "url": "https://fershop.net/catalog/product/101",
+        "status": 200,
+        "length": 47249
+      },
+      "MAX": {
+        "url": "https://fershop.net/catalog/product/9999",
+        "status": 404,
+        "length": 6995
+      },
+      "ZERO": {
+        "url": "https://fershop.net/catalog/product/0",
+        "status": 200,
+        "length": 37977
+      },
+      "NEG": {
+        "url": "https://fershop.net/catalog/product/-1",
+        "status": 404,
+        "length": 6995
+      }
+    }
+  },
+  {
+    "base_pid": 200,
+    "tests": {
+      "PID-1": {
+        "url": "https://fershop.net/catalog/product/199",
+        "status": 200,
+        "length": 50775
+      },
+      "PID+1": {
+        "url": "https://fershop.net/catalog/product/201",
+        "status": 200,
+        "length": 44350
+      },
+      "MAX": {
+        "url": "https://fershop.net/catalog/product/9999",
+        "status": 404,
+        "length": 6995
+      },
+      "ZERO": {
+        "url": "https://fershop.net/catalog/product/0",
+        "status": 200,
+        "length": 37977
+      },
+      "NEG": {
+        "url": "https://fershop.net/catalog/product/-1",
+        "status": 404,
+        "length": 6995
+      }
+    }
+  },
+  {
+    "base_pid": 400,
+    "tests": {
+      "PID-1": {
+        "url": "https://fershop.net/catalog/product/399",
+        "status": 200,
+        "length": 47147
+      },
+      "PID+1": {
+        "url": "https://fershop.net/catalog/product/401",
+        "status": 200,
+        "length": 47072
+      },
+      "MAX": {
+        "url": "https://fershop.net/catalog/product/9999",
+        "status": 404,
+        "length": 6995
+      },
+      "ZERO": {
+        "url": "https://fershop.net/catalog/product/0",
+        "status": 200,
+        "length": 37977
+      },
+      "NEG": {
+        "url": "https://fershop.net/catalog/product/-1",
+        "status": 404,
+        "length": 6995
+      }
+    }
+  },
+  {
+    "base_pid": 600,
+    "tests": {
+      "PID-1": {
+        "url": "https://fershop.net/catalog/product/599",
+        "status": 200,
+        "length": 45539
+      },
+      "PID+1": {
+        "url": "https://fershop.net/catalog/product/601",
+        "status": 200,
+        "length": 46125
+      },
+      "MAX": {
+        "url": "https://fershop.net/catalog/product/9999",
+        "status": 404,
+        "length": 6995
+      },
+      "ZERO": {
+        "url": "https://fershop.net/catalog/product/0",
+        "status": 200,
+        "length": 37977
+      },
+      "NEG": {
+        "url": "https://fershop.net/catalog/product/-1",
+        "status": 404,
+        "length": 6995
+      }
+    }
+  }
+]

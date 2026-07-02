@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>红队评估报告 - blastzone-站群漏洞利用</title>
+    <style>
+        body { font-family: 'Segoe UI', 'Microsoft YaHei', sans-serif; margin: 40px; background: #f5f5f5; }
+        .report { max-width: 900px; margin: 0 auto; background: white; padding: 40px; border-radius: 8px; box-shadow: 0 2px 10px rgba(0,0,0,0.1); }
+        h1 { color: #c0392b; border-bottom: 3px solid #c0392b; padding-bottom: 10px; }
+        h2 { color: #2c3e50; margin-top: 30px; }
+        .meta { background: #ecf0f1; padding: 15px; border-radius: 5px; margin-bottom: 20px; }
+        .meta td { padding: 5px 15px; }
+        .section { margin-bottom: 25px; padding: 15px; border-left: 4px solid #3498db; background: #fafafa; }
+        .section.findings { border-left-color: #e74c3c; }
+        .section.chain { border-left-color: #2ecc71; }
+        .section.logic { border-left-color: #f39c12; }
+        table { width: 100%; border-collapse: collapse; margin: 10px 0; }
+        th, td { padding: 8px 12px; text-align: left; border-bottom: 1px solid #ddd; }
+        th { background: #34495e; color: white; }
+        tr:hover { background: #f0f0f0; }
+        .severity-critical { color: #c0392b; font-weight: bold; }
+        .severity-high { color: #e74c3c; }
+        .severity-medium { color: #f39c12; }
+        .severity-low { color: #27ae60; }
+        .badge { display: inline-block; padding: 3px 8px; border-radius: 3px; font-size: 12px; color: white; }
+        .badge-critical { background: #c0392b; }
+        .badge-high { background: #e74c3c; }
+        .badge-medium { background: #f39c12; }
+        .badge-low { background: #27ae60; }
+        .footer { margin-top: 40px; text-align: center; color: #95a5a6; font-size: 12px; }
+        code { background: #f4f4f4; padding: 2px 6px; border-radius: 3px; font-family: Consolas, monospace; }
+        pre { background: #2c3e50; color: #ecf0f1; padding: 15px; border-radius: 5px; overflow-x: auto; }
+    </style>
+</head>
+<body>
+<div class="report">
+    <h1>🔴 红队评估报告</h1>
+    <div class="meta">
+        <table>
+            <tr><td><strong>项目</strong></td><td>blastzone-站群漏洞利用</td>
+                <td><strong>目标</strong></td><td>blastzone.org + 25 domains</td></tr>
+            <tr><td><strong>日期</strong></td><td>2026-06-24 04:58:40</td>
+                <td><strong>漏洞数</strong></td><td>7</td></tr>
+        </table>
+    </div>
+    <div class="section findings"><h2>主动探测结果</h2><table><thead><tr><th>严重度</th><th>类型</th><th>目标</th><th>证据</th></tr></thead>
+                       <tbody><tr>
+                        <td><span class="badge badge-critical">CRITICAL</span></td>
+                        <td>phpMyAdmin 在线</td>
+                        <td>216.215.30.37:443</td>
+                        <td>HTTPS 200, 18576b — 数据库管理后台</td>
+                    </tr><tr>
+                        <td><span class="badge badge-critical">CRITICAL</span></td>
+                        <td>Blue Iris 在线</td>
+                        <td>173.209.174.233:81</td>
+                        <td>BlueServer/5.9.9.98 + CORS:* + Set-Cookie</td>
+                    </tr><tr>
+                        <td><span class="badge badge-high">HIGH</span></td>
+                        <td>Webmail 在线</td>
+                        <td>216.215.30.37:443/webmail/</td>
+                        <td>200, 634b — Web 邮件</td>
+                    </tr><tr>
+                        <td><span class="badge badge-medium">MEDIUM</span></td>
+                        <td>Mailman 在线</td>
+                        <td>216.215.30.39:80</td>
+                        <td>Apache/2.4.66 Debian — 邮件列表</td>
+                    </tr><tr>
+                        <td><span class="badge badge-medium">MEDIUM</span></td>
+                        <td>IIS 虚拟主机</td>
+                        <td>216.215.30.34:80</td>
+                        <td>3 站虚拟主机: blastzone.org + lokiresearch + performancehobbies</td>
+                    </tr><tr>
+                        <td><span class="badge badge-low">LOW</span></td>
+                        <td>Proxmox 超时</td>
+                        <td>216.215.30.35:8006</td>
+                        <td>连接超时 — 可能有 IP 白名单</td>
+                    </tr><tr>
+                        <td><span class="badge badge-low">LOW</span></td>
+                        <td>SSH 安全</td>
+                        <td>173.209.174.233:22</td>
+                        <td>弱口令爆破失败</td>
+                    </tr></tbody></table></div>
+    <div class="footer">
+        <p>AI-Burp V4 自动生成 | 2026-06-24 04:58:40</p>
+        <p>本报告仅供授权方使用, 未经许可不得传播</p>
+    </div>
+</div>
+</body>
+</html>

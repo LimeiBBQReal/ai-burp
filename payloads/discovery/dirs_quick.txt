@@ -1,0 +1,33 @@
+# 快速目录扫描 - 30个高价值目标
+# 用于快速判断站点类型和潜在入口
+
+admin
+login
+api
+backup
+config
+.git
+.env
+test
+upload
+dashboard
+panel
+manager
+phpmyadmin
+wp-admin
+administrator
+swagger
+robots.txt
+sitemap.xml
+web.config
+.htaccess
+debug
+logs
+database
+install
+setup
+user
+users
+files
+data
+private

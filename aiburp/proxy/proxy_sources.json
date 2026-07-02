@@ -1,0 +1,195 @@
+{
+  "_description": "高质量代理 IP 源清单 (2026-06-22 整理), 方便回溯更新",
+  "_usage": "python fetch_from_sources.py 自动下载解析, 或手动更新 URL",
+  "_notes": "5min 验证 > 每日验证 > 不定期; 机房 IP 对 DOLA 足够",
+
+  "tier1_fast_verify": {
+    "_desc": "5-30分钟验证一次, 存活率最高 (推荐优先)",
+    "sources": [
+      {
+        "name": "proxifly_http",
+        "repo": "proxifly/free-proxy-list",
+        "format": "http_txt",
+        "url": "https://raw.githubusercontent.com/proxifly/free-proxy-list/main/proxies/protocols/http/data.txt",
+        "verify_freq": "5min",
+        "est_nodes": 3200,
+        "note": "92国家, 5分钟验证, 存活率最高"
+      },
+      {
+        "name": "proxifly_socks5",
+        "repo": "proxifly/free-proxy-list",
+        "format": "http_txt",
+        "url": "https://raw.githubusercontent.com/proxifly/free-proxy-list/main/proxies/protocols/socks5/data.txt",
+        "verify_freq": "5min",
+        "est_nodes": 800,
+        "note": "SOCKS5 版本"
+      },
+      {
+        "name": "proxyscrape_http",
+        "repo": "proxyscrape/free-proxy-list",
+        "format": "http_txt",
+        "url": "https://api.proxyscrape.com/v4/free-proxy-list/get?request=display_proxies&proxy_format=protocolip&format=text&protocol=http",
+        "verify_freq": "1min",
+        "est_nodes": 10000,
+        "note": "22000+ 总量, 1分钟刷新, 最大池"
+      },
+      {
+        "name": "proxyscrape_socks5",
+        "repo": "proxyscrape/free-proxy-list",
+        "format": "http_txt",
+        "url": "https://api.proxyscrape.com/v4/free-proxy-list/get?request=display_proxies&proxy_format=protocolip&format=text&protocol=socks5",
+        "verify_freq": "1min",
+        "est_nodes": 3000,
+        "note": "SOCKS5 版本"
+      },
+      {
+        "name": "iplocate_http",
+        "repo": "iplocate/free-proxy-list",
+        "format": "http_txt",
+        "url": "https://raw.githubusercontent.com/iplocate/free-proxy-list/main/proxy/types/http/data.txt",
+        "verify_freq": "30min",
+        "est_nodes": 5000,
+        "note": "30分钟验证"
+      },
+      {
+        "name": "thordata_http",
+        "repo": "Thordata/awesome-free-proxy-list",
+        "format": "csv_http",
+        "url": "https://raw.githubusercontent.com/Thordata/awesome-free-proxy-list/main/proxy/csv/http/data.csv",
+        "verify_freq": "daily",
+        "est_nodes": 4000,
+        "note": "每日 GitHub Actions 验证"
+      }
+    ]
+  },
+
+  "tier2_daily_clash": {
+    "_desc": "每日更新的 Clash/V2Ray 节点 (需要 mihomo 转换)",
+    "sources": [
+      {
+        "name": "nomorewalls",
+        "repo": "peasoft/NoMoreWalls",
+        "stars": 5000,
+        "format": "clash_yaml",
+        "url": "https://raw.githubusercontent.com/peasoft/NoMoreWalls/master/list.yml",
+        "verify_freq": "daily",
+        "note": "高质量, 每日更新, Clash 格式"
+      },
+      {
+        "name": "mahdibland_clash",
+        "repo": "mahdibland/V2RayAggregator",
+        "stars": 4000,
+        "format": "clash_meta",
+        "url": "https://raw.githubusercontent.com/mahdibland/V2RayAggregator/master/sub/sub_merge_yaml.yml",
+        "verify_freq": "8h",
+        "est_nodes": 5000,
+        "note": "最大聚合源, 8小时更新"
+      },
+      {
+        "name": "matinghanbari_v2ray",
+        "repo": "MatinGhanbari/v2ray-configs",
+        "stars": 3000,
+        "format": "base64_multi",
+        "urls": [
+          "https://raw.githubusercontent.com/MatinGhanbari/v2ray-configs/main/sub/v2ray.txt"
+        ],
+        "verify_freq": "15min",
+        "est_nodes": 7500,
+        "note": "15分钟更新, 量大"
+      },
+      {
+        "name": "yebekhe_telegram",
+        "repo": "yebekhe/TelegramV2rayCollector",
+        "stars": 2000,
+        "format": "base64_multi",
+        "urls": [
+          "https://raw.githubusercontent.com/yebekhe/TelegramV2rayCollector/master/sub/vless.txt",
+          "https://raw.githubusercontent.com/yebekhe/TelegramV2rayCollector/master/sub/trojan.txt"
+        ],
+        "verify_freq": "cron",
+        "note": "Telegram 频道收集, 按协议分类"
+      },
+      {
+        "name": "clashfree_daily",
+        "repo": "free-nodes/clashfree",
+        "format": "clash_yaml_dated",
+        "url_template": "https://raw.githubusercontent.com/free-nodes/clashfree/master/clash{YYYYMMDD}.yml",
+        "verify_freq": "daily",
+        "note": "按日期命名, 需动态生成 URL"
+      },
+      {
+        "name": "puddincat_bestclash",
+        "repo": "PuddinCat/BestClash",
+        "stars": 1000,
+        "format": "clash_yaml",
+        "url": "https://raw.githubusercontent.com/PuddinCat/BestClash/main/proxy.yaml",
+        "verify_freq": "30min",
+        "note": "自动抓取+测速"
+      },
+      {
+        "name": "freefq",
+        "repo": "freefq/free",
+        "stars": 5000,
+        "format": "v2ray_txt",
+        "url": "https://raw.githubusercontent.com/freefq/free/master/v2",
+        "verify_freq": "daily",
+        "note": "老牌源, star高"
+      }
+    ]
+  },
+
+  "tier3_api_pool": {
+    "_desc": "API 端点 (JSON/纯文本, 可直接 curl_cffi)",
+    "sources": [
+      {
+        "name": "geonode_api",
+        "type": "api",
+        "format": "json",
+        "url": "https://proxylist.geonode.com/api/proxy-list?limit=500&page=1&sort_by=lastChecked&sort_type=desc&protocols=http,https",
+        "note": "JSON 格式, 需解析 data[].ip:port"
+      },
+      {
+        "name": "pubproxy_api",
+        "type": "api",
+        "format": "txt",
+        "url": "http://pubproxy.com/api/proxylist?format=txt",
+        "note": "纯文本, 不验证"
+      },
+      {
+        "name": "thespeedx_http",
+        "repo": "TheSpeedX/PROXY-List",
+        "format": "http_txt",
+        "url": "https://raw.githubusercontent.com/TheSpeedX/PROXY-List/master/http.txt",
+        "est_nodes": 9150,
+        "note": "每日验证"
+      },
+      {
+        "name": "thespeedx_socks5",
+        "repo": "TheSpeedX/PROXY-List",
+        "format": "http_txt",
+        "url": "https://raw.githubusercontent.com/TheSpeedX/PROXY-List/master/socks5.txt",
+        "note": "SOCKS5 版本"
+      }
+    ]
+  },
+
+  "proxy_pool_projects": {
+    "_desc": "自部署代理池 (持续验证, 质量最高)",
+    "projects": [
+      {
+        "name": "jhao104/proxy_pool",
+        "url": "https://github.com/jhao104/proxy_pool",
+        "lang": "Python",
+        "api": "GET /get (单个) / GET /all (全部)",
+        "note": "行业标杆, 持续抓取+验证 HTTP/SOCKS"
+      },
+      {
+        "name": "snakem982/proxypool",
+        "url": "https://github.com/snakem982/proxypool",
+        "lang": "Go",
+        "api": "Clash YAML endpoint",
+        "note": "Clash 节点池, 自动测速"
+      }
+    ]
+  }
+}

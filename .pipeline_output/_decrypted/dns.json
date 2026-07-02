@@ -1,0 +1,23 @@
+{
+  "target": "CartManager.net",
+  "records": {
+    "A": [
+      "192.41.22.47"
+    ],
+    "MX": [
+      "10 smtp.visiongrp.com."
+    ],
+    "TXT": [
+      "\"spf2.0/pra ?all\"",
+      "\"v=spf1 mx ip4:192.41.22.8 ip4:192.41.22.32 a -all\""
+    ],
+    "NS": [
+      "joselyn.ns.cloudflare.com.",
+      "ruben.ns.cloudflare.com."
+    ],
+    "SOA": [
+      "joselyn.ns.cloudflare.com. dns.cloudflare.com. 2406629325 10000 2400 604800 1800"
+    ]
+  },
+  "elapsed_s": 0.8
+}

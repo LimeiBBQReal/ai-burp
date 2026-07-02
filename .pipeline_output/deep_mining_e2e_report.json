@@ -1,0 +1,125 @@
+{
+  "target": "fershop.net",
+  "elapsed_sec": 0.1,
+  "baseline": {
+    "traffic_entries": 1525,
+    "verified_count": 1488,
+    "breakthroughs_count": 1489
+  },
+  "deep_mining": {
+    "candidates_count": 1510,
+    "cluster_stats": {
+      "total_urls": 1510,
+      "templates": 23,
+      "avg_per_template": 65.65,
+      "max_per_template": 1488
+    },
+    "representatives_count": 24,
+    "hidden_param_hits": 24,
+    "llm_round1_value_counts": {
+      "clusters": 1,
+      "must_probe": 20,
+      "skip": 0
+    },
+    "final_high_count": 20,
+    "new_high_not_in_baseline": 17,
+    "saved_pct": 0.0
+  },
+  "samples": {
+    "first_5_reps": [
+      "https://fershop.net/",
+      "https://fershop.net/about",
+      "https://fershop.net/api/founding-members-payment.php",
+      "https://fershop.net/artists",
+      "https://fershop.net/catalog"
+    ],
+    "first_5_high": [
+      "https://fershop.net/",
+      "https://fershop.net/about",
+      "https://fershop.net/api/founding-members-payment.php",
+      "https://fershop.net/artists",
+      "https://fershop.net/catalog"
+    ],
+    "first_5_new_high": [
+      "https://fershop.net/",
+      "https://fershop.net/about",
+      "https://fershop.net/artists",
+      "https://fershop.net/catalog",
+      "https://fershop.net/catalog-archive"
+    ],
+    "first_3_hidden_hits": [
+      {
+        "url": "https://fershop.net/",
+        "added_params": [
+          {
+            "name": "debug",
+            "value": "1",
+            "category": "general_debug",
+            "rationale": "通用猜测参数 debug"
+          },
+          {
+            "name": "test",
+            "value": "1",
+            "category": "general_debug",
+            "rationale": "通用猜测参数 test"
+          },
+          {
+            "name": "verbose",
+            "value": "1",
+            "category": "general_debug",
+            "rationale": "通用猜测参数 verbose"
+          }
+        ]
+      },
+      {
+        "url": "https://fershop.net/about",
+        "added_params": [
+          {
+            "name": "debug",
+            "value": "1",
+            "category": "general_debug",
+            "rationale": "通用猜测参数 debug"
+          },
+          {
+            "name": "test",
+            "value": "1",
+            "category": "general_debug",
+            "rationale": "通用猜测参数 test"
+          },
+          {
+            "name": "verbose",
+            "value": "1",
+            "category": "general_debug",
+            "rationale": "通用猜测参数 verbose"
+          }
+        ]
+      },
+      {
+        "url": "https://fershop.net/api/founding-members-payment.php",
+        "added_params": [
+          {
+            "name": "debug",
+            "value": "1",
+            "category": "general_debug",
+            "rationale": "通用猜测参数 debug"
+          },
+          {
+            "name": "test",
+            "value": "1",
+            "category": "general_debug",
+            "rationale": "通用猜测参数 test"
+          },
+          {
+            "name": "verbose",
+            "value": "1",
+            "category": "general_debug",
+            "rationale": "通用猜测参数 verbose"
+          }
+        ]
+      }
+    ]
+  },
+  "llm_used": true,
+  "fallback_used": false,
+  "fail_fast_verified": true
+}

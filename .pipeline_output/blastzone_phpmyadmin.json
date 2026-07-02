@@ -1,0 +1,62 @@
+[
+  {
+    "url": "http://bzhost1.blastzone.org/phpmyadmin/",
+    "status": 200,
+    "len": 18576,
+    "signal": "phpMyAdmin"
+  },
+  {
+    "url": "http://bzhost1.blastzone.org/phpmyadmin/index.php",
+    "status": 200,
+    "len": 18576,
+    "signal": "phpMyAdmin"
+  },
+  {
+    "url": "http://bzhost1.blastzone.org/phpmyadmin/setup/",
+    "status": 401,
+    "len": 1807,
+    "signal": ""
+  },
+  {
+    "url": "http://bzhost1.blastzone.org/phpmyadmin/scripts/setup.php",
+    "status": 404,
+    "len": 1807,
+    "signal": ""
+  },
+  {
+    "url": "http://bzhost1.blastzone.org/phpmyadmin/config.inc.php",
+    "status": 200,
+    "len": 0,
+    "signal": ""
+  },
+  {
+    "url": "http://bzhost1.blastzone.org/phpmyadmin/README",
+    "status": 200,
+    "len": 1520,
+    "signal": "phpMyAdmin"
+  },
+  {
+    "url": "http://bzhost1.blastzone.org/phpmyadmin/ChangeLog",
+    "status": 200,
+    "len": 22805,
+    "signal": "phpMyAdmin"
+  },
+  {
+    "url": "http://bzhost1.blastzone.org/phpmyadmin/Documentation.html",
+    "status": 404,
+    "len": 1807,
+    "signal": ""
+  },
+  {
+    "url": "http://216.215.30.39/phpmyadmin/",
+    "status": 404,
+    "len": 315,
+    "signal": ""
+  },
+  {
+    "url": "http://216.215.30.39/phpmyadmin/index.php",
+    "status": 404,
+    "len": 315,
+    "signal": ""
+  }
+]

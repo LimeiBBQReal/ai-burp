@@ -1,0 +1,53 @@
+log-level: silent
+mode: Rule
+port: 7890
+proxies:
+- name: shodan_000_1163ms_3.99.158.188
+  port: 3128
+  server: 3.99.158.188
+  type: http
+- name: shodan_001_1244ms_16.62.101.120
+  port: 3128
+  server: 16.62.101.120
+  type: http
+- name: shodan_002_1254ms_34.245.66.223
+  port: 3128
+  server: 34.245.66.223
+  type: http
+- name: shodan_003_1461ms_51.48.124.249
+  port: 3128
+  server: 51.48.124.249
+  type: http
+- name: shodan_004_1569ms_13.63.58.215
+  port: 3128
+  server: 13.63.58.215
+  type: http
+- name: shodan_005_1911ms_51.92.147.225
+  port: 3128
+  server: 51.92.147.225
+  type: http
+- name: shodan_006_2148ms_
+  port: 3128
+  server: 48.210.71.128
+  type: http
+- name: shodan_007_2212ms_34.244.37.93
+  port: 3128
+  server: 34.244.37.93
+  type: http
+proxy-groups:
+- interval: 120
+  name: GLOBAL
+  proxies:
+  - shodan_000_1163ms_3.99.158.188
+  - shodan_001_1244ms_16.62.101.120
+  - shodan_002_1254ms_34.245.66.223
+  - shodan_003_1461ms_51.48.124.249
+  - shodan_004_1569ms_13.63.58.215
+  - shodan_005_1911ms_51.92.147.225
+  - shodan_006_2148ms_
+  - shodan_007_2212ms_34.244.37.93
+  type: url-test
+  url: http://httpbin.org/ip
+rules:
+- MATCH,GLOBAL
+socks-port: 7891

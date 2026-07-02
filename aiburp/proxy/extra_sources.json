@@ -1,0 +1,78 @@
+{
+  "extra_sources": [
+    {
+      "name": "ProxyScraper-http",
+      "url": "https://raw.githubusercontent.com/ProxyScraper/ProxyScraper/refs/heads/main/http.txt",
+      "type": "http",
+      "format": "ip:port"
+    },
+    {
+      "name": "ProxyScraper-socks4",
+      "url": "https://raw.githubusercontent.com/ProxyScraper/ProxyScraper/refs/heads/main/socks4.txt",
+      "type": "socks4",
+      "format": "ip:port"
+    },
+    {
+      "name": "ProxyScraper-socks5",
+      "url": "https://raw.githubusercontent.com/ProxyScraper/ProxyScraper/refs/heads/main/socks5.txt",
+      "type": "socks5",
+      "format": "ip:port"
+    },
+    {
+      "name": "ProxyScrape-free-all",
+      "url": "https://raw.githubusercontent.com/ProxyScrape/free-proxy-list/refs/heads/main/proxies/all/data.txt",
+      "type": "mixed",
+      "format": "ip:port"
+    },
+    {
+      "name": "proxifly-free-all",
+      "url": "https://raw.githubusercontent.com/proxifly/free-proxy-list/refs/heads/main/proxies/all/data.txt",
+      "type": "mixed",
+      "format": "ip:port"
+    },
+    {
+      "name": "vxiaov-free_proxies",
+      "url": "https://github.com/vxiaov/free_proxies",
+      "type": "html-page",
+      "format": "page"
+    },
+    {
+      "name": "wrfree-free",
+      "url": "https://github.com/wrfree/free",
+      "type": "html-page",
+      "format": "page"
+    },
+    {
+      "name": "TheSpeedX-PROXY-List-http",
+      "url": "https://raw.githubusercontent.com/TheSpeedX/PROXY-List/master/http.txt",
+      "type": "http",
+      "format": "ip:port",
+      "update_interval": "1h",
+      "preverified": true
+    },
+    {
+      "name": "TheSpeedX-PROXY-List-socks5",
+      "url": "https://raw.githubusercontent.com/TheSpeedX/PROXY-List/master/socks5.txt",
+      "type": "socks5",
+      "format": "ip:port",
+      "update_interval": "1h",
+      "preverified": true
+    },
+    {
+      "name": "clarketm-proxy-list",
+      "url": "https://raw.githubusercontent.com/clarketm/proxy-list/master/proxy-list-raw.txt",
+      "type": "http",
+      "format": "ip:port",
+      "update_interval": "30min",
+      "preverified": true
+    },
+    {
+      "name": "roosterkid-openproxylist-socks5",
+      "url": "https://raw.githubusercontent.com/roosterkid/openproxylist/main/SOCKS5_RAT.txt",
+      "type": "socks5",
+      "format": "ip:port",
+      "update_interval": "1h",
+      "preverified": true
+    }
+  ]
+}

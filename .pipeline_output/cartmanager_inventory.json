@@ -1,0 +1,1202 @@
+{
+  "target": "cartmanager.net",
+  "ts": 1782502664.7901123,
+  "dns_strategy": {
+    "primary": "DoH (HTTPS) only",
+    "endpoints": [
+      "Google",
+      "Cloudflare"
+    ],
+    "udp_53_status": "BLOCKED — TUN hijack confirmed",
+    "spoof_check": "RFC 6890 reserved ranges"
+  },
+  "subdomains": [
+    "aaxatech.cartmanager.net",
+    "angersteins.cartmanager.net",
+    "cartmanager.net",
+    "comwww.cartmanager.net",
+    "dudadiesel.cartmanager.net",
+    "freeonehand.cartmanager.net",
+    "gripleash.cartmanager.net",
+    "heartlandembroideryonline.cartmanager.net",
+    "hyelighting.cartmanager.net",
+    "nat.cartmanager.net",
+    "nutrasource.cartmanager.net",
+    "redrockthreads.cartmanager.net",
+    "seaside.cartmanager.net",
+    "smtp.cartmanager.net",
+    "starmedia.cartmanager.net",
+    "testmachine.cartmanager.net",
+    "wholehousefan.cartmanager.net",
+    "windrift.cartmanager.net",
+    "www.cartmanager.net"
+  ],
+  "resolved_dns": [
+    {
+      "host": "aaxatech.cartmanager.net",
+      "a": [
+        "192.41.22.47"
+      ],
+      "aaaa": [],
+      "cname": [],
+      "mx": [],
+      "ns": [],
+      "txt": [],
+      "source": {
+        "A": "Google",
+        "AAAA": "fail",
+        "CNAME": "fail",
+        "MX": "fail",
+        "NS": "fail",
+        "TXT": "fail"
+      },
+      "spoofed": [],
+      "errors": []
+    },
+    {
+      "host": "angersteins.cartmanager.net",
+      "a": [
+        "192.41.22.47"
+      ],
+      "aaaa": [],
+      "cname": [],
+      "mx": [],
+      "ns": [],
+      "txt": [],
+      "source": {
+        "A": "Google",
+        "AAAA": "fail",
+        "CNAME": "fail",
+        "MX": "fail",
+        "NS": "fail",
+        "TXT": "fail"
+      },
+      "spoofed": [],
+      "errors": []
+    },
+    {
+      "host": "cartmanager.net",
+      "a": [
+        "192.41.22.47"
+      ],
+      "aaaa": [],
+      "cname": [],
+      "mx": [
+        "cartmanager.net"
+      ],
+      "ns": [
+        "cartmanager.net",
+        "cartmanager.net"
+      ],
+      "txt": [
+        "v=spf1 mx ip4:192.41.22.8 ip4:192.41.22.32 a -all",
+        "spf2.0/pra ?all"
+      ],
+      "source": {
+        "A": "Google",
+        "AAAA": "fail",
+        "CNAME": "fail",
+        "MX": "Google",
+        "NS": "Google",
+        "TXT": "Google"
+      },
+      "spoofed": [],
+      "errors": []
+    },
+    {
+      "host": "comwww.cartmanager.net",
+      "a": [
+        "192.41.22.47"
+      ],
+      "aaaa": [],
+      "cname": [],
+      "mx": [],
+      "ns": [],
+      "txt": [],
+      "source": {
+        "A": "Google",
+        "AAAA": "fail",
+        "CNAME": "fail",
+        "MX": "fail",
+        "NS": "fail",
+        "TXT": "fail"
+      },
+      "spoofed": [],
+      "errors": []
+    },
+    {
+      "host": "dudadiesel.cartmanager.net",
+      "a": [
+        "192.41.22.47"
+      ],
+      "aaaa": [],
+      "cname": [],
+      "mx": [],
+      "ns": [],
+      "txt": [],
+      "source": {
+        "A": "Google",
+        "AAAA": "fail",
+        "CNAME": "fail",
+        "MX": "fail",
+        "NS": "fail",
+        "TXT": "fail"
+      },
+      "spoofed": [],
+      "errors": []
+    },
+    {
+      "host": "freeonehand.cartmanager.net",
+      "a": [
+        "192.41.22.47"
+      ],
+      "aaaa": [],
+      "cname": [],
+      "mx": [],
+      "ns": [],
+      "txt": [],
+      "source": {
+        "A": "Google",
+        "AAAA": "fail",
+        "CNAME": "fail",
+        "MX": "fail",
+        "NS": "fail",
+        "TXT": "fail"
+      },
+      "spoofed": [],
+      "errors": []
+    },
+    {
+      "host": "gripleash.cartmanager.net",
+      "a": [
+        "192.41.22.47"
+      ],
+      "aaaa": [],
+      "cname": [],
+      "mx": [],
+      "ns": [],
+      "txt": [],
+      "source": {
+        "A": "Google",
+        "AAAA": "fail",
+        "CNAME": "fail",
+        "MX": "fail",
+        "NS": "fail",
+        "TXT": "fail"
+      },
+      "spoofed": [],
+      "errors": []
+    },
+    {
+      "host": "heartlandembroideryonline.cartmanager.net",
+      "a": [
+        "192.41.22.47"
+      ],
+      "aaaa": [],
+      "cname": [],
+      "mx": [],
+      "ns": [],
+      "txt": [],
+      "source": {
+        "A": "Google",
+        "AAAA": "fail",
+        "CNAME": "fail",
+        "MX": "fail",
+        "NS": "fail",
+        "TXT": "fail"
+      },
+      "spoofed": [],
+      "errors": []
+    },
+    {
+      "host": "hyelighting.cartmanager.net",
+      "a": [
+        "192.41.22.47"
+      ],
+      "aaaa": [],
+      "cname": [],
+      "mx": [],
+      "ns": [],
+      "txt": [],
+      "source": {
+        "A": "Google",
+        "AAAA": "fail",
+        "CNAME": "fail",
+        "MX": "fail",
+        "NS": "fail",
+        "TXT": "fail"
+      },
+      "spoofed": [],
+      "errors": []
+    },
+    {
+      "host": "nat.cartmanager.net",
+      "a": [
+        "192.41.22.30"
+      ],
+      "aaaa": [],
+      "cname": [],
+      "mx": [],
+      "ns": [],
+      "txt": [],
+      "source": {
+        "A": "Google",
+        "AAAA": "fail",
+        "CNAME": "fail",
+        "MX": "fail",
+        "NS": "fail",
+        "TXT": "fail"
+      },
+      "spoofed": [],
+      "errors": []
+    },
+    {
+      "host": "nutrasource.cartmanager.net",
+      "a": [
+        "192.41.22.47"
+      ],
+      "aaaa": [],
+      "cname": [],
+      "mx": [],
+      "ns": [],
+      "txt": [],
+      "source": {
+        "A": "Google",
+        "AAAA": "fail",
+        "CNAME": "fail",
+        "MX": "fail",
+        "NS": "fail",
+        "TXT": "fail"
+      },
+      "spoofed": [],
+      "errors": []
+    },
+    {
+      "host": "redrockthreads.cartmanager.net",
+      "a": [
+        "192.41.22.47"
+      ],
+      "aaaa": [],
+      "cname": [],
+      "mx": [],
+      "ns": [],
+      "txt": [],
+      "source": {
+        "A": "Google",
+        "AAAA": "fail",
+        "CNAME": "fail",
+        "MX": "fail",
+        "NS": "fail",
+        "TXT": "fail"
+      },
+      "spoofed": [],
+      "errors": []
+    },
+    {
+      "host": "seaside.cartmanager.net",
+      "a": [
+        "192.41.22.47"
+      ],
+      "aaaa": [],
+      "cname": [],
+      "mx": [],
+      "ns": [],
+      "txt": [],
+      "source": {
+        "A": "Google",
+        "AAAA": "fail",
+        "CNAME": "fail",
+        "MX": "fail",
+        "NS": "fail",
+        "TXT": "fail"
+      },
+      "spoofed": [],
+      "errors": []
+    },
+    {
+      "host": "smtp.cartmanager.net",
+      "a": [
+        "192.41.22.32"
+      ],
+      "aaaa": [],
+      "cname": [],
+      "mx": [],
+      "ns": [],
+      "txt": [],
+      "source": {
+        "A": "Google",
+        "AAAA": "fail",
+        "CNAME": "fail",
+        "MX": "fail",
+        "NS": "fail",
+        "TXT": "fail"
+      },
+      "spoofed": [],
+      "errors": []
+    },
+    {
+      "host": "starmedia.cartmanager.net",
+      "a": [
+        "192.41.22.47"
+      ],
+      "aaaa": [],
+      "cname": [],
+      "mx": [],
+      "ns": [],
+      "txt": [],
+      "source": {
+        "A": "Google",
+        "AAAA": "fail",
+        "CNAME": "fail",
+        "MX": "fail",
+        "NS": "fail",
+        "TXT": "fail"
+      },
+      "spoofed": [],
+      "errors": []
+    },
+    {
+      "host": "testmachine.cartmanager.net",
+      "a": [
+        "192.41.22.47"
+      ],
+      "aaaa": [],
+      "cname": [],
+      "mx": [],
+      "ns": [],
+      "txt": [],
+      "source": {
+        "A": "Google",
+        "AAAA": "fail",
+        "CNAME": "fail",
+        "MX": "fail",
+        "NS": "fail",
+        "TXT": "fail"
+      },
+      "spoofed": [],
+      "errors": []
+    },
+    {
+      "host": "wholehousefan.cartmanager.net",
+      "a": [
+        "192.41.22.47"
+      ],
+      "aaaa": [],
+      "cname": [],
+      "mx": [],
+      "ns": [],
+      "txt": [],
+      "source": {
+        "A": "Google",
+        "AAAA": "fail",
+        "CNAME": "fail",
+        "MX": "fail",
+        "NS": "fail",
+        "TXT": "fail"
+      },
+      "spoofed": [],
+      "errors": []
+    },
+    {
+      "host": "windrift.cartmanager.net",
+      "a": [
+        "192.41.22.47"
+      ],
+      "aaaa": [],
+      "cname": [],
+      "mx": [],
+      "ns": [],
+      "txt": [],
+      "source": {
+        "A": "Google",
+        "AAAA": "fail",
+        "CNAME": "fail",
+        "MX": "fail",
+        "NS": "fail",
+        "TXT": "fail"
+      },
+      "spoofed": [],
+      "errors": []
+    },
+    {
+      "host": "www.cartmanager.net",
+      "a": [
+        "192.41.22.47"
+      ],
+      "aaaa": [],
+      "cname": [
+        "www.cartmanager.net"
+      ],
+      "mx": [
+        "cartmanager.net"
+      ],
+      "ns": [
+        "cartmanager.net",
+        "cartmanager.net"
+      ],
+      "txt": [
+        "spf2.0/pra ?all",
+        "v=spf1 mx ip4:192.41.22.8 ip4:192.41.22.32 a -all"
+      ],
+      "source": {
+        "A": "Google",
+        "AAAA": "fail",
+        "CNAME": "Google",
+        "MX": "Google",
+        "NS": "Google",
+        "TXT": "Google"
+      },
+      "spoofed": [],
+      "errors": []
+    }
+  ],
+  "ips": [
+    "192.41.22.30",
+    "192.41.22.32",
+    "192.41.22.47"
+  ],
+  "port_scan": {
+    "192.41.22.32": [],
+    "192.41.22.30": [],
+    "192.41.22.47": [
+      80
+    ]
+  },
+  "port_evidence": {
+    "192.41.22.32": {
+      "21": {
+        "open": false,
+        "banner": null,
+        "err": "timeout",
+        "probe": "PROBE"
+      },
+      "25": {
+        "open": false,
+        "banner": null,
+        "err": "no_banner",
+        "probe": "PROBE"
+      },
+      "80": {
+        "open": false,
+        "banner": null,
+        "err": "no_banner",
+        "probe": "PROBE"
+      },
+      "22": {
+        "open": false,
+        "banner": null,
+        "err": "no_banner",
+        "probe": "PROBE"
+      },
+      "110": {
+        "open": false,
+        "banner": null,
+        "err": "no_banner",
+        "probe": "PROBE"
+      },
+      "443": {
+        "open": false,
+        "banner": null,
+        "err": "no_banner",
+        "probe": "PROBE"
+      },
+      "465": {
+        "open": false,
+        "banner": null,
+        "err": "no_banner",
+        "probe": "PROBE"
+      },
+      "143": {
+        "open": false,
+        "banner": null,
+        "err": "no_banner",
+        "probe": "PROBE"
+      },
+      "53": {
+        "open": false,
+        "banner": null,
+        "err": "no_banner",
+        "probe": "GENERIC"
+      },
+      "1433": {
+        "open": false,
+        "banner": null,
+        "err": "no_banner",
+        "probe": "PROBE"
+      },
+      "995": {
+        "open": false,
+        "banner": null,
+        "err": "no_banner",
+        "probe": "PROBE"
+      },
+      "2082": {
+        "open": false,
+        "banner": null,
+        "err": "no_banner",
+        "probe": "GENERIC"
+      },
+      "993": {
+        "open": false,
+        "banner": null,
+        "err": "no_banner",
+        "probe": "PROBE"
+      },
+      "2086": {
+        "open": false,
+        "banner": null,
+        "err": "no_banner",
+        "probe": "GENERIC"
+      },
+      "2087": {
+        "open": false,
+        "banner": null,
+        "err": "no_banner",
+        "probe": "GENERIC"
+      },
+      "587": {
+        "open": false,
+        "banner": null,
+        "err": "no_banner",
+        "probe": "PROBE"
+      },
+      "1521": {
+        "open": false,
+        "banner": null,
+        "err": "no_banner",
+        "probe": "PROBE"
+      },
+      "2083": {
+        "open": false,
+        "banner": null,
+        "err": "no_banner",
+        "probe": "GENERIC"
+      },
+      "2096": {
+        "open": false,
+        "banner": null,
+        "err": "no_banner",
+        "probe": "GENERIC"
+      },
+      "3306": {
+        "open": false,
+        "banner": null,
+        "err": "no_banner",
+        "probe": "PROBE"
+      },
+      "2095": {
+        "open": false,
+        "banner": null,
+        "err": "no_banner",
+        "probe": "GENERIC"
+      },
+      "6379": {
+        "open": false,
+        "banner": null,
+        "err": "no_banner",
+        "probe": "PROBE"
+      },
+      "8000": {
+        "open": false,
+        "banner": null,
+        "err": "no_banner",
+        "probe": "GENERIC"
+      },
+      "5432": {
+        "open": false,
+        "banner": null,
+        "err": "no_banner",
+        "probe": "PROBE"
+      },
+      "3389": {
+        "open": false,
+        "banner": null,
+        "err": "no_banner",
+        "probe": "GENERIC"
+      },
+      "8080": {
+        "open": false,
+        "banner": null,
+        "err": "no_banner",
+        "probe": "GENERIC"
+      },
+      "5900": {
+        "open": false,
+        "banner": null,
+        "err": "no_banner",
+        "probe": "GENERIC"
+      },
+      "8081": {
+        "open": false,
+        "banner": null,
+        "err": "no_banner",
+        "probe": "GENERIC"
+      },
+      "8443": {
+        "open": false,
+        "banner": null,
+        "err": "no_banner",
+        "probe": "GENERIC"
+      },
+      "8888": {
+        "open": false,
+        "banner": null,
+        "err": "no_banner",
+        "probe": "GENERIC"
+      },
+      "9200": {
+        "open": false,
+        "banner": null,
+        "err": "no_banner",
+        "probe": "GENERIC"
+      },
+      "11211": {
+        "open": false,
+        "banner": null,
+        "err": "no_banner",
+        "probe": "PROBE"
+      },
+      "9300": {
+        "open": false,
+        "banner": null,
+        "err": "no_banner",
+        "probe": "GENERIC"
+      },
+      "27017": {
+        "open": false,
+        "banner": null,
+        "err": "no_banner",
+        "probe": "PROBE"
+      }
+    },
+    "192.41.22.30": {
+      "22": {
+        "open": false,
+        "banner": null,
+        "err": "no_banner",
+        "probe": "PROBE"
+      },
+      "21": {
+        "open": false,
+        "banner": null,
+        "err": "no_banner",
+        "probe": "PROBE"
+      },
+      "53": {
+        "open": false,
+        "banner": null,
+        "err": "no_banner",
+        "probe": "GENERIC"
+      },
+      "80": {
+        "open": false,
+        "banner": null,
+        "err": "no_banner",
+        "probe": "PROBE"
+      },
+      "143": {
+        "open": false,
+        "banner": null,
+        "err": "no_banner",
+        "probe": "PROBE"
+      },
+      "443": {
+        "open": false,
+        "banner": null,
+        "err": "no_banner",
+        "probe": "PROBE"
+      },
+      "587": {
+        "open": false,
+        "banner": null,
+        "err": "no_banner",
+        "probe": "PROBE"
+      },
+      "25": {
+        "open": false,
+        "banner": null,
+        "err": "no_banner",
+        "probe": "PROBE"
+      },
+      "995": {
+        "open": false,
+        "banner": null,
+        "err": "no_banner",
+        "probe": "PROBE"
+      },
+      "993": {
+        "open": false,
+        "banner": null,
+        "err": "no_banner",
+        "probe": "PROBE"
+      },
+      "1521": {
+        "open": false,
+        "banner": null,
+        "err": "no_banner",
+        "probe": "PROBE"
+      },
+      "110": {
+        "open": false,
+        "banner": null,
+        "err": "no_banner",
+        "probe": "PROBE"
+      },
+      "1433": {
+        "open": false,
+        "banner": null,
+        "err": "no_banner",
+        "probe": "PROBE"
+      },
+      "465": {
+        "open": false,
+        "banner": null,
+        "err": "no_banner",
+        "probe": "PROBE"
+      },
+      "2083": {
+        "open": false,
+        "banner": null,
+        "err": "no_banner",
+        "probe": "GENERIC"
+      },
+      "2086": {
+        "open": false,
+        "banner": null,
+        "err": "no_banner",
+        "probe": "GENERIC"
+      },
+      "2082": {
+        "open": false,
+        "banner": null,
+        "err": "no_banner",
+        "probe": "GENERIC"
+      },
+      "2095": {
+        "open": false,
+        "banner": null,
+        "err": "no_banner",
+        "probe": "GENERIC"
+      },
+      "3389": {
+        "open": false,
+        "banner": null,
+        "err": "no_banner",
+        "probe": "GENERIC"
+      },
+      "2096": {
+        "open": false,
+        "banner": null,
+        "err": "no_banner",
+        "probe": "GENERIC"
+      },
+      "2087": {
+        "open": false,
+        "banner": null,
+        "err": "no_banner",
+        "probe": "GENERIC"
+      },
+      "5432": {
+        "open": false,
+        "banner": null,
+        "err": "no_banner",
+        "probe": "PROBE"
+      },
+      "8000": {
+        "open": false,
+        "banner": null,
+        "err": "no_banner",
+        "probe": "GENERIC"
+      },
+      "3306": {
+        "open": false,
+        "banner": null,
+        "err": "no_banner",
+        "probe": "PROBE"
+      },
+      "8081": {
+        "open": false,
+        "banner": null,
+        "err": "no_banner",
+        "probe": "GENERIC"
+      },
+      "8443": {
+        "open": false,
+        "banner": null,
+        "err": "no_banner",
+        "probe": "GENERIC"
+      },
+      "8080": {
+        "open": false,
+        "banner": null,
+        "err": "no_banner",
+        "probe": "GENERIC"
+      },
+      "6379": {
+        "open": false,
+        "banner": null,
+        "err": "no_banner",
+        "probe": "PROBE"
+      },
+      "5900": {
+        "open": false,
+        "banner": null,
+        "err": "no_banner",
+        "probe": "GENERIC"
+      },
+      "8888": {
+        "open": false,
+        "banner": null,
+        "err": "no_banner",
+        "probe": "GENERIC"
+      },
+      "9300": {
+        "open": false,
+        "banner": null,
+        "err": "no_banner",
+        "probe": "GENERIC"
+      },
+      "9200": {
+        "open": false,
+        "banner": null,
+        "err": "no_banner",
+        "probe": "GENERIC"
+      },
+      "11211": {
+        "open": false,
+        "banner": null,
+        "err": "no_banner",
+        "probe": "PROBE"
+      },
+      "27017": {
+        "open": false,
+        "banner": null,
+        "err": "no_banner",
+        "probe": "PROBE"
+      }
+    },
+    "192.41.22.47": {
+      "80": {
+        "open": true,
+        "banner": "HTTP/1.1 403 Forbidden\r\nDate: Fri, 26 Jun 2026 19:37:07 GMT\r\nServer: Apache\r\nX-Frame-Options: SAMEORIGIN\r\nX-Content-Type-Options: nosniff\r\nContent-Length: 916\r\nConnection: close\r\nContent-Type: text/ht",
+        "err": null,
+        "probe": "PROBE"
+      },
+      "21": {
+        "open": false,
+        "banner": null,
+        "err": "no_banner",
+        "probe": "PROBE"
+      },
+      "22": {
+        "open": false,
+        "banner": null,
+        "err": "no_banner",
+        "probe": "PROBE"
+      },
+      "465": {
+        "open": false,
+        "banner": null,
+        "err": "no_banner",
+        "probe": "PROBE"
+      },
+      "993": {
+        "open": false,
+        "banner": null,
+        "err": "no_banner",
+        "probe": "PROBE"
+      },
+      "587": {
+        "open": false,
+        "banner": null,
+        "err": "no_banner",
+        "probe": "PROBE"
+      },
+      "443": {
+        "open": false,
+        "banner": null,
+        "err": "no_banner",
+        "probe": "PROBE"
+      },
+      "143": {
+        "open": false,
+        "banner": null,
+        "err": "no_banner",
+        "probe": "PROBE"
+      },
+      "25": {
+        "open": false,
+        "banner": null,
+        "err": "no_banner",
+        "probe": "PROBE"
+      },
+      "110": {
+        "open": false,
+        "banner": null,
+        "err": "no_banner",
+        "probe": "PROBE"
+      },
+      "1433": {
+        "open": false,
+        "banner": null,
+        "err": "no_banner",
+        "probe": "PROBE"
+      },
+      "53": {
+        "open": false,
+        "banner": null,
+        "err": "no_banner",
+        "probe": "GENERIC"
+      },
+      "2087": {
+        "open": false,
+        "banner": null,
+        "err": "no_banner",
+        "probe": "GENERIC"
+      },
+      "995": {
+        "open": false,
+        "banner": null,
+        "err": "no_banner",
+        "probe": "PROBE"
+      },
+      "2086": {
+        "open": false,
+        "banner": null,
+        "err": "no_banner",
+        "probe": "GENERIC"
+      },
+      "2096": {
+        "open": false,
+        "banner": null,
+        "err": "no_banner",
+        "probe": "GENERIC"
+      },
+      "2082": {
+        "open": false,
+        "banner": null,
+        "err": "no_banner",
+        "probe": "GENERIC"
+      },
+      "3306": {
+        "open": false,
+        "banner": null,
+        "err": "no_banner",
+        "probe": "PROBE"
+      },
+      "2083": {
+        "open": false,
+        "banner": null,
+        "err": "no_banner",
+        "probe": "GENERIC"
+      },
+      "3389": {
+        "open": false,
+        "banner": null,
+        "err": "no_banner",
+        "probe": "GENERIC"
+      },
+      "5432": {
+        "open": false,
+        "banner": null,
+        "err": "no_banner",
+        "probe": "PROBE"
+      },
+      "5900": {
+        "open": false,
+        "banner": null,
+        "err": "no_banner",
+        "probe": "GENERIC"
+      },
+      "1521": {
+        "open": false,
+        "banner": null,
+        "err": "no_banner",
+        "probe": "PROBE"
+      },
+      "6379": {
+        "open": false,
+        "banner": null,
+        "err": "no_banner",
+        "probe": "PROBE"
+      },
+      "2095": {
+        "open": false,
+        "banner": null,
+        "err": "no_banner",
+        "probe": "GENERIC"
+      },
+      "8443": {
+        "open": false,
+        "banner": null,
+        "err": "no_banner",
+        "probe": "GENERIC"
+      },
+      "8000": {
+        "open": false,
+        "banner": null,
+        "err": "no_banner",
+        "probe": "GENERIC"
+      },
+      "8081": {
+        "open": false,
+        "banner": null,
+        "err": "no_banner",
+        "probe": "GENERIC"
+      },
+      "8080": {
+        "open": false,
+        "banner": null,
+        "err": "no_banner",
+        "probe": "GENERIC"
+      },
+      "8888": {
+        "open": false,
+        "banner": null,
+        "err": "no_banner",
+        "probe": "GENERIC"
+      },
+      "9200": {
+        "open": false,
+        "banner": null,
+        "err": "no_banner",
+        "probe": "GENERIC"
+      },
+      "9300": {
+        "open": false,
+        "banner": null,
+        "err": "no_banner",
+        "probe": "GENERIC"
+      },
+      "11211": {
+        "open": false,
+        "banner": null,
+        "err": "no_banner",
+        "probe": "PROBE"
+      },
+      "27017": {
+        "open": false,
+        "banner": null,
+        "err": "no_banner",
+        "probe": "PROBE"
+      }
+    }
+  },
+  "port_evidence_note": "open=true 仅当 banner 真的读到; TUN 可能伪造 SYN/ACK, 但伪造不出正确 HTTP 200/SMTP 220/Redis +PONG 等应用层响应",
+  "wayback_count": 500,
+  "wayback_sample": [
+    "http://www.cartmanager.net:80/",
+    "http://www.cartmanager.net:80/)",
+    "http://www.cartmanager.net:80/+6+w6IDyUCKEovfOz1Li8g==",
+    "http://www.cartmanager.net:80/+auOvPTDQ7rZRRPPk6wx1w==",
+    "http://www.cartmanager.net:80/+c0W9vTmybDnWD6K5iDXaA==",
+    "http://www.cartmanager.net:80/+cDaiHAs3v2RpYftk3EnPA==",
+    "http://cartmanager.net/+expires_date.toGMTString()+",
+    "http://www.cartmanager.net:80/+EZuJz3fc6zw2Era3AIfSQ==",
+    "http://www.cartmanager.net:80/+iZ60fvsuCoS15dZyW4bqg==",
+    "http://www.cartmanager.net:80/+kkmzowyX6PUDRxcw5dAug==",
+    "http://www.cartmanager.net:80/+mDf1J5JrE8vXVJK+VsY8A==",
+    "http://www.cartmanager.net:80/+mk+337g1kAfX34+F6+G9Q==",
+    "http://www.cartmanager.net:80/+NPt2yAPlQE1jSQ5Fg4Ycw==",
+    "http://www.cartmanager.net:80/+rXPiFUK+yUu3XBGTWNh4Q==",
+    "http://www.cartmanager.net:80/+usY2GAzp3V/oN68lsQ+lw==",
+    "http://www.cartmanager.net:80/+Wu+rnOGG6vLu+mS0ipZEw==",
+    "http://www.cartmanager.net:80/+Yg+G3q7pG18KEoHhgnJCA==",
+    "http://www.cartmanager.net:80/+zq19WxpxbSnVxd5F6FsWw==",
+    "https://www.cartmanager.net/.well-known/ai-plugin.json",
+    "https://www.cartmanager.net/.well-known/assetlinks.json",
+    "https://www.cartmanager.net/.well-known/dnt-policy.txt",
+    "https://www.cartmanager.net/.well-known/gpc.json",
+    "https://www.cartmanager.net/.well-known/nodeinfo",
+    "https://www.cartmanager.net/.well-known/openid-configuration",
+    "https://www.cartmanager.net/.well-known/security.txt",
+    "https://www.cartmanager.net/.well-known/trust.txt",
+    "http://www.cartmanager.net:80/006/Zf8wt47scIgu3eMkfw==",
+    "http://www.cartmanager.net:80/01xDsq7EqvGduQ4Pg/zvXQ==",
+    "http://www.cartmanager.net:80/03K8PiiLsIbrNX0YxpYqwQ==",
+    "http://www.cartmanager.net:80/03oNbZ0Is1CqMTvRvM+9uw==",
+    "http://www.cartmanager.net:80/03w0nx1G6e9JPrFdL+K4Uw==",
+    "http://www.cartmanager.net:80/0AhEknnz5PlvtNGdTk2I3w==",
+    "http://www.cartmanager.net:80/0bMx5T8bCxRDj/r4lpvhiQ==",
+    "http://www.cartmanager.net:80/0catch/",
+    "http://www.cartmanager.net:80/0catch/CartManagerLogob.jpg",
+    "http://www.cartmanager.net:80/0catch/partners.gif",
+    "http://www.cartmanager.net:80/0catch/svDemo.gif",
+    "http://www.cartmanager.net:80/0catch/svExampleStore.gif",
+    "http://www.cartmanager.net:80/0catch/zerocatch.gif",
+    "http://www.cartmanager.net:80/0DIuvx88Q/kqLowNozZK4g==",
+    "http://www.cartmanager.net:80/0doqRmTe8w5qhuPGxTgMcQ==",
+    "http://www.cartmanager.net:80/0EeiALl3nhif318uPiiP1w==",
+    "http://www.cartmanager.net:80/0eLWLrKreYfP2rHoue7QcA==",
+    "http://www.cartmanager.net:80/0F2o7aglNST4hWUVNlHvfA==",
+    "http://www.cartmanager.net:80/0gSBOmJKbwIyIWRiVIOKDQ==",
+    "http://www.cartmanager.net:80/0h+vrQeOba8v38rIdfdxdA==",
+    "http://www.cartmanager.net:80/0i7aaSslbCrqgj3NyNvSsQ==",
+    "http://www.cartmanager.net:80/0KhZi7bTcAZxIiSWfMWNNg==",
+    "http://www.cartmanager.net:80/0kp56J8s7jaN7SOfEGmORw==",
+    "http://www.cartmanager.net:80/0lhVRLOPgf0ji7o2UhYvsA==",
+    "http://www.cartmanager.net:80/0LZnk5diN5+1bBJ5tuGsyQ==",
+    "http://www.cartmanager.net:80/0mBmA7NnTHCRkg8d9Xz6sQ==",
+    "http://www.cartmanager.net:80/0mVP630G5PJCwpwCdwkgQg==",
+    "http://www.cartmanager.net:80/0ocJq8s5+ZWbLO26AqOGTQ==",
+    "http://www.cartmanager.net:80/0oMiTkhU8rIsMkUCJyRMuw==",
+    "http://www.cartmanager.net:80/0ONEsgZ5pdyt3bclTUwWnw==",
+    "http://www.cartmanager.net:80/0Pzw6Vl2jaI0uraVno4hkQ==",
+    "http://www.cartmanager.net:80/0QBsorvEQHb6B784Ay5Utw==",
+    "http://www.cartmanager.net:80/0sclj7uvdz3APsaTv4gR0Q==",
+    "http://www.cartmanager.net:80/0Tf2G4jY90TSSKAGQEihGQ==",
+    "http://www.cartmanager.net:80/0v1LLGuv7w/tQrZiSXCaAA==",
+    "http://www.cartmanager.net:80/0WoU9oJ5fC8djgVXH00bpw==",
+    "http://cartmanager.net:80/0xCkBIP5OZ3X7RcS4P3XAg==",
+    "http://www.cartmanager.net:80/0xyKeTy7pRafT53GA6JHjw==",
+    "http://www.cartmanager.net:80/0zYCGaTDIBH4bM27bqckA==",
+    "http://www.cartmanager.net:80/114Z1iOg7Jsv1LullV829Q==",
+    "http://www.cartmanager.net:80/11izPf4YSInMhQSKHAdddw==",
+    "http://www.cartmanager.net:80/136rOYPvAYB6gg7hbDaR+A==",
+    "http://www.cartmanager.net:80/1a1jFBCk9tU5w9ML3IgTgQ==",
+    "http://www.cartmanager.net:80/1a7YalL65PaNar9wGHLiKg==",
+    "http://www.cartmanager.net:80/1amkjTKOjmXqAsS+dGu1Zg==",
+    "http://www.cartmanager.net:80/1BBWz4i55/LA2oo+dEuseQ==",
+    "http://www.cartmanager.net:80/1bmn+lcel74w6X6TfNUyvg==",
+    "http://www.cartmanager.net:80/1CP8jaQipuj7KEcLEMbusw==",
+    "http://www.cartmanager.net:80/1D+kC4J/i8KIABPJPutshQ==",
+    "http://www.cartmanager.net:80/1dQnBVGVC/EzUUin8x/nkA==",
+    "http://www.cartmanager.net:80/1dzsw9GI3Tu6L8CJu4ojSw==",
+    "http://www.cartmanager.net:80/1ibuUChfBWMIFCmBhZ7Tkw==",
+    "http://www.cartmanager.net:80/1k9x+KfC6jZu6oCSitEPWw==",
+    "http://www.cartmanager.net:80/1mjTHAAzAthfGwltblMUDg==",
+    "http://www.cartmanager.net:80/1q5NeCn/FnOpuGykO/m/Kw==",
+    "http://www.cartmanager.net:80/1RM/jrFCpSVxSBIS31ayvA==",
+    "http://www.cartmanager.net:80/1RoGdem8g+Xc4LthrmoBDQ==",
+    "http://www.cartmanager.net:80/1tQluCwi6cEfizEMWtQCyw==",
+    "http://www.cartmanager.net:80/1uAnveOJFfs+wY5vg5ZiLQ==",
+    "http://www.cartmanager.net:80/1V5URpQrY1BI0cKrC2R3lw==",
+    "http://www.cartmanager.net:80/1YmUV28g70Gt6cyxzG5qpQ==",
+    "http://www.cartmanager.net:80/2/ffehIgcpSqcKB4Hkg5eQ==",
+    "http://www.cartmanager.net:80/20rQrPFswCrc0IhqePJWAQ==",
+    "http://www.cartmanager.net:80/22t9BKP50OB+xbPhugHruA==",
+    "http://www.cartmanager.net:80/25cM9ue3kVW10LoW/pQQMg==",
+    "http://www.cartmanager.net:80/26uZ76D4PMJVGqjMUgbxWA==",
+    "http://www.cartmanager.net:80/2AAkqHCZp2vU7QbiyoxPdA==",
+    "http://www.cartmanager.net:80/2aDCq6PbEaCz+nDDAhkYlw==",
+    "http://www.cartmanager.net:80/2aMiO6DPe9XW/24bGMC12A==",
+    "http://www.cartmanager.net:80/2d7mwUqt4EKDa0exVsjtuQ==",
+    "http://www.cartmanager.net:80/2DtTz0j53evKSylv5WnyZg==",
+    "http://www.cartmanager.net:80/2EXA0WzOFYLZhQWu3FifQg==",
+    "http://www.cartmanager.net:80/2gOITd8Rk5zdd/2SO3YtkQ==",
+    "http://www.cartmanager.net:80/2jneFmUo48R2vWbKTwRfig=="
+  ],
+  "reverse_ip_sample": {
+    "192.41.22.47": [],
+    "192.41.22.32": [],
+    "192.41.22.30": []
+  },
+  "stats": {
+    "subdomain_count": 19,
+    "ip_count": 3,
+    "ip_with_open_ports": 1,
+    "wayback_url_count": 500,
+    "spoofed_records_total": 0,
+    "spoofed_subdomains": 0
+  }
+}

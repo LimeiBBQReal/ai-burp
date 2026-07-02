@@ -1,0 +1,232 @@
+[
+  {
+    "pid": 3,
+    "in_minus": [
+      "ERR:('Connection aborted.', Connec",
+      0
+    ],
+    "in_plus": [
+      "ERR:('Connection aborted.', Remote",
+      0
+    ],
+    "max_9999": [
+      "ERR:('Connection aborted.', Remote",
+      0
+    ],
+    "zero": [
+      200,
+      37977
+    ],
+    "neg_minus1": [
+      404,
+      6995
+    ]
+  },
+  {
+    "pid": 28,
+    "in_minus": [
+      "ERR:('Connection aborted.', Remote",
+      0
+    ],
+    "in_plus": [
+      200,
+      49611
+    ],
+    "max_9999": [
+      404,
+      6995
+    ],
+    "zero": [
+      "ERR:('Connection aborted.', Connec",
+      0
+    ],
+    "neg_minus1": [
+      "ERR:HTTPSConnectionPool(host='fers",
+      0
+    ]
+  },
+  {
+    "pid": 50,
+    "in_minus": [
+      "ERR:('Connection aborted.', Remote",
+      0
+    ],
+    "in_plus": [
+      "ERR:('Connection aborted.', Remote",
+      0
+    ],
+    "max_9999": [
+      404,
+      6995
+    ],
+    "zero": [
+      "ERR:('Connection aborted.', Connec",
+      0
+    ],
+    "neg_minus1": [
+      "ERR:('Connection aborted.', Remote",
+      0
+    ]
+  },
+  {
+    "pid": 100,
+    "in_minus": [
+      "ERR:('Connection aborted.', Remote",
+      0
+    ],
+    "in_plus": [
+      "ERR:('Connection aborted.', Remote",
+      0
+    ],
+    "max_9999": [
+      "ERR:('Connection aborted.', Connec",
+      0
+    ],
+    "zero": [
+      200,
+      37977
+    ],
+    "neg_minus1": [
+      404,
+      6995
+    ]
+  },
+  {
+    "pid": 200,
+    "in_minus": [
+      200,
+      50775
+    ],
+    "in_plus": [
+      "ERR:HTTPSConnectionPool(host='fers",
+      0
+    ],
+    "max_9999": [
+      "ERR:('Connection aborted.', Remote",
+      0
+    ],
+    "zero": [
+      "ERR:('Connection aborted.', Remote",
+      0
+    ],
+    "neg_minus1": [
+      404,
+      6995
+    ]
+  },
+  {
+    "pid": 400,
+    "in_minus": [
+      200,
+      47147
+    ],
+    "in_plus": [
+      "ERR:('Connection aborted.', Remote",
+      0
+    ],
+    "max_9999": [
+      404,
+      6995
+    ],
+    "zero": [
+      "ERR:('Connection aborted.', Remote",
+      0
+    ],
+    "neg_minus1": [
+      "ERR:HTTPSConnectionPool(host='fers",
+      0
+    ]
+  },
+  {
+    "pid": 600,
+    "in_minus": [
+      200,
+      45539
+    ],
+    "in_plus": [
+      "ERR:HTTPSConnectionPool(host='fers",
+      0
+    ],
+    "max_9999": [
+      404,
+      6995
+    ],
+    "zero": [
+      200,
+      37977
+    ],
+    "neg_minus1": [
+      "ERR:('Connection aborted.', Connec",
+      0
+    ]
+  },
+  {
+    "pid": 800,
+    "in_minus": [
+      "ERR:('Connection aborted.', Remote",
+      0
+    ],
+    "in_plus": [
+      "ERR:('Connection aborted.', Remote",
+      0
+    ],
+    "max_9999": [
+      "ERR:('Connection aborted.', Remote",
+      0
+    ],
+    "zero": [
+      "ERR:('Connection aborted.', Remote",
+      0
+    ],
+    "neg_minus1": [
+      "ERR:('Connection aborted.', Remote",
+      0
+    ]
+  },
+  {
+    "pid": 900,
+    "in_minus": [
+      "ERR:('Connection aborted.', Remote",
+      0
+    ],
+    "in_plus": [
+      "ERR:('Connection aborted.', Remote",
+      0
+    ],
+    "max_9999": [
+      "ERR:('Connection aborted.', Remote",
+      0
+    ],
+    "zero": [
+      "ERR:('Connection aborted.', Remote",
+      0
+    ],
+    "neg_minus1": [
+      "ERR:('Connection aborted.', Remote",
+      0
+    ]
+  },
+  {
+    "pid": 950,
+    "in_minus": [
+      "ERR:('Connection aborted.', Remote",
+      0
+    ],
+    "in_plus": [
+      200,
+      44166
+    ],
+    "max_9999": [
+      "ERR:('Connection aborted.', Remote",
+      0
+    ],
+    "zero": [
+      200,
+      37977
+    ],
+    "neg_minus1": [
+      "ERR:('Connection aborted.', Remote",
+      0
+    ]
+  }
+]

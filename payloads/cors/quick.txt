@@ -1,0 +1,5 @@
+# CORS Quick Detection
+null
+https://evil.com
+http://evil.com
+https://attacker.com

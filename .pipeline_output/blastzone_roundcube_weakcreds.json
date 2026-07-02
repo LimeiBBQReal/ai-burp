@@ -1,0 +1,65 @@
+[
+  {
+    "user": "admin",
+    "pass": "admin",
+    "status": 200,
+    "len": 5566,
+    "failed_signal": false,
+    "session_signal": true,
+    "redirect_url": "https://webmail.blastzone.org/?_task=login"
+  },
+  {
+    "user": "admin",
+    "pass": "password",
+    "status": 200,
+    "len": 5566,
+    "failed_signal": false,
+    "session_signal": true,
+    "redirect_url": "https://webmail.blastzone.org/?_task=login"
+  },
+  {
+    "user": "admin",
+    "pass": "blastzone",
+    "status": 200,
+    "len": 5566,
+    "failed_signal": false,
+    "session_signal": true,
+    "redirect_url": "https://webmail.blastzone.org/?_task=login"
+  },
+  {
+    "user": "root",
+    "pass": "root",
+    "status": 200,
+    "len": 5566,
+    "failed_signal": false,
+    "session_signal": true,
+    "redirect_url": "https://webmail.blastzone.org/?_task=login"
+  },
+  {
+    "user": "root",
+    "pass": "password",
+    "status": 200,
+    "len": 5566,
+    "failed_signal": false,
+    "session_signal": true,
+    "redirect_url": "https://webmail.blastzone.org/?_task=login"
+  },
+  {
+    "user": "postmaster",
+    "pass": "postmaster",
+    "status": 200,
+    "len": 5566,
+    "failed_signal": false,
+    "session_signal": true,
+    "redirect_url": "https://webmail.blastzone.org/?_task=login"
+  },
+  {
+    "user": "admin@blastzone.org",
+    "pass": "admin",
+    "status": 200,
+    "len": 5566,
+    "failed_signal": false,
+    "session_signal": true,
+    "redirect_url": "https://webmail.blastzone.org/?_task=login"
+  }
+]

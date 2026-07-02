@@ -1,0 +1,126 @@
+{
+  "review_date": "2026-06-26",
+  "targets": {
+    "fershop.net": {
+      "report_file": "reports/fershop_FINAL_v1_report.md",
+      "pipeline_file": ".pipeline_output/fershop_inventory.json",
+      "status": "success",
+      "site_reachable": true,
+      "report_findings_count": 30,
+      "pipeline_new_findings": [
+        {
+          "url": "https://fershop.net/api/votes.php",
+          "source": "crawler_html_inline_js",
+          "not_in_report": true,
+          "assessment": "投票功能API，需测试认证和注入"
+        },
+        {
+          "url": "https://fershop.net/api/artists.php",
+          "source": "crawler_html_inline_js",
+          "not_in_report": true,
+          "assessment": "艺术家数据API"
+        },
+        {
+          "url": "https://fershop.net/api/upload.php",
+          "source": "crawler_html_inline_js",
+          "not_in_report": true,
+          "assessment": "⭐ 潜在文件上传端点，高价值"
+        },
+        {
+          "url": "https://fershop.net/api/founding-members-payment.php",
+          "source": "crawler_html_inline_js",
+          "not_in_report": true,
+          "assessment": "⭐ 支付相关端点，高价值"
+        },
+        {
+          "url": "https://fershop.net/api/products.php",
+          "source": "crawler_js_extract",
+          "not_in_report": true,
+          "assessment": "产品数据API"
+        },
+        {
+          "url": "https://fershop.net/api/wiki-edit.php",
+          "source": "crawler_js_extract",
+          "not_in_report": true,
+          "assessment": "⭐ WIKI编辑功能，可能存在未授权写入"
+        },
+        {
+          "url": "https://fershop.net/api/backendDataInSessionFlag",
+          "source": "crawler_html_inline_js",
+          "not_in_report": true,
+          "assessment": "调试/状态端点"
+        },
+        {
+          "url": "https://fershop.net/api/graphql_is_translatable_rweb_tweet_is_translatable_enabled",
+          "source": "crawler_html_inline_js",
+          "not_in_report": true,
+          "assessment": "Twitter翻译相关，疑似嵌入第三方JS引用"
+        },
+        {
+          "url": "https://fershop.net/opensearch.xml",
+          "source": "crawler_html_inline_js",
+          "not_in_report": true,
+          "assessment": "OpenSearch描述文件"
+        },
+        {
+          "url": "https://fershop.net/os-x.xml",
+          "source": "crawler_html_inline_js",
+          "not_in_report": true,
+          "assessment": "OS X 搜索插件"
+        },
+        {
+          "url": "https://fershop.net/os-grok.xml",
+          "source": "crawler_html_inline_js",
+          "not_in_report": true,
+          "assessment": "Grok 搜索插件"
+        },
+        {
+          "url": "https://fershop.net/manifest.json",
+          "source": "crawler_html_inline_js",
+          "not_in_report": true,
+          "assessment": "PWA manifest"
+        }
+      ],
+      "confirmed_findings": {
+        "admin.php_200": "确认仍可访问，200 4197B",
+        "api_delete_order_404": "确认仍是404",
+        "api_orders_404": "确认仍是404",
+        "api_login_404": "确认仍是404",
+        "api_user_profile_404": "确认仍是404",
+        "s3_bucket_404": "确认仍是404",
+        "google_oauth_callback_404": "确认仍是404",
+        "swagger_404": "确认仍是404",
+        "swagger_json_404": "确认仍是404"
+      }
+    },
+    "blastzone": {
+      "report_file": "reports/blastzone_FINAL_v4_report.md",
+      "status": "unreachable",
+      "site_reachable": false,
+      "error": "bzhost1.com returns 502 from all proxy sources and direct connection",
+      "note": "站点可能临时下线或维护中，无法进行新资产采集",
+      "old_findings_summary": {
+        "top_targets": [
+          "webmail.blastzone.org — Roundcube Webmail (无WAF)",
+          "bzhost1.blastzone.org/phpmyadmin — phpMyAdmin (无WAF)",
+          "www.ashleywestmark.com — WordPress (admin用户已知)",
+          "216.215.30.39 — 新服务器Apache/2.4.66 (Debian)"
+        ],
+        "status_when_reachable": "建议站点恢复后重新运行pipeline"
+      }
+    }
+  },
+  "comparison_summary": {
+    "fershop_improvement": "CrawlerEngine新发现12个原报告未覆盖的端点，尤其是/api/upload.php和/api/wiki-edit.php和/api/founding-members-payment.php具备高测试价值",
+    "blastzone_limitation": "站点502无法测试，需等待恢复",
+    "crawler_engine_verification": "6阶段架构正常运行：1508 sitemap URL延迟处理，第一阶段dict_probe+HTML解析发现609个非sitemap资产"
+  },
+  "next_steps": [
+    "1. 对fershop新发现的/api/upload.php进行文件上传测试",
+    "2. 测试/api/wiki-edit.php是否存在未授权写入",
+    "3. 测试/api/founding-members-payment.php支付端点",
+    "4. 对/api/votes.php和/api/artists.php做参数fuzz",
+    "5. 恢复blastzone后再运行pipeline",
+    "6. 配置GitHub Token扫描代码泄露"
+  ]
+}

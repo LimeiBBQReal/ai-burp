@@ -1,0 +1,21 @@
+# 引号绕过 - 十六进制
+0x61646d696e
+0x27
+CHAR(39)
+CHR(39)
+
+# 引号绕过 - CHAR 函数
+CHAR(97,100,109,105,110)
+CONCAT(CHAR(97),CHAR(100),CHAR(109),CHAR(105),CHAR(110))
+
+# 引号绕过 - 字符串拼接
+CONCAT('a','d','m','i','n')
+'a''dmin'
+"a""dmin"
+
+# 引号绕过 - 无引号技巧
+admin
+1
+NULL
+TRUE
+FALSE

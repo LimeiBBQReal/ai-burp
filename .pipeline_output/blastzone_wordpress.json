@@ -1,0 +1,8 @@
+[
+  {
+    "url": "http://www.ashleywestmark.com/wp-login.php",
+    "is_wp": true,
+    "form_action": "https://www.ashleywestmark.com/wp-login.php",
+    "user_field": "log"
+  }
+]

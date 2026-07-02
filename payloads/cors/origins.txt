@@ -1,0 +1,17 @@
+# CORS Test Origins
+null
+https://evil.com
+http://evil.com
+https://attacker.com
+http://attacker.com
+https://target.com.evil.com
+https://eviltarget.com
+https://target.com.attacker.com
+https://attackertarget.com
+https://target.com%60.evil.com
+https://target.com%0d.evil.com
+https://target.com%0a.evil.com
+https://target.com%09.evil.com
+https://target.com%00.evil.com
+https://target.com\.evil.com
+https://target.com/.evil.com

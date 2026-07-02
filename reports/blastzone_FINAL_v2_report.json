@@ -1,0 +1,217 @@
+{
+  "project": "blastzone-站群终极漏洞报告 v2",
+  "target": "25 domains (12 phpMyAdmin + 4 WordPress + 共享主机)",
+  "generated_at": "2026-06-24 09:07:49",
+  "sections": [
+    {
+      "title": "攻击面总览",
+      "content": {
+        "域名": "25 (12 暴露phpMyAdmin + 4 WordPress + 其余静态/离线)",
+        "phpMyAdmin暴露": "12 个域名, 全部v5.2.3同源 (blastzonewebhosting.com共享主机)",
+        "服务器": "Apache群 (共享主机) + IIS (blastzone.org/performancehobbies)",
+        "CMS": "WordPress (ashleywestmark/myth-racing/dryharvest/northwestrocketry/pemberton)",
+        "防护": "phpMyAdmin 5.2.3无CVE/setup认证扎实; server-status被403防护; SYN-ACK防火墙",
+        "OpSec": "本轮全程走代理(出口104.28.x Cloudflare), 真实IP未泄露"
+      }
+    },
+    {
+      "title": "确认的漏洞和发现",
+      "rows": [
+        [
+          "critical",
+          "phpMyAdmin 群体暴露 (12站)",
+          "12个域名",
+          "全部v5.2.3同源共享主机 — 拿下一个可横向"
+        ],
+        [
+          "critical",
+          "phpMyAdmin 公开",
+          "216.215.30.37",
+          "之前已发现, 本轮确认v5.2.3无未修复CVE"
+        ],
+        [
+          "critical",
+          "Blue Iris未授权API",
+          "173.209.174.233:81/api/",
+          "泄露设备UUID ace18986+软件版本65003148"
+        ],
+        [
+          "high",
+          "pingback SSRF可用",
+          "ashleywestmark.com",
+          "xmlrpc pingback.ping确认可用(盲探测需外部回调)"
+        ],
+        [
+          "high",
+          "Blue Iris暴露",
+          "173.209.174.233:81",
+          "BlueServer/5.9.9.98 + CORS:*"
+        ],
+        [
+          "high",
+          "WordPress用户枚举",
+          "ashleywestmark.com",
+          "admin(id=1) + kushal.singh@connectinfosoft.com(id=2)"
+        ],
+        [
+          "medium",
+          "WordPress插件指纹",
+          "ashleywestmark等",
+          "robo-gallery5.0.7/elementor4.1.4/post-slider3.5.1等(版本已修复已知CVE)"
+        ],
+        [
+          "medium",
+          "作者信息泄露",
+          "lokiresearch.com",
+          "<meta Author=\"Greg Deputy\"> + TinyMCE 4.x"
+        ],
+        [
+          "low",
+          "WordPress暴露",
+          "4个站",
+          "ashleywestmark/myth-racing/northwestrocketry/pemberton"
+        ],
+        [
+          "low",
+          "readme.html版本泄露",
+          "多个WP站",
+          "泄露安装版本信息"
+        ]
+      ]
+    },
+    {
+      "title": "已排除的攻击面 (系统性验证后确认关闭)",
+      "rows": [
+        [
+          "info",
+          "phpMyAdmin CVE",
+          "12站",
+          "v5.2.3 — CVE-2025-24530(XSS)在5.2.2已修复, 无未修复CVE"
+        ],
+        [
+          "info",
+          "phpMyAdmin setup认证",
+          "216.215.30.37",
+          "7种路径归一化全被401挡 — Basic Auth扎实"
+        ],
+        [
+          "info",
+          "phpMyAdmin登录枚举",
+          "216.215.30.37",
+          "6用户名无响应差异 — 不区分用户存在性"
+        ],
+        [
+          "info",
+          "phpMyAdmin配置读取",
+          "216.215.30.37",
+          "config.inc.php返回空(PHP执行) — 无法读源码"
+        ],
+        [
+          "info",
+          "Blue Iris session注入",
+          "173.209.174.233",
+          "5种session值全302 — 服务端校验"
+        ],
+        [
+          "info",
+          "Blue Iris路径穿越",
+          "173.209.174.233",
+          "所有../变体重定向登录 — 无穿越"
+        ],
+        [
+          "info",
+          "robo-gallery CVE",
+          "ashleywestmark",
+          "5.0.7 — CVE-2025-47521(XSS)影响≤5.0.2, 已修复"
+        ],
+        [
+          "info",
+          "elementor CVE",
+          "dryharvest",
+          "4.1.4 — 核心RCE在3.6.2, 高于受影响版本"
+        ],
+        [
+          "info",
+          "MoxieManager",
+          "lokiresearch",
+          "插件存在但api.php 404 — ASP.NET不执行PHP, 不可利用"
+        ],
+        [
+          "info",
+          "IIS短文件名",
+          "lokiresearch",
+          "*~1*全400 — 不可靠枚举"
+        ],
+        [
+          "info",
+          "nar.org路径",
+          "nar.org",
+          "随机路径404/敏感路径403 — 防护良好"
+        ],
+        [
+          "info",
+          "SYN-ACK防火墙",
+          "216.215.30.34",
+          "3306/6379/22全超时 — 防火墙有效"
+        ],
+        [
+          "info",
+          "server-status",
+          "11站",
+          "全部403 — 被防护, 非泄露"
+        ],
+        [
+          "info",
+          "wp-config备份",
+          "ashleywestmark",
+          ".bak/.old/.orig全404 — 不存在"
+        ],
+        [
+          "info",
+          "pingback盲SSRF",
+          "ashleywestmark",
+          "无faultCode差异 — WP fire-and-forget, 需外部回调"
+        ]
+      ]
+    },
+    {
+      "title": "RCE路径分析 (未成功但有潜力)",
+      "rows": [
+        [
+          "-",
+          "路径A: phpMyAdmin群",
+          "12站共享主机",
+          "弱密码失败 — 但12站同源意味着密码字典可针对性扩展(域名/公司名)"
+        ],
+        [
+          "-",
+          "路径B: WordPress",
+          "ashleywestmark",
+          "pingback SSRF确认 — 需架设外部回调做内网探测(元数据/内网DB)"
+        ],
+        [
+          "-",
+          "路径C: connectinfosoft",
+          "关联资产",
+          "第2管理员邮箱kushal.singh@connectinfosoft.com — 外包公司域名可深挖"
+        ],
+        [
+          "-",
+          "路径D: BlueIris",
+          "173.209.174.233",
+          "无认证绕过CVE — 仅信息泄露"
+        ]
+      ]
+    },
+    {
+      "title": "OpSec评估",
+      "content": {
+        "第一轮(失败)": "🔴 全部直连 — 真实IP 209.137.178.198暴露给所有目标日志",
+        "第二轮(修复)": "✅ 全程代理 — 出口104.28.x(Cloudflare), 3节点轮换",
+        "代理覆盖": "HTTP层(requests)+raw socket层(PySocks)全覆盖",
+        "安全闸门": "Agent.run新增verify_proxy — 出口IP=真实IP时拒绝运行",
+        "教训": "红队工具的代理不能靠自觉, 必须代码层强制验证"
+      }
+    }
+  ]
+}

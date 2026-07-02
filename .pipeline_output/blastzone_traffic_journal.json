@@ -1,0 +1,380 @@
+[
+  {
+    "url": "http://webmail.blastzone.org",
+    "method": "GET",
+    "status": 0,
+    "length": 0,
+    "headers": {},
+    "body_preview": "",
+    "params": {},
+    "tags": [],
+    "errors": [
+      "request_failed:HTTPConnectionPool(host='3.211.120.181', port=443): Max retr"
+    ],
+    "elapsed_ms": 0,
+    "ok": false
+  },
+  {
+    "url": "https://webmail.blastzone.org",
+    "method": "GET",
+    "status": 0,
+    "length": 0,
+    "headers": {},
+    "body_preview": "",
+    "params": {},
+    "tags": [],
+    "errors": [
+      "request_failed:('Connection aborted.', ConnectionResetError(10054, '远程主机强迫关"
+    ],
+    "elapsed_ms": 0,
+    "ok": false
+  },
+  {
+    "url": "http://webmail.blastzone.org/?_task=login",
+    "method": "GET",
+    "status": 0,
+    "length": 0,
+    "headers": {},
+    "body_preview": "",
+    "params": {
+      "_task": "login"
+    },
+    "tags": [],
+    "errors": [
+      "request_failed:('Connection aborted.', ConnectionResetError(10054, '远程主机强迫关"
+    ],
+    "elapsed_ms": 0,
+    "ok": false
+  },
+  {
+    "url": "http://bzhost1.blastzone.org",
+    "method": "GET",
+    "status": 0,
+    "length": 0,
+    "headers": {},
+    "body_preview": "",
+    "params": {},
+    "tags": [],
+    "errors": [
+      "request_failed:('Connection aborted.', RemoteDisconnected('Remote end close"
+    ],
+    "elapsed_ms": 0,
+    "ok": false
+  },
+  {
+    "url": "http://bzhost1.blastzone.org/phpmyadmin",
+    "method": "GET",
+    "status": 0,
+    "length": 0,
+    "headers": {},
+    "body_preview": "",
+    "params": {},
+    "tags": [],
+    "errors": [
+      "request_failed:('Connection aborted.', RemoteDisconnected('Remote end close"
+    ],
+    "elapsed_ms": 0,
+    "ok": false
+  },
+  {
+    "url": "https://www.ashleywestmark.com",
+    "method": "GET",
+    "status": 200,
+    "length": 116363,
+    "headers": {
+      "Server": "Apache",
+      "Content-Type": "text/html; charset=UTF-8"
+    },
+    "body_preview": "<!DOCTYPE html>\n<html lang=\"en-US\">\n<head>\n\t<meta charset=\"UTF-8\" />\n<meta http-equiv=\"X-UA-Compatible\" content=\"IE=edge\">\n\t<link rel=\"pingback\" href=\"https://www.ashleywestmark.com/xmlrpc.php\" />\n\n\t<script type=\"text/javascript\">\n\t\tdocument.documentElement.className = 'js';\t\n\t</script>\n\n\t<script>var et_site_url='https://www.ashleywestmark.com';var et_post_id='9';function et_core_page_resource_fallback(a,b){\"undefined\"===typeof b&&(b=a.sheet.cssRules&&0===a.sheet.cssRules.length);b&&(a.onerror=null,a.onload=null,a.href?a.href=et_site_url+\"/?et_core_page_resource=\"+a.id+et_post_id:a.src&&(a.src=et_site_url+\"/?et_core_page_resource=\"+a.id+et_post_id))}\n</script><meta name='robots' content='index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1' />\n\n\t<!-- This site is optimized with the Yoast SEO plugin v26.3 - https://yoast.com/wordpress/plugins/seo/ -->\n\t<title>Property Maintenance, Cleaning &amp; Repair Services WA | Ashley</title>\n\t<meta name=\"description\" content=\"Ashley Westmark specialise in property maintenance, cleaning &amp; repair services in WA designed to preserve value, improve appearance, reduce future issues\" />\n\t<link rel=\"canonical\" href=\"https://www.ashleywestmark.com/\" />\n\t<meta property=\"og:locale\" content=\"en_US\" />\n\t<meta property=\"og:type\" content=\"website\" />\n\t<meta property=\"og:title\" content=\"Property Maintenance, Cleaning and Repair Services WA | Ashley\" />\n\t<meta property=\"og:description\" content=\"Ashley Westmark specialise in property maintenance, cleaning &amp; repair services in WA designed to preserve value, improve appearance, reduce costly future issues.\" />\n\t<meta property=\"og:url\" content=\"https://www.ashleywestmark.com/\" />\n\t<meta property=\"og:site_name\" content=\"Ashley Westmark Inc\" />\n\t<meta property=\"article:publisher\" content=\"https://www.facebook.com/AshleyWestmarkInc/\" />\n\t<meta property=\"article:modified_time\" content=\"2026-01-02T06:49:02+00:00\" />\n\t<meta property=\"og:image\" content=\"https://www.ashleyw",
+    "params": {},
+    "tags": [
+      "wordpress",
+      "server:apache"
+    ],
+    "errors": [],
+    "elapsed_ms": 3986.2,
+    "ok": true
+  },
+  {
+    "url": "http://www.ashleywestmark.com/wp-login.php",
+    "method": "GET",
+    "status": 200,
+    "length": 6930,
+    "headers": {
+      "Server": "Apache",
+      "X-Frame-Options": "SAMEORIGIN",
+      "Content-Security-Policy": "frame-ancestors 'self';",
+      "Set-Cookie": "wordpress_test_cookie=WP%20Cookie%20check; path=/; secure; HttpOnly",
+      "Content-Type": "text/html; charset=UTF-8"
+    },
+    "body_preview": "<!DOCTYPE html>\n\t<html lang=\"en-US\">\n\t<head>\n\t<meta http-equiv=\"Content-Type\" content=\"text/html; charset=UTF-8\" />\n\t<title>Log In &lsaquo; Ashley Westmark Inc &#8212; WordPress</title>\n\t<meta name='robots' content='noindex, follow' />\n<link rel='dns-prefetch' href='//www.googletagmanager.com' />\n<link rel='stylesheet' id='dashicons-css' href='https://www.ashleywestmark.com/wp-includes/css/dashicons.min.css?ver=7.0' media='all' />\n<link rel='stylesheet' id='buttons-css' href='https://www.ashleywestmark.com/wp-includes/css/buttons.min.css?ver=7.0' media='all' />\n<link rel='stylesheet' id='forms-css' href='https://www.ashleywestmark.com/wp-admin/css/forms.min.css?ver=7.0' media='all' />\n<link rel='stylesheet' id='l10n-css' href='https://www.ashleywestmark.com/wp-admin/css/l10n.min.css?ver=7.0' media='all' />\n<link rel='stylesheet' id='wp-base-styles-css' href='https://www.ashleywestmark.com/wp-includes/css/dist/base-styles/admin-schemes.min.css?ver=7.0' media='all' />\n<link rel='stylesheet' id='login-css' href='https://www.ashleywestmark.com/wp-admin/css/login.min.css?ver=7.0' media='all' />\n<meta name=\"generator\" content=\"Site Kit by Google 1.166.0\" /><style>h1 a { \r\n\t\t\t\t\tbackground-image:url(https://www.ashleywestmark.com/wp-content/uploads/2025/09/logo.png) !important;\r\n\t\t\t\t\theight:100px !important;\r\n\t\t\t\t\twidth:100% !important;\r\n\t\t\t\t\tbackground-size:100% !important;\r\n\t\t\t\t\tline-height:inherit !important;\r\n\t\t\t\t\t} body.login.login-action-login{\r\n\r\n\t\t\t\tbackground-color: #f0f0f1;\r\n\r\n\t\t\t}body.iwllc_loaded p#nav a, body.iwllc_loaded p#backtoblog a{\r\n\r\n\t\t\t\tcolor: #50575e;\r\n\r\n\t\t\t}\r\n\t\tbody.iwllc_loaded p#nav a:hover, body.iwllc_loaded p#backtoblog a:hover{\r\n\r\n\t\t\t\tcolor: #135e96;\r\n\r\n\t\t\t}\r\n\t\t</style>\t<meta name='referrer' content='strict-origin-when-cross-origin' />\n\t\t<meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\" />\n\t<link rel=\"icon\" href=\"https://www.ashleywestmark.com/wp-content/uploads/2025/08/icons-150x150.jpg\" sizes=\"32x32\" />\n<link rel=\"icon\" href",
+    "params": {},
+    "tags": [
+      "wordpress",
+      "server:apache"
+    ],
+    "errors": [],
+    "elapsed_ms": 3309.6,
+    "ok": true
+  },
+  {
+    "url": "http://ashleywestmark.com",
+    "method": "GET",
+    "status": 200,
+    "length": 116363,
+    "headers": {
+      "Server": "Apache",
+      "Content-Type": "text/html; charset=UTF-8"
+    },
+    "body_preview": "<!DOCTYPE html>\n<html lang=\"en-US\">\n<head>\n\t<meta charset=\"UTF-8\" />\n<meta http-equiv=\"X-UA-Compatible\" content=\"IE=edge\">\n\t<link rel=\"pingback\" href=\"https://www.ashleywestmark.com/xmlrpc.php\" />\n\n\t<script type=\"text/javascript\">\n\t\tdocument.documentElement.className = 'js';\t\n\t</script>\n\n\t<script>var et_site_url='https://www.ashleywestmark.com';var et_post_id='9';function et_core_page_resource_fallback(a,b){\"undefined\"===typeof b&&(b=a.sheet.cssRules&&0===a.sheet.cssRules.length);b&&(a.onerror=null,a.onload=null,a.href?a.href=et_site_url+\"/?et_core_page_resource=\"+a.id+et_post_id:a.src&&(a.src=et_site_url+\"/?et_core_page_resource=\"+a.id+et_post_id))}\n</script><meta name='robots' content='index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1' />\n\n\t<!-- This site is optimized with the Yoast SEO plugin v26.3 - https://yoast.com/wordpress/plugins/seo/ -->\n\t<title>Property Maintenance, Cleaning &amp; Repair Services WA | Ashley</title>\n\t<meta name=\"description\" content=\"Ashley Westmark specialise in property maintenance, cleaning &amp; repair services in WA designed to preserve value, improve appearance, reduce future issues\" />\n\t<link rel=\"canonical\" href=\"https://www.ashleywestmark.com/\" />\n\t<meta property=\"og:locale\" content=\"en_US\" />\n\t<meta property=\"og:type\" content=\"website\" />\n\t<meta property=\"og:title\" content=\"Property Maintenance, Cleaning and Repair Services WA | Ashley\" />\n\t<meta property=\"og:description\" content=\"Ashley Westmark specialise in property maintenance, cleaning &amp; repair services in WA designed to preserve value, improve appearance, reduce costly future issues.\" />\n\t<meta property=\"og:url\" content=\"https://www.ashleywestmark.com/\" />\n\t<meta property=\"og:site_name\" content=\"Ashley Westmark Inc\" />\n\t<meta property=\"article:publisher\" content=\"https://www.facebook.com/AshleyWestmarkInc/\" />\n\t<meta property=\"article:modified_time\" content=\"2026-01-02T06:49:02+00:00\" />\n\t<meta property=\"og:image\" content=\"https://www.ashleyw",
+    "params": {},
+    "tags": [
+      "wordpress",
+      "server:apache"
+    ],
+    "errors": [],
+    "elapsed_ms": 5544.3,
+    "ok": true
+  },
+  {
+    "url": "http://216.215.30.39",
+    "method": "GET",
+    "status": 200,
+    "length": 10701,
+    "headers": {
+      "Server": "Apache/2.4.66 (Debian)",
+      "Content-Type": "text/html"
+    },
+    "body_preview": "\n<!DOCTYPE html PUBLIC \"-//W3C//DTD XHTML 1.0 Transitional//EN\" \"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd\">\n<html xmlns=\"http://www.w3.org/1999/xhtml\">\n  <head>\n    <meta http-equiv=\"Content-Type\" content=\"text/html; charset=UTF-8\" />\n    <title>Apache2 Debian Default Page: It works</title>\n    <style type=\"text/css\" media=\"screen\">\n  * {\n    margin: 0px 0px 0px 0px;\n    padding: 0px 0px 0px 0px;\n  }\n\n  body, html {\n    padding: 3px 3px 3px 3px;\n\n    background-color: #D8DBE2;\n\n    font-family: Verdana, sans-serif;\n    font-size: 11pt;\n    text-align: center;\n  }\n\n  div.main_page {\n    position: relative;\n    display: table;\n\n    width: 800px;\n\n    margin-bottom: 3px;\n    margin-left: auto;\n    margin-right: auto;\n    padding: 0px 0px 0px 0px;\n\n    border-width: 2px;\n    border-color: #212738;\n    border-style: solid;\n\n    background-color: #FFFFFF;\n\n    text-align: center;\n  }\n\n  div.page_header {\n    height: 99px;\n    width: 100%;\n\n    background-color: #F5F6F7;\n  }\n\n  div.page_header span {\n    margin: 15px 0px 0px 50px;\n\n    font-size: 180%;\n    font-weight: bold;\n  }\n\n  div.page_header img {\n    margin: 3px 0px 0px 40px;\n\n    border: 0px 0px 0px;\n  }\n\n  div.table_of_contents {\n    clear: left;\n\n    min-width: 200px;\n\n    margin: 3px 3px 3px 3px;\n\n    background-color: #FFFFFF;\n\n    text-align: left;\n  }\n\n  div.table_of_contents_item {\n    clear: left;\n\n    width: 100%;\n\n    margin: 4px 0px 0px 0px;\n\n    background-color: #FFFFFF;\n\n    color: #000000;\n    text-align: left;\n  }\n\n  div.table_of_contents_item a {\n    margin: 6px 0px 0px 6px;\n  }\n\n  div.content_section {\n    margin: 3px 3px 3px 3px;\n\n    background-color: #FFFFFF;\n\n    text-align: left;\n  }\n\n  div.content_section_text {\n    padding: 4px 8px 4px 8px;\n\n    color: #000000;\n    font-size: 100%;\n  }\n\n  div.content_section_text pre {\n    margin: 8px 0px 8px 0px;\n    padding: 8px 8px 8px 8px;\n\n    border-width: 1px;\n    border-style: dotted;\n    border-color: #000000;\n\n    background-color: ",
+    "params": {},
+    "tags": [
+      "server:apache/2.4.66 (debian)"
+    ],
+    "errors": [],
+    "elapsed_ms": 372.1,
+    "ok": true
+  },
+  {
+    "url": "https://216.215.30.39",
+    "method": "GET",
+    "status": 0,
+    "length": 0,
+    "headers": {},
+    "body_preview": "",
+    "params": {},
+    "tags": [],
+    "errors": [
+      "request_failed:('Connection aborted.', RemoteDisconnected('Remote end close"
+    ],
+    "elapsed_ms": 0,
+    "ok": false
+  },
+  {
+    "url": "http://blastzone.org",
+    "method": "GET",
+    "status": 200,
+    "length": 9166,
+    "headers": {
+      "Content-Type": "text/html",
+      "Server": "Microsoft-IIS/10.0",
+      "Set-Cookie": "ASPSESSIONIDCCBBRQST=CANDHIADCIHBFIFHMEBFGPOC; path=/",
+      "X-Powered-By": "ASP.NET"
+    },
+    "body_preview": "\r\n\r\n<html>\r\n<head>\r\n<meta NAME=\"GENERATOR\" Content=\"Microsoft Visual InterDev 1.0\">\r\n<meta HTTP-EQUIV=\"Content-Type\" content=\"text/html; charset=iso-8859-1\">\r\n<meta name=\"description\" content=\"High power rocketry, pictures and info.\">\r\n<meta name=\"keywords\" content=\"rocketry,high power rocketry,Rocket,Rockets,Pyro,The Blast Zone,HPR,\"> \r\n<title>High Power Rocketry in the Blast Zone</title>\r\n<script language=\"Javascript\">\r\n<!--\r\nfunction NavBarDesc(iLoc) {\r\n\t\tua = navigator.userAgent;\r\n\tv = navigator.appVersion.substring(0,1);\r\n\tif ( ( ua.lastIndexOf( \"MSIE\" ) != -1 ) &&\r\n\t\t ( v != '1' ) &&\r\n\t\t ( v != '2' ) &&\r\n\t\t ( v != '3' ) )\r\n\t{\r\n\t\tif (iLoc == 1) {\r\n\t\t\tLinkText.innerHTML = \"Fun with large flaming objects flying into the sky!\"\r\n\t\t} \r\n\t\tif (iLoc == 2) {\r\n\t\t\tLinkText.innerHTML = \"Email me.\"\r\n\t\t} \r\n\t\tif (iLoc == 3) {\r\n\t\t\tLinkText.innerHTML = \"For more info on anything you see in this web site, start here.\"\r\n\t\t} \r\n\t\tif (iLoc == 4) {\r\n\t\t\tLinkText.innerHTML = \"Takes you back here.\"\r\n\t\t}\r\n\t}\r\n}\r\nfunction ResetDesc() {\r\n\tLinkText.innerHTML = \"<BR>\"\t\r\n}\r\n//-->\r\n</script>  \r\n</head>\r\n<style>\r\n<!--\r\nH1 {\r\n\tfont-family:Arial;\r\n\tfont-size=22pt;\r\n}\t\r\nH2 {\r\n\tfont-family:Arial;\r\n\tfont-size=18pt;\r\n}\t\r\nH3 {\r\n\tfont-family:Arial;\r\n\tfont-size=10pt;\r\n}\r\nH4 {\r\n\tfont-family:Arial;\r\n\tfont-size=7pt;\r\n}\r\n-->\r\n</style>\r\n<body bgcolor=\"000000\" text=\"ffffff\" background=\"/images/rocketback.gif\" bgproperties=\"fixed\" link=\"6060ff\" vlink=\"6060ff\">\r\n<script language=JavaScript>\r\n<!--\r\n\tua = navigator.userAgent;\r\n\tv = navigator.appVersion.substring(0,1);\r\n\tif ( ( ua.lastIndexOf( \"MSIE\" ) != -1 ) &&\r\n\t\t ( v != '1' ) &&\r\n\t\t ( v != '2' ) &&\r\n\t\t ( v != '3' ) )\r\n\t{\r\n\t\tdocument.body.onmouseover=makeCool;\r\n\t\tdocument.body.onmouseout=makeNormal;\r\n    }\r\n\r\n\tfunction makeCool()\r\n\t{\r\n\t\tsrc = event.toElement;\r\n\t\tif (src.tagName == \"A\")\r\n\t\t{\r\n\t\t\tsrc.oldcol = src.style.color;\r\n\t\t\tsrc.style.color = \"ff0000\"; \r\n\t\t\t//window.status = src.innerHTML;\r\n\t\t}\r\n\t}\r\n    \r\n\tfunction makeNormal()\r\n\t{\r\n\t\tsrc=event.fromElement;\r",
+    "params": {},
+    "tags": [
+      "server:microsoft-iis/10.0",
+      "powered:asp.net"
+    ],
+    "errors": [],
+    "elapsed_ms": 430.9,
+    "ok": true
+  },
+  {
+    "url": "http://www.blastzone.org",
+    "method": "GET",
+    "status": 200,
+    "length": 9166,
+    "headers": {
+      "Content-Type": "text/html",
+      "Server": "Microsoft-IIS/10.0",
+      "X-Powered-By": "ASP.NET"
+    },
+    "body_preview": "\r\n\r\n<html>\r\n<head>\r\n<meta NAME=\"GENERATOR\" Content=\"Microsoft Visual InterDev 1.0\">\r\n<meta HTTP-EQUIV=\"Content-Type\" content=\"text/html; charset=iso-8859-1\">\r\n<meta name=\"description\" content=\"High power rocketry, pictures and info.\">\r\n<meta name=\"keywords\" content=\"rocketry,high power rocketry,Rocket,Rockets,Pyro,The Blast Zone,HPR,\"> \r\n<title>High Power Rocketry in the Blast Zone</title>\r\n<script language=\"Javascript\">\r\n<!--\r\nfunction NavBarDesc(iLoc) {\r\n\t\tua = navigator.userAgent;\r\n\tv = navigator.appVersion.substring(0,1);\r\n\tif ( ( ua.lastIndexOf( \"MSIE\" ) != -1 ) &&\r\n\t\t ( v != '1' ) &&\r\n\t\t ( v != '2' ) &&\r\n\t\t ( v != '3' ) )\r\n\t{\r\n\t\tif (iLoc == 1) {\r\n\t\t\tLinkText.innerHTML = \"Fun with large flaming objects flying into the sky!\"\r\n\t\t} \r\n\t\tif (iLoc == 2) {\r\n\t\t\tLinkText.innerHTML = \"Email me.\"\r\n\t\t} \r\n\t\tif (iLoc == 3) {\r\n\t\t\tLinkText.innerHTML = \"For more info on anything you see in this web site, start here.\"\r\n\t\t} \r\n\t\tif (iLoc == 4) {\r\n\t\t\tLinkText.innerHTML = \"Takes you back here.\"\r\n\t\t}\r\n\t}\r\n}\r\nfunction ResetDesc() {\r\n\tLinkText.innerHTML = \"<BR>\"\t\r\n}\r\n//-->\r\n</script>  \r\n</head>\r\n<style>\r\n<!--\r\nH1 {\r\n\tfont-family:Arial;\r\n\tfont-size=22pt;\r\n}\t\r\nH2 {\r\n\tfont-family:Arial;\r\n\tfont-size=18pt;\r\n}\t\r\nH3 {\r\n\tfont-family:Arial;\r\n\tfont-size=10pt;\r\n}\r\nH4 {\r\n\tfont-family:Arial;\r\n\tfont-size=7pt;\r\n}\r\n-->\r\n</style>\r\n<body bgcolor=\"000000\" text=\"ffffff\" background=\"/images/rocketback.gif\" bgproperties=\"fixed\" link=\"6060ff\" vlink=\"6060ff\">\r\n<script language=JavaScript>\r\n<!--\r\n\tua = navigator.userAgent;\r\n\tv = navigator.appVersion.substring(0,1);\r\n\tif ( ( ua.lastIndexOf( \"MSIE\" ) != -1 ) &&\r\n\t\t ( v != '1' ) &&\r\n\t\t ( v != '2' ) &&\r\n\t\t ( v != '3' ) )\r\n\t{\r\n\t\tdocument.body.onmouseover=makeCool;\r\n\t\tdocument.body.onmouseout=makeNormal;\r\n    }\r\n\r\n\tfunction makeCool()\r\n\t{\r\n\t\tsrc = event.toElement;\r\n\t\tif (src.tagName == \"A\")\r\n\t\t{\r\n\t\t\tsrc.oldcol = src.style.color;\r\n\t\t\tsrc.style.color = \"ff0000\"; \r\n\t\t\t//window.status = src.innerHTML;\r\n\t\t}\r\n\t}\r\n    \r\n\tfunction makeNormal()\r\n\t{\r\n\t\tsrc=event.fromElement;\r",
+    "params": {},
+    "tags": [
+      "server:microsoft-iis/10.0",
+      "powered:asp.net"
+    ],
+    "errors": [],
+    "elapsed_ms": 428.5,
+    "ok": true
+  },
+  {
+    "url": "http://bouncehouses.com",
+    "method": "GET",
+    "status": 200,
+    "length": 482465,
+    "headers": {
+      "Content-Type": "text/html; charset=utf-8",
+      "set-cookie": "localization=US; path=/; expires=Sat, 26 Jun 2027 07:05:16 GMT; SameSite=Lax, cart_currency=USD; path=/; expires=Fri, 10 Jul 2026 07:05:16 GMT; SameSite=Lax, _shopify_y=7c14a472-9851-483a-ab69-74e40d27c0a8; domain=bouncehouses.com; path=/; expires=Sat, 26 Jun 2027 13:05:16 GMT; SameSite=Lax, _shopify_s=340545d8-2bad-4162-9ff0-b85d215a28f2; domain=bouncehouses.com; path=/; expires=Fri, 26 Jun 2026 07:35:16 GMT; SameSite=Lax, _shopify_essential=:AZ8Cv0B6AAEAuPFTE919dwEVQksv4jN4sqbXGZxwihXprNH-CPa7XtyQMEclzdxG_LXx7QVh_Vo3h802R5j5rr1xZUzgWly_ubiHkGCQ1EsWhWzsQefJszfXvUHhE0ukWFsXxSMsM-ajqXXd5uPCwPavcMzaW48CYVnJhO21-KMC9himwbuJWswBVQ5G1lainQU79ACVn0dp5mkVTQzL39EcjQaVBg6iXF5ji2XO88TTRpwGcTt1aFKli0qBGStbceylCgK7DVUu_7DJl1lbwwJxSwyvt6G-uSMkX_XDC_vgPz97_PTx3cwn_-zqRVoHsfzb52edgA_5QkYCt9pjog3_VdmK5Ji9WmLTkBwh1dHwYI8fmnzAd-Flnbbj04J99x4r3tl3ZI6kisXinaBsWD6egg:; Max-Age=31536000; Path=/; HttpOnly; Secure; Priority=High; SameSite=Lax, _shopify_analytics=:AZ8Cv0FGAAEA-aHixqMPC3qD4_08xoET0QhDZYFzCh20KOIpi3I4EVxErtz8Np74flvgi4NWyoVzRNuba31ILfvDLSZEmYx8FcGNTvc:; Max-Age=31536000; Path=/; HttpOnly; Secure; Priority=High; SameSite=Lax, _shopify_marketing=:AZ8Cv0FGAAEAs8I9uZhmnRvmB6BMH8kFU9EIUKkDrQyJc3cYOOdib9m5FiZkd1my52c8YNwU70ClJnMZe4o-vf9zbHY:; Max-Age=31536000; Path=/; HttpOnly; Secure; Priority=High; SameSite=Lax",
+      "x-frame-options": "DENY",
+      "content-security-policy": "block-all-mixed-content; frame-ancestors 'none'; upgrade-insecure-requests;",
+      "strict-transport-security": "max-age=7889238",
+      "server": "cloudflare"
+    },
+    "body_preview": "\n<!doctype html>\n<html class=\"no-js\" lang=\"en\">\n  <head>\n    <meta charset=\"utf-8\">\n    <meta http-equiv=\"X-UA-Compatible\" content=\"IE=edge,chrome=1\">\n    <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0, height=device-height, minimum-scale=1.0\">\n    <meta name=\"theme-color\" content=\"#f5b722\">\n\n    <!-- Network optimisations -->\n<link rel=\"preconnect\" href=\"//cdn.shopify.com\" crossorigin>\n<link rel=\"preconnect\" href=\"//fonts.shopifycdn.com\" crossorigin>\n\n<link rel=\"preload\" as=\"style\" href=\"//bouncehouses.com/cdn/shop/t/2/assets/base.css?v=142780140354698976521746714062\">\n\n<link rel=\"preload\" href=\"//bouncehouses.com/cdn/fonts/quicksand/quicksand_n4.bf8322a9d1da765aa396ad7b6eeb81930a6214de.woff2\" as=\"font\" type=\"font/woff2\" crossorigin>\n<link rel=\"preload\" href=\"//bouncehouses.com/cdn/fonts/quicksand/quicksand_n7.d375fe11182475f82f7bb6306a0a0e4018995610.woff2\" as=\"font\" type=\"font/woff2\" crossorigin>\n\n<link rel=\"canonical\" href=\"https://bouncehouses.com/\">\n      <link rel=\"shortcut icon\" href=\"//bouncehouses.com/cdn/shop/files/Blast-Zone-Twitter-Logo_Stroke_31c0c0f0-3c29-4990-bd0f-f0cb6b49175a.png?crop=center&height=32&v=1742530628&width=32\" type=\"image/png\">\n    \n\n    <!-- Title and description ================================================== -->\n    <title>Blast Zone</title><meta name=\"description\" content=\"Blast Zone Premium-Quality Inflatables, Bounce Houses, Inflatable Slides, Water Parks. From $279 - less than it often costs to rent!\"><!-- /snippets/social-meta-tags.liquid -->\n\n\n\n\n<meta property=\"og:site_name\" content=\"Blast Zone\">\n<meta property=\"og:url\" content=\"https://bouncehouses.com/\">\n<meta property=\"og:title\" content=\"Blast Zone\">\n<meta property=\"og:type\" content=\"website\">\n<meta property=\"og:description\" content=\"Blast Zone Premium-Quality Inflatables, Bounce Houses, Inflatable Slides, Water Parks. From $279 - less than it often costs to rent!\">\n\n\n\n\n\n<meta name=\"twitter:card\" content=\"summary_large_image\">\n<meta name=\"twitter:tit",
+    "params": {},
+    "tags": [
+      "shopify",
+      "server:cloudflare"
+    ],
+    "errors": [],
+    "elapsed_ms": 2528.0,
+    "ok": true
+  },
+  {
+    "url": "https://bouncehouses.com",
+    "method": "GET",
+    "status": 200,
+    "length": 482465,
+    "headers": {
+      "Content-Type": "text/html; charset=utf-8",
+      "set-cookie": "localization=US; path=/; expires=Sat, 26 Jun 2027 07:05:17 GMT, cart_currency=USD; path=/; expires=Fri, 10 Jul 2026 07:05:17 GMT, _shopify_y=7c14a472-9851-483a-ab69-74e40d27c0a8; domain=bouncehouses.com; path=/; expires=Sat, 26 Jun 2027 13:05:17 GMT; SameSite=Lax, _shopify_s=340545d8-2bad-4162-9ff0-b85d215a28f2; domain=bouncehouses.com; path=/; expires=Fri, 26 Jun 2026 07:35:17 GMT; SameSite=Lax, _shopify_essential=:AZ8Cv0B6AAEA8QOcQE_aZhryNcH7bB9_ofbXutm10uiIE-Z4XXPHjnm7aWcIoiF3J1ugZx6hLg1eEo9mwaxA2mnzuczE8TEJ2dvxKAyoh4BIcew7i5lyn6Fq9-CdU92tbT6-6_OheiDORlY3N4amorTNddq-MZHTFg9HFHMVsnvpzxHadRJTA3vMpz0-bax5qxZygXarOyiSpqxsVqP5VPVAd2ScK9c0hkJN2N9NZl61tHM8NswrPC2Ysab3UJjL0bi_bnoXn1Pxpv23qfbgzKeow0VYbI2KjvCWvCXCcHtY0nfmRU6tNqYLW43gVVAMUfG8_PEIP7Ty0DP-1cYr1IqtAEXNSM9yAiuaf0D01GP1Uz-igw7LHFslFm731KDdf7Tukf1-FYDwg8YY9ybRgoTonME:; Max-Age=31536000; Path=/; HttpOnly; Secure; Priority=High; SameSite=Lax",
+      "x-frame-options": "DENY",
+      "content-security-policy": "block-all-mixed-content; frame-ancestors 'none'; upgrade-insecure-requests;",
+      "strict-transport-security": "max-age=7889238",
+      "server": "cloudflare"
+    },
+    "body_preview": "\n<!doctype html>\n<html class=\"no-js\" lang=\"en\">\n  <head>\n    <meta charset=\"utf-8\">\n    <meta http-equiv=\"X-UA-Compatible\" content=\"IE=edge,chrome=1\">\n    <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0, height=device-height, minimum-scale=1.0\">\n    <meta name=\"theme-color\" content=\"#f5b722\">\n\n    <!-- Network optimisations -->\n<link rel=\"preconnect\" href=\"//cdn.shopify.com\" crossorigin>\n<link rel=\"preconnect\" href=\"//fonts.shopifycdn.com\" crossorigin>\n\n<link rel=\"preload\" as=\"style\" href=\"//bouncehouses.com/cdn/shop/t/2/assets/base.css?v=142780140354698976521746714062\">\n\n<link rel=\"preload\" href=\"//bouncehouses.com/cdn/fonts/quicksand/quicksand_n4.bf8322a9d1da765aa396ad7b6eeb81930a6214de.woff2\" as=\"font\" type=\"font/woff2\" crossorigin>\n<link rel=\"preload\" href=\"//bouncehouses.com/cdn/fonts/quicksand/quicksand_n7.d375fe11182475f82f7bb6306a0a0e4018995610.woff2\" as=\"font\" type=\"font/woff2\" crossorigin>\n\n<link rel=\"canonical\" href=\"https://bouncehouses.com/\">\n      <link rel=\"shortcut icon\" href=\"//bouncehouses.com/cdn/shop/files/Blast-Zone-Twitter-Logo_Stroke_31c0c0f0-3c29-4990-bd0f-f0cb6b49175a.png?crop=center&height=32&v=1742530628&width=32\" type=\"image/png\">\n    \n\n    <!-- Title and description ================================================== -->\n    <title>Blast Zone</title><meta name=\"description\" content=\"Blast Zone Premium-Quality Inflatables, Bounce Houses, Inflatable Slides, Water Parks. From $279 - less than it often costs to rent!\"><!-- /snippets/social-meta-tags.liquid -->\n\n\n\n\n<meta property=\"og:site_name\" content=\"Blast Zone\">\n<meta property=\"og:url\" content=\"https://bouncehouses.com/\">\n<meta property=\"og:title\" content=\"Blast Zone\">\n<meta property=\"og:type\" content=\"website\">\n<meta property=\"og:description\" content=\"Blast Zone Premium-Quality Inflatables, Bounce Houses, Inflatable Slides, Water Parks. From $279 - less than it often costs to rent!\">\n\n\n\n\n\n<meta name=\"twitter:card\" content=\"summary_large_image\">\n<meta name=\"twitter:tit",
+    "params": {},
+    "tags": [
+      "shopify",
+      "server:cloudflare"
+    ],
+    "errors": [],
+    "elapsed_ms": 1185.7,
+    "ok": true
+  },
+  {
+    "url": "http://bzhost1.blastzone.org/phpmyadmin/",
+    "method": "GET",
+    "status": 0,
+    "length": 0,
+    "headers": {},
+    "body_preview": "",
+    "params": {},
+    "tags": [],
+    "errors": [
+      "request_failed:('Connection aborted.', ConnectionResetError(10054, '远程主机强迫关"
+    ],
+    "elapsed_ms": 0,
+    "ok": false
+  },
+  {
+    "url": "http://bzhost1.blastzone.org/phpmyadmin/index.php",
+    "method": "GET",
+    "status": 0,
+    "length": 0,
+    "headers": {},
+    "body_preview": "",
+    "params": {},
+    "tags": [],
+    "errors": [
+      "request_failed:('Connection aborted.', RemoteDisconnected('Remote end close"
+    ],
+    "elapsed_ms": 0,
+    "ok": false
+  },
+  {
+    "url": "http://216.215.30.39/phpmyadmin/",
+    "method": "GET",
+    "status": 404,
+    "length": 315,
+    "headers": {
+      "Server": "Apache/2.4.66 (Debian)",
+      "Content-Type": "text/html; charset=iso-8859-1"
+    },
+    "body_preview": "<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.01//EN\" \"http://www.w3.org/TR/html4/strict.dtd\">\n<html><head>\n<title>404 Not Found</title>\n</head><body>\n<h1>Not Found</h1>\n<p>The requested URL was not found on this server.</p>\n<hr>\n<address>Apache/2.4.66 (Debian) Server at 216.215.30.39 Port 80</address>\n</body></html>\n",
+    "params": {},
+    "tags": [
+      "server:apache/2.4.66 (debian)"
+    ],
+    "errors": [],
+    "elapsed_ms": 364.9,
+    "ok": false
+  },
+  {
+    "url": "http://216.215.30.39/",
+    "method": "GET",
+    "status": 200,
+    "length": 10701,
+    "headers": {
+      "Server": "Apache/2.4.66 (Debian)",
+      "Content-Type": "text/html"
+    },
+    "body_preview": "\n<!DOCTYPE html PUBLIC \"-//W3C//DTD XHTML 1.0 Transitional//EN\" \"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd\">\n<html xmlns=\"http://www.w3.org/1999/xhtml\">\n  <head>\n    <meta http-equiv=\"Content-Type\" content=\"text/html; charset=UTF-8\" />\n    <title>Apache2 Debian Default Page: It works</title>\n    <style type=\"text/css\" media=\"screen\">\n  * {\n    margin: 0px 0px 0px 0px;\n    padding: 0px 0px 0px 0px;\n  }\n\n  body, html {\n    padding: 3px 3px 3px 3px;\n\n    background-color: #D8DBE2;\n\n    font-family: Verdana, sans-serif;\n    font-size: 11pt;\n    text-align: center;\n  }\n\n  div.main_page {\n    position: relative;\n    display: table;\n\n    width: 800px;\n\n    margin-bottom: 3px;\n    margin-left: auto;\n    margin-right: auto;\n    padding: 0px 0px 0px 0px;\n\n    border-width: 2px;\n    border-color: #212738;\n    border-style: solid;\n\n    background-color: #FFFFFF;\n\n    text-align: center;\n  }\n\n  div.page_header {\n    height: 99px;\n    width: 100%;\n\n    background-color: #F5F6F7;\n  }\n\n  div.page_header span {\n    margin: 15px 0px 0px 50px;\n\n    font-size: 180%;\n    font-weight: bold;\n  }\n\n  div.page_header img {\n    margin: 3px 0px 0px 40px;\n\n    border: 0px 0px 0px;\n  }\n\n  div.table_of_contents {\n    clear: left;\n\n    min-width: 200px;\n\n    margin: 3px 3px 3px 3px;\n\n    background-color: #FFFFFF;\n\n    text-align: left;\n  }\n\n  div.table_of_contents_item {\n    clear: left;\n\n    width: 100%;\n\n    margin: 4px 0px 0px 0px;\n\n    background-color: #FFFFFF;\n\n    color: #000000;\n    text-align: left;\n  }\n\n  div.table_of_contents_item a {\n    margin: 6px 0px 0px 6px;\n  }\n\n  div.content_section {\n    margin: 3px 3px 3px 3px;\n\n    background-color: #FFFFFF;\n\n    text-align: left;\n  }\n\n  div.content_section_text {\n    padding: 4px 8px 4px 8px;\n\n    color: #000000;\n    font-size: 100%;\n  }\n\n  div.content_section_text pre {\n    margin: 8px 0px 8px 0px;\n    padding: 8px 8px 8px 8px;\n\n    border-width: 1px;\n    border-style: dotted;\n    border-color: #000000;\n\n    background-color: ",
+    "params": {},
+    "tags": [
+      "server:apache/2.4.66 (debian)"
+    ],
+    "errors": [],
+    "elapsed_ms": 1181.0,
+    "ok": true
+  },
+  {
+    "url": "http://216.215.30.39/index.php",
+    "method": "GET",
+    "status": 404,
+    "length": 315,
+    "headers": {
+      "Server": "Apache/2.4.66 (Debian)",
+      "Content-Type": "text/html; charset=iso-8859-1"
+    },
+    "body_preview": "<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.01//EN\" \"http://www.w3.org/TR/html4/strict.dtd\">\n<html><head>\n<title>404 Not Found</title>\n</head><body>\n<h1>Not Found</h1>\n<p>The requested URL was not found on this server.</p>\n<hr>\n<address>Apache/2.4.66 (Debian) Server at 216.215.30.39 Port 80</address>\n</body></html>\n",
+    "params": {},
+    "tags": [
+      "server:apache/2.4.66 (debian)"
+    ],
+    "errors": [],
+    "elapsed_ms": 293.9,
+    "ok": false
+  },
+  {
+    "url": "http://216.215.30.39/admin/",
+    "method": "GET",
+    "status": 404,
+    "length": 315,
+    "headers": {
+      "Server": "Apache/2.4.66 (Debian)",
+      "Content-Type": "text/html; charset=iso-8859-1"
+    },
+    "body_preview": "<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.01//EN\" \"http://www.w3.org/TR/html4/strict.dtd\">\n<html><head>\n<title>404 Not Found</title>\n</head><body>\n<h1>Not Found</h1>\n<p>The requested URL was not found on this server.</p>\n<hr>\n<address>Apache/2.4.66 (Debian) Server at 216.215.30.39 Port 80</address>\n</body></html>\n",
+    "params": {},
+    "tags": [
+      "server:apache/2.4.66 (debian)"
+    ],
+    "errors": [],
+    "elapsed_ms": 293.8,
+    "ok": false
+  },
+  {
+    "url": "http://216.215.30.39/wp-login.php",
+    "method": "GET",
+    "status": 404,
+    "length": 315,
+    "headers": {
+      "Server": "Apache/2.4.66 (Debian)",
+      "Content-Type": "text/html; charset=iso-8859-1"
+    },
+    "body_preview": "<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.01//EN\" \"http://www.w3.org/TR/html4/strict.dtd\">\n<html><head>\n<title>404 Not Found</title>\n</head><body>\n<h1>Not Found</h1>\n<p>The requested URL was not found on this server.</p>\n<hr>\n<address>Apache/2.4.66 (Debian) Server at 216.215.30.39 Port 80</address>\n</body></html>\n",
+    "params": {},
+    "tags": [
+      "wordpress",
+      "server:apache/2.4.66 (debian)"
+    ],
+    "errors": [],
+    "elapsed_ms": 294.7,
+    "ok": false
+  }
+]

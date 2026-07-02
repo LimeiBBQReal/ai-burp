@@ -1,0 +1,25 @@
+{
+  "redis": {
+    "status": "SAFE"
+  },
+  "mongodb": {
+    "status": "SAFE"
+  },
+  "mysql": {
+    "status": "SAFE"
+  },
+  "ftp": {
+    "status": "SAFE"
+  },
+  "ssl": {},
+  "elasticsearch": {
+    "status": "SAFE"
+  },
+  "memcached": {
+    "status": "SAFE"
+  },
+  "postgresql": {
+    "status": "SAFE"
+  },
+  "elapsed_s": 24.2
+}

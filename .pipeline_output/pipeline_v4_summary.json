@@ -1,0 +1,22 @@
+{
+  "fershop.net": {
+    "target": "fershop.net",
+    "phase1_count": 1525,
+    "phase2_count": 1525,
+    "phase3_breakthroughs": 1489,
+    "phase4_gate_pass": 1488,
+    "phase4_gate_reject": 0,
+    "phase4_confirmed": 0,
+    "confirmed_list": []
+  },
+  "blastzone": {
+    "target": "blastzone",
+    "phase1_count": 21,
+    "phase2_count": 21,
+    "phase3_breakthroughs": 0,
+    "phase4_gate_pass": 0,
+    "phase4_gate_reject": 0,
+    "phase4_confirmed": 0,
+    "confirmed_list": []
+  }
+}

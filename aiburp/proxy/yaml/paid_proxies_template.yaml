@@ -1,0 +1,69 @@
+# 付费代理 IP 池配置模板
+# 把这里替换成你买的代理, 然后:
+#   python test_dola_cap.py --yaml yaml/paid_proxies.yaml  (探测)
+#   python export_capable.py  (导出 CAPABLE 的到 dola_capable.yaml)
+
+mixed-port: 7890
+allow-lan: false
+mode: global
+log-level: warning
+ipv6: false
+
+dns:
+  enable: true
+  ipv6: false
+  nameserver: [223.5.5.5, 119.29.29.29, 8.8.8.8]
+
+proxies:
+  # === 方式 1: HTTP 高匿名代理 (最常见, 推荐) ===
+  - name: "paid_http_01"
+    type: http
+    server: proxy.provider.com
+    port: 8000
+    username: "your_user"
+    password: "your_pass"
+
+  # === 方式 2: SOCKS5 代理 (mihomo 会转成 HTTP 给 curl_cffi) ===
+  - name: "paid_socks5_01"
+    type: socks5
+    server: proxy.provider.com
+    port: 1080
+    username: "your_user"
+    password: "your_pass"
+
+  # === 方式 3: 带轮换的代理 (URL 里带 session/rotation 参数) ===
+  - name: "paid_rotate_01"
+    type: http
+    server: gate.proxyprovider.com
+    port: 7777
+    username: "user-session-abc123"   # 不同 session = 不同出口 IP
+    password: "pass"
+
+  # === 方式 4: 多个独立 IP (静态, 每个 yaml 条目一个) ===
+  - name: "static_ip_01"
+    type: http
+    server: 1.2.3.4
+    port: 8080
+    username: "user"
+    password: "pass"
+
+  - name: "static_ip_02"
+    type: http
+    server: 5.6.7.8
+    port: 8080
+    username: "user"
+    password: "pass"
+
+proxy-groups:
+  - name: GLOBAL
+    type: select
+    proxies:
+      - paid_http_01
+      - paid_socks5_01
+      - paid_rotate_01
+      - static_ip_01
+      - static_ip_02
+      - DIRECT
+
+rules:
+  - MATCH,GLOBAL

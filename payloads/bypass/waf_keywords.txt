@@ -1,0 +1,51 @@
+# 关键字绕过 - 大小写混合
+SeLeCt
+sElEcT
+UNION
+UnIoN
+uNiOn
+AND
+AnD
+aNd
+OR
+oR
+Or
+FROM
+FrOm
+fRoM
+WHERE
+WhErE
+wHeRe
+
+# 关键字绕过 - 注释插入
+SEL/**/ECT
+UN/**/ION
+AN/**/D
+O/**/R
+FR/**/OM
+WH/**/ERE
+S/**/E/**/L/**/E/**/C/**/T
+U/**/N/**/I/**/O/**/N
+
+# 关键字绕过 - MySQL 版本注释
+/*!50000SELECT*/
+/*!50000UNION*/
+/*!50000AND*/
+/*!50000OR*/
+/*!SELECT*/
+/*!UNION*/
+/*!12345SELECT*/
+/*!12345UNION*/
+
+# 关键字绕过 - 双写
+SELSELECTECT
+UNUNIONION
+ANANDD
+OORR
+FFROMROM
+
+# 关键字绕过 - 编码
+%53%45%4c%45%43%54
+%55%4e%49%4f%4e
+%41%4e%44
+%4f%52

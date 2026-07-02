@@ -1,0 +1,17 @@
+{
+  "target": "cartmanager.net",
+  "subdomain_count": 19,
+  "ip_count": 3,
+  "open_port_ips": {
+    "192.41.22.47": [
+      80
+    ]
+  },
+  "wayback_count": 500,
+  "reverse_ip_ips": [
+    "192.41.22.47",
+    "192.41.22.32",
+    "192.41.22.30"
+  ],
+  "spoofed_records": 0
+}

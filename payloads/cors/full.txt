@@ -1,0 +1,94 @@
+# CORS Misconfiguration Test Origins
+
+# Null Origin
+null
+
+# Basic Evil Domains
+https://evil.com
+http://evil.com
+https://attacker.com
+http://attacker.com
+https://malicious.com
+http://malicious.com
+
+# Subdomain Tricks (replace target.com with actual target)
+https://target.com.evil.com
+https://evil.target.com
+https://eviltarget.com
+https://target.com.attacker.com
+https://attackertarget.com
+https://target.comevil.com
+https://evilcom.target.com
+
+# Prefix/Suffix Tricks
+https://nottarget.com
+https://target.com.not
+https://target.comnot
+https://nottarget.com.target.com
+
+# Special Characters
+https://target.com%60.evil.com
+https://target.com%0d.evil.com
+https://target.com%0a.evil.com
+https://target.com%09.evil.com
+https://target.com%00.evil.com
+https://target.com\.evil.com
+https://target.com/.evil.com
+https://target.com\@evil.com
+https://target.com#.evil.com
+https://target.com?.evil.com
+
+# Unicode Tricks
+https://target。com
+https://target．com
+https://target%E3%80%82com
+https://target%EF%BC%8Ecom
+
+# Protocol Variations
+http://target.com
+https://target.com
+//target.com
+
+# Port Variations
+https://evil.com:443
+https://evil.com:80
+https://evil.com:8080
+
+# IP Address
+https://127.0.0.1
+https://localhost
+https://[::1]
+https://0x7f000001
+https://2130706433
+
+# Wildcard Test
+*
+*.evil.com
+
+# Credentials in Origin
+https://user:pass@evil.com
+https://user@evil.com
+
+# Case Variations
+https://EVIL.COM
+https://Evil.Com
+https://TARGET.COM.evil.com
+
+# Whitespace
+https://evil.com 
+https:// evil.com
+https://evil.com%20
+https://evil.com%09
+
+# Backslash
+https://evil.com\
+https://evil.com\/
+https://target.com\@evil.com
+
+# Fragment
+https://evil.com#
+https://evil.com#target.com
+
+# Query String
+https://evil.com?
+https://evil.com?target.com

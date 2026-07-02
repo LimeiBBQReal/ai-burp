@@ -1,0 +1,78 @@
+mixed-port: 7890
+allow-lan: false
+mode: global
+log-level: warning
+ipv6: false
+dns:
+  enable: true
+  ipv6: false
+  nameserver:
+  - 223.5.5.5
+  - 119.29.29.29
+  - 8.8.8.8
+proxies:
+- name: 乌克兰_062111006
+  type: vless
+  server: 143.244.45.50
+  port: 8443
+  uuid: 394f6981-a782-4779-9a85-e6cf22935d93
+  tls: true
+  servername: ams1.fromblancwithlove.com
+- name: RO_speednode_0049
+  port: 9002
+  server: 84.239.49.202
+  skip-cert-verify: true
+  tls: true
+  type: http
+  udp: true
+- name: NL_speednode_0010
+  port: 8443
+  server: 79.127.227.215
+  servername: ams1.fromblancwithlove.com
+  skip-cert-verify: false
+  tls: true
+  type: vless
+  udp: true
+  uuid: 394f6981-a782-4779-9a85-e6cf22935d93
+- name: RO_speednode_0031
+  port: 9002
+  server: 84.239.49.173
+  skip-cert-verify: true
+  tls: true
+  type: http
+  udp: true
+- name: KR_speednode_0003
+  network: ws
+  packet-encoding: xudp
+  port: 443
+  server: 211.49.57.178
+  servername: s5.868001.xyz
+  skip-cert-verify: false
+  tls: true
+  type: vless
+  udp: true
+  uuid: 23cb9aa7-9756-459f-aa84-3a27bdf6ad64
+  ws-opts:
+    headers:
+      Host: s5.868001.xyz
+    path: /proxyip
+- name: RO_speednode_0032
+  port: 9002
+  server: 84.239.49.166
+  skip-cert-verify: true
+  tls: true
+  type: http
+  udp: true
+proxy-groups:
+- name: GLOBAL
+  type: select
+  proxies:
+  - 乌克兰_062111006
+  - RO_speednode_0049
+  - NL_speednode_0010
+  - RO_speednode_0031
+  - KR_speednode_0003
+  - RO_speednode_0032
+  - DIRECT
+rules:
+- MATCH,GLOBAL

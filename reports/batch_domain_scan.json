@@ -1,0 +1,693 @@
+{
+  "results": [
+    {
+      "domain": "artfulbullet.com",
+      "http": {},
+      "https": {
+        "status": 200,
+        "alive": true,
+        "final_url": "https://artfulbullet.com/index.php",
+        "size": 96131,
+        "title": "The Art &amp; Science of Bullet Casting",
+        "server": "Apache",
+        "powered": ""
+      },
+      "paths": {
+        "login": {
+          "status": 200,
+          "size": 23840,
+          "snippet": "<!DOCTYPE html> <html id=\"XF\" lang=\"en-U"
+        },
+        "phpmyadmin/": {
+          "status": 200,
+          "size": 18530,
+          "snippet": "<!doctype html> <html lang=\"en\" dir=\"ltr"
+        },
+        "server-status": {
+          "status": 403,
+          "size": 239,
+          "snippet": ""
+        }
+      },
+      "fingerprint": {
+        "https": []
+      }
+    },
+    {
+      "domain": "ashleywestmark.com",
+      "http": {},
+      "https": {
+        "status": 200,
+        "alive": true,
+        "final_url": "https://www.ashleywestmark.com/",
+        "size": 116333,
+        "title": "Property Maintenance, Cleaning &amp; Repair Services WA | As",
+        "server": "Apache",
+        "powered": ""
+      },
+      "paths": {
+        "phpmyadmin/": {
+          "status": 200,
+          "size": 18530,
+          "snippet": "<!doctype html> <html lang=\"en\" dir=\"ltr"
+        },
+        "server-status": {
+          "status": 403,
+          "size": 1810,
+          "snippet": ""
+        },
+        "wp-json/": {
+          "status": 200,
+          "size": 282391,
+          "snippet": "{\"name\":\"Ashley Westmark Inc\",\"descripti"
+        }
+      },
+      "fingerprint": {
+        "https": [
+          "WordPress"
+        ]
+      }
+    },
+    {
+      "domain": "blastzone.com",
+      "http": {},
+      "https": {
+        "status": 200,
+        "alive": true,
+        "final_url": "https://bouncehouses.com/",
+        "size": 479100,
+        "title": "Blast Zone",
+        "server": "cloudflare",
+        "powered": ""
+      },
+      "paths": {},
+      "fingerprint": {
+        "https": [
+          "CDN:Cloudflare"
+        ]
+      }
+    },
+    {
+      "domain": "blastzone.org",
+      "http": {},
+      "https": {
+        "status": 200,
+        "alive": true,
+        "final_url": "https://blastzone.org/",
+        "size": 9166,
+        "title": "High Power Rocketry in the Blast Zone",
+        "server": "Microsoft-IIS/10.0",
+        "powered": "ASP.NET"
+      },
+      "paths": {},
+      "fingerprint": {
+        "https": []
+      }
+    },
+    {
+      "domain": "blastzonewebhosting.com",
+      "http": {},
+      "https": {
+        "status": 200,
+        "alive": true,
+        "final_url": "https://blastzonewebhosting.com/",
+        "size": 27021,
+        "title": "BlastZone Web Hosting",
+        "server": "Apache",
+        "powered": ""
+      },
+      "paths": {
+        "phpmyadmin/": {
+          "status": 200,
+          "size": 18530,
+          "snippet": "<!doctype html> <html lang=\"en\" dir=\"ltr"
+        },
+        "server-status": {
+          "status": 403,
+          "size": 1809,
+          "snippet": ""
+        }
+      },
+      "fingerprint": {
+        "https": [
+          "WordPress"
+        ]
+      }
+    },
+    {
+      "domain": "burnsim.com",
+      "http": {
+        "alive": false,
+        "error": "ConnectionError"
+      },
+      "https": {
+        "alive": false,
+        "error": "SSLError"
+      },
+      "paths": {},
+      "fingerprint": {}
+    },
+    {
+      "domain": "dryharvest.com",
+      "http": {
+        "alive": false,
+        "error": "ConnectionError"
+      },
+      "https": {
+        "alive": false,
+        "error": "SSLError"
+      },
+      "paths": {},
+      "fingerprint": {}
+    },
+    {
+      "domain": "homecontrolassistant.com",
+      "http": {
+        "alive": false,
+        "error": "ReadTimeout"
+      },
+      "https": {
+        "alive": false,
+        "error": "ReadTimeout"
+      },
+      "paths": {},
+      "fingerprint": {}
+    },
+    {
+      "domain": "lesabrage.com",
+      "http": {
+        "alive": false,
+        "error": "ReadTimeout"
+      },
+      "https": {
+        "alive": false,
+        "error": "ReadTimeout"
+      },
+      "paths": {},
+      "fingerprint": {}
+    },
+    {
+      "domain": "lokiresearch.com",
+      "http": {
+        "alive": false,
+        "error": "ReadTimeout"
+      },
+      "https": {
+        "alive": false,
+        "error": "ReadTimeout"
+      },
+      "paths": {},
+      "fingerprint": {}
+    },
+    {
+      "domain": "mdra-archive.org",
+      "http": {
+        "alive": false,
+        "error": "ReadTimeout"
+      },
+      "https": {
+        "alive": false,
+        "error": "ReadTimeout"
+      },
+      "paths": {},
+      "fingerprint": {}
+    },
+    {
+      "domain": "mdrocketry.net",
+      "http": {
+        "alive": false,
+        "error": "ReadTimeout"
+      },
+      "https": {
+        "alive": false,
+        "error": "ReadTimeout"
+      },
+      "paths": {},
+      "fingerprint": {}
+    },
+    {
+      "domain": "myth-racing.com",
+      "http": {},
+      "https": {
+        "status": 200,
+        "alive": true,
+        "final_url": "https://myth-racing.com/",
+        "size": 34905,
+        "title": "Myth Racing &#8211; Early Hemi and Delta Blower Drive Parts",
+        "server": "Apache",
+        "powered": ""
+      },
+      "paths": {
+        "phpmyadmin/": {
+          "status": 200,
+          "size": 18530,
+          "snippet": "<!doctype html> <html lang=\"en\" dir=\"ltr"
+        },
+        "server-status": {
+          "status": 403,
+          "size": 1809,
+          "snippet": ""
+        },
+        "wp-json/": {
+          "status": 200,
+          "size": 193643,
+          "snippet": "{\"name\":\"Myth Racing\",\"description\":\"Ear"
+        }
+      },
+      "fingerprint": {
+        "https": []
+      }
+    },
+    {
+      "domain": "nar.org",
+      "http": {},
+      "https": {
+        "status": 200,
+        "alive": true,
+        "final_url": "https://nar.org/",
+        "size": 46387,
+        "title": "Home - National Association of Rocketry",
+        "server": "",
+        "powered": ""
+      },
+      "paths": {
+        "admin": {
+          "status": 403,
+          "size": 118,
+          "snippet": ""
+        },
+        "login": {
+          "status": 200,
+          "size": 40815,
+          "snippet": "<!DOCTYPE html>   <html lang=\"en\"> \t"
+        },
+        ".git/HEAD": {
+          "status": 403,
+          "size": 118,
+          "snippet": ""
+        },
+        ".env": {
+          "status": 403,
+          "size": 93,
+          "snippet": ""
+        },
+        "wp-config.php.bak": {
+          "status": 403,
+          "size": 118,
+          "snippet": ""
+        },
+        "phpmyadmin/": {
+          "status": 403,
+          "size": 118,
+          "snippet": ""
+        },
+        "wp-json/": {
+          "status": 403,
+          "size": 118,
+          "snippet": ""
+        }
+      },
+      "fingerprint": {
+        "https": [
+          "ASP.NET"
+        ]
+      }
+    },
+    {
+      "domain": "northwestrocketry.com",
+      "http": {},
+      "https": {
+        "status": 200,
+        "alive": true,
+        "final_url": "https://northwestrocketry.com/",
+        "size": 30094,
+        "title": "Northwest Rocketry",
+        "server": "Apache",
+        "powered": ""
+      },
+      "paths": {
+        "phpmyadmin/": {
+          "status": 200,
+          "size": 18530,
+          "snippet": "<!doctype html> <html lang=\"en\" dir=\"ltr"
+        },
+        "server-status": {
+          "status": 403,
+          "size": 1809,
+          "snippet": ""
+        }
+      },
+      "fingerprint": {
+        "https": [
+          "WordPress"
+        ]
+      }
+    },
+    {
+      "domain": "nypower.org",
+      "http": {},
+      "https": {
+        "status": 200,
+        "alive": true,
+        "final_url": "https://nypower.org/",
+        "size": 1862,
+        "title": "Welcome!",
+        "server": "Apache",
+        "powered": ""
+      },
+      "paths": {
+        "phpmyadmin/": {
+          "status": 200,
+          "size": 18530,
+          "snippet": "<!doctype html> <html lang=\"en\" dir=\"ltr"
+        },
+        "server-status": {
+          "status": 403,
+          "size": 1810,
+          "snippet": ""
+        }
+      },
+      "fingerprint": {
+        "https": []
+      }
+    },
+    {
+      "domain": "pembertontechnologies.com",
+      "http": {},
+      "https": {
+        "status": 200,
+        "alive": true,
+        "final_url": "https://www.pembertontechnologies.com/",
+        "size": 38913,
+        "title": "Pemberton Technologies &#8211; Not Just Three Fins and a Nos",
+        "server": "Apache",
+        "powered": ""
+      },
+      "paths": {
+        "phpmyadmin/": {
+          "status": 200,
+          "size": 18530,
+          "snippet": "<!doctype html> <html lang=\"en\" dir=\"ltr"
+        },
+        "server-status": {
+          "status": 403,
+          "size": 1809,
+          "snippet": ""
+        },
+        "wp-json/": {
+          "status": 200,
+          "size": 194389,
+          "snippet": "{\"name\":\"Pemberton Technologies\",\"descri"
+        }
+      },
+      "fingerprint": {
+        "https": [
+          "WordPress"
+        ]
+      }
+    },
+    {
+      "domain": "performancehobbies.com",
+      "http": {},
+      "https": {
+        "status": 200,
+        "alive": true,
+        "final_url": "https://performancehobbies.com/",
+        "size": 15199,
+        "title": "Performance Hobbies Homepage",
+        "server": "Microsoft-IIS/10.0",
+        "powered": "ASP.NET"
+      },
+      "paths": {},
+      "fingerprint": {
+        "https": []
+      }
+    },
+    {
+      "domain": "rasaero.com",
+      "http": {},
+      "https": {
+        "status": 200,
+        "alive": true,
+        "final_url": "https://rasaero.com/",
+        "size": 634,
+        "title": "\n\t\tWelcome to RASAero.com\n\t",
+        "server": "Apache",
+        "powered": ""
+      },
+      "paths": {
+        "phpmyadmin/": {
+          "status": 200,
+          "size": 18530,
+          "snippet": "<!doctype html> <html lang=\"en\" dir=\"ltr"
+        },
+        "server-status": {
+          "status": 403,
+          "size": 1810,
+          "snippet": ""
+        }
+      },
+      "fingerprint": {
+        "https": []
+      }
+    },
+    {
+      "domain": "rocketflite.com",
+      "http": {},
+      "https": {
+        "status": 200,
+        "alive": true,
+        "final_url": "https://rocketflite.com/",
+        "size": 11258,
+        "title": "Rocketflite igniter / Magnelite electric match ",
+        "server": "Apache",
+        "powered": ""
+      },
+      "paths": {
+        "phpmyadmin/": {
+          "status": 200,
+          "size": 18530,
+          "snippet": "<!doctype html> <html lang=\"en\" dir=\"ltr"
+        },
+        "server-status": {
+          "status": 403,
+          "size": 1810,
+          "snippet": ""
+        }
+      },
+      "fingerprint": {
+        "https": []
+      }
+    },
+    {
+      "domain": "rocketry-education.com",
+      "http": {
+        "alive": false,
+        "error": "ReadTimeout"
+      },
+      "https": {
+        "alive": false,
+        "error": "ReadTimeout"
+      },
+      "paths": {},
+      "fingerprint": {}
+    },
+    {
+      "domain": "rocketrydata.com",
+      "http": {},
+      "https": {
+        "status": 200,
+        "alive": true,
+        "final_url": "https://rocketrydata.com/index.php?title=Main_Page",
+        "size": 31327,
+        "title": "Rocketry Data Wiki",
+        "server": "Apache",
+        "powered": ""
+      },
+      "paths": {
+        "phpmyadmin/": {
+          "status": 200,
+          "size": 18530,
+          "snippet": "<!doctype html> <html lang=\"en\" dir=\"ltr"
+        },
+        "server-status": {
+          "status": 403,
+          "size": 1810,
+          "snippet": ""
+        }
+      },
+      "fingerprint": {
+        "https": []
+      }
+    },
+    {
+      "domain": "rousetech.net",
+      "http": {
+        "alive": false,
+        "error": "ReadTimeout"
+      },
+      "https": {
+        "alive": false,
+        "error": "ReadTimeout"
+      },
+      "paths": {},
+      "fingerprint": {}
+    },
+    {
+      "domain": "scottsrockets.com",
+      "http": {},
+      "https": {
+        "status": 200,
+        "alive": true,
+        "final_url": "https://scottsrockets.com/",
+        "size": 1862,
+        "title": "Welcome!",
+        "server": "Apache",
+        "powered": ""
+      },
+      "paths": {
+        "phpmyadmin/": {
+          "status": 200,
+          "size": 18530,
+          "snippet": "<!doctype html> <html lang=\"en\" dir=\"ltr"
+        },
+        "server-status": {
+          "status": 403,
+          "size": 1810,
+          "snippet": ""
+        }
+      },
+      "fingerprint": {
+        "https": []
+      }
+    },
+    {
+      "domain": "technicopedia.com",
+      "http": {},
+      "https": {
+        "status": 200,
+        "alive": true,
+        "final_url": "https://technicopedia.com/",
+        "size": 25622,
+        "title": "Blakbird's Technicopedia",
+        "server": "Apache",
+        "powered": ""
+      },
+      "paths": {
+        "phpmyadmin/": {
+          "status": 200,
+          "size": 18530,
+          "snippet": "<!doctype html> <html lang=\"en\" dir=\"ltr"
+        },
+        "server-status": {
+          "status": 403,
+          "size": 1809,
+          "snippet": ""
+        }
+      },
+      "fingerprint": {
+        "https": []
+      }
+    }
+  ],
+  "findings": [
+    {
+      "domain": "artfulbullet.com",
+      "type": "phpMyAdmin 公开暴露 (v5.2.3)",
+      "severity": "critical",
+      "evidence": "artfulbullet.com/phpmyadmin/ 返回 200"
+    },
+    {
+      "domain": "ashleywestmark.com",
+      "type": "phpMyAdmin 公开暴露 (v5.2.3)",
+      "severity": "critical",
+      "evidence": "ashleywestmark.com/phpmyadmin/ 返回 200"
+    },
+    {
+      "domain": "blastzonewebhosting.com",
+      "type": "phpMyAdmin 公开暴露 (v5.2.3)",
+      "severity": "critical",
+      "evidence": "blastzonewebhosting.com/phpmyadmin/ 返回 200"
+    },
+    {
+      "domain": "myth-racing.com",
+      "type": "phpMyAdmin 公开暴露 (v5.2.3)",
+      "severity": "critical",
+      "evidence": "myth-racing.com/phpmyadmin/ 返回 200"
+    },
+    {
+      "domain": "northwestrocketry.com",
+      "type": "phpMyAdmin 公开暴露 (v5.2.3)",
+      "severity": "critical",
+      "evidence": "northwestrocketry.com/phpmyadmin/ 返回 200"
+    },
+    {
+      "domain": "nypower.org",
+      "type": "phpMyAdmin 公开暴露 (v5.2.3)",
+      "severity": "critical",
+      "evidence": "nypower.org/phpmyadmin/ 返回 200"
+    },
+    {
+      "domain": "pembertontechnologies.com",
+      "type": "phpMyAdmin 公开暴露 (v5.2.3)",
+      "severity": "critical",
+      "evidence": "pembertontechnologies.com/phpmyadmin/ 返回 200"
+    },
+    {
+      "domain": "rasaero.com",
+      "type": "phpMyAdmin 公开暴露 (v5.2.3)",
+      "severity": "critical",
+      "evidence": "rasaero.com/phpmyadmin/ 返回 200"
+    },
+    {
+      "domain": "rocketflite.com",
+      "type": "phpMyAdmin 公开暴露 (v5.2.3)",
+      "severity": "critical",
+      "evidence": "rocketflite.com/phpmyadmin/ 返回 200"
+    },
+    {
+      "domain": "rocketrydata.com",
+      "type": "phpMyAdmin 公开暴露 (v5.2.3)",
+      "severity": "critical",
+      "evidence": "rocketrydata.com/phpmyadmin/ 返回 200"
+    },
+    {
+      "domain": "scottsrockets.com",
+      "type": "phpMyAdmin 公开暴露 (v5.2.3)",
+      "severity": "critical",
+      "evidence": "scottsrockets.com/phpmyadmin/ 返回 200"
+    },
+    {
+      "domain": "technicopedia.com",
+      "type": "phpMyAdmin 公开暴露 (v5.2.3)",
+      "severity": "critical",
+      "evidence": "technicopedia.com/phpmyadmin/ 返回 200"
+    },
+    {
+      "domain": "ashleywestmark.com",
+      "type": "WordPress 指纹",
+      "severity": "low",
+      "evidence": "https 暴露 WP"
+    },
+    {
+      "domain": "blastzonewebhosting.com",
+      "type": "WordPress 指纹",
+      "severity": "low",
+      "evidence": "https 暴露 WP"
+    },
+    {
+      "domain": "northwestrocketry.com",
+      "type": "WordPress 指纹",
+      "severity": "low",
+      "evidence": "https 暴露 WP"
+    },
+    {
+      "domain": "pembertontechnologies.com",
+      "type": "WordPress 指纹",
+      "severity": "low",
+      "evidence": "https 暴露 WP"
+    }
+  ],
+  "scanned": 25,
+  "total_findings": 16
+}

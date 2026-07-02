@@ -1,0 +1,71 @@
+{
+  "target": "142.171.54.2",
+  "domains": [
+    "mail.ntensemedia.com",
+    "mail.sezasindh.gos.pk",
+    "mail.sibl.com.pk",
+    "mail.snowroute.com",
+    "mail.zee-hosting.net",
+    "ns1.fortehosting.com",
+    "ns1.ntensemedia.com",
+    "ns1.snowroute.com"
+  ],
+  "open_ports": {
+    "443": "HTTP/1.1 400 Bad Request\r\nDate: Thu, 02 Jul 2026 17:31:12 GMT\r\nServer: Apache\r\nLast-Modified: Tue, 2",
+    "80": "",
+    "9090": "",
+    "8443": "",
+    "5000": "",
+    "22": "",
+    "3306": "",
+    "3000": "",
+    "9000": "",
+    "8000": "",
+    "21": "",
+    "11211": "",
+    "6379": "",
+    "8080": "",
+    "8888": "",
+    "27017": "",
+    "5432": "",
+    "9200": ""
+  },
+  "found_paths": [
+    {
+      "path": "/",
+      "status": 200,
+      "length": 4543,
+      "title": "Parallels H-Sphere",
+      "content_type": "text/html"
+    },
+    {
+      "path": "/robots.txt",
+      "status": 200,
+      "length": 26,
+      "title": "",
+      "content_type": "text/plain"
+    },
+    {
+      "path": "/css",
+      "status": 301,
+      "length": 228,
+      "title": "301 Moved Permanently",
+      "content_type": "text/html; charset=iso-8859-1"
+    },
+    {
+      "path": "/images",
+      "status": 301,
+      "length": 231,
+      "title": "301 Moved Permanently",
+      "content_type": "text/html; charset=iso-8859-1"
+    },
+    {
+      "path": "/favicon.ico",
+      "status": 200,
+      "length": 1150,
+      "title": "",
+      "content_type": "image/x-icon"
+    }
+  ],
+  "elapsed_s": 9.6
+}

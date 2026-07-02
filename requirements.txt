@@ -1,0 +1,31 @@
+# ============================================================
+# AI-Burp V4 核心依赖 (必需)
+# ============================================================
+httpx>=0.24.0
+requests>=2.28.0
+dnspython>=2.3.0
+python-dotenv>=1.0.0
+
+# ============================================================
+# V4 traffic 层可选协议库 (按需安装)
+# ============================================================
+# pip install -r requirements.txt      # 核心
+# pip install -r requirements-full.txt # 全部可选 (包括 mitmproxy/playwright)
+#
+# 单独安装某个协议支持:
+#   pip install websockets    # WebSocket adapter
+#   pip install pymysql       # MySQL adapter
+#   pip install cryptography  # TLS 证书解析
+#   pip install impacket      # SMB adapter (完整模式)
+
+# WebSocket (ws:// 协议)
+websockets>=12.0
+
+# MySQL (弱口令检测)
+pymysql>=1.1.0
+
+# TLS 证书解析 (SAN/弱套件检测)
+cryptography>=41.0.0
+
+# 注: impacket (SMB) 不在此默认安装 - 它依赖较多, 按需安装
+# pip install impacket  # 启用 SMB 完整模式 (空会话枚举/弱口令)

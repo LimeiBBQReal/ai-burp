@@ -1,0 +1,25 @@
+{
+  "target": "CartManager.net",
+  "tested": 1542,
+  "found": [
+    {
+      "path": "# Combined directory wordlist (~5000 entries)",
+      "url": "https://CartManager.net/# Combined directory wordlist (~5000 entries)",
+      "status": 200,
+      "size": 12637
+    },
+    {
+      "path": "admin",
+      "url": "https://CartManager.net/admin",
+      "status": 200,
+      "size": 7628
+    },
+    {
+      "path": "examples",
+      "url": "https://CartManager.net/examples",
+      "status": 200,
+      "size": 24220
+    }
+  ],
+  "elapsed_s": 76.3
+}

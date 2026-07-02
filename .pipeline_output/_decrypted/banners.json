@@ -1,0 +1,57 @@
+{
+  "target": "CartManager.net",
+  "ip": "192.41.22.47",
+  "results": [
+    {
+      "port": 443,
+      "banner": "",
+      "response": ""
+    },
+    {
+      "port": 80,
+      "banner": "",
+      "response": "HTTP/1.1 200 OK\r\nDate: Sun, 28 Jun 2026 19:30:22 GMT\r\nServer: Apache\r\nX-Frame-Options: SAMEORIGIN\r\nVary: Accept-Encoding\r\nX-Content-Type-Options: nosniff\r\nConnection: close\r\nContent-Type: text/html; charset=UTF-8\r\n\r\n<!DOCTYPE html PUBLIC \"-//W3C//DTD HTML 4.01 Transitional//EN\" \"http://www.w3.org/TR/html4/loose.dtd\">\r\n<html lang=\"en-US\">\r\n\t<head>\r\n\t\t<title>CartManager - How The World Shops On-Line</title>\n\t\t<meta name=\"keywords\" content=\"\">\r\n\t\t<meta name=\"description\" content=\"\">\r\n\t\t<meta http-e"
+    },
+    {
+      "port": 21,
+      "error": "timed out"
+    },
+    {
+      "port": 25,
+      "error": "timed out"
+    },
+    {
+      "port": 27017,
+      "error": "timed out"
+    },
+    {
+      "port": 22,
+      "error": "timed out"
+    },
+    {
+      "port": 110,
+      "error": "timed out"
+    },
+    {
+      "port": 143,
+      "error": "timed out"
+    },
+    {
+      "port": 5432,
+      "error": "timed out"
+    },
+    {
+      "port": 3306,
+      "error": "timed out"
+    },
+    {
+      "port": 9200,
+      "error": "timed out"
+    },
+    {
+      "port": 6379,
+      "error": "timed out"
+    }
+  ],
+  "elapsed_s": 3.0
+}

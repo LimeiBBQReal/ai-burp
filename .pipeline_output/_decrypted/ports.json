@@ -1,0 +1,10 @@
+{
+  "target": "CartManager.net",
+  "ip": "192.41.22.47",
+  "tested": 82,
+  "open_ports": [
+    80,
+    443
+  ],
+  "elapsed_s": 2.0
+}

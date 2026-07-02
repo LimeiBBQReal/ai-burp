@@ -1,0 +1,11 @@
+# Open Redirect Quick Detection
+//evil.com
+///evil.com
+////evil.com
+https://evil.com
+//evil.com/%2f%2e%2e
+/\evil.com
+/.evil.com
+///evil.com@good.com
+//evil.com\@good.com
+https:evil.com
