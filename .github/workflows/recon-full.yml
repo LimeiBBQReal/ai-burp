@@ -1,0 +1,161 @@
+name: Recon - Full Orchestrated (Multi-Round)
+
+on:
+  workflow_dispatch:
+    inputs:
+      target:
+        description: '目标域名'
+        default: 'cartmanager.net'
+        required: true
+      max_rounds:
+        description: '最大采集轮数 (默认 3, 每轮 ~15-30min)'
+        default: '3'
+        required: false
+      deep_depth:
+        description: '子域名递归深度 (默认 2)'
+        default: '2'
+        required: false
+      converge_rounds:
+        description: '连续N轮无新域名则停止 (默认 2)'
+        default: '2'
+        required: false
+      script_timeout:
+        description: '单个脚本超时秒数 (默认 600 = 10min)'
+        default: '600'
+        required: false
+      wildcard_samples:
+        description: '泛解析采样次数 (默认 3)'
+        default: '3'
+        required: false
+      resume_from_round:
+        description: '从第N轮断点续传 (默认 1 = 全新)'
+        default: '1'
+        required: false
+
+  # 限制只在 main 分支运行, 避免链式触发无限循环
+  workflow_run:
+    workflows: ["Recon - Full Orchestrated (Multi-Round)"]
+    types: [completed]
+    branches: [main]
+
+jobs:
+  # 决策层: 判断本次是手动触发还是链式续跑
+  should-run:
+    runs-on: ubuntu-latest
+    outputs:
+      target: ${{ steps.cfg.outputs.target }}
+      max_rounds: ${{ steps.cfg.outputs.max_rounds }}
+      deep_depth: ${{ steps.cfg.outputs.deep_depth }}
+      converge_rounds: ${{ steps.cfg.outputs.converge_rounds }}
+      run_flag: ${{ steps.cfg.outputs.run_flag }}
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: false
+      - id: cfg
+        run: |
+          if [ "${{ github.event_name }}" = "workflow_dispatch" ]; then
+            echo "target=${{ inputs.target }}" >> $GITHUB_OUTPUT
+            echo "max_rounds=${{ inputs.max_rounds }}" >> $GITHUB_OUTPUT
+            echo "deep_depth=${{ inputs.deep_depth }}" >> $GITHUB_OUTPUT
+            echo "converge_rounds=${{ inputs.converge_rounds }}" >> $GITHUB_OUTPUT
+            echo "run_flag=dispatch" >> $GITHUB_OUTPUT
+          else
+            # 链式触发: 保存占位, 实际由 run_orchestrator job 判断
+            echo "target=cartmanager.net" >> $GITHUB_OUTPUT
+            echo "max_rounds=${{ inputs.max_rounds || 3 }}" >> $GITHUB_OUTPUT
+            echo "deep_depth=2" >> $GITHUB_OUTPUT
+            echo "converge_rounds=2" >> $GITHUB_OUTPUT
+            echo "run_flag=skip" >> $GITHUB_OUTPUT
+          fi
+
+  # 主采集 Job
+  run-orchestrator:
+    needs: should-run
+    if: needs.should-run.outputs.run_flag == 'dispatch' || github.event_name == 'workflow_dispatch'
+    runs-on: ubuntu-latest
+    # 3 轮 × ~ 30 min/轮 + buffer = 120 min. 实际情况根据目标规模调整.
+    timeout-minutes: 150
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: false
+          fetch-depth: 0
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - run: pip install requests dnspython cryptography
+
+      # 下载历史产物 (用于断点续传)
+      - name: Restore previous checkpoints
+        uses: actions/download-artifact@v4
+        with:
+          name: recon-checkpoint
+          path: recon/out/
+        continue-on-error: true
+
+      - name: Run Recon Orchestrator
+        env:
+          TARGET: ${{ inputs.target }}
+          RECON_RSA_PRIVATE: ${{ secrets.RECON_RSA_PRIVATE }}
+          RECON_RSA_PUBLIC: ${{ secrets.RECON_RSA_PUBLIC }}
+          PROXY_AES_KEY: ${{ secrets.PROXY_AES_KEY }}
+          RECON_SSL_VERIFY: "0"
+          MAX_ROUNDS: ${{ inputs.max_rounds }}
+          DEEP_DEPTH: ${{ inputs.deep_depth }}
+          CONVERGE_ROUNDS: ${{ inputs.converge_rounds }}
+          RUN_PHASE1: "1"
+          RUN_PHASE2: "1"
+          RUN_PHASE3: "1"
+          SCRIPT_TIMEOUT: ${{ inputs.script_timeout || 600 }}
+          WILDCARD_SAMPLES: ${{ inputs.wildcard_samples || 3 }}
+          SHODAN_API_KEY: ${{ secrets.SHODAN_API_KEY }}
+          CENSYS_API_KEY: ${{ secrets.CENSYS_API_KEY }}
+          OTX_API_KEY: ${{ secrets.OTX_API_KEY }}
+          VIRUSTOTAL_API_KEY: ${{ secrets.VIRUSTOTAL_API_KEY }}
+          SECURITYTRAILS_API_KEY: ${{ secrets.SECURITYTRAILS_API_KEY }}
+          FOFA_EMAIL: ${{ secrets.FOFA_EMAIL }}
+          FOFA_API_KEY: ${{ secrets.FOFA_API_KEY }}
+          HUNTER_API_KEY: ${{ secrets.HUNTER_API_KEY }}
+        run: |
+          cd recon
+          echo "===== 开始采集: target=${{ inputs.target }} max_rounds=${{ inputs.max_rounds }} ====="
+          python recon_orchestrator.py 2>&1 | tee orchestrator_full.log
+          echo "===== 采集完成 ====="
+
+      # 保存本轮产物 (用于下次断点续传)
+      - name: Save checkpoint artifacts
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: recon-checkpoint
+          path: recon/out/
+          retention-days: 14
+
+      # 保存日志
+      - name: Upload logs
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: recon-logs-${{ inputs.target }}
+          path: recon/*.log
+          retention-days: 30
+
+      # 提交加密结果到 Git
+      - name: Commit results
+        if: always()
+        env:
+          PAT_TOKEN: ${{ secrets.PAT_TOKEN }}
+        run: |
+          git config user.name "LimeiBBQReal"
+          git config user.email "LimeiBBQReal@users.noreply.github.com"
+          git add recon/out/ recon/logs/
+          if git diff --cached --quiet; then
+            echo "无变化, 跳过 commit"
+          else
+            git commit -m "recon: multi-round ${{ inputs.target }} (max=${{ inputs.max_rounds }})"
+            git fetch origin main && git rebase origin/main || true
+            git push "https://LimeiBBQReal:${PAT_TOKEN}@github.com/${{ github.repository }}.git" HEAD:main || true
+          fi
