@@ -32,12 +32,6 @@ on:
         default: '1'
         required: false
 
-  # 限制只在 main 分支运行, 避免链式触发无限循环
-  workflow_run:
-    workflows: ["Recon - Full Orchestrated (Multi-Round)"]
-    types: [completed]
-    branches: [main]
-
 jobs:
   # 决策层: 判断本次是手动触发还是链式续跑
   should-run:
