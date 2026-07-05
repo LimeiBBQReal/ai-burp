@@ -121,6 +121,32 @@ class TestHttpAdapter:
         assert b"Server: unit-test" in traffic_response.raw
         assert evidence_response.raw_b64
 
+    def test_convert_does_not_fabricate_raw_for_status_zero_empty_response(self):
+        from aiburp.traffic.adapters.http import HttpAdapter
+
+        class DummyResponse:
+            ok = False
+            status = 0
+            time_ms = 0
+            body = ""
+            length = 0
+            headers = {}
+            url = "http://127.0.0.1/"
+            method = "GET"
+            error = "ConnectTimeout"
+            blocked = False
+            reflects = False
+            anomalies = []
+            payload = ""
+            tags = ["HTTP"]
+
+        traffic_response = HttpAdapter._convert(DummyResponse())
+        evidence_response = EvidenceResponse.from_traffic_response(traffic_response)
+
+        assert traffic_response.raw == b""
+        assert evidence_response.raw_b64 == ""
+        assert traffic_response.error == "ConnectTimeout"
+
 
 class TestRedisAdapter:
     """RedisAdapter - 用 fake_redis_server 测"""

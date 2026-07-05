@@ -442,7 +442,8 @@ class AsyncBurp:
                 if r.status in [403, 406, 429]: r.blocked = True
                 
             except Exception as e:
-                r = Response(ok=False, url=url, method=method, error=str(e), tags=tags)
+                message = str(e) or type(e).__name__
+                r = Response(ok=False, url=url, method=method, error=message, tags=tags)
             
             self.history.append(r)
             return r

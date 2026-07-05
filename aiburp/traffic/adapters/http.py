@@ -207,6 +207,9 @@ class HttpAdapter(ProtocolAdapter):
         status = int(getattr(r, "status", 0) or 0)
         headers = dict(getattr(r, "headers", {}) or {})
         body = getattr(r, "body", "") or ""
+        if status <= 0 and not headers and not body:
+            return b""
+
         body_bytes = body if isinstance(body, bytes) else str(body).encode("utf-8", "replace")
 
         status_line = f"HTTP/1.1 {status}\r\n".encode("ascii", "replace")
