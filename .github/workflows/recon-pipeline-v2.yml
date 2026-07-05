@@ -134,7 +134,7 @@ jobs:
         with:
           python-version: '3.11'
 
-      - run: pip install requests urllib3 cryptography
+      - run: pip install requests urllib3 httpx cryptography
 
       - name: Download crypto keys
         uses: actions/download-artifact@v4
@@ -222,7 +222,7 @@ jobs:
         with:
           python-version: '3.11'
 
-      - run: pip install requests urllib3 cryptography
+      - run: pip install requests urllib3 httpx cryptography
 
       - name: Download crypto keys
         uses: actions/download-artifact@v4
@@ -374,7 +374,7 @@ jobs:
         with:
           python-version: '3.11'
 
-      - run: pip install requests urllib3 cryptography
+      - run: pip install requests urllib3 httpx cryptography
 
       - name: Download crypto keys
         uses: actions/download-artifact@v4
@@ -463,7 +463,7 @@ jobs:
         with:
           python-version: '3.11'
 
-      - run: pip install requests urllib3 cryptography
+      - run: pip install requests urllib3 httpx cryptography
 
       - name: Download crypto keys
         uses: actions/download-artifact@v4
@@ -552,7 +552,7 @@ jobs:
         with:
           python-version: '3.11'
 
-      - run: pip install requests urllib3 cryptography
+      - run: pip install requests urllib3 httpx cryptography
 
       - name: Download crypto keys
         uses: actions/download-artifact@v4
@@ -651,7 +651,7 @@ jobs:
         with:
           python-version: '3.11'
 
-      - run: pip install requests urllib3 cryptography
+      - run: pip install requests urllib3 httpx cryptography
 
       - name: Download crypto keys
         uses: actions/download-artifact@v4
@@ -683,6 +683,7 @@ jobs:
           RECON_TARGET: ${{ inputs.target }}
           RECON_MAX_WORKERS: ${{ inputs.max_workers }}
         run: |
+          set -o pipefail
           python recon/cloud/run_spec_executor.py 2>&1 | tee recon/out/run_spec.log
 
       - name: Encrypt RunSpec Results
