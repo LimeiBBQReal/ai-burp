@@ -1,0 +1,808 @@
+name: Recon Pipeline V3 - LLM Driven (Encrypted)
+
+on:
+  workflow_dispatch:
+    inputs:
+      target:
+        description: 'Target (domain/IP/CIDR/ASN)'
+        required: true
+        default: 'example.com'
+      phase:
+        description: 'Phase to run'
+        required: true
+        default: 'full'
+        type: choice
+        options:
+          - full
+          - phase1
+          - phase1_5
+          - phase2
+          - phase3
+          - phase4
+          - run_spec
+      run_spec_b64:
+        description: 'Base64-encoded run_spec.json (required when phase=run_spec)'
+        required: false
+        default: ''
+      llm_backend:
+        description: 'LLM Backend'
+        required: true
+        default: 'catpaw'
+        type: choice
+        options:
+          - catpaw
+          - openai
+      openai_model:
+        description: 'OpenAI Model (if backend=openai)'
+        required: false
+        default: 'gpt-4o'
+      max_workers:
+        description: 'Max concurrency'
+        required: false
+        default: '30'
+
+permissions:
+  contents: read
+  actions: read
+
+concurrency:
+  group: recon-${{ inputs.target }}
+  cancel-in-progress: false
+
+jobs:
+  # ==========================================================
+  # Job 0: Setup Encryption Keys
+  # ==========================================================
+  setup:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    outputs:
+      public_key: ${{ steps.keys.outputs.public_key }}
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: false
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Install dependencies
+        run: pip install cryptography
+
+      - name: Generate RSA Key Pair
+        id: keys
+        run: |
+          python -c "
+          from cryptography.hazmat.primitives import serialization
+          from cryptography.hazmat.primitives.asymmetric import rsa
+          from cryptography.hazmat.backends import default_backend
+
+          # Generate RSA key pair
+          private_key = rsa.generate_private_key(
+              public_exponent=65537,
+              key_size=2048,
+              backend=default_backend()
+          )
+
+          # Save private key (will be discarded after workflow)
+          pem_private = private_key.private_bytes(
+              encoding=serialization.Encoding.PEM,
+              format=serialization.PrivateFormat.PKCS8,
+              encryption_algorithm=serialization.NoEncryption()
+          )
+          with open('test_private.pem', 'wb') as f:
+              f.write(pem_private)
+
+          # Save public key
+          public_key = private_key.public_key()
+          pem_public = public_key.public_bytes(
+              encoding=serialization.Encoding.PEM,
+              format=serialization.PublicFormat.SubjectPublicKeyInfo
+          )
+          with open('test_public.pem', 'wb') as f:
+              f.write(pem_public)
+
+          print('Keys generated successfully')
+          print(f'Public key hash: {pem_public[:50]}...')
+          "
+
+      - name: Upload keys for other jobs
+        uses: actions/upload-artifact@v4
+        with:
+          name: crypto-keys
+          path: |
+            test_public.pem
+            test_private.pem
+          retention-days: 1
+
+  # ==========================================================
+  # Job 1: Phase 1 - Discovery
+  # ==========================================================
+  phase1-discovery:
+    needs: setup
+    if: inputs.phase == 'full' || inputs.phase == 'phase1'
+    runs-on: ubuntu-latest
+    timeout-minutes: 60
+
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: false
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - run: pip install requests urllib3 cryptography
+
+      - name: Download crypto keys
+        uses: actions/download-artifact@v4
+        with:
+          name: crypto-keys
+
+      - name: Restore checkpoint
+        uses: actions/download-artifact@v4
+        with:
+          name: recon-checkpoint-${{ inputs.target }}
+          path: recon/out/
+        continue-on-error: true
+
+      - name: Run Phase 1 - Discovery
+        env:
+          RECON_TARGET: ${{ inputs.target }}
+          SHODAN_API_KEY: ${{ secrets.SHODAN_API_KEY }}
+          CENSYS_API_ID: ${{ secrets.CENSYS_API_ID }}
+          CENSYS_API_SECRET: ${{ secrets.CENSYS_API_SECRET }}
+          OTX_API_KEY: ${{ secrets.OTX_API_KEY }}
+          VIRUSTOTAL_API_KEY: ${{ secrets.VIRUSTOTAL_API_KEY }}
+          SECURITYTRAILS_API_KEY: ${{ secrets.SECURITYTRAILS_API_KEY }}
+          FOFA_EMAIL: ${{ secrets.FOFA_EMAIL }}
+          FOFA_API_KEY: ${{ secrets.FOFA_API_KEY }}
+          HUNTER_API_KEY: ${{ secrets.HUNTER_API_KEY }}
+        run: |
+          cd recon/cloud
+          python phase1_discovery.py 2>&1 | tee ../out/phase1.log
+
+      - name: Encrypt Phase 1 Results
+        run: |
+          python -c "
+          import json
+          import sys
+          sys.path.insert(0, '.')
+          from recon.crypto import get_crypto_manager
+
+          crypto = get_crypto_manager()
+
+          # Load and encrypt results
+          with open('recon/out/phase1_assets.json') as f:
+              data = json.load(f)
+
+          data_file, key_file = crypto.encrypt_file(data, 'recon/out/phase1_assets')
+          print(f'Encrypted: {data_file}')
+
+          # Remove plaintext
+          import os
+          os.remove('recon/out/phase1_assets.json')
+          print('Plaintext removed')
+          "
+
+      - name: Upload Phase 1 Results (Encrypted)
+        uses: actions/upload-artifact@v4
+        with:
+          name: phase1-assets-${{ inputs.target }}
+          path: |
+            recon/out/phase1_assets.data.enc
+            recon/out/phase1_assets.key.enc
+          retention-days: 14
+
+      - name: Upload checkpoint
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: recon-checkpoint-${{ inputs.target }}
+          path: recon/out/
+          retention-days: 14
+
+  # ==========================================================
+  # Job 2: Phase 1.5 - LLM Filtering
+  # ==========================================================
+  phase1-5-filtering:
+    needs: [setup, phase1-discovery]
+    if: inputs.phase == 'full' || inputs.phase == 'phase1_5'
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: false
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - run: pip install requests urllib3 cryptography
+
+      - name: Download crypto keys
+        uses: actions/download-artifact@v4
+        with:
+          name: crypto-keys
+
+      - name: Download Phase 1 Results
+        uses: actions/download-artifact@v4
+        with:
+          name: phase1-assets-${{ inputs.target }}
+          path: recon/out/
+
+      - name: Decrypt Phase 1 Results
+        run: |
+          python -c "
+          import sys
+          sys.path.insert(0, '.')
+          from recon.crypto import get_crypto_manager
+
+          crypto = get_crypto_manager()
+          data = crypto.decrypt_file('recon/out/phase1_assets.data.enc', 'recon/out/phase1_assets.key.enc')
+
+          import json
+          with open('recon/out/phase1_assets.json', 'w') as f:
+              json.dump(data, f)
+          print('Decrypted successfully')
+          "
+
+      - name: Run Phase 1.5 - LLM Filtering
+        env:
+          RECON_TARGET: ${{ inputs.target }}
+          LLM_BACKEND: ${{ inputs.llm_backend }}
+          OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
+          OPENAI_MODEL: ${{ inputs.openai_model }}
+          OPENAI_BASE_URL: ${{ secrets.OPENAI_BASE_URL }}
+        run: |
+          python -c "
+          import json
+          import sys
+          sys.path.insert(0, '.')
+          from recon.llm import CatPawBackend, OpenAIBackend
+          from recon.input_parser import InputParser
+          import os
+
+          # Load Phase 1 results
+          with open('recon/out/phase1_assets.json') as f:
+              data = json.load(f)
+
+          assets = data.get('assets', [])
+          target = data.get('target', '${{ inputs.target }}')
+
+          print(f'Loaded {len(assets)} assets')
+
+          # Create LLM
+          backend = '${{ inputs.llm_backend }}'
+          if backend == 'openai' and os.environ.get('OPENAI_API_KEY'):
+              llm = OpenAIBackend(
+                  api_key=os.environ.get('OPENAI_API_KEY'),
+                  model=os.environ.get('OPENAI_MODEL', '${{ inputs.openai_model }}'),
+                  base_url=os.environ.get('OPENAI_BASE_URL') or os.environ.get('OPENAI_API_BASE'),
+              )
+          else:
+              llm = CatPawBackend()
+
+          # Analyze
+          resp = llm.analyze_assets(target=target, assets=assets)
+
+          if resp.success:
+              result = resp.structured_data
+              asset_index = {a.get('value', ''): a for a in assets}
+              hydrated_relevant = []
+              for item in result.get('relevant_assets', []):
+                  value = item if isinstance(item, str) else item.get('value', '')
+                  if not value:
+                      continue
+                  merged = dict(asset_index.get(value, {'value': value}))
+                  if isinstance(item, dict):
+                      merged.update(item)
+                  hydrated_relevant.append(merged)
+
+              output = {
+                  'target': target,
+                  'target_type': data.get('target_type', ''),
+                  'total_assets': len(assets),
+                  'assets': hydrated_relevant,
+                  'relevant_assets': hydrated_relevant,
+                  'irrelevant_assets': result.get('irrelevant_assets', []),
+                  'all_assets': assets,
+                  'llm_result': result,
+              }
+
+              print(f'Relevant: {len(hydrated_relevant)}')
+              print(f'Irrelevant: {len(result.get(\"irrelevant_assets\", []))}')
+
+              with open('recon/out/phase1_5_filtering.json', 'w') as f:
+                  json.dump(output, f, ensure_ascii=False, indent=2)
+          else:
+              print(f'LLM error: {resp.error}')
+              sys.exit(1)
+          " 2>&1 | tee recon/out/phase1_5.log
+
+      - name: Encrypt Phase 1.5 Results
+        run: |
+          python -c "
+          import json
+          import sys
+          import os
+          sys.path.insert(0, '.')
+          from recon.crypto import get_crypto_manager
+
+          crypto = get_crypto_manager()
+
+          with open('recon/out/phase1_5_filtering.json') as f:
+              data = json.load(f)
+
+          data_file, key_file = crypto.encrypt_file(data, 'recon/out/phase1_5_filtering')
+          print(f'Encrypted: {data_file}')
+
+          # Remove plaintext
+          os.remove('recon/out/phase1_5_filtering.json')
+          os.remove('recon/out/phase1_assets.json')
+          print('Plaintext removed')
+          "
+
+      - name: Upload Phase 1.5 Results (Encrypted)
+        uses: actions/upload-artifact@v4
+        with:
+          name: phase1-5-filtering-${{ inputs.target }}
+          path: |
+            recon/out/phase1_5_filtering.data.enc
+            recon/out/phase1_5_filtering.key.enc
+          retention-days: 14
+
+  # ==========================================================
+  # Job 3: Phase 2 - LLM Protocol Identification
+  # ==========================================================
+  phase2-fingerprinting:
+    needs: [setup, phase1-5-filtering]
+    if: inputs.phase == 'full' || inputs.phase == 'phase2'
+    runs-on: ubuntu-latest
+    timeout-minutes: 90
+
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: false
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - run: pip install requests urllib3 cryptography
+
+      - name: Download crypto keys
+        uses: actions/download-artifact@v4
+        with:
+          name: crypto-keys
+
+      - name: Download Phase 1.5 Results
+        uses: actions/download-artifact@v4
+        with:
+          name: phase1-5-filtering-${{ inputs.target }}
+          path: recon/out/
+
+      - name: Decrypt Phase 1.5 Results
+        run: |
+          python -c "
+          import sys
+          sys.path.insert(0, '.')
+          from recon.crypto import get_crypto_manager
+
+          crypto = get_crypto_manager()
+          data = crypto.decrypt_file('recon/out/phase1_5_filtering.data.enc', 'recon/out/phase1_5_filtering.key.enc')
+
+          import json
+          with open('recon/out/phase1_5_filtering.json', 'w') as f:
+              json.dump(data, f)
+          print('Decrypted successfully')
+          "
+
+      - name: Run Phase 2 - LLM Protocol Identification
+        env:
+          RECON_TARGET: ${{ inputs.target }}
+          RECON_MAX_WORKERS: ${{ inputs.max_workers }}
+          LLM_BACKEND: ${{ inputs.llm_backend }}
+          OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
+          OPENAI_MODEL: ${{ inputs.openai_model }}
+        run: |
+          cd recon/cloud
+          python phase2_fingerprinting.py 2>&1 | tee ../out/phase2.log
+
+      - name: Encrypt Phase 2 Results
+        run: |
+          python -c "
+          import json
+          import sys
+          import os
+          sys.path.insert(0, '.')
+          from recon.crypto import get_crypto_manager
+
+          crypto = get_crypto_manager()
+
+          with open('recon/out/phase2_protocols.json') as f:
+              data = json.load(f)
+
+          data_file, key_file = crypto.encrypt_file(data, 'recon/out/phase2_protocols')
+          print(f'Encrypted: {data_file}')
+
+          os.remove('recon/out/phase2_protocols.json')
+          os.remove('recon/out/phase1_5_filtering.json')
+          print('Plaintext removed')
+          "
+
+      - name: Upload Phase 2 Results (Encrypted)
+        uses: actions/upload-artifact@v4
+        with:
+          name: phase2-protocols-${{ inputs.target }}
+          path: |
+            recon/out/phase2_protocols.data.enc
+            recon/out/phase2_protocols.key.enc
+          retention-days: 14
+
+  # ==========================================================
+  # Job 4: Phase 3 - LLM Response Analysis
+  # ==========================================================
+  phase3-probing:
+    needs: [setup, phase2-fingerprinting]
+    if: inputs.phase == 'full' || inputs.phase == 'phase3'
+    runs-on: ubuntu-latest
+    timeout-minutes: 120
+
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: false
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - run: pip install requests urllib3 cryptography
+
+      - name: Download crypto keys
+        uses: actions/download-artifact@v4
+        with:
+          name: crypto-keys
+
+      - name: Download Phase 2 Results
+        uses: actions/download-artifact@v4
+        with:
+          name: phase2-protocols-${{ inputs.target }}
+          path: recon/out/
+
+      - name: Decrypt Phase 2 Results
+        run: |
+          python -c "
+          import sys
+          sys.path.insert(0, '.')
+          from recon.crypto import get_crypto_manager
+
+          crypto = get_crypto_manager()
+          data = crypto.decrypt_file('recon/out/phase2_protocols.data.enc', 'recon/out/phase2_protocols.key.enc')
+
+          import json
+          with open('recon/out/phase2_protocols.json', 'w') as f:
+              json.dump(data, f)
+          print('Decrypted successfully')
+          "
+
+      - name: Run Phase 3 - LLM Response Analysis
+        env:
+          RECON_TARGET: ${{ inputs.target }}
+          RECON_MAX_WORKERS: ${{ inputs.max_workers }}
+          LLM_BACKEND: ${{ inputs.llm_backend }}
+          OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
+          OPENAI_MODEL: ${{ inputs.openai_model }}
+        run: |
+          cd recon/cloud
+          python phase3_probing.py 2>&1 | tee ../out/phase3.log
+
+      - name: Encrypt Phase 3 Results
+        run: |
+          python -c "
+          import json
+          import sys
+          import os
+          sys.path.insert(0, '.')
+          from recon.crypto import get_crypto_manager
+
+          crypto = get_crypto_manager()
+
+          with open('recon/out/phase3_probes.json') as f:
+              data = json.load(f)
+
+          data_file, key_file = crypto.encrypt_file(data, 'recon/out/phase3_probes')
+          print(f'Encrypted: {data_file}')
+
+          os.remove('recon/out/phase3_probes.json')
+          os.remove('recon/out/phase2_protocols.json')
+          print('Plaintext removed')
+          "
+
+      - name: Upload Phase 3 Results (Encrypted)
+        uses: actions/upload-artifact@v4
+        with:
+          name: phase3-probes-${{ inputs.target }}
+          path: |
+            recon/out/phase3_probes.data.enc
+            recon/out/phase3_probes.key.enc
+          retention-days: 14
+
+  # ==========================================================
+  # Job 5: Phase 4 - LLM Vulnerability Verification
+  # ==========================================================
+  phase4-analysis:
+    needs: [setup, phase3-probing]
+    if: inputs.phase == 'full' || inputs.phase == 'phase4'
+    runs-on: ubuntu-latest
+    timeout-minutes: 60
+
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: false
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - run: pip install requests urllib3 cryptography
+
+      - name: Download crypto keys
+        uses: actions/download-artifact@v4
+        with:
+          name: crypto-keys
+
+      - name: Download Phase 3 Results
+        uses: actions/download-artifact@v4
+        with:
+          name: phase3-probes-${{ inputs.target }}
+          path: recon/out/
+
+      - name: Decrypt Phase 3 Results
+        run: |
+          python -c "
+          import sys
+          sys.path.insert(0, '.')
+          from recon.crypto import get_crypto_manager
+
+          crypto = get_crypto_manager()
+          data = crypto.decrypt_file('recon/out/phase3_probes.data.enc', 'recon/out/phase3_probes.key.enc')
+
+          import json
+          with open('recon/out/phase3_probes.json', 'w') as f:
+              json.dump(data, f)
+          print('Decrypted successfully')
+          "
+
+      - name: Run Phase 4 - LLM Vulnerability Verification
+        env:
+          RECON_TARGET: ${{ inputs.target }}
+          LLM_BACKEND: ${{ inputs.llm_backend }}
+          OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
+          OPENAI_MODEL: ${{ inputs.openai_model }}
+        run: |
+          cd recon/cloud
+          python phase4_analysis.py 2>&1 | tee ../out/phase4.log
+
+      - name: Encrypt Phase 4 Results
+        run: |
+          python -c "
+          import json
+          import sys
+          import os
+          sys.path.insert(0, '.')
+          from recon.crypto import get_crypto_manager
+
+          crypto = get_crypto_manager()
+
+          with open('recon/out/phase4_vulnerabilities.json') as f:
+              data = json.load(f)
+
+          data_file, key_file = crypto.encrypt_file(data, 'recon/out/phase4_vulnerabilities')
+          print(f'Encrypted: {data_file}')
+
+          os.remove('recon/out/phase4_vulnerabilities.json')
+          os.remove('recon/out/phase3_probes.json')
+          print('Plaintext removed')
+          "
+
+      - name: Upload Phase 4 Results (Encrypted)
+        uses: actions/upload-artifact@v4
+        with:
+          name: phase4-vulns-${{ inputs.target }}
+          path: |
+            recon/out/phase4_vulnerabilities.data.enc
+            recon/out/phase4_vulnerabilities.key.enc
+          retention-days: 30
+
+      - name: Upload all results (Encrypted)
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: recon-full-results-${{ inputs.target }}
+          path: |
+            recon/out/*.data.enc
+            recon/out/*.key.enc
+            recon/cloud/*.log
+          retention-days: 30
+
+  # ==========================================================
+  # Job 5.5: RunSpec Executor - Local Decision Follow-up
+  # ==========================================================
+  run-spec-executor:
+    needs: setup
+    if: inputs.phase == 'run_spec'
+    runs-on: ubuntu-latest
+    timeout-minutes: 120
+
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: false
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - run: pip install requests urllib3 cryptography
+
+      - name: Download crypto keys
+        uses: actions/download-artifact@v4
+        with:
+          name: crypto-keys
+
+      - name: Decode RunSpec
+        env:
+          RUN_SPEC_B64: ${{ inputs.run_spec_b64 }}
+        run: |
+          python - <<'PY'
+          import base64
+          import os
+          from pathlib import Path
+
+          data = os.environ.get("RUN_SPEC_B64", "").strip()
+          if not data:
+              raise SystemExit("run_spec_b64 is required when phase=run_spec")
+
+          raw = base64.b64decode(data.encode("ascii"), validate=True)
+          out = Path("recon/out/run_spec.json")
+          out.parent.mkdir(parents=True, exist_ok=True)
+          out.write_bytes(raw)
+          print(f"Wrote {out} ({len(raw)} bytes)")
+          PY
+
+      - name: Run RunSpec Executor
+        env:
+          RECON_TARGET: ${{ inputs.target }}
+          RECON_MAX_WORKERS: ${{ inputs.max_workers }}
+        run: |
+          python recon/cloud/run_spec_executor.py 2>&1 | tee recon/out/run_spec.log
+
+      - name: Encrypt RunSpec Results
+        run: |
+          python -c "
+          import json
+          import os
+          import sys
+          sys.path.insert(0, '.')
+          from recon.crypto import get_crypto_manager
+
+          crypto = get_crypto_manager()
+
+          with open('recon/out/run_spec_results.json') as f:
+              data = json.load(f)
+
+          data_file, key_file = crypto.encrypt_file(data, 'recon/out/run_spec_results')
+          print(f'Encrypted: {data_file}')
+
+          os.remove('recon/out/run_spec_results.json')
+          if os.path.exists('recon/out/run_spec.json'):
+              os.remove('recon/out/run_spec.json')
+          print('Plaintext removed')
+          "
+
+      - name: Upload RunSpec Results (Encrypted)
+        uses: actions/upload-artifact@v4
+        with:
+          name: run-spec-results-${{ inputs.target }}
+          path: |
+            recon/out/run_spec_results.data.enc
+            recon/out/run_spec_results.key.enc
+            recon/out/run_spec.log
+          retention-days: 14
+
+  # ==========================================================
+  # Job 6: Report (Summary only, no sensitive data)
+  # ==========================================================
+  report:
+    needs: [phase1-discovery, phase1-5-filtering, phase2-fingerprinting, phase3-probing, phase4-analysis]
+    if: always() && (inputs.phase == 'full')
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: false
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - run: pip install cryptography
+
+      - name: Download crypto keys
+        uses: actions/download-artifact@v4
+        with:
+          name: crypto-keys
+
+      - name: Download all artifacts
+        uses: actions/download-artifact@v4
+        with:
+          path: artifacts/
+
+      - name: Generate Summary Report
+        run: |
+          python -c "
+          import json
+          import sys
+          sys.path.insert(0, '.')
+          from recon.crypto import get_crypto_manager
+
+          crypto = get_crypto_manager()
+
+          # Decrypt Phase 1 for stats
+          try:
+              p1 = crypto.decrypt_file('artifacts/phase1-assets-${{ inputs.target }}/phase1_assets.data.enc',
+                                       'artifacts/phase1-assets-${{ inputs.target }}/phase1_assets.key.enc')
+              total_assets = p1.get('total_assets', 0)
+          except:
+              total_assets = 0
+
+          # Decrypt Phase 1.5 for stats
+          try:
+              p15 = crypto.decrypt_file('artifacts/phase1-5-filtering-${{ inputs.target }}/phase1_5_filtering.data.enc',
+                                        'artifacts/phase1-5-filtering-${{ inputs.target }}/phase1_5_filtering.key.enc')
+              relevant = len(p15.get('relevant_assets', []))
+          except:
+              relevant = 0
+
+          # Decrypt Phase 4 for vuln stats
+          try:
+              p4 = crypto.decrypt_file('artifacts/phase4-vulns-${{ inputs.target }}/phase4_vulnerabilities.data.enc',
+                                       'artifacts/phase4-vulns-${{ inputs.target }}/phase4_vulnerabilities.key.enc')
+              vulns = p4.get('total_vulnerabilities', 0)
+          except:
+              vulns = 0
+
+          # Write summary (no sensitive details)
+          target = '${{ inputs.target }}'
+          llm_backend = '${{ inputs.llm_backend }}'
+          openai_model = '${{ inputs.openai_model }}'
+          with open('recon_summary.md', 'w') as f:
+              f.write('# Recon Pipeline V3 - Summary Report\\n\\n')
+              f.write(f'**Target:** {target}\\n')
+              f.write(f'**LLM:** {llm_backend} ({openai_model})\\n\\n')
+              f.write('## Results\\n\\n')
+              f.write(f'- Total Assets Discovered: **{total_assets}**\\n')
+              f.write(f'- Relevant Assets: **{relevant}**\\n')
+              f.write(f'- Confirmed Vulnerabilities: **{vulns}**\\n\\n')
+              f.write('> Full results are encrypted and available as artifacts.\\n')
+              f.write('> Download artifacts and use test_private.pem to decrypt.\\n')
+
+          print('Summary generated (no sensitive data)')
+          "
+
+      - name: Upload Summary
+        uses: actions/upload-artifact@v4
+        with:
+          name: recon-summary-${{ inputs.target }}
+          path: recon_summary.md
+          retention-days: 30

@@ -12,6 +12,7 @@ import pytest
 import asyncio
 
 from aiburp.traffic import TrafficEngine, TrafficRequest
+from recon.evidence import EvidenceResponse
 
 
 class TestTcpAdapter:
@@ -91,6 +92,34 @@ class TestTcpAdapter:
         finally:
             server.close()
             await server.wait_closed()
+
+
+class TestHttpAdapter:
+    def test_convert_preserves_raw_response_bytes(self):
+        from aiburp.traffic.adapters.http import HttpAdapter
+
+        class DummyResponse:
+            ok = True
+            status = 200
+            time_ms = 12.0
+            body = "hello"
+            length = 5
+            headers = {"Server": "unit-test"}
+            url = "http://127.0.0.1/"
+            method = "GET"
+            error = ""
+            blocked = False
+            reflects = False
+            anomalies = []
+            payload = ""
+            tags = ["HTTP"]
+
+        traffic_response = HttpAdapter._convert(DummyResponse())
+        evidence_response = EvidenceResponse.from_traffic_response(traffic_response)
+
+        assert traffic_response.raw.startswith(b"HTTP/1.1 200")
+        assert b"Server: unit-test" in traffic_response.raw
+        assert evidence_response.raw_b64
 
 
 class TestRedisAdapter:

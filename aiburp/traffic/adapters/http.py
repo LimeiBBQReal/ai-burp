@@ -183,6 +183,7 @@ class HttpAdapter(ProtocolAdapter):
             ok=r.ok,
             status=r.status,
             time_ms=r.time_ms,
+            raw=HttpAdapter._raw_response_bytes(r),
             text=r.body,
             body=r.body,
             length=r.length,
@@ -196,3 +197,21 @@ class HttpAdapter(ProtocolAdapter):
             payload=(req.payload if req and req.payload is not None else r.payload) or "",
             tags=list(r.tags) if hasattr(r, "tags") else [],
         )
+
+    @staticmethod
+    def _raw_response_bytes(r) -> bytes:
+        raw = getattr(r, "raw", b"") or b""
+        if raw:
+            return raw
+
+        status = int(getattr(r, "status", 0) or 0)
+        headers = dict(getattr(r, "headers", {}) or {})
+        body = getattr(r, "body", "") or ""
+        body_bytes = body if isinstance(body, bytes) else str(body).encode("utf-8", "replace")
+
+        status_line = f"HTTP/1.1 {status}\r\n".encode("ascii", "replace")
+        header_lines = b"".join(
+            f"{name}: {value}\r\n".encode("utf-8", "replace")
+            for name, value in headers.items()
+        )
+        return status_line + header_lines + b"\r\n" + body_bytes

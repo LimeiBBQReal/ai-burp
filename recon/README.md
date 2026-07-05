@@ -2,8 +2,72 @@
 
 云端被动/主动信息采集，跑在 **GitHub Actions** 上，避免本地 TUN 劫持污染。
 
-> **双层加密**: 明文 → AES-256-CBC → RSA-2048-OAEP 包装 AES key  
+> **双层加密**: 明文 → AES-256-CBC → RSA-2048-OAEP 包装 AES key
 > 公开仓库只看到密文, 没有 RSA 私钥就无法解密
+
+---
+
+## 当前 V3 闭环
+
+新的 LLM 驱动链路采用“本地决策层 + GitHub Actions 执行层 + Burp 化证据层”的分工:
+
+1. Phase 1 在 GitHub Actions 做广度资产发现, 输出原始资产。
+2. Phase 1.5 调用 LLM 筛选资产, 输出时保留完整资产对象, 供后续阶段继续使用。
+3. Phase 2 / Phase 3 通过 `recon/traffic_bridge.py` 调用 `aiburp.traffic.TrafficEngine` 发包, 不再在云端脚本里重复维护一套协议执行器。
+4. 每轮发包输出 `evidence_bundle`, 其中 `records[].request` 保存请求, `records[].response` 保存响应、raw base64、headers、tags、anomalies 和 next steps, 供本地 LLM 复盘。
+5. Phase 4 继续消费 Phase 3 的协议结果, 后续可直接升级为消费完整 `evidence_bundle`。
+
+本地决策控制器:
+
+```bash
+python -m recon.local_controller decide recon/out/phase3_probes.json --out recon/out/run_spec.json
+
+# 可选: 使用 OpenAI 兼容后端; 失败时默认回退规则引擎
+python -m recon.local_controller decide recon/out/phase3_probes.json --backend openai --out recon/out/run_spec.json
+```
+
+把本地生成的 `run_spec.json` 交给 GitHub Actions 执行:
+
+```powershell
+.\scripts\trigger_recon.ps1 -Target "example.com" -Phase run_spec -RunSpecPath recon/out/run_spec.json -Wait
+```
+
+执行结果会作为加密 artifact 上传，名称为 `run-spec-results-<target>`，核心文件为:
+
+```text
+run_spec_results.data.enc
+run_spec_results.key.enc
+```
+
+`run_spec.json` 是下一轮云端执行任务的标准输入:
+
+```json
+{
+  "target": "example.com",
+  "phase": "phase3_payload",
+  "source_phase": "phase3",
+  "stop": false,
+  "tasks": [
+    {
+      "action": "send",
+      "protocol": "http",
+      "target": "https://example.com/robots.txt",
+      "meta": {"method": "GET"},
+      "reason": "Lightweight HTTP discovery path"
+    }
+  ]
+}
+```
+
+关键运行参数:
+
+| 变量 | 默认值 | 说明 |
+|------|--------|------|
+| `RECON_MAX_WORKERS` | `30` | 云端发包并发数 |
+| `RECON_MAX_PHASE2_TASKS` | `3000` | Phase 2 最大发包任务数, 防止资产过多导致 Actions 超时 |
+| `RECON_PROBE_TIMEOUT` | Phase 2 为 `5`, Phase 3 为 `10` | 单次探测超时 |
+| `RECON_RUN_SPEC_PATH` | `recon/out/run_spec.json` | 云端执行器读取的 RunSpec 路径 |
+| `RECON_RUN_SPEC_OUTPUT` | `recon/out/run_spec_results.json` | 云端执行器明文输出路径, 上传前会加密 |
 
 ---
 
@@ -53,9 +117,9 @@
 解密:  RSA 私钥解 .key.enc → AES key → 解密 .data.enc → 明文
 ```
 
-**为什么需要双层?**  
-- 单独 AES: 密钥会随密文入仓, 任何人 commit 历史都能解密  
-- 单独 RSA: 2048-bit RSA 加密大文件极慢  
+**为什么需要双层?**
+- 单独 AES: 密钥会随密文入仓, 任何人 commit 历史都能解密
+- 单独 RSA: 2048-bit RSA 加密大文件极慢
 - AES+RSA: AES 加密数据快, RSA 只加密 32 字节 key, 私钥只在本地
 
 ---
@@ -104,7 +168,7 @@ git push -u origin main
 
 ### 5. 测试 workflow
 
-在仓库 Actions 页面, 选 "Recon - Subdomain Enum" → Run workflow  
+在仓库 Actions 页面, 选 "Recon - Subdomain Enum" → Run workflow
 输入 `example.com` (或任何合法域名) → 绿色按钮
 
 跑完后会 commit `recon/out/subdomain.data.enc` + `subdomain.key.enc` 到仓库.
